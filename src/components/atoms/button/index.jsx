@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Button(props) {
 	return (
-		<div className="w-fit m-auto">
+		<div className="w-fit">
 			<button className={props.className}>{props.text}</button>
 		</div>
 	);
