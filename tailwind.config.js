@@ -2,7 +2,13 @@
 module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
-		extend: {},
+		// fontFamily: {
+		//   'raleway': ['raleway'],
+		extend: {
+			colors: {
+				"light-blue": "#549697",
+			},
+		},
 	},
 	plugins: [],
 };
