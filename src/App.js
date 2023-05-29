@@ -1,10 +1,12 @@
 import "./global.css";
 import Button from "./components/atoms/button";
 import Title from "./components/atoms/title";
+import Navbar from "./components/atoms/navbar";
 
 function App() {
 	return (
 		<div className="App">
+			<Navbar></Navbar>
 			{/* <Title className="font-extrabold text-7xl uppercase ml-[170px] my-5 text-yellow">
 				Projects
 			</Title>
