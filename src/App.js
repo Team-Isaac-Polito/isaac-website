@@ -2,11 +2,19 @@ import "./global.css";
 import Button from "./components/atoms/button";
 import Title from "./components/atoms/title";
 import Navbar from "./components/atoms/navbar";
+import Hero from "./components/molecules/hero";
 
 function App() {
 	return (
-		<div className="App">
+		<div>
 			<Navbar></Navbar>
+			<Hero
+				title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+			/>
+			<Button text="Contattaci" isPrimary />
+			<Button text="Contattaci" isYellow />
+			<Button text="Contattaci" />
 			{/* <Title className="font-extrabold text-7xl uppercase ml-[170px] my-5 text-yellow">
 				Projects
 			</Title>
