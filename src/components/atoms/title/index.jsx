@@ -2,8 +2,9 @@ import React from "react";
 
 export default function Title(props) {
 	return (
-		<h1 className={props.className}>
+		<div className={props.className}>
+		<h1 className="text-[60px] uppercase font-extrabold">
             {props.children}
-        </h1>
+        </h1></div>
 	);
 }
