@@ -28,6 +28,7 @@ function App() {
 				title="Progetti"
 				text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget laoreet arcu, et placerat erat. Proin semper tristique elit a dictum. Donec id erat sapien. Morbi non placerat lorem. Aenean feugiat est id nisi suscipit, sed iaculis dolor fermentum. Donec mauris elit, aliquam ac lacinia et, mollis in ante. Maecenas enim nibh, vehicula id volutpat eu."
 			/>
+			<Diagonal isEnd firstColor="fill-dark-blue" secondColor="fill-white" lineColor="stroke-dark-blue"/>
 		</div>
 	);
 }
