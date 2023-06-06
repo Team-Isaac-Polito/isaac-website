@@ -9,7 +9,7 @@ export default function NavBar(props) {
       <nav className="flex flex-row items-center m-auto text-5xl uppercase w-fit">
         <div className=" m-[20px] hover:text-yellow">
           <NavLink
-            to="/"
+            to="./"
             className={({ isActive }) =>
               isActive ? "text-yellow" : "text-white"
             }
@@ -19,7 +19,7 @@ export default function NavBar(props) {
         </div>
         <div className="text-white m-[20px] hover:text-yellow">
           <NavLink
-            to="/about"
+            to="./about"
             className={({ isActive }) =>
               isActive ? "text-yellow" : "text-white"
             }
@@ -29,7 +29,7 @@ export default function NavBar(props) {
         </div>
         <div className="text-white m-[20px] hover:text-yellow">
           <NavLink
-            to="/projects"
+            to="./projects"
             className={({ isActive }) =>
               isActive ? "text-yellow" : "text-white"
             }
@@ -39,7 +39,7 @@ export default function NavBar(props) {
         </div>
         <div className="text-white m-[20px] hover:text-yellow">
           <NavLink
-            to="/events"
+            to="./events"
             className={({ isActive }) =>
               isActive ? "text-yellow" : "text-white"
             }
