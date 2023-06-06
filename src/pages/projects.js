@@ -1,6 +1,6 @@
 import React from "react"
-import Button from "../components/atoms/button"
-import Title from "../components/atoms/title"
+import Button from "../components/atoms/Button"
+import Title from "../components/atoms/Title"
 
 export default function Projects() {
   return (

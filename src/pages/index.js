@@ -1,8 +1,7 @@
 import RotatedBorder from "../components/atoms/RotatedBorder"
-import Hero from "../components/molecules/hero"
-import Title from "../components/atoms/title"
+import Hero from "../components/molecules/Hero"
+import Title from "../components/atoms/Title"
 import lightbulb from "../assets/lightbulb.png"
-import Button from "../components/atoms/button"
 
 export default function Home() {
   return (
