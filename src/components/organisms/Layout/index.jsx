@@ -1,6 +1,6 @@
 import React from "react"
 import { Outlet } from "react-router-dom"
-import NavBar from "../../atoms/NavBar"
+import NavBar from "../../atoms/navbar"
 
 const Layout = () => {
   return (
