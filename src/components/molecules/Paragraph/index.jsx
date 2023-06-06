@@ -6,7 +6,7 @@ import Title from "../../atoms/Title"
 
 export default function Paragraph(props) {
   return props.isTextLeft ? (
-    <div classname="w-full">
+    <div className="w-full">
       <div className="grid grid-cols-2 w-full text-white py-[100px] bg-dark-blue h-fit">
         <div className=" ml-[150px] mt-0 w-fit h-fit">
           <Title className="text-yellow">{props.title}</Title>
@@ -20,7 +20,7 @@ export default function Paragraph(props) {
       </div>
     </div>
   ) : (
-    <div classname="w-full">
+    <div className="w-full">
       <div className="grid grid-cols-2 gap-24 w-full text-white py-[100px] bg-dark-blue h-fit">
         <div className="w-full pl-24 m-auto">
           <RotatedBorder
