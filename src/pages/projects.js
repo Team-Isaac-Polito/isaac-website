@@ -1,12 +1,17 @@
 import React from "react"
 import Button from "../components/atoms/Button"
 import Title from "../components/atoms/Title"
+import reseq from "../assets/prova.mp4"
 
 export default function Projects() {
   return (
     <div>
-    <div className="m-auto text-white w-fit">Pagina Progetti</div>
-    <div className="w-full">
+        <div>
+            <Title className="bg-white text-dark-blue text-center pt-5">Rese.Q Mk1</Title>
+        </div>
+        <video width="1920" height="600" autoplay="autoplay" muted loop >
+            <source src={reseq} type="video/mp4"/>
+        </video>
             <div className="grid grid-cols-2 w-full text-dark-blue py-[100px] bg-white">
                 <div className=" ml-[150px] mt-0 w-fit h-fit">
                     <Title className="text-light-blue">Caratteristiche</Title>
