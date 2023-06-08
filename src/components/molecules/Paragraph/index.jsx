@@ -1,7 +1,6 @@
 import React from "react"
 import Button from "../../atoms/Button"
 import RotatedBorder from "../../atoms/RotatedBorder"
-import Frame from "../../atoms/frame"
 import Title from "../../atoms/Title"
 
 export default function Paragraph(props) {
@@ -15,23 +14,20 @@ export default function Paragraph(props) {
         </div>
         <div className="w-full pl-24 m-auto h-fit">
           <div className="z-0 bg-gray-500 h-[666px] w-[547px] rounded-md ml-[55px]"></div>
-          <Frame color="stroke-yellow" className="-mt-[715px]" />
+          {/*<Frame color="stroke-yellow" className="-mt-[715px]" />*/}
         </div>
       </div>
     </div>
   ) : (
-    <div className="w-full">
-      <div className="grid grid-cols-2 gap-24 w-full text-white py-[100px] bg-dark-blue h-fit">
-        <div className="w-full pl-24 m-auto">
+    <div class="bluePalette">
+      <div className="grid grid-cols-2 gap-24 w-full py-[100px] ">
+        <div className="relative">
           <RotatedBorder
-            rotateBorder="-93deg"
-            borderHeight="90%"
-            color="red"
-            width="150px"
-            height="230px"
-          >
-            <div className="!overflow-visible -ml-3 z-0 bg-gray-500 h-[666px] w-[547px] rounded-md m-auto" />
+            color="yellow"
+            width="619px"
+            height="729px">
           </RotatedBorder>
+          <div className="m-auto z-10 rounded-md bg-gray-500 h-[666px] w-[547px]"  />
         </div>
         <div className="mr-[150px] w-fit text-right m-auto">
           <Title className="text-yellow">{props.title}</Title>
