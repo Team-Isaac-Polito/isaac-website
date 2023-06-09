@@ -7,7 +7,7 @@ import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
 
 export default function Footer(props) {
   return (
-    <footer className="grid grid-rows-2 font-Raleway text-[20px] h-[500px] bg-dark-blue w-full text-white">
+    <footer className="grid grid-rows-2 font-Raleway text-[20px] h-[500px] bg-dark-blue w-full text-white bg-dark-blue-isaac">
       <div className="grid grid-cols-2 mx-[175px] my-[70px]">
         <div className="grid grid-rows-2">
           <div>
