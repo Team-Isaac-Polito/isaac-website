@@ -30,10 +30,10 @@ export default function Projects() {
           <source src={reseq} type="video/mp4" />
         </video>
         <Paragraph
-          color="green"
+          isTextLeft
           title="About Rese.Q Mk1"
           text="È il primo prototipo del team per raggiungere l’obiettivo di creare un robot innovativo per le operazioni SAR.
-        La nostra idea è quella di avere un robot modulare cingolato e con due possibili configurazioni: braccio robotico e robot strisciante. In modo che riesca a destreggiarsi facilmente in situazioni pericolose, per perlustrare l’ambiente senza rischiare le vite dei soccorritori."
+            La nostra idea è quella di avere un robot modulare cingolato e con due possibili configurazioni: braccio robotico e robot strisciante. In modo che riesca a destreggiarsi facilmente in situazioni pericolose, per perlustrare l’ambiente senza rischiare le vite dei soccorritori."
         ></Paragraph>
         <div className="w-full">
           <div className="grid grid-cols-2 w-full text-dark-blue py-[100px] bg-white">
