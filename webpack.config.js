@@ -9,6 +9,8 @@ module.exports = {
             loader: "@svgr/webpack",
             options: {
               svgo: true,
+              typescript: true,
+              babel: false,
               svgoConfig: {
                 plugins: [
                   {

@@ -1,7 +1,8 @@
-import React from "react"
+import React, { FC } from "react"
 import Button from "../../atoms/Button"
+import HeroProps from "./index.types"
 
-export default function Hero(props) {
+const Hero: FC<HeroProps> = (props) => {
   return (
     <div className="bg-black h-[1095px] pt-52">
       <div className="m-auto text-center text-white w-fit ">
@@ -16,3 +17,5 @@ export default function Hero(props) {
     </div>
   )
 }
+
+export default Hero

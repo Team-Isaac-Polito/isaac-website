@@ -3,7 +3,7 @@ import { ReactComponent as InstagramButton } from "../../../assets/svg/instagram
 import { ReactComponent as LinkedinButton } from "../../../assets/svg/linkedinButton.svg"
 import classNames from "classnames"
 
-export const SocialNavigation = ({ className }) => {
+export const SocialNavigation = (className) => {
   return (
     <>
       <div
