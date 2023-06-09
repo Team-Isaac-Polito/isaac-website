@@ -3,7 +3,7 @@ import Title from "../components/atoms/Title"
 export default function Home() {
   return (
     <div className="mt-10 transform skew-y-3 bg-white">
-      <div className="w-full pt-20 transform -skew-y-3 laptop:pt-24 text-dark-blue h-fit">
+      <div className="w-full pt-20 transform -skew-y-3 laptop:pt-24 text-dark-blue-isaac h-fit">
         <Title className="m-auto mb-10 text-center">About us</Title>
         <p className="mx-10 tablet:mx-[75px] laptop:mx-[100px] desktop:mx-[200px] w-fit tablet:text-center text-[18px] laptop:text-2xl desktop:text-4xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget

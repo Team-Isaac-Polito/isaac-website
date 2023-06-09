@@ -1,5 +1,5 @@
-import "./global.css"
-import { createRoot } from 'react-dom/client'
+import "./styles/global.css"
+import { createRoot } from "react-dom/client"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Layout from "./components/organisms/Layout"
 import Home from "./pages/index.js"
@@ -22,4 +22,4 @@ export default function App() {
   )
 }
 
-createRoot(document.getElementById('root')).render(<App />)
+createRoot(document.getElementById("root")).render(<App />)
