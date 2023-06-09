@@ -6,8 +6,52 @@
 @tailwind utilities;
 
 body {
-  background-color: #0f0f0f;
-  font-family: "Raleway", sans-serif;
+  background-color: #ffffff;
+  font-family: "Raleway";
+  font-size: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  border-color: inherit;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  font-family: "Raleway";
+  font-size: 70px;
+}
+
+h2 {
+  font-family: "Raleway";
+  font-size: 40px;
+}
+
+.bluePalette {
+  background-color: #1b1d44;
+  color: white;
+  border-color: #ffc757;
+}
+h1.bluePalette {
+  color: #ffc757;
+}
+
+.lightBluePalette {
+  background-color: #549697;
+  color: white;
+  border-color: #ffc757;
+}
+h1.lightBluePalette {
+  color: #ffc757;
+}
+
+.whitePalette {
+  background-color: white;
+  color: #1b1d44;
+  border-color: #549697;
+}
+h1.whitePalette {
+  color: #549697;
 }
