@@ -2,7 +2,6 @@ import RotatedBorder from "../components/atoms/RotatedBorder"
 import Hero from "../components/molecules/Hero"
 import Title from "../components/atoms/Title"
 import lightbulb from "../assets/lightbulb.png"
-import Footer from "../components/atoms/footer"
 import Logo from "../assets/svg/logo.svg"
 
 export default function Home() {
