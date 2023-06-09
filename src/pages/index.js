@@ -26,22 +26,19 @@ export default function Home() {
           <div className="w-[130px] h-[130px] laptop:w-[180px] laptop:h-[180px] desktop:w-[262px] desktop:h-[263px] bg-gray-400 rounded-[10px] m-auto"></div>
         </div>
       </div>
-      <div className="mt-5">
+      <div className="relative py-10">
         <RotatedBorder
-          rotateBorder="-93deg"
           borderHeight="90%"
           color="red"
           width="150px"
-          height="230px"
-        >
-          <div className="!overflow-visible -ml-3">
-            <img
-              src={lightbulb}
-              className="w-[130px] relative left-[15%] top-[7px]"
-              alt="lightbulb"
-            />
-          </div>
-        </RotatedBorder>
+          height="230px"/>
+        <div className="!overflow-visible m-auto">
+          <img
+            src={lightbulb}
+            className="w-[130px] m-auto"
+            alt="lightbulb"
+          />
+        </div>
       </div>
       {/* <Paragraph
 				title="Progetti"
