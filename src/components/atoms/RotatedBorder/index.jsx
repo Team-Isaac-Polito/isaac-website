@@ -1,21 +1,31 @@
 import React from "react"
 
 const RotatedBorder = ({
-  height, width, top, classN
+  color = "black",
+  children,
+  vertical = "-3deg",
+  height = "100%",
+  width = "100%",
+  top,
+  left = null,
+  right = null,
 }) => {
   return (
-    <div className={classN}>
-    <div  className="absolute left-0 right-0 m-auto border-inherit"  style={{ top: "50%", transform: "translateY(-50%)",}}>
+    <div className="relative z-10 m-auto w-fit">
       <div
-        className="m-auto border-2 border-solid rounded-md "
+        className="absolute w-full h-full border-2 border-white border-solid rounded-md -z-10"
         style={{
-          borderColor: "inherit",
-          transform: `rotate(-3deg)`,
+          borderColor: color,
+          transform: `rotate(${vertical})`,
           height: height,
           width: width,
           top: top,
-        }}>
-    </div></div></div>
+          left: left,
+          right: right,
+        }}
+      />
+      {children}
+    </div>
   )
 }
 

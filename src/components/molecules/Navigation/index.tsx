@@ -2,7 +2,7 @@ import { AnimatePresence, LazyMotion, m } from "framer-motion"
 import React from "react"
 import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
 import { NavLink } from "react-router-dom"
-import { navRoutes } from "../../../routes.ts"
+import { navRoutes } from "../../../routes"
 import { SocialNavigation } from "../../atoms/SocialNavigation"
 
 const features = () => import("../../../features").then((res) => res.default)
