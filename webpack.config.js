@@ -11,7 +11,6 @@ module.exports = {
               svgo: true,
               typescript: true,
               babel: false,
-              svgoConfig: {
                 plugins: [
                   {
                     name: "preset-default",

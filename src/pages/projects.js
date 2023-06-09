@@ -13,7 +13,7 @@ export default function Projects() {
             Rese.Q Mk1
           </Title>
         </div>
-        <video width="1920" height="600" autoplay="autoplay" muted loop>
+        <video width="1920" height="600" autoPlay="autoplay" muted loop>
           <source src={reseq} type="video/mp4" />
         </video>
         <Paragraph
@@ -108,7 +108,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <video width="1920" height="600" autoplay="autoplay" muted loop>
+        <video width="1920" height="600" autoPlay="autoplay" muted loop>
           <source src={reseq} type="video/mp4" />
         </video>
         <div className="grid grid-cols-2 w-full text-dark-blue py-[100px] bg-white">
@@ -122,7 +122,7 @@ export default function Projects() {
               Rese.Q Mk1
             </Title>
           </div>
-          <video width="1920" height="600" autoplay="autoplay" muted loop>
+          <video width="1920" height="600" autoPlay="autoplay" muted loop>
             <source src={reseq} type="video/mp4" />
           </video>
           <Paragraph
