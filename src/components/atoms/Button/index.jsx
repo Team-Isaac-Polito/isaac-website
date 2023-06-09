@@ -17,6 +17,7 @@ export default function Button(props) {
     <div>
       <button className="px-5 py-3 rounded-[20px] text-dark-blue-isaac font-semibold text-4xl uppercase m-auto border-[5px] w-[450px] h-[90px] border-light-blue">
         {props.text}
+        {props.subtitle}
       </button>
     </div>
   )
