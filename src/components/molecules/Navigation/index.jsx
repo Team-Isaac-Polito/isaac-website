@@ -22,10 +22,12 @@ const Navigation = ({ toggleMenu, setToggleMenu, isRec }) => {
             >
               <div className="flex flex-col h-full bg-black">
                 <div className="flex flex-row justify-between mt-3">
-                  <div className="ml-10">{/* <Logo className="h-8" /> */}</div>
+                  <div className="ml-10">
+                    <Logo className="h-8 w-fit" />
+                  </div>
                   <div className="" onClick={() => setToggleMenu(!toggleMenu)}>
                     <button className="border-none outline-none cursor-pointer bg-none">
-                      <span className="text-white text-2xl font-extrabold hover:text-green-jetop transition duration-[250ms] mr-3">
+                      <span className="text-white text-2xl font-extrabold hover:text-yellow transition duration-[250ms] mr-3">
                         &#x2715;
                       </span>
                     </button>
@@ -42,7 +44,7 @@ const Navigation = ({ toggleMenu, setToggleMenu, isRec }) => {
                                 onClick={() => setToggleMenu(!toggleMenu)}
                               >
                                 <m.div
-                                  className="font-poppins antialiased flex items-center text-[30px] tracking-normal text-white hover:text-green-jetop transition duration-[250ms] w-full last:mb-[2vh]"
+                                  className="font-poppins antialiased flex items-center text-[30px] tracking-normal text-white hover:text-yellow transition duration-[250ms] w-full last:mb-[2vh]"
                                   whileHover={{
                                     x: 40,
                                     transition: {

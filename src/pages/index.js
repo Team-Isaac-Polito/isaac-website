@@ -9,12 +9,11 @@ export default function Home() {
   return (
     <div>
       {/* <Logo /> */}
-      {/* <Hero
+      <Hero
         title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       />
       <div className="w-full pt-10 bg-white laptop:pt-24 text-dark-blue-isaac h-fit">
-        {/* <Diagonal isTopDown secondColor="fill-white" firstColor="fill-black" /> 
         <Title className="m-auto mb-10 text-center">About us</Title>
         <p className="mx-10 tablet:mx-[75px] laptop:mx-[100px] desktop:mx-[200px] w-fit tablet:text-center text-[18px] laptop:text-2xl desktop:text-4xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget
@@ -45,18 +44,18 @@ export default function Home() {
             />
           </div>
         </RotatedBorder>
-      </div> */}
+      </div>{" "}
       {/* <Paragraph
-				title="Progetti"
-				text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget laoreet arcu, et placerat erat. Proin semper tristique elit a dictum. Donec id erat sapien. Morbi non placerat lorem. Aenean feugiat est id nisi suscipit, sed iaculis dolor fermentum. Donec mauris elit, aliquam ac lacinia et, mollis in ante. Maecenas enim nibh, vehicula id volutpat eu."
-			/>
-			<div className="mt-40">
-				<Paragraph
-					isTextLeft
-					title="Progetti"
-					text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget laoreet arcu, et placerat erat. Proin semper tristique elit a dictum. Donec id erat sapien. Morbi non placerat lorem. Aenean feugiat est id nisi suscipit, sed iaculis dolor fermentum. Donec mauris elit, aliquam ac lacinia et, mollis in ante. Maecenas enim nibh, vehicula id volutpat eu."
-				/>
-			</div> */}
+        title="Progetti"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget laoreet arcu, et placerat erat. Proin semper tristique elit a dictum. Donec id erat sapien. Morbi non placerat lorem. Aenean feugiat est id nisi suscipit, sed iaculis dolor fermentum. Donec mauris elit, aliquam ac lacinia et, mollis in ante. Maecenas enim nibh, vehicula id volutpat eu."
+      />
+      <div className="mt-40">
+        <Paragraph
+          isTextLeft
+          title="Progetti"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget laoreet arcu, et placerat erat. Proin semper tristique elit a dictum. Donec id erat sapien. Morbi non placerat lorem. Aenean feugiat est id nisi suscipit, sed iaculis dolor fermentum. Donec mauris elit, aliquam ac lacinia et, mollis in ante. Maecenas enim nibh, vehicula id volutpat eu."
+        />
+      </div> */}
       {/* <Diagonal
 				isEnd
 				firstColor="fill-dark-blue-isaac"

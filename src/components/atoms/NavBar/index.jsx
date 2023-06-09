@@ -7,7 +7,7 @@ import MenuIcon from "../../../assets/MenuIcon.png"
 
 const NavBar = ({ setToggleMenu, toggleMenu }) => {
   return (
-    <header className="sticky top-0 z-20 grid w-full h-20 grid-cols-4 text-white bg-transparent font-Staatliches laptop:h-28 desktop:h-32 tablet:bg-dark-blue-isaac bg-black/50 tablet:backdrop-blur-md">
+    <header className="sticky top-0 z-20 grid w-full h-20 grid-cols-4 text-white bg-transparent font-Staatliches laptop:h-28 desktop:h-32 tablet:bg-dark-blue-isaac tablet:backdrop-blur-md">
       <Logo className="hidden h-10 m-auto laptop:ml-4 desktop:ml-28 laptop:h-14 desktop:h-20 tablet:flex" />
       <nav className="items-center hidden col-span-2 m-auto text-5xl uppercase tablet:flex tablet:flex-row w-fit">
         <ul className="m-auto">
