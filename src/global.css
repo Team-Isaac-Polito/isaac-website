@@ -6,11 +6,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 
 body {
-  background-color: #000;
+  background-color: #ffffff;
   font-family: "Raleway";
   font-size: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  border-color: inherit;
 }
 
 code {
@@ -26,4 +27,32 @@ h1 {
 h2 {
   font-family: "Raleway";
   font-size: 40px;
+}
+
+.bluePalette{
+  background-color: #1b1d44;
+  color: white;
+  border-color: #ffc757;
+}
+h1.bluePalette{
+  color:  #ffc757;
+}
+
+
+.lightBluePalette{
+  background-color: #549697;
+  color: white;
+  border-color: #ffc757;
+}
+h1.lightBluePalette{
+  color: #ffc757;
+}
+
+.whitePalette{
+  background-color: white;
+  color: #1b1d44;
+  border-color: #549697;
+}
+h1.whitePalette{
+  color: #549697;
 }
