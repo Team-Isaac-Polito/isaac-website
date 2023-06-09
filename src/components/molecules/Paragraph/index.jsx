@@ -1,42 +1,49 @@
 import React from "react"
 import Button from "../../atoms/Button"
 import RotatedBorder from "../../atoms/RotatedBorder"
-import Frame from "../../atoms/frame"
 import Title from "../../atoms/Title"
 
 export default function Paragraph(props) {
   return props.isTextLeft ? (
-    <div className="w-full">
-      <div className="grid grid-cols-2 w-full text-white py-[100px] bg-dark-blue-isaac h-fit">
-        <div className=" ml-[150px] mt-0 w-fit h-fit">
-          <Title className="text-yellow-isaac">{props.title}</Title>
-          <div className="my-10">{props.text}</div>
-          <Button text="Learn more" isYellow />
-        </div>
-        <div className="w-full pl-24 m-auto h-fit">
-          <div className="z-0 bg-gray-500 h-[666px] w-[547px] rounded-md ml-[55px]"></div>
-          <Frame color="stroke-yellow-isaac" className="-mt-[715px]" />
+    <div className="skew-y-3">
+      <div class={props.class}>
+        <div className="-skew-y-3 grid grid-cols-2 gap-24 w-full py-[200px]">
+          <div className="ml-[150px] w-fit m-auto">
+            <Title class={props.class}>{props.title}</Title>
+            <div className="my-10">{props.text}</div>
+            <Button text="Learn more" class={props.class} />
+          </div>
+          <div className="relative">
+            <RotatedBorder
+              classN={props.class}
+              color="green"
+              width="619px"
+              height="729px"
+            ></RotatedBorder>
+            <div className="m-auto z-10 rounded-md bg-gray-500 h-[666px] w-[547px]" />
+          </div>
         </div>
       </div>
     </div>
   ) : (
-    <div className="w-full">
-      <div className="grid grid-cols-2 gap-24 w-full text-white py-[100px] bg-dark-blue-isaac h-fit">
-        <div className="w-full pl-24 m-auto">
-          <RotatedBorder
-            rotateBorder="-93deg"
-            borderHeight="90%"
-            color="red"
-            width="150px"
-            height="230px"
-          >
-            <div className="!overflow-visible -ml-3 z-0 bg-gray-500 h-[666px] w-[547px] rounded-md m-auto" />
-          </RotatedBorder>
-        </div>
-        <div className="mr-[150px] w-fit text-right m-auto">
-          <Title className="text-yellow-isaac">{props.title}</Title>
-          <div className="my-10">{props.text}</div>
-          <Button text="Learn more" isYellow className="ml-10 w-fit" />
+    <div className="skew-y-3">
+      <div class={props.class}>
+        <div className="-skew-y-3 grid grid-cols-2 gap-24 w-full py-[200px] ">
+          <div className="relative">
+            <RotatedBorder
+              classN={props.class}
+              width="619px"
+              height="729px"
+            ></RotatedBorder>
+            <div className="m-auto z-10 rounded-md bg-gray-500 h-[666px] w-[547px]" />
+          </div>
+          <div className="mr-[150px] w-fit text-right m-auto">
+            <Title class={props.class}>{props.title}</Title>
+            <div className="my-10">{props.text}</div>
+            <div className="w-full pr-0">
+              <Button text="Learn more" class={props.class} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

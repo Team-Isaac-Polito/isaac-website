@@ -1,14 +1,9 @@
-import React, { FC } from "react"
-import TitleProps from "./index.types"
+import React from "react"
 
-const Title: FC<TitleProps> = (props) => {
+export default function Title(props) {
   return (
-    <div className={props!.className}>
-      <h1 className="text-[30px] laptop:text-4xl desktop:text-[60px] uppercase font-extrabold">
-        {props.children}
-      </h1>
+    <div className="text-[30px] laptop:text-4xl desktop:text-[60px] uppercase font-extrabold">
+      <h1 className={props.className}>{props.children}</h1>
     </div>
   )
 }
-
-export default Title
