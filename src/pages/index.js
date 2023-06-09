@@ -2,6 +2,8 @@ import RotatedBorder from "../components/atoms/RotatedBorder"
 import Hero from "../components/molecules/Hero"
 import Title from "../components/atoms/Title"
 import lightbulb from "../assets/lightbulb.png"
+import Footer from "../components/atoms/footer";
+
 
 export default function Home() {
   return (
@@ -60,6 +62,7 @@ export default function Home() {
 				secondColor="fill-white"
 				lineColor="stroke-dark-blue"
 			/> */}
+    <Footer></Footer>
     </div>
   )
 }
