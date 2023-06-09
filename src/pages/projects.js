@@ -14,7 +14,8 @@ export default function Projects() {
             <source src={reseq} type="video/mp4"/>
         </video>
         <Paragraph 
-            isTextLeft
+            class="bluePalette"
+            //isTextLeft
             title="About Rese.Q Mk1"
             text="È il primo prototipo del team per raggiungere l’obiettivo di creare un robot innovativo per le operazioni SAR.
             La nostra idea è quella di avere un robot modulare cingolato e con due possibili configurazioni: braccio robotico e robot strisciante. In modo che riesca a destreggiarsi facilmente in situazioni pericolose, per perlustrare l’ambiente senza rischiare le vite dei soccorritori.">
@@ -22,9 +23,9 @@ export default function Projects() {
         <div className="w-full">
             <div className="grid grid-cols-2 w-full text-dark-blue py-[100px] bg-white">
                 <div className=" ml-[150px] mt-0 w-fit h-fit">
-                    <Title className="text-light-blue">Caratteristiche</Title>
+                    <Title class="whitePalette">Caratteristiche</Title>
                     <div className="my-10">Ciao</div>
-                    <Button text="Learn more" />
+                    <Button class="whitePalette" text="Learn more"/>
                 </div >
                 <div>
                     <div className="flex flex-row rounded-lg  bg-light-blue h-fit mb-6 py-3 w-[529px] m-auto">

@@ -9,13 +9,13 @@ export default function Button(props) {
     </div>
   ) : props.isYellow ? (
     <div>
-      <button className="px-5 py-3 rounded-[20px] text-white font-semibold text-4xl uppercase m-auto border-[5px] w-[450px] h-[90px] border-yellow">
+      <button className="px-5 py-3 rounded-[20px] text-white font-semibold text-4xl uppercase m-auto border-[5px] w-[450px] h-[90px]">
         {props.text}
       </button>
     </div>
   ) : (
-    <div>
-      <button className="px-5 py-3 rounded-[20px] text-dark-blue font-semibold text-4xl uppercase m-auto border-[5px] w-[450px] h-[90px] border-light-blue">
+    <div class={props.class}>
+      <button className=" px-5 py-3 rounded-[20px] font-semibold text-4xl uppercase m-auto border-[5px] w-[450px] h-[90px] border-inherit">
         {props.text}
       </button>
     </div>
