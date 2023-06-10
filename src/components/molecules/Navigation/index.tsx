@@ -1,13 +1,14 @@
 import { AnimatePresence, LazyMotion, m } from "framer-motion"
-import React from "react"
+import React, { FC } from "react"
 import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
 import { NavLink } from "react-router-dom"
 import { navRoutes } from "../../../routes"
+import NavigationProps from "./index.types"
 import { SocialNavigation } from "../../atoms/SocialNavigation"
 
 const features = () => import("../../../features").then((res) => res.default)
 
-const Navigation = ({ toggleMenu, setToggleMenu, isRec }) => {
+const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
   return (
     <>
       <AnimatePresence>
