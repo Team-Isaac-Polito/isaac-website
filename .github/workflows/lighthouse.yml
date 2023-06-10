@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CI: false
+      LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -12,4 +13,4 @@ jobs:
           node-version: 20
       - run: npm ci && npm install -g @lhci/cli@0.12.x
       - run: npm run build
-      - run: lhci autorun
+      - run: lhci --config=.github/workflows/lighthouserc.json autorun

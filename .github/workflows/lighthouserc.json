@@ -1,0 +1,17 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./build",
+      "isSinglePageApplication": "true",
+      "url": [        
+        "http://localhost/",
+        "http://localhost/about",
+        "http://localhost/projects",
+        "http://localhost/events"
+      ]
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
