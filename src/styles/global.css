@@ -8,15 +8,9 @@
 body {
   background-color: #ffffff;
   font-family: "Raleway";
-  font-size: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border-color: inherit;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 h1 {
