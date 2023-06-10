@@ -1,11 +1,16 @@
 import React from "react"
-import { navRoutes } from "../../../routes.ts"
+import { navRoutes } from "../../../routes"
 import { NavLink } from "react-router-dom"
 import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
-import classNames from "classnames"
 import MenuIcon from "../../../assets/MenuIcon.png"
 
 const NavBar = ({ setToggleMenu, toggleMenu }) => {
+  const navLinkClass = ({ isActive }: { isActive: boolean }): string => {
+    return `hover:text-yellow-isaac mt-0 h-fit text-white font-extrabold text-xl tablet:text-base laptop:text-2xl desktop:text-4xl ${
+      isActive ? "text-yellow-isaac" : ""
+    }`
+  }
+
   return (
     <header className="sticky top-0 z-20 grid w-full h-20 grid-cols-4 text-white bg-transparent font-Staatliches laptop:h-28 desktop:h-32 tablet:bg-dark-blue-isaac tablet:backdrop-blur-md">
       <Logo className="hidden h-10 m-auto laptop:ml-4 desktop:ml-28 laptop:h-14 desktop:h-20 tablet:flex" />
@@ -17,13 +22,7 @@ const NavBar = ({ setToggleMenu, toggleMenu }) => {
                 key={route.id}
                 className="relative inline-block mx-5 cursor-pointer h-fit"
               >
-                <NavLink
-                  to={route.path}
-                  className={classNames(
-                    "hover:text-yellow-isaac mt-0 h-fit text-white font-extrabold text-xl tablet:text-base laptop:text-2xl desktop:text-4xl",
-                    ({ isActive }) => (isActive ? "text-yellow-isaac" : "")
-                  )}
-                >
+                <NavLink to={route.path} className={navLinkClass}>
                   {route.title}
                 </NavLink>
               </li>

@@ -1,17 +1,11 @@
 import { ReactComponent as FacebookButton } from "../../../assets/svg/facebookButton.svg"
 import { ReactComponent as InstagramButton } from "../../../assets/svg/instagramButton.svg"
 import { ReactComponent as LinkedinButton } from "../../../assets/svg/linkedinButton.svg"
-import classNames from "classnames"
 
 export const SocialNavigation = (className) => {
   return (
     <>
-      <div
-        className={classNames(
-          "text-white hover:text-yellow flex flex-row items-center gap-[6px] tablet:gap-3 laptop:gap-5 notebook:gap-6 desktop:gap-7",
-          className ?? ""
-        )}
-      >
+      <div className="text-white hover:text-yellow flex flex-row items-center gap-[6px] tablet:gap-3 laptop:gap-5 notebook:gap-6 desktop:gap-7">
         <a
           href={"https://www.facebook.com/"}
           target="_blank"
