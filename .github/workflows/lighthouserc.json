@@ -3,7 +3,7 @@
     "collect": {
       "staticDistDir": "./build",
       "isSinglePageApplication": "true",
-      "url": [        
+      "url": [
         "http://localhost/",
         "http://localhost/about",
         "http://localhost/projects",
