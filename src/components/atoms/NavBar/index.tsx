@@ -1,10 +1,11 @@
-import React from "react"
+import React, { FC } from "react"
 import { navRoutes } from "../../../routes"
 import { NavLink } from "react-router-dom"
 import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
 import MenuIcon from "../../../assets/MenuIcon.png"
+import NavBarProps from "./index.types"
 
-const NavBar = ({ setToggleMenu, toggleMenu }) => {
+const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
   const navLinkClass = ({ isActive }: { isActive: boolean }): string => {
     return `hover:text-yellow-isaac mt-0 h-fit text-white font-extrabold text-xl tablet:text-base laptop:text-2xl desktop:text-4xl ${
       isActive ? "text-yellow-isaac" : ""
@@ -34,7 +35,7 @@ const NavBar = ({ setToggleMenu, toggleMenu }) => {
         <a href="/" className="m-auto h-fit">
           ITA
         </a>
-        <div className="w-[3px] laptop:w-1 h-8 mx-3 bg-white laptop:h-10" />{" "}
+        <div className="w-[3px] laptop:w-1 h-8 mx-3 bg-white laptop:h-10" />
         <a href="/" className="m-auto h-fit">
           ENG
         </a>

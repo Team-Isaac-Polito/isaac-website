@@ -1,6 +1,7 @@
-import React from "react"
+import React, { FC } from "react"
+import RotatedBorderProps from "./index.types"
 
-const RotatedBorder = ({
+const RotatedBorder: FC<RotatedBorderProps> = ({
   color = "black",
   children,
   vertical = "-3deg",

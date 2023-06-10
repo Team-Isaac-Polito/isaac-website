@@ -1,4 +1,4 @@
 export default interface TitleProps {
-  className?: string | any
-  children: number | string
+  className?: string
+  children: React.ReactNode
 }
