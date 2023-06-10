@@ -22,14 +22,10 @@
     }
   },
   "include": [
-    "custom.d.ts",
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "lib/api.ts",
-    "src/components/atoms/SocialNavigation/index.jsx",
-    "src/components/atoms/footer/index.jsx",
-    "src/components/atoms/footer/index.jsx"
+    "**/*.js",
+    "**/*.jsx"
   ],
   "exclude": ["node_modules"]
 }
