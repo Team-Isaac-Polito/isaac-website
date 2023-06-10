@@ -3,7 +3,7 @@ import Hero from "../components/molecules/Hero"
 import Title from "../components/atoms/Title"
 import lightbulb from "../assets/lightbulb.png"
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <div>
       <Hero
@@ -11,7 +11,7 @@ export default function Home() {
         subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       />
       <div className="w-full pt-10 bg-white laptop:pt-24 text-dark-blue-isaac h-fit">
-        <Title className="m-auto mb-10 text-center">About us</Title>
+        <Title className="m-auto mb-10 text-center">About</Title>
         <p className="mx-10 tablet:mx-[75px] laptop:mx-[100px] desktop:mx-[200px] w-fit tablet:text-center text-[18px] laptop:text-2xl desktop:text-4xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget
           laoreet arcu, et placerat erat. Proin semper tristique elit a dictum.
@@ -27,11 +27,13 @@ export default function Home() {
       </div>
       <div className="mt-5">
         <RotatedBorder
-          rotateBorder="-93deg"
-          borderHeight="90%"
+          vertical="-93deg"
           color="red"
           width="150px"
           height="230px"
+          top={0}
+          left={0}
+          right={0}
         >
           <div className="!overflow-visible -ml-3">
             <img

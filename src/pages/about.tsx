@@ -1,6 +1,6 @@
 import Title from "../components/atoms/Title"
 
-export default function Home() {
+export default function About(): JSX.Element {
   return (
     <div className="mt-10 transform skew-y-3 bg-white">
       <div className="w-full pt-20 transform -skew-y-3 laptop:pt-24 text-dark-blue-isaac h-fit">

@@ -2,10 +2,10 @@ import "./styles/global.css"
 import { createRoot } from "react-dom/client"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Layout from "./components/organisms/Layout"
-import Home from "./pages/index.js"
-import About from "./pages/about.js"
-import Projects from "./pages/projects.js"
-import Events from "./pages/events.js"
+import Home from "./pages/index.tsx"
+import About from "./pages/about.tsx"
+import Projects from "./pages/projects.tsx"
+import Events from "./pages/events.tsx"
 
 export default function App() {
   return (
