@@ -13,7 +13,7 @@ export default function Projects(): JSX.Element {
           Rese.Q Mk1
         </Title>
 
-        <video width="1920" height="600" autoPlay="autoplay" muted loop>
+        <video width="1920" height="600" autoPlay={true} muted loop>
           <source src={reseq} type="video/mp4" />
         </video>
 
