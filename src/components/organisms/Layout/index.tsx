@@ -1,6 +1,6 @@
 import React, { FC, useRef, useState } from "react"
 import NavBar from "../../atoms/NavBar"
-import Footer from "../../atoms/footer"
+import Footer from "../../atoms/Footer"
 import Navigation from "../../molecules/Navigation"
 import { Outlet } from "react-router-dom"
 import LayoutProps from "./index.types"
