@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react"
+import React, { FC, useRef, useState } from "react"
 import NavBar from "../../atoms/NavBar"
-import Footer from "../../atoms/footer"
+import Footer from "../../atoms/Footer"
 import Navigation from "../../molecules/Navigation"
 import { Outlet } from "react-router-dom"
+import LayoutProps from "./index.types"
 
-const Layout = ({ children }) => {
+const Layout: FC<LayoutProps> = ({ children }) => {
   const topRef = useRef(null)
   const [toggleMenu, setToggleMenu] = useState(false)
 
@@ -18,11 +19,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div ref={topRef} />
-      <NavBar
-        toggleMenu={toggleMenu}
-        setToggleMenu={disableScrollMobile}
-        isRec={false}
-      />
+      <NavBar toggleMenu={toggleMenu} setToggleMenu={disableScrollMobile} />
       <Navigation toggleMenu={toggleMenu} setToggleMenu={disableScrollMobile} />
       <Outlet />
       {children}

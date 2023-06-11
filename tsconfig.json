@@ -21,6 +21,13 @@
       "@organisms/*": ["src/components/organisms/*"]
     }
   },
-  "include": ["custom.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+  "include": [
+    "custom.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.config.js"
+  ],
   "exclude": ["node_modules"]
 }

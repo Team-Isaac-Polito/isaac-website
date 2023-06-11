@@ -4,7 +4,7 @@ import Title from "../components/atoms/Title"
 import Paragraph from "../components/molecules/Paragraph"
 import reseq from "../assets/prova.mp4"
 
-export default function Projects() {
+export default function Projects(): JSX.Element {
   return (
     <div>
       <div>
@@ -13,22 +13,24 @@ export default function Projects() {
             Rese.Q Mk1
           </Title>
         </div>
-        <video width="1920" height="600" autoPlay="autoplay" muted loop>
+        <video width="1920" height="600" autoPlay muted loop>
           <source src={reseq} type="video/mp4" />
         </video>
         <Paragraph
-          class="bluePalette"
-          //isTextLeft
+          classN="bluePalette"
+          isTextLeft
           title="About Rese.Q Mk1"
           text="È il primo prototipo del team per raggiungere l’obiettivo di creare un robot innovativo per le operazioni SAR.
             La nostra idea è quella di avere un robot modulare cingolato e con due possibili configurazioni: braccio robotico e robot strisciante. In modo che riesca a destreggiarsi facilmente in situazioni pericolose, per perlustrare l’ambiente senza rischiare le vite dei soccorritori."
-        ></Paragraph>
+        />
         <div className="w-full">
           <div className="grid grid-cols-2 w-full text-dark-blue py-[100px] bg-white">
             <div className=" ml-[150px] mt-0 w-fit h-fit">
-              <Title class="whitePalette">Caratteristiche</Title>
+              <Title className="whitePalette">Caratteristiche</Title>
               <div className="my-10">Ciao</div>
-              <Button class="whitePalette" text="Learn more" />
+              <Button className="whitePalette" isPrimary={false}>
+                Learn more
+              </Button>
             </div>
             <div>
               <div className="flex flex-row rounded-lg  bg-light-blue h-fit mb-6 py-3 w-[529px] m-auto">

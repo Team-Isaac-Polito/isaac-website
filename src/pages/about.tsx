@@ -1,16 +1,10 @@
-import RotatedBorder from "../components/atoms/RotatedBorder"
-import Hero from "../components/molecules/Hero"
 import Title from "../components/atoms/Title"
-import lightbulb from "../assets/lightbulb.png"
+import React from "react"
 
-export default function Home() {
+export default function About(): JSX.Element {
   return (
-    <div>
-      <Hero
-        title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      />
-      <div className="w-full pt-10 bg-white laptop:pt-24 text-dark-blue-isaac h-fit">
+    <div className="mt-10 transform skew-y-3 bg-white">
+      <div className="w-full pt-20 transform -skew-y-3 laptop:pt-24 text-dark-blue-isaac h-fit">
         <Title className="m-auto mb-10 text-center">About us</Title>
         <p className="mx-10 tablet:mx-[75px] laptop:mx-[100px] desktop:mx-[200px] w-fit tablet:text-center text-[18px] laptop:text-2xl desktop:text-4xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget
@@ -24,23 +18,6 @@ export default function Home() {
           <div className="w-[130px] h-[130px] laptop:w-[180px] laptop:h-[180px] desktop:w-[262px] desktop:h-[263px] bg-gray-400 rounded-[10px] m-auto"></div>
           <div className="w-[130px] h-[130px] laptop:w-[180px] laptop:h-[180px] desktop:w-[262px] desktop:h-[263px] bg-gray-400 rounded-[10px] m-auto"></div>
         </div>
-      </div>
-      <div className="mt-5">
-        <RotatedBorder
-          rotateBorder="-93deg"
-          borderHeight="90%"
-          color="red"
-          width="150px"
-          height="230px"
-        >
-          <div className="!overflow-visible -ml-3">
-            <img
-              src={lightbulb}
-              className="w-[130px] relative left-[15%] top-[7px]"
-              alt="lightbulb"
-            />
-          </div>
-        </RotatedBorder>
       </div>
     </div>
   )

@@ -11,7 +11,7 @@ const Hero: FC<HeroProps> = (props) => {
           {props.title}
         </h1>
         <div className="m-auto mt-16 w-fit">
-          <Button text="Contattaci" isPrimary />
+          <Button isPrimary>Contattaci</Button>
         </div>
       </div>
     </div>
