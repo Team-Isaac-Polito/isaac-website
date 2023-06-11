@@ -1,8 +1,8 @@
 export default interface ParagraphProps {
-  props: string
+  props?: string
   palette: string
-  invertSlope: boolean
-  isStart: boolean
+  invertSlope?: boolean
+  isStart?: boolean
   children: React.ReactNode
   className?: string
 }

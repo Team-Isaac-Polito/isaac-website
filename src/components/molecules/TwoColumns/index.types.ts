@@ -1,7 +1,7 @@
 export default interface TwoColumnsProps {
-  props: string
-  palette?: string
-  isTextLeft: boolean
+  props?: string
+  palette: string
+  isTextLeft?: boolean
 
   text: string
   buttonText?: string
