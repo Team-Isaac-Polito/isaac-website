@@ -10,7 +10,10 @@ export default function Home(): JSX.Element {
         title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       />
-      <div className="w-full pt-10 bg-white laptop:pt-24 text-dark-blue-isaac h-fit">
+      <div
+        className="w-full pt-10 bg-white laptop:pt-24 text-dark-blue-isaac h-fit"
+        id="about"
+      >
         <Title className="m-auto mb-10 text-center">About</Title>
         <p className="mx-10 tablet:mx-[75px] laptop:mx-[100px] desktop:mx-[200px] w-fit tablet:text-center text-[18px] laptop:text-2xl desktop:text-4xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget
