@@ -1,6 +1,6 @@
 import React from "react"
 import Button from "../../atoms/Button"
-import RotatedBorder from "../../atoms/RotatedBorder"
+import RotatedBorderNew from "../../atoms/RotatedBorderNew"
 import Title from "../../atoms/Title"
 
 export default function Paragraph(props) {
@@ -14,12 +14,12 @@ export default function Paragraph(props) {
             <Button text="Learn more" class={props.class} />
           </div>
           <div className="relative">
-            <RotatedBorder
+            <RotatedBorderNew
               classN={props.class}
               color="green"
               width="619px"
               height="729px"
-            ></RotatedBorder>
+            ></RotatedBorderNew>
             <div className="m-auto z-10 rounded-md bg-gray-500 h-[666px] w-[547px]" />
           </div>
         </div>
@@ -30,11 +30,11 @@ export default function Paragraph(props) {
       <div className={props.class}>
         <div className="-skew-y-3 grid grid-cols-2 gap-24 w-full py-[200px] ">
           <div className="relative">
-            <RotatedBorder
+            <RotatedBorderNew
               classN={props.class}
               width="619px"
               height="729px"
-            ></RotatedBorder>
+            ></RotatedBorderNew>
             <div className="m-auto z-10 rounded-md bg-gray-500 h-[666px] w-[547px]" />
           </div>
           <div className="mr-[150px] w-fit text-right m-auto">
