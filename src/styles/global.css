@@ -13,22 +13,9 @@ body {
   border-color: inherit;
 }
 
-h1 {
-  font-family: "Raleway";
-  font-size: 70px;
-}
-
-h2 {
-  font-family: "Raleway";
-  font-size: 40px;
-}
-
 @layer components {
   .bluePalette {
-    @apply bg-dark-blue-isaac text-white border-yellow-isaac;
-    div {
-      @apply bluePalette;
-    }
+    @apply bg-dark-blue-isaac text-white border-light-blue-isaac;
   }
   .lightBluePalette {
     @apply bg-light-blue-isaac text-white border-yellow-isaac;
