@@ -11,7 +11,7 @@ const TwoColumns: FC<TwoColumnsProps> = (props) => {
         <div className=" w-fit m-auto mx-10">
           <Title className={props.palette}>{props.title}</Title>
           <div className="my-10 ">{props.text}</div>
-          {props.buttonText == undefined || props.buttonText == "" ? null : (
+          {props.buttonText === undefined || props.buttonText === "" ? null : (
             <Button palette={props.palette}>{props.buttonText}</Button>
           )}
         </div>
@@ -31,7 +31,8 @@ const TwoColumns: FC<TwoColumnsProps> = (props) => {
           <div className="my-10">{props.text}</div>
 
           <div className="w-full pr-0">
-            {props.buttonText == undefined || props.buttonText == "" ? null : (
+            {props.buttonText === undefined ||
+            props.buttonText === "" ? null : (
               <Button palette={props.palette}>{props.buttonText}</Button>
             )}
           </div>

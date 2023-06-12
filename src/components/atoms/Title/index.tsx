@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react"
 import TitleProps from "./index.types"
-import classNames from "classnames"
 
 const Title = forwardRef<HTMLAnchorElement, TitleProps>(
   ({ children, className, palette }): JSX.Element => {

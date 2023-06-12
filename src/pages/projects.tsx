@@ -1,5 +1,4 @@
 import React from "react"
-import Button from "../components/atoms/Button"
 import Title from "../components/atoms/Title"
 import Paragraph from "../components/molecules/Paragraph"
 import reseq from "../assets/prova.mp4"

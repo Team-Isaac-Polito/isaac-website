@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react"
 import ButtonProps from "./index.types"
-import classNames from "classnames"
 import { ButtonGroup } from "@mantine/core/lib/Button/ButtonGroup/ButtonGroup"
 
 const Button = forwardRef<HTMLAnchorElement, ButtonProps>(

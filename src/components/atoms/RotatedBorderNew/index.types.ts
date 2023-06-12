@@ -1,5 +1,3 @@
-import { ReactElement } from "react"
-
 export default interface RotatedBorderNewProps {
   props?: any
   palette?: string
