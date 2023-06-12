@@ -4,35 +4,44 @@ import RotatedBorderNew from "../../atoms/RotatedBorderNew"
 import Title from "../../atoms/Title"
 import TwoColumnsProps from "./index.types"
 
-const TwoColumns: FC<TwoColumnsProps> = (props) => {
-  return props.isTextLeft ? (
-    <div className={props.heigth}>
-      <div className="grid grid-cols-2 gap-20 w-full h-full">
-        <div className=" w-fit m-auto mx-10">
-          <Title className={props.palette}>{props.title}</Title>
-          <div className="my-10 ">{props.text}</div>
-          {props.buttonText == undefined || props.buttonText == "" ? null : (
-            <Button palette={props.palette}>{props.buttonText}</Button>
+const TwoColumns: FC<TwoColumnsProps> = ({
+  className,
+  isTextLeft,
+  text,
+  buttonText,
+  title,
+  children,
+  classNameTitle,
+  classNameButton,
+  classNameBorder,
+}) => {
+  return isTextLeft ? (
+    <div className={className}>
+      <div className="grid w-full h-full grid-cols-2 gap-20">
+        <div className="m-auto mx-10 w-fit">
+          <Title className={classNameTitle}>{title}</Title>
+          <div className="my-10 ">{text}</div>
+          {buttonText === undefined || buttonText === "" ? null : (
+            <Button className={classNameButton}>{buttonText}</Button>
           )}
         </div>
-        <RotatedBorderNew palette={props.palette} borderSize={props.borderSize}>
-          {props.children}
+        <RotatedBorderNew className={classNameBorder} invertSlope={false}>
+          {children}
         </RotatedBorderNew>
       </div>
     </div>
   ) : (
-    <div className={props.heigth}>
-      <div className="grid grid-cols-2 gap-20 w-full h-full">
-        <RotatedBorderNew palette={props.palette} borderSize={props.borderSize}>
-          {props.children}
+    <div className={className}>
+      <div className="grid w-full h-full grid-cols-2 gap-20">
+        <RotatedBorderNew className={classNameBorder} invertSlope={false}>
+          {children}
         </RotatedBorderNew>
-        <div className=" w-fit text-right m-auto mx-10">
-          <Title className={props.palette}>{props.title}</Title>
-          <div className="my-10">{props.text}</div>
-
+        <div className="m-auto mx-10 text-right w-fit">
+          <Title className={classNameTitle}>{title}</Title>
+          <div className="my-10">{text}</div>
           <div className="w-full pr-0">
-            {props.buttonText == undefined || props.buttonText == "" ? null : (
-              <Button palette={props.palette}>{props.buttonText}</Button>
+            {buttonText === undefined || buttonText === "" ? null : (
+              <Button className={classNameButton}>{buttonText}</Button>
             )}
           </div>
         </div>

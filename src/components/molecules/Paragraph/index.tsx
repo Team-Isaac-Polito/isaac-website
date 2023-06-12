@@ -1,40 +1,47 @@
 import React, { FC } from "react"
 import ParagraphProps from "./index.types"
+import classNames from "classnames"
 
-const Paragraph: FC<ParagraphProps> = (props) => {
-  return props.invertSlope ? (
-    props.isStart ? (
-      <div className={" skew-y-3 h-fit" + props.className}>
-        <div className={"py-[10px] " + props.palette} />
+const Paragraph: FC<ParagraphProps> = ({
+  invertSlope,
+  isStart,
+  children,
+  className,
+  classNameDiv,
+}) => {
+  return invertSlope ? (
+    isStart ? (
+      <div className={classNames("skew-y-3 h-fit", classNameDiv)}>
+        <div className={classNames("py-[10px]", className)} />
         <div className="bg-white py-[10px]" />
-        <div className={props.palette}>
-          <div className="-skew-y-3 py-[50px]">{props.children}</div>
+        <div className={className}>
+          <div className="-skew-y-3 py-[50px]">{children}</div>
         </div>
       </div>
     ) : (
-      <div className={" skew-y-3 " + props.className}>
-        <div className={props.palette}>
-          <div className="-skew-y-3 py-[50px]">{props.children}</div>
+      <div className={classNames("skew-y-3", classNameDiv)}>
+        <div className={className}>
+          <div className="-skew-y-3 py-[50px]">{children}</div>
         </div>
         <div className="bg-white py-[10px]" />
-        <div className={"py-[10px] " + props.palette} />
+        <div className={classNames("py-[10px]", className)} />
       </div>
     )
-  ) : props.isStart ? (
-    <div className={" -skew-y-3 h-fit" + props.className}>
-      <div className={"py-[10px] " + props.palette} />
+  ) : isStart ? (
+    <div className={classNames("-skew-y-3 h-fit", classNameDiv)}>
+      <div className={classNames("py-[10px]", className)} />
       <div className="bg-white py-[10px]" />
-      <div className={props.palette}>
-        <div className="skew-y-3 py-[50px]">{props.children}</div>
+      <div className={className}>
+        <div className="skew-y-3 py-[50px]">{children}</div>
       </div>
     </div>
   ) : (
-    <div className={" -skew-y-3 " + props.className}>
-      <div className={props.palette}>
-        <div className="skew-y-3 py-[50px]">{props.children}</div>
+    <div className={classNames("-skew-y-3 ", classNameDiv)}>
+      <div className={className}>
+        <div className="skew-y-3 py-[50px]">{children}</div>
       </div>
       <div className="bg-white py-[10px]" />
-      <div className={"py-[10px] " + props.palette} />
+      <div className={classNames("py-[10px]", className)} />
     </div>
   )
 }
