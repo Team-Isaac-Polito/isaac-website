@@ -125,7 +125,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
                 }}
                 className="mb-4 w-fit"
               >
-                Rase.Q
+                Rese.Q
               </button>
             </div>
           </div>
