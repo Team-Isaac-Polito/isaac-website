@@ -134,10 +134,10 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
               Eventi
             </div>
             <div className="grid grid-rows-5 text-xl">
-              <a href="" className="mb-4">
+              <a href="/" className="mb-4">
                 Maker Faire 2022
               </a>
-              <a href="" className="mb-4">
+              <a href="/" className="mb-4">
                 A&T 2023
               </a>
             </div>

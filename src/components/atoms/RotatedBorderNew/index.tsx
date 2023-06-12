@@ -1,45 +1,50 @@
 import React, { FC } from "react"
 import RotatedBorderNewProps from "./index.types"
+import classNames from "classnames"
 
-const RotatedBorderNew: FC<RotatedBorderNewProps> = (props) => {
-  return props.invertSlope ? (
+const RotatedBorderNew: FC<RotatedBorderNewProps> = ({
+  invertSlope,
+  children,
+  className,
+}) => {
+  return invertSlope ? (
     <div className="relative h-full">
       <div
-        className={"absolute left-0 right-0 m-auto " + props.palette}
+        className={classNames("absolute left-0 right-0 m-auto ", className)}
         style={{ top: "50%", transform: "translateY(-50%)" }}
       >
         <div
-          className={
-            "m-auto border-2 border-solid rounded-md rotate-[3deg] border-inherit" +
-            props.borderSize
-          }
+          className={classNames(
+            "m-auto border-2 border-solid rounded-md rotate-[3deg] border-inherit",
+            className
+          )}
         ></div>
       </div>
       <div
         style={{ top: "50%", transform: "translateY(-50%)" }}
         className={"absolute left-0 right-0 m-auto z-10 w-fit "}
       >
-        {props.children}
+        {children}
       </div>
     </div>
   ) : (
     <div className="relative h-full">
       <div
-        className={"absolute left-0 right-0 m-auto " + props.palette}
+        className={classNames("absolute left-0 right-0 m-auto ", className)}
         style={{ top: "50%", transform: "translateY(-50%)" }}
       >
         <div
-          className={
-            "m-auto border-2 border-solid rounded-md -rotate-[3deg] border-inherit" +
-            props.borderSize
-          }
+          className={classNames(
+            "m-auto border-2 border-solid rounded-md -rotate-[3deg] border-inherit",
+            className
+          )}
         ></div>
       </div>
       <div
         style={{ top: "50%", transform: "translateY(-50%)" }}
         className={"absolute left-0 right-0 m-auto z-10 w-fit "}
       >
-        {props.children}
+        {children}
       </div>
     </div>
   )
