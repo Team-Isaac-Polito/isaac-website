@@ -10,7 +10,7 @@
 		"@mantine/hooks": "^6.0.13",
 		"@svgr/webpack": "^8.0.1",
 		"@types/jest": "^29.5.2",
-		"@types/node": "^20.2.6",
+		"@types/node": "^20.3.0",
 		"@types/react": "^18.2.11",
 		"@types/react-dom": "^18.2.4",
 		"classnames": "^2.3.2",
@@ -50,7 +50,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.22.5",
-		"@types/node": "^20.2.6",
+		"@types/node": "^20.3.0",
 		"@types/react": "^18.2.11",
 		"@types/webpack-env": "^1.18.1",
 		"css-loader": "^6.8.1",
