@@ -50,7 +50,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
               </button>
               <button
                 onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                  scrollToElement("#progetti")
+                  scrollToElement("#projects")
                 }}
                 className="mb-4 w-fit"
               >
@@ -58,7 +58,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
               </button>
               <button
                 onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                  scrollToElement("#eventi")
+                  scrollToElement("#events")
                 }}
                 className="mb-4 w-fit"
               >
@@ -66,7 +66,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
               </button>
               <button
                 onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                  scrollToElement("#numeri")
+                  scrollToElement("#numbers")
                 }}
                 className="mb-4 w-fit"
               >
@@ -74,7 +74,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
               </button>
               <button
                 onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                  scrollToElement("#contatti")
+                  scrollToElement("#contacts")
                 }}
                 className="mb-4 w-fit"
               >
@@ -90,7 +90,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
             <div className="grid grid-rows-5 text-xl">
               <button
                 onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                  scrollToElement("#contatti")
+                  scrollToElement("#aboutUs")
                 }}
                 className="mb-4 w-fit"
               >
@@ -98,7 +98,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
               </button>
               <button
                 onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                  scrollToElement("#contatti")
+                  scrollToElement("#history")
                 }}
                 className="mb-4 w-fit"
               >
@@ -106,7 +106,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
               </button>
               <button
                 onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                  scrollToElement("#contatti")
+                  scrollToElement("#teamAreas")
                 }}
                 className="mb-4 w-fit"
               >
@@ -121,7 +121,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
             <div className="grid grid-rows-5 text-xl">
               <button
                 onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                  scrollToElement("#contatti")
+                  scrollToElement("#reseQ")
                 }}
                 className="mb-4 w-fit"
               >
@@ -134,12 +134,22 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
               Eventi
             </div>
             <div className="grid grid-rows-5 text-xl">
-              <a href="/" className="mb-4">
+              <button
+                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                  scrollToElement("#makerFaire")
+                }}
+                className="mb-4 w-fit"
+              >
                 Maker Faire 2022
-              </a>
-              <a href="/" className="mb-4">
+              </button>
+              <button
+                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                  scrollToElement("#a&t")
+                }}
+                className="mb-4 w-fit"
+              >
                 A&T 2023
-              </a>
+              </button>
             </div>
           </div>
         </div>
