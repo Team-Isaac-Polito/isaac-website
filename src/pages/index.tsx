@@ -1,3 +1,4 @@
+import React from "react"
 import RotatedBorder from "../components/atoms/RotatedBorder"
 import Hero from "../components/molecules/Hero"
 import Title from "../components/atoms/Title"

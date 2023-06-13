@@ -1,4 +1,4 @@
-import { FC } from "react"
+import React, { FC } from "react"
 import SocialProps from "./index.types"
 import { ReactComponent as EmailButton } from "../../../assets/svg/emailButton.svg"
 import { ReactComponent as InstagramButton } from "../../../assets/svg/instagramButton.svg"
