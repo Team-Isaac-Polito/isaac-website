@@ -17,7 +17,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      REACT_APP_BASE_PATH: ${{ github.event.repository.name }}/
+      BASE_PATH: /${{ github.event.repository.name }}
       CI: false
     steps:
       - name: Checkout
