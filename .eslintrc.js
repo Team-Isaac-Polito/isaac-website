@@ -19,4 +19,9 @@ module.exports = {
   parserOptions: {
     warnOnUnsupportedTypeScriptVersion: false,
   },
+  settings: {
+    react: {
+      version: "detect",  
+    },
+  }
 }
