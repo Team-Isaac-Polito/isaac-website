@@ -2,7 +2,6 @@
 	"name": "isaac-website",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": ".",
 	"dependencies": {
 		"@emotion/react": "^11.11.1",
 		"@mantine/carousel": "^6.0.13",
