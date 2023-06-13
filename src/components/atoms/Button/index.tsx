@@ -3,7 +3,7 @@ import ButtonProps from "./index.types"
 import classNames from "classnames"
 
 const Button = forwardRef<HTMLAnchorElement, ButtonProps>(
-  ({ isPrimary, children, className, href, onClick }): JSX.Element => {
+  ({ isPrimary, children, className, href, onClick }, ref): JSX.Element => {
     return isPrimary ? (
       <a
         href={href}

@@ -3,7 +3,7 @@ import TitleProps from "./index.types"
 import classNames from "classnames"
 
 const Title = forwardRef<HTMLAnchorElement, TitleProps>(
-  ({ children, className }): JSX.Element => {
+  ({ children, className }, ref): JSX.Element => {
     return (
       <div className="text-[30px] laptop:text-4xl desktop:text-[60px] uppercase font-extrabold">
         <h1
