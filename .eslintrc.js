@@ -13,7 +13,8 @@ module.exports = {
     "react-refresh",
   ],
   rules: {
-    "react-refresh/only-export-components": "warn"
+    "react-refresh/only-export-components": "warn",
+    "prettier/prettier": "warn",
   },
   parserOptions: {
     warnOnUnsupportedTypeScriptVersion: false,
