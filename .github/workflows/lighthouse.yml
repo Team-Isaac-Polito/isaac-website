@@ -4,7 +4,6 @@ jobs:
   lighthouseci:
     runs-on: ubuntu-latest
     env:
-      CI: false
       LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
     steps:
       - uses: actions/checkout@v3
