@@ -8,10 +8,7 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   parser: "@typescript-eslint/parser",
-  plugins: [
-    "@typescript-eslint",
-    "react-refresh",
-  ],
+  plugins: ["@typescript-eslint", "react-refresh"],
   rules: {
     "react-refresh/only-export-components": "warn",
     "prettier/prettier": "warn",
@@ -21,7 +18,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: "detect",  
+      version: "detect",
     },
-  }
+  },
 }
