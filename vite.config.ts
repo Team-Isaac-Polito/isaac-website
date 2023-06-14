@@ -6,7 +6,7 @@ import eslint from 'vite-plugin-eslint';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.BASE_PATH || "",
+  base: process.env.BASE_PATH || "/",
   plugins: [
     react(),
     svgrPlugin(),
