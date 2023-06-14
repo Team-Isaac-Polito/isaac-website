@@ -41,7 +41,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
             </div>
             <div className="grid grid-rows-5 text-xl">
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#about")
                 }}
                 className="mb-4 w-fit"
@@ -49,7 +49,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
                 About
               </button>
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#projects")
                 }}
                 className="mb-4 w-fit"
@@ -57,7 +57,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
                 Progetti
               </button>
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#events")
                 }}
                 className="mb-4 w-fit"
@@ -65,7 +65,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
                 Eventi
               </button>
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#numbers")
                 }}
                 className="mb-4 w-fit"
@@ -73,7 +73,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
                 I nostri numeri
               </button>
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#contacts")
                 }}
                 className="mb-4 w-fit"
@@ -89,7 +89,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
             </div>
             <div className="grid grid-rows-5 text-xl">
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#aboutUs")
                 }}
                 className="mb-4 w-fit"
@@ -97,7 +97,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
                 About us
               </button>
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#history")
                 }}
                 className="mb-4 w-fit"
@@ -105,7 +105,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
                 La nostra storia
               </button>
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#teamAreas")
                 }}
                 className="mb-4 w-fit"
@@ -120,7 +120,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
             </div>
             <div className="grid grid-rows-5 text-xl">
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#reseQ")
                 }}
                 className="mb-4 w-fit"
@@ -135,7 +135,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
             </div>
             <div className="grid grid-rows-5 text-xl">
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#makerFaire")
                 }}
                 className="mb-4 w-fit"
@@ -143,7 +143,7 @@ const Footer: FC<FooterProps> = ({ isNavigation, className }) => {
                 Maker Faire 2022
               </button>
               <button
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick={() => {
                   scrollToElement("#a&t")
                 }}
                 className="mb-4 w-fit"
