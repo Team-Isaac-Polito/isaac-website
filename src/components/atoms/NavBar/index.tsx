@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { NavLink, useLocation, useNavigate } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import MenuIcon from "../../../assets/MenuIcon.png"
 import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
 import { navRoutes } from "../../../routes"
@@ -8,15 +8,9 @@ import NavBarProps from "./index.types"
 
 const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
   const { t, i18n } = useTranslation()
-  const { pathname } = useLocation()
-  const baseUrl = i18n.language === "it" ? "" : "/" + i18n.language
-  const navigate = useNavigate()
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng)
-    const newLng = lng === "it" ? "" : "/" + lng
-    const newPathname = pathname.replace("/en", "")
-    navigate(`${newLng}${newPathname}`)
   }
 
   const navLinkClass = ({ isActive }: { isActive: boolean }): string => {
@@ -36,10 +30,7 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
                 key={route.id}
                 className="relative inline-block mx-5 cursor-pointer h-fit"
               >
-                <NavLink
-                  to={baseUrl + `/${route.path}`}
-                  className={navLinkClass}
-                >
+                <NavLink to={`/${route.path}`} className={navLinkClass}>
                   {t(`routes.${route.title}`)}
                 </NavLink>
               </li>
