@@ -30,7 +30,7 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
                 key={route.id}
                 className="relative inline-block mx-5 cursor-pointer h-fit"
               >
-                <NavLink to={`/${route.path}`} className={navLinkClass}>
+                <NavLink to={`${route.path}`} className={navLinkClass}>
                   {t(`routes.${route.title}`)}
                 </NavLink>
               </li>
