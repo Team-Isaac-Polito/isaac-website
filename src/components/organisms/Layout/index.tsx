@@ -1,11 +1,10 @@
 import Footer from "@atoms/Footer"
 import NavBar from "@atoms/NavBar"
 import Navigation from "@molecules/Navigation"
-import React, { FC, useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 import { Outlet } from "react-router-dom"
-import LayoutProps from "./index.types"
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+const Layout = () => {
   const topRef = useRef(null)
   const [toggleMenu, setToggleMenu] = useState(false)
 
@@ -22,7 +21,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <NavBar toggleMenu={toggleMenu} setToggleMenu={disableScrollMobile} />
       <Navigation toggleMenu={toggleMenu} setToggleMenu={disableScrollMobile} />
       <Outlet />
-      {children}
       <Footer />
     </>
   )
