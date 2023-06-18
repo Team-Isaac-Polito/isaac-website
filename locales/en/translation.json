@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "Home": "Home",
+    "Chi siamo": "About",
+    "Progetti": "Projects",
+    "Eventi": "Events"
+  }
+}
