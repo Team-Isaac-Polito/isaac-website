@@ -1,20 +1,24 @@
-import {defineConfig} from 'vite';
-import react from '@vitejs/plugin-react';
-import svgrPlugin from 'vite-plugin-svgr';
-import tailwindcss from 'tailwindcss';
-import eslint from 'vite-plugin-eslint';
+import react from "@vitejs/plugin-react"
+import path from "path"
+import tailwindcss from "tailwindcss"
+import { defineConfig } from "vite"
+import eslint from "vite-plugin-eslint"
+import svgrPlugin from "vite-plugin-svgr"
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: process.env.BASE_PATH || "/",
-  plugins: [
-    react(),
-    svgrPlugin(),
-    eslint(),
-  ],
+  resolve: {
+    alias: {
+      "@atoms": `${path.resolve(__dirname, "./src/components/atoms")}`,
+      "@molecules": `${path.resolve(__dirname, "./src/components/molecules")}`,
+      "@organisms": `${path.resolve(__dirname, "./src/components/organisms")}`,
+    },
+  },
+  plugins: [react(), svgrPlugin(), eslint()],
   css: {
     postcss: {
       plugins: [tailwindcss],
     },
   },
-});
+})
