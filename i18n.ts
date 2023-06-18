@@ -7,7 +7,7 @@ i18n
   .init({
     debug: true,
     backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
+      loadPath: "locales/{{lng}}/{{ns}}.json",
     },
     supportedLngs: ["it", "en"],
     interpolation: {
