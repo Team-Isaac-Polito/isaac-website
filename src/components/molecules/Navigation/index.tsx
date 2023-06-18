@@ -1,10 +1,10 @@
+import { SocialNavigation } from "@atoms/SocialNavigation"
 import { AnimatePresence, LazyMotion, m } from "framer-motion"
 import React, { FC } from "react"
-import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
 import { NavLink } from "react-router-dom"
+import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
 import { navRoutes } from "../../../routes"
 import NavigationProps from "./index.types"
-import { SocialNavigation } from "../../atoms/SocialNavigation"
 
 const features = () => import("../../../features").then((res) => res.default)
 

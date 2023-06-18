@@ -1,7 +1,7 @@
+import Button from "@atoms/Button"
+import RotatedBorderNew from "@atoms/RotatedBorderNew"
+import Title from "@atoms/Title"
 import React, { FC } from "react"
-import Button from "../../atoms/Button"
-import RotatedBorderNew from "../../atoms/RotatedBorderNew"
-import Title from "../../atoms/Title"
 import TwoColumnsProps from "./index.types"
 
 const TwoColumns: FC<TwoColumnsProps> = ({

@@ -1,7 +1,7 @@
+import RotatedBorder from "@atoms/RotatedBorder"
+import Title from "@atoms/Title"
+import Hero from "@molecules/Hero"
 import React from "react"
-import RotatedBorder from "../components/atoms/RotatedBorder"
-import Hero from "../components/molecules/Hero"
-import Title from "../components/atoms/Title"
 import lightbulb from "../assets/lightbulb.png"
 
 export default function Home(): JSX.Element {

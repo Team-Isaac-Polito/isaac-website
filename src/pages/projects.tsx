@@ -1,8 +1,8 @@
+import Title from "@atoms/Title"
+import Paragraph from "@molecules/Paragraph"
+import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
-import Title from "../components/atoms/Title"
-import Paragraph from "../components/molecules/Paragraph"
 import reseq from "../assets/prova.mp4"
-import TwoColumns from "../components/molecules/TwoColumns"
 
 export default function Projects(): JSX.Element {
   return (
