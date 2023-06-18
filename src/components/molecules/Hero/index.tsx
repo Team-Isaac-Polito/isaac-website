@@ -1,5 +1,5 @@
+import Button from "@atoms/Button"
 import React, { FC } from "react"
-import Button from "../../atoms/Button"
 import HeroProps from "./index.types"
 
 const Hero: FC<HeroProps> = (props) => {
