@@ -1,11 +1,24 @@
 import React, { FC } from "react"
-import { navRoutes } from "../../../routes"
-import { NavLink } from "react-router-dom"
-import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
+import { useTranslation } from "react-i18next"
+import { NavLink, useLocation, useNavigate } from "react-router-dom"
 import MenuIcon from "../../../assets/MenuIcon.png"
+import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
+import { navRoutes } from "../../../routes"
 import NavBarProps from "./index.types"
 
 const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
+  const { t, i18n } = useTranslation()
+  const { pathname } = useLocation()
+  const baseUrl = i18n.language === "it" ? "" : "/" + i18n.language
+  const navigate = useNavigate()
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng)
+    const newLng = lng === "it" ? "" : "/" + lng
+    const newPathname = pathname.replace("/en", "")
+    navigate(`${newLng}${newPathname}`)
+  }
+
   const navLinkClass = ({ isActive }: { isActive: boolean }): string => {
     return `hover:text-yellow-isaac mt-0 h-fit text-white font-extrabold text-xl tablet:text-base laptop:text-2xl desktop:text-4xl ${
       isActive ? "text-yellow-isaac" : ""
@@ -23,8 +36,11 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
                 key={route.id}
                 className="relative inline-block mx-5 cursor-pointer h-fit"
               >
-                <NavLink to={route.path} className={navLinkClass}>
-                  {route.title}
+                <NavLink
+                  to={baseUrl + `/${route.path}`}
+                  className={navLinkClass}
+                >
+                  {t(`routes.${route.title}`)}
                 </NavLink>
               </li>
             )
@@ -32,13 +48,27 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
         </ul>
       </nav>
       <div className="hidden m-auto text-xl text-white tablet:flex tablet:flex-row justify-self-end tablet:text-base laptop:text-2xl desktop:text-4xl w-fit laptop:mr-28">
-        <a href="/" className="m-auto h-fit">
+        <button
+          onClick={() => changeLanguage("it")}
+          className={
+            i18n.language === "it"
+              ? "text-yellow-300 m-auto h-fit"
+              : "m-auto h-fit text-white"
+          }
+        >
           ITA
-        </a>
+        </button>
         <div className="w-[3px] laptop:w-1 h-8 mx-3 bg-white laptop:h-10" />
-        <a href="/" className="m-auto h-fit">
+        <button
+          onClick={() => changeLanguage("en")}
+          className={
+            i18n.language === "en"
+              ? "text-yellow-300 m-auto h-fit"
+              : "m-auto h-fit text-white"
+          }
+        >
           ENG
-        </a>
+        </button>
       </div>
       <div className="h-6 col-start-4 mt-3 mr-4 w-fit justify-self-end tablet:hidden">
         <button
