@@ -15,36 +15,33 @@ const TwoColumns: FC<TwoColumnsProps> = ({
   classNameButton,
   classNameBorder,
 }) => {
-  return isTextLeft ? (
-    <div className={className}>
-      <div className="grid w-full h-full grid-cols-2 gap-20">
-        <div className="m-auto mx-10 w-fit">
-          <Title className={classNameTitle}>{title}</Title>
-          <div className="my-10 ">{text}</div>
-          {buttonText === undefined || buttonText === "" ? null : (
-            <Button className={classNameButton}>{buttonText}</Button>
-          )}
-        </div>
-        <RotatedBorderNew className={classNameBorder} invertSlope={false}>
-          {children}
-        </RotatedBorderNew>
-      </div>
+  const textColumn = (
+    <div className="m-auto w-[250px] laptop:w-[400px] notebook:w-[400px] desktop:w-[600px]  ">
+      <Title className={classNameTitle}>{title}</Title>
+      <div className="my-10 ">{text}</div>
+      {buttonText === undefined || buttonText === "" ? null : (
+        <Button className={classNameButton}>{buttonText}</Button>
+      )}
     </div>
-  ) : (
+  )
+
+  const borderColumn = (
+    <RotatedBorderNew className={classNameBorder} invertSlope={false}>
+      {children}
+    </RotatedBorderNew>
+  )
+
+  return (
     <div className={className}>
-      <div className="grid w-full h-full grid-cols-2 gap-20">
-        <RotatedBorderNew className={classNameBorder} invertSlope={false}>
-          {children}
-        </RotatedBorderNew>
-        <div className="m-auto mx-10 text-right w-fit">
-          <Title className={classNameTitle}>{title}</Title>
-          <div className="my-10">{text}</div>
-          <div className="w-full pr-0">
-            {buttonText === undefined || buttonText === "" ? null : (
-              <Button className={classNameButton}>{buttonText}</Button>
-            )}
-          </div>
-        </div>
+      <div className="grid w-full h-full grid-cols-2 gap-20 text-2xl">
+        {isTextLeft
+          ? [textColumn, borderColumn]
+          : [
+              borderColumn,
+              <div key="textRightColumn" className="m-auto text-right w-fit">
+                {textColumn}
+              </div>,
+            ]}
       </div>
     </div>
   )
