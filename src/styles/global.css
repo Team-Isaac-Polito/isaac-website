@@ -15,7 +15,7 @@ body {
 
 @layer components {
   .bluePalette {
-    @apply bg-dark-blue-isaac text-white border-light-blue-isaac;
+    @apply bg-dark-blue-isaac text-white border-yellow-isaac;
   }
   .lightBluePalette {
     @apply bg-light-blue-isaac text-white border-yellow-isaac;
