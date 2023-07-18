@@ -14,14 +14,14 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
   }
 
   const navLinkClass = ({ isActive }: { isActive: boolean }): string => {
-    return `hover:text-yellow-isaac mt-0 h-fit text-white font-extrabold text-xl tablet:text-base laptop:text-2xl desktop:text-4xl ${
+    return `hover:text-yellow-isaac mt-0 h-fit text-white text-xl tablet:text-base laptop:text-2xl desktop:text-5xl ${
       isActive ? "text-yellow-isaac" : ""
     }`
   }
 
   return (
-    <header className="sticky top-0 z-20 grid w-full h-20 grid-cols-4 text-white bg-transparent font-Staatliches laptop:h-28 desktop:h-32 tablet:bg-dark-blue-isaac tablet:backdrop-blur-md">
-      <Logo className="hidden h-10 m-auto laptop:ml-4 desktop:ml-28 laptop:h-14 desktop:h-20 tablet:flex" />
+    <header className="sticky top-0 z-20 grid w-full h-20 grid-cols-4 text-white bg-transparent font-Staatliches laptop:h-28 desktop:h-36 tablet:bg-dark-blue-isaac tablet:backdrop-blur-md">
+      <Logo className="hidden h-10 m-auto laptop:ml-4 desktop:ml-28 laptop:h-14 desktop:h-24 tablet:flex" />
       <nav className="items-center hidden col-span-2 m-auto text-5xl uppercase tablet:flex tablet:flex-row w-fit">
         <ul className="m-auto">
           {navRoutes.map((route) => {
@@ -43,7 +43,7 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
           onClick={() => changeLanguage("it")}
           className={
             i18n.language === "it"
-              ? "text-yellow-300 m-auto h-fit"
+              ? "text-yellow-isaac m-auto h-fit underline"
               : "m-auto h-fit text-white"
           }
         >
@@ -54,7 +54,7 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
           onClick={() => changeLanguage("en")}
           className={
             i18n.language === "en"
-              ? "text-yellow-300 m-auto h-fit"
+              ? "text-yellow-isaac m-auto h-fit underline"
               : "m-auto h-fit text-white"
           }
         >
