@@ -48,7 +48,7 @@
 		"@types/react": "^18.2.14",
 		"@types/webpack-env": "^1.18.1",
 		"@typescript-eslint/eslint-plugin": "^5.60.1",
-		"@typescript-eslint/parser": "^5.60.1",
+		"@typescript-eslint/parser": "^5.61.0",
 		"@vitejs/plugin-react": "^4.0.1",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-prettier": "^4.2.1",
