@@ -5,7 +5,6 @@ export default interface TwoColumnsProps {
   buttonText?: string
   title: string
   children: React.ReactNode
-  classNameTitle?: string
-  classNameButton?: string
+  palette: string
   classNameBorder?: string
 }
