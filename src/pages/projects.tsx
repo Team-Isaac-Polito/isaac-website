@@ -16,17 +16,15 @@ export default function Projects(): JSX.Element {
           <source src={reseq} type="video/mp4" />
         </video>
 
-        <Paragraph className="bluePalette">
+        <Paragraph palette="bluePalette" className="my-32">
           <TwoColumns
             isTextLeft
-            classNameTitle="bluePalette"
-            classNameButton="bluePalette"
+            palette="bluePalette"
             title="chi è rese.q mk1"
             text="È il primo prototipo del team per raggiungere l’obiettivo di creare un robot innovativo per le operazioni SAR.
             La nostra idea è quella di avere un robot modulare cingolato e con due possibili configurazioni: braccio robotico e robot strisciante. In modo che riesca a destreggiarsi facilmente in situazioni pericolose, per perlustrare l’ambiente senza rischiare le vite dei soccorritori."
             buttonText="Learn more"
             classNameBorder="tablet:w-[400px] tablet:h-[500px] desktop:w-[619px] desktop:h-[729px]"
-            className="desktop:h-[1100px] tablet:h-[650px]"
           >
             <div className="rounded-md bg-gray-500 desktop:w-[547px] desktop:h-[666px] tablet:w-[340px] tablet:h-[460px]" />
           </TwoColumns>
@@ -34,8 +32,7 @@ export default function Projects(): JSX.Element {
 
         <TwoColumns
           className="h-[800px]"
-          classNameButton="whitePalette"
-          classNameTitle="whitePalette"
+          palette="whitePalette"
           classNameBorder="h-0 w-0"
           title="caratteristiche"
           text="Struttura modulare:
@@ -127,11 +124,11 @@ export default function Projects(): JSX.Element {
 
         <Paragraph
           invertSlope
-          className="lightBluePalette"
-          classNameDiv="py-[100px] mb-[50px]"
+          palette="lightBluePalette"
+          className="py-[100px] mb-[50px]"
         >
           <div className="m-auto mx-[200px] text-center">
-            <Title className="lightBluePalette mb-[20px]">obiettivi</Title>
+            <Title className="mb-20 lightBluePalette">obiettivi</Title>
             Lo scopo di Rese.Q Mk1 è quello di fornire supporto ai soccorritori
             in situazioni emergenziali. Le sue funzionalità attuali sono:
           </div>
