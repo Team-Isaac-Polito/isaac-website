@@ -1,12 +1,11 @@
 import Number from "@atoms/Number"
 import Title from "@atoms/Title"
-import React, { FC } from "react"
+import React from "react"
 import { ReactComponent as Calendar } from "../../../assets/svg/calendar.svg"
 import { ReactComponent as People } from "../../../assets/svg/people.svg"
 import { ReactComponent as Robot } from "../../../assets/svg/robot.svg"
-import NumbersProps from "./index.types"
 
-const Numbers: FC<NumbersProps> = () => {
+const Numbers = () => {
   return (
     <div className="m-auto mb-20 w-fit notebook:mb-40">
       <Title className="m-auto mb-20 notebook:mb-40 w-fit lightBluePalette">
