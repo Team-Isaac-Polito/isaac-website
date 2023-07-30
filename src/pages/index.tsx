@@ -57,7 +57,7 @@ export default function Home(): JSX.Element {
         </TwoColumns>
       </div>
       <Paragraph className="my-32" palette="lightBluePalette" invertSlope>
-        <Numbers page={undefined} />
+        <Numbers />
       </Paragraph>
       <Title className="m-auto mb-20 w-fit">Galleria</Title>
       <RotatedBorder
