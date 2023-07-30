@@ -24,7 +24,8 @@ export default function Projects(): JSX.Element {
             text="È il primo prototipo del team per raggiungere l’obiettivo di creare un robot innovativo per le operazioni SAR.
             La nostra idea è quella di avere un robot modulare cingolato e con due possibili configurazioni: braccio robotico e robot strisciante. In modo che riesca a destreggiarsi facilmente in situazioni pericolose, per perlustrare l’ambiente senza rischiare le vite dei soccorritori."
             buttonText="Learn more"
-            classNameBorder="tablet:w-[400px] tablet:h-[500px] desktop:w-[619px] desktop:h-[729px]"
+            classNameBorder="bluePalette tablet:w-[400px] tablet:h-[500px] desktop:w-[619px] desktop:h-[729px]"
+            className="desktop:h-[1100px] tablet:h-[650px]"
           >
             <div className="rounded-md bg-gray-500 desktop:w-[547px] desktop:h-[666px] tablet:w-[340px] tablet:h-[460px]" />
           </TwoColumns>
