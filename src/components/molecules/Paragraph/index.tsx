@@ -14,7 +14,7 @@ const Paragraph: FC<ParagraphProps> = ({
       <div className={classNames("skew-y-3", className)}>
         <div className={classNames("h-3 mb-7", palette)} />
         <div className={palette}>
-          <div className="py-40 mx-48 text-4xl text-center -skew-y-3 h-fit">
+          <div className="py-32 mx-48 text-4xl text-center -skew-y-3 desktop:py-40 h-fit">
             {children}
           </div>
         </div>
@@ -22,7 +22,7 @@ const Paragraph: FC<ParagraphProps> = ({
     ) : (
       <div className={classNames("skew-y-3", className)}>
         <div className={palette}>
-          <div className="py-40 mx-48 text-4xl text-center -skew-y-3 h-fit">
+          <div className="py-32 mx-48 text-4xl text-center -skew-y-3 desktop:py-40 h-fit">
             {children}
           </div>
         </div>
@@ -33,7 +33,7 @@ const Paragraph: FC<ParagraphProps> = ({
     <div className={classNames("-skew-y-3", className)}>
       <div className={classNames("h-3 mb-7", palette)} />
       <div className={palette}>
-        <div className="py-40 mx-48 text-4xl text-center skew-y-3 h-fit">
+        <div className="py-32 mx-48 text-4xl text-center skew-y-3 desktop:py-40 h-fit">
           {children}
         </div>
       </div>
@@ -41,7 +41,7 @@ const Paragraph: FC<ParagraphProps> = ({
   ) : (
     <div className={classNames("-skew-y-3", className)}>
       <div className={palette}>
-        <div className="py-40 mx-48 text-4xl text-center skew-y-3 h-fit">
+        <div className="py-32 mx-48 text-4xl text-center skew-y-3 desktop:py-40 h-fit">
           {children}
         </div>
       </div>
