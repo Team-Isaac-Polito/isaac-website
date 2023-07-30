@@ -1,47 +1,51 @@
+import classNames from "classnames"
 import React, { FC } from "react"
 import ParagraphProps from "./index.types"
-import classNames from "classnames"
 
 const Paragraph: FC<ParagraphProps> = ({
   invertSlope,
-  isStart,
+  isLineTop,
   children,
   className,
-  classNameDiv,
+  palette,
 }) => {
   return invertSlope ? (
-    isStart ? (
-      <div className={classNames("skew-y-3 h-fit", classNameDiv)}>
-        <div className={classNames("py-[10px]", className)} />
-        <div className="bg-white py-[10px]" />
-        <div className={className}>
-          <div className="-skew-y-3 py-[50px]">{children}</div>
+    isLineTop ? (
+      <div className={classNames("skew-y-3", className)}>
+        <div className={classNames("h-3 mb-7", palette)} />
+        <div className={palette}>
+          <div className="py-32 mx-48 text-4xl text-center -skew-y-3 desktop:py-40 h-fit">
+            {children}
+          </div>
         </div>
       </div>
     ) : (
-      <div className={classNames("skew-y-3", classNameDiv)}>
-        <div className={className}>
-          <div className="-skew-y-3 py-[50px]">{children}</div>
+      <div className={classNames("skew-y-3", className)}>
+        <div className={palette}>
+          <div className="py-32 mx-48 text-4xl text-center -skew-y-3 desktop:py-40 h-fit">
+            {children}
+          </div>
         </div>
-        <div className="bg-white py-[10px]" />
-        <div className={classNames("py-[10px]", className)} />
+        <div className={classNames("h-3 mt-7", palette)} />
       </div>
     )
-  ) : isStart ? (
-    <div className={classNames("-skew-y-3 h-fit", classNameDiv)}>
-      <div className={classNames("py-[10px]", className)} />
-      <div className="bg-white py-[10px]" />
-      <div className={className}>
-        <div className="skew-y-3 py-[50px]">{children}</div>
+  ) : isLineTop ? (
+    <div className={classNames("-skew-y-3", className)}>
+      <div className={classNames("h-3 mb-7", palette)} />
+      <div className={palette}>
+        <div className="py-32 mx-48 text-4xl text-center skew-y-3 desktop:py-40 h-fit">
+          {children}
+        </div>
       </div>
     </div>
   ) : (
-    <div className={classNames("-skew-y-3 ", classNameDiv)}>
-      <div className={className}>
-        <div className="skew-y-3 py-[50px]">{children}</div>
+    <div className={classNames("-skew-y-3", className)}>
+      <div className={palette}>
+        <div className="py-32 mx-48 text-4xl text-center skew-y-3 desktop:py-40 h-fit">
+          {children}
+        </div>
       </div>
-      <div className="bg-white py-[10px]" />
-      <div className={classNames("py-[10px]", className)} />
+      <div className={classNames("h-3 mt-7", palette)} />
     </div>
   )
 }

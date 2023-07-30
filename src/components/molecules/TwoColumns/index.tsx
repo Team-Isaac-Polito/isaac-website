@@ -1,6 +1,7 @@
 import Button from "@atoms/Button"
 import RotatedBorderNew from "@atoms/RotatedBorderNew"
 import Title from "@atoms/Title"
+import classNames from "classnames"
 import React, { FC } from "react"
 import TwoColumnsProps from "./index.types"
 
@@ -11,34 +12,42 @@ const TwoColumns: FC<TwoColumnsProps> = ({
   buttonText,
   title,
   children,
-  classNameTitle,
-  classNameButton,
+  palette,
   classNameBorder,
 }) => {
   const textColumn = (
-    <div className="m-auto w-[250px] laptop:w-[400px] notebook:w-[400px] desktop:w-[600px]  ">
-      <Title className={classNameTitle}>{title}</Title>
-      <div className="my-10 ">{text}</div>
-      {buttonText === undefined || buttonText === "" ? null : (
-        <Button className={classNameButton}>{buttonText}</Button>
+    <div className={className}>
+      <Title className={palette}>{title}</Title>
+      <div className="my-10 text-xl font-normal tablet:text-base laptop:text-2xl notebook:text-3xl desktop:text-5xl desktop:leading-tight">
+        {text}
+      </div>
+      {buttonText === undefined || buttonText === "" ? null : isTextLeft ? (
+        <Button className={palette}>{buttonText}</Button>
+      ) : (
+        <Button className={classNames("float-right", palette)}>
+          {buttonText}
+        </Button>
       )}
     </div>
   )
 
-  const borderColumn = (
-    <RotatedBorderNew className={classNameBorder} invertSlope={false}>
-      {children}
-    </RotatedBorderNew>
-  )
-
   return (
     <div className={className}>
-      <div className="grid w-full h-full grid-cols-2 gap-20 text-2xl">
+      <div className="grid grid-cols-2 gap-20">
         {isTextLeft
-          ? [textColumn, borderColumn]
+          ? [
+              <div key="textRightColumn" className="m-auto text-left">
+                {textColumn}
+              </div>,
+              <RotatedBorderNew key="content" className={classNameBorder}>
+                {children}
+              </RotatedBorderNew>,
+            ]
           : [
-              borderColumn,
-              <div key="textRightColumn" className="m-auto text-right w-fit">
+              <RotatedBorderNew key="content" className={classNameBorder}>
+                {children}
+              </RotatedBorderNew>,
+              <div key="textRightColumn" className="m-auto text-right">
                 {textColumn}
               </div>,
             ]}
