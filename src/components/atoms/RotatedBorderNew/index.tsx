@@ -1,6 +1,6 @@
+import classNames from "classnames"
 import React, { FC } from "react"
 import RotatedBorderNewProps from "./index.types"
-import classNames from "classnames"
 
 const RotatedBorderNew: FC<RotatedBorderNewProps> = ({
   invertSlope,
@@ -15,10 +15,10 @@ const RotatedBorderNew: FC<RotatedBorderNewProps> = ({
       >
         <div
           className={classNames(
-            "m-auto border-2 border-solid rounded-md rotate-[3deg] border-inherit",
+            "m-auto border-4 border-solid rounded-md rotate-[3deg] border-inherit",
             className
           )}
-        ></div>
+        />
       </div>
       <div
         style={{ top: "50%", transform: "translateY(-50%)" }}
@@ -35,10 +35,10 @@ const RotatedBorderNew: FC<RotatedBorderNewProps> = ({
       >
         <div
           className={classNames(
-            "m-auto border-2 border-solid rounded-md -rotate-[3deg] border-inherit",
+            "m-auto border-4 border-solid rounded-md -rotate-[3deg] border-inherit",
             className
           )}
-        ></div>
+        />
       </div>
       <div
         style={{ top: "50%", transform: "translateY(-50%)" }}
