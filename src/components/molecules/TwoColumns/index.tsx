@@ -18,7 +18,9 @@ const TwoColumns: FC<TwoColumnsProps> = ({
   const textColumn = (
     <div className={className}>
       <Title className={palette}>{title}</Title>
-      <div className="my-10 text-4xl">{text}</div>
+      <div className="my-10 text-xl font-normal tablet:text-base laptop:text-2xl notebook:text-3xl desktop:text-5xl desktop:leading-tight">
+        {text}
+      </div>
       {buttonText === undefined || buttonText === "" ? null : isTextLeft ? (
         <Button className={palette}>{buttonText}</Button>
       ) : (
