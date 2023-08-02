@@ -21,7 +21,7 @@ body {
     @apply bg-light-blue-isaac text-white border-yellow-isaac;
   }
   .whitePalette {
-    @apply bg-white text-dark-blue-isaac border-light-blue-isaac;
+    @apply text-dark-blue-isaac border-light-blue-isaac;
   }
   h1.bluePalette {
     @apply text-yellow-isaac;
