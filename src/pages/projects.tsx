@@ -3,12 +3,15 @@ import Paragraph from "@molecules/Paragraph"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
 import reseq from "../assets/prova.mp4"
+import { useTranslation } from "react-i18next"
 
 export default function Projects(): JSX.Element {
+  const { t } = useTranslation()
+
   return (
     <div>
       <div>
-        <Title className="text-center bg-white py-7 text-dark-blue">
+        <Title className="text-center py-7 text-dark-blue">
           Rese.Q Mk1
         </Title>
 
@@ -21,8 +24,7 @@ export default function Projects(): JSX.Element {
             isTextLeft
             palette="bluePalette"
             title="chi è rese.q mk1"
-            text="È il primo prototipo del team per raggiungere l’obiettivo di creare un robot innovativo per le operazioni SAR.
-            La nostra idea è quella di avere un robot modulare cingolato e con due possibili configurazioni: braccio robotico e robot strisciante. In modo che riesca a destreggiarsi facilmente in situazioni pericolose, per perlustrare l’ambiente senza rischiare le vite dei soccorritori."
+            text={t("projects.paragraph1.text")}
             buttonText="Learn more"
             classNameBorder="bluePalette tablet:w-[400px] tablet:h-[500px] desktop:w-[619px] desktop:h-[729px]"
             className="desktop:h-[1100px] tablet:h-[650px]"

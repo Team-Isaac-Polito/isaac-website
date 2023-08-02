@@ -4,5 +4,32 @@
     "Chi siamo": "About",
     "Progetti": "Progetti",
     "Eventi": "Eventi"
-  }
+  },
+  "projects": {
+    "paragraph1": {
+      "title" : "Chi è Rese.Q mk1",
+      "text": "È il primo prototipo del team per raggiungere l’obiettivo di creare un robot innovativo per le operazioni SAR.\n La nostra idea è quella di avere un robot modulare cingolato e con due possibili configurazioni: braccio robotico e robot strisciante. In modo che riesca a destreggiarsi facilmente in situazioni pericolose, per perlustrare l’ambiente senza rischiare le vite dei soccorritori."
+    },
+    "paragraph2":{
+      "title":"Caratteristiche",
+      "text":"Struttura modulare:\n Permette di adattare il robot a diverse scenari, con moduli specializzati\n Configurazione snake-like: Permette maggiore agilità nel movimento\n Configurazione braccio robotico: Per un sollevamento in verticale di parte del robot\n Controllo remoto:\n Tramite un telecomando e una telecamera sul robot, con possibilità future di guida autonoma e semi-autonoma",
+      "datasheet" : {
+        "characteristic":{
+          "1":"Dimensioni",
+          "2":"Peso"
+        },
+        "data":{
+  
+        }
+    }
+    
+    },
+  "paragraph3":{
+    "title":"Obiettivi",
+    "text":"Lo scopo di Rese.Q Mk1 è quello di fornire supporto ai soccorritori in situazioni emergenziali.\n Le sue funzionalità attuali sono:",
+    "card":{
+      "1":"Esplorazione e mappatura di aree non in sicurezza"
+      
+    }
+  }}
 }
