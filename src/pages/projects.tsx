@@ -5,6 +5,8 @@ import React from "react"
 import reseq from "../assets/prova.mp4"
 import { useTranslation } from "react-i18next"
 import Table from "@molecules/Table"
+import { Carousel } from "@mantine/carousel"
+import { rem } from "@mantine/core"
 
 export default function Projects(): JSX.Element {
   const { t } = useTranslation()
@@ -58,11 +60,46 @@ export default function Projects(): JSX.Element {
           palette="lightBluePalette"
           className="py-[100px] mb-[50px]"
         >
-          <div className="m-auto mx-[200px] text-center">
+          <div className="m-auto mx-[200px] text-center text-5xl">
             <Title className="mb-20 lightBluePalette">obiettivi</Title>
             Lo scopo di Rese.Q Mk1 è quello di fornire supporto ai soccorritori
             in situazioni emergenziali. Le sue funzionalità attuali sono:
           </div>
+
+          <Carousel
+            className="w-[60%] h-fit"
+            mx="auto"
+            withControls={false}
+            withIndicators
+            styles={{
+              indicator: {
+                width: rem(12),
+                height: rem(10),
+                border: "solid 2px white",
+                transition: "width 200ms ease",
+                "&[data-active]": {
+                  width: rem(40),
+                  backgroundColor: "white",
+                },
+              },
+            }}
+          >
+            <Carousel.Slide>
+              <TwoColumns
+                className="h-[500px]"
+                isTextLeft
+                palette="lightBluePalette"
+                title=""
+                text="Esplorazione e mappatura di aree non in sicurezza"
+                classNameBorder="w-[400px] h-[330px] lightBluePalette"
+              >
+                <div className="bg-gray-300 w-[360px] h-[293px]"></div>
+              </TwoColumns>
+            </Carousel.Slide>
+            <Carousel.Slide>2</Carousel.Slide>
+            <Carousel.Slide>3</Carousel.Slide>
+            {/* ...other slides */}
+          </Carousel>
         </Paragraph>
       </div>
     </div>
