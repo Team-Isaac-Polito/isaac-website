@@ -5,6 +5,7 @@ import React from "react"
 import reseq from "../assets/prova.mp4"
 import { useTranslation } from "react-i18next"
 import Table from "@molecules/Table"
+import Slides from "@molecules/Slides"
 
 export default function Projects(): JSX.Element {
   const { t } = useTranslation()
@@ -58,11 +59,16 @@ export default function Projects(): JSX.Element {
           palette="lightBluePalette"
           className="py-[100px] mb-[50px]"
         >
-          <div className="m-auto mx-[200px] text-center">
+          <div className="m-auto mx-[200px] text-center text-5xl">
             <Title className="mb-20 lightBluePalette">obiettivi</Title>
             Lo scopo di Rese.Q Mk1 è quello di fornire supporto ai soccorritori
             in situazioni emergenziali. Le sue funzionalità attuali sono:
           </div>
+          <Slides
+            numSlides={3}
+            palette="lightBluePalette"
+            translationPath="projects.paragraph3.slides"
+          ></Slides>
         </Paragraph>
       </div>
     </div>
