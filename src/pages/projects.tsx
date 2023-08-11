@@ -34,16 +34,10 @@ export default function Projects(): JSX.Element {
         </Paragraph>
 
         <TwoColumns
-          className="h-[800px]"
           palette="whitePalette"
           classNameBorder="h-0 w-0"
           title="caratteristiche"
-          text="Struttura modulare:
-          Permette di adattare il robot a diverse scenari, con moduli specializzati
-          Configurazione snake-like: Permette maggiore agilità nel movimento
-          Configurazione braccio robotico: Per un sollevamento in verticale di parte del robot
-          Controllo remoto:
-          Tramite un telecomando e una telecamera sul robot, con possibilità future di guida autonoma e semi-autonoma"
+          textKey="projects.paragraph2.text"
         >
           <div className="w-fit">
             <Table
