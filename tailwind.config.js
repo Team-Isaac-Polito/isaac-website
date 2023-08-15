@@ -41,6 +41,8 @@ module.exports = {
             lineHeight: "2.938rem",
           },
         ],
+        "4-5xl": ["40px", "44px"],
+        "5-5xl": ["55px", "60px"],
       },
     },
   },
