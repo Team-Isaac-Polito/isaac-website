@@ -5,10 +5,8 @@ import Autoplay from "embla-carousel-autoplay"
 import React, { useRef } from "react"
 import { FC } from "react"
 import SlidesProps from "./index.types"
-import { useTranslation } from "react-i18next"
 
 const Slides: FC<SlidesProps> = ({ translationPath, numSlides, palette }) => {
-  const { t } = useTranslation()
   const autoplay = useRef(Autoplay({ delay: 6000 }))
   const slides: Array<React.ReactNode> = []
 
@@ -20,10 +18,14 @@ const Slides: FC<SlidesProps> = ({ translationPath, numSlides, palette }) => {
           isTextLeft
           palette={palette}
           title=""
-          text={t(translationPath + "." + i)}
-          classNameBorder={"w-[400px] h-[330px]" + " " + palette}
+          textKey={translationPath + "." + i}
+          classNameBorder={
+            "desktop:w-[400px] notebook:w-[270px] laptop:w-[200px] aspect-[7/6] " +
+            " " +
+            palette
+          }
         >
-          <div className="bg-gray-300 w-[360px] h-[293px]"></div>
+          <div className="bg-gray-300 desktop:w-[340px] notebook:w-[240px] laptop:w-[180px] aspect-[6/5]"></div>
         </TwoColumns>
       </Carousel.Slide>
     )
