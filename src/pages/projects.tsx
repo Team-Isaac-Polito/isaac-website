@@ -64,6 +64,19 @@ export default function Projects(): JSX.Element {
             translationPath="projects.paragraph3.slides"
           ></Slides>
         </Paragraph>
+
+        <div className="py-32 h-fit">
+          <RotatedBorder
+            width="90%"
+            height="100%"
+            left="5%"
+            className="border-light-blue-isaac rotate-[3deg]"
+          >
+            <div className="w-screen">
+              <Gallery />
+            </div>
+          </RotatedBorder>
+        </div>
       </div>
     </div>
   )
