@@ -12,7 +12,7 @@
     },
     "paragraph2": {
       "title": "Caratteristiche",
-      "text": "Struttura modulare:\n Permette di adattare il robot a diverse scenari, con moduli specializzati\n Configurazione snake-like: Permette maggiore agilità nel movimento\n Configurazione braccio robotico: Per un sollevamento in verticale di parte del robot\n Controllo remoto:\n Tramite un telecomando e una telecamera sul robot, con possibilità future di guida autonoma e semi-autonoma",
+      "text": "<strong>Struttura modulare:</strong><br>Permette di adattare il robot a diverse scenari, con moduli specializzati<br><strong>Configurazione snake-like:</strong><br>Permette maggiore agilità nel movimento<br><strong>Configurazione braccio robotico:</strong><br>Per un sollevamento in verticale di parte del robot<br><strong>Controllo remoto:</strong><br>Tramite un telecomando e una telecamera sul robot, con possibilità future di guida autonoma e semi-autonoma.",
       "datasheet": {
         "title": "Scheda tecnica",
         "column1": {

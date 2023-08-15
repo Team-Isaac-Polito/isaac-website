@@ -4,11 +4,13 @@ import Title from "@atoms/Title"
 import classNames from "classnames"
 import React, { FC } from "react"
 import TwoColumnsProps from "./index.types"
+import { Trans } from "react-i18next"
 
 const TwoColumns: FC<TwoColumnsProps> = ({
   className,
   isTextLeft,
   text,
+  textKey,
   buttonText,
   title,
   children,
@@ -16,9 +18,14 @@ const TwoColumns: FC<TwoColumnsProps> = ({
   classNameBorder,
 }) => {
   const textColumn = (
-    <div className={className}>
+    <div className=" align-middle">
       <Title className={palette}>{title}</Title>
-      <div className="my-10 text-xl font-normal tablet:text-base laptop:text-2xl notebook:text-3xl desktop:text-5xl desktop:leading-tight">
+      <div
+        className="my-10 font-normal
+                    text-xl tablet:text-base laptop:text-2xl notebook:text-3xl desktop:text-5xl 
+                    desktop:leading-tight"
+      >
+        <Trans i18nKey={textKey}></Trans>
         {text}
       </div>
       {buttonText === undefined || buttonText === "" ? null : isTextLeft ? (
@@ -33,10 +40,10 @@ const TwoColumns: FC<TwoColumnsProps> = ({
 
   return (
     <div className={className}>
-      <div className="grid grid-cols-2 gap-20">
+      <div className="grid grid-cols-2 gap-20 h-full">
         {isTextLeft
           ? [
-              <div key="textRightColumn" className="m-auto text-left">
+              <div key="textLeftColumn" className="m-auto text-left">
                 {textColumn}
               </div>,
               <RotatedBorderNew key="content" className={classNameBorder}>

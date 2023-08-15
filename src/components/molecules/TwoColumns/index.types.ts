@@ -1,7 +1,8 @@
 export default interface TwoColumnsProps {
   className?: string
   isTextLeft?: boolean
-  text: string
+  text?: string
+  textKey?: string
   buttonText?: string
   title: string
   children: React.ReactNode
