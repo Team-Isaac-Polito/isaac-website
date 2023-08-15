@@ -25,7 +25,7 @@ export default function Projects(): JSX.Element {
             palette="bluePalette"
             title="chi è rese.q mk1"
             textKey="projects.paragraph1.text"
-            buttonText="Learn more"
+            buttonText=""
             classNameBorder="bluePalette aspect-[4/5] tablet:h-[500px] desktop:h-[736px]"
           >
             <div
