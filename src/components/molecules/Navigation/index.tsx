@@ -23,7 +23,7 @@ const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
             >
               <div className="flex flex-col h-full bg-black">
                 <div className="flex flex-row justify-between mt-3">
-                  <div className="ml-10">
+                  <div className="mt-4 ml-10">
                     <Logo className="h-8 w-fit" />
                   </div>
                   <div className="" onClick={() => setToggleMenu(!toggleMenu)}>
