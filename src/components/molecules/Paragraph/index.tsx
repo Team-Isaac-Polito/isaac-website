@@ -1,3 +1,4 @@
+import Typography from "@atoms/Typography"
 import classNames from "classnames"
 import React, { FC } from "react"
 import ParagraphProps from "./index.types"
@@ -15,15 +16,15 @@ const Paragraph: FC<ParagraphProps> = ({
 
   const slope = (
     <div className={palette}>
-      <div
-        className={
-          "py-28 h-fit mx-48 tablet:mx-16 laptop:mx-28 notebook:mx-36 desktop:mx-48" +
-          " text-xl font-normal tablet:text-base laptop:text-2xl notebook:text-3xl desktop:text-5xl desktop:leading-tight text-center " +
+      <Typography
+        variant="p"
+        className={classNames(
+          "py-24 text-4xl text-center -skew-y-3 notebook:py-32 mx-14 laptop:mx-32 notebook:mx-40 desktop:mx-48 desktop:py-40 h-fit",
           slopeContent
-        }
+        )}
       >
         {children}
-      </div>
+      </Typography>
     </div>
   )
 
