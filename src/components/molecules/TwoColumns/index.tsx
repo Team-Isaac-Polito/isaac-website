@@ -1,16 +1,16 @@
 import Button from "@atoms/Button"
 import RotatedBorderNew from "@atoms/RotatedBorderNew"
-import Title from "@atoms/Title"
+import Typography from "@atoms/Typography"
 import classNames from "classnames"
 import React, { FC } from "react"
-import TwoColumnsProps from "./index.types"
 import { Trans } from "react-i18next"
+import TwoColumnsProps from "./index.types"
 
 const TwoColumns: FC<TwoColumnsProps> = ({
   className,
   isTextLeft,
-  text,
   textKey,
+  text,
   buttonText,
   title,
   children,
@@ -18,16 +18,14 @@ const TwoColumns: FC<TwoColumnsProps> = ({
   classNameBorder,
 }) => {
   const textColumn = (
-    <div className=" align-middle">
-      <Title className={palette}>{title}</Title>
-      <div
-        className="my-10 font-normal
-                    text-xl tablet:text-base laptop:text-2xl notebook:text-3xl desktop:text-5xl 
-                    desktop:leading-tight"
-      >
-        <Trans i18nKey={textKey}></Trans>
+    <div className="align-middle">
+      <Typography className={palette} variant="h1">
+        {title}
+      </Typography>
+      <Typography variant="p" className="my-10">
+        <Trans i18nKey={textKey} />
         {text}
-      </div>
+      </Typography>
       {buttonText === undefined || buttonText === "" ? null : isTextLeft ? (
         <Button className={palette}>{buttonText}</Button>
       ) : (
@@ -40,7 +38,7 @@ const TwoColumns: FC<TwoColumnsProps> = ({
 
   return (
     <div className={className}>
-      <div className="grid grid-cols-2 gap-20 h-full">
+      <div className="grid h-full grid-cols-2 laptop:gap-14 desktop:gap-20">
         {isTextLeft
           ? [
               <div key="textLeftColumn" className="m-auto text-left">

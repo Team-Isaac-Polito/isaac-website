@@ -1,11 +1,11 @@
-import Title from "@atoms/Title"
+import Typography from "@atoms/Typography"
 import Paragraph from "@molecules/Paragraph"
+import Slides from "@molecules/Slides"
+import Table from "@molecules/Table"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
-import reseq from "../assets/prova.mp4"
 import { useTranslation } from "react-i18next"
-import Table from "@molecules/Table"
-import Slides from "@molecules/Slides"
+import reseq from "../assets/prova.mp4"
 
 export default function Projects(): JSX.Element {
   const { t } = useTranslation()
@@ -13,12 +13,12 @@ export default function Projects(): JSX.Element {
   return (
     <div>
       <div>
-        <Title className="text-center py-7 text-dark-blue">Rese.Q Mk1</Title>
-
+        <Typography className="text-center py-7 text-dark-blue" variant="h1">
+          Rese.Q Mk1
+        </Typography>
         <video width="1920" height="600" autoPlay muted loop>
           <source src={reseq} type="video/mp4" />
         </video>
-
         <Paragraph palette="bluePalette" className="my-32">
           <TwoColumns
             isTextLeft
@@ -32,7 +32,6 @@ export default function Projects(): JSX.Element {
             <div className="rounded-md bg-gray-500 desktop:w-[547px] desktop:h-[666px] tablet:w-[340px] tablet:h-[460px]" />
           </TwoColumns>
         </Paragraph>
-
         <TwoColumns
           palette="whitePalette"
           classNameBorder="h-0 w-0"
@@ -47,14 +46,15 @@ export default function Projects(): JSX.Element {
             />
           </div>
         </TwoColumns>
-
         <Paragraph
           invertSlope
           palette="lightBluePalette"
           className="py-[100px] mb-[50px]"
         >
           <div className="m-auto mx-[200px] text-center text-5xl">
-            <Title className="mb-20 lightBluePalette">obiettivi</Title>
+            <Typography className="mb-20 lightBluePalette" variant="h1">
+              obiettivi
+            </Typography>
             Lo scopo di Rese.Q Mk1 è quello di fornire supporto ai soccorritori
             in situazioni emergenziali. Le sue funzionalità attuali sono:
           </div>
@@ -62,7 +62,7 @@ export default function Projects(): JSX.Element {
             numSlides={3}
             palette="lightBluePalette"
             translationPath="projects.paragraph3.slides"
-          ></Slides>
+          />
         </Paragraph>
       </div>
     </div>
