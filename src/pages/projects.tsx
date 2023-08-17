@@ -1,7 +1,5 @@
 import Typography from "@atoms/Typography"
 import Paragraph from "@molecules/Paragraph"
-import Slides from "@molecules/Slides"
-import Table from "@molecules/Table"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
 import reseq from "../assets/ReseQ1.mp4"
@@ -10,7 +8,6 @@ import Slides from "@molecules/Slides"
 import RotatedBorder from "@atoms/RotatedBorder"
 import Gallery from "@molecules/Gallery"
 import { Trans } from "react-i18next"
-
 
 export default function Projects(): JSX.Element {
   return (
@@ -58,7 +55,9 @@ export default function Projects(): JSX.Element {
         </div>
 
         <Paragraph invertSlope palette="lightBluePalette">
-          <Title className="mb-10 lightBluePalette">obiettivi</Title>
+          <Typography className="mb-10 lightBluePalette" variant="h1">
+            obiettivi
+          </Typography>
           <Trans i18nKey="projects.paragraph3.text"></Trans>
           <Slides
             numSlides={3}
