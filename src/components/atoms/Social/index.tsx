@@ -1,9 +1,9 @@
+import classNames from "classnames"
 import React, { FC } from "react"
-import SocialProps from "./index.types"
 import { ReactComponent as EmailButton } from "../../../assets/svg/emailButton.svg"
 import { ReactComponent as InstagramButton } from "../../../assets/svg/instagramButton.svg"
 import { ReactComponent as LinkedinButton } from "../../../assets/svg/linkedinButton.svg"
-import classNames from "classnames"
+import SocialProps from "./index.types"
 
 const Social: FC<SocialProps> = ({ className }) => {
   return (
@@ -18,7 +18,7 @@ const Social: FC<SocialProps> = ({ className }) => {
           href={"https://www.instagram.com/"}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[13px] tablet:w-[30px] laptop:w-[47px] notebook:w-[63px] desktop:w-16 text-white hover:text-yellow-isaac"
+          className="w-[13px] tablet:w-8 laptop:w-12 notebook:w-14 desktop:w-16 text-white hover:text-yellow-isaac"
         >
           <InstagramButton />
         </a>
@@ -26,7 +26,7 @@ const Social: FC<SocialProps> = ({ className }) => {
           href={"https://www.linkedin.com/"}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[13px] tablet:w-[30px] laptop:w-[47px] notebook:w-[63px] desktop:w-16 text-white hover:text-yellow-isaac"
+          className="w-[13px] tablet:w-8 laptop:w-12 notebook:w-14 desktop:w-16 text-white hover:text-yellow-isaac"
         >
           <LinkedinButton />
         </a>
@@ -34,9 +34,9 @@ const Social: FC<SocialProps> = ({ className }) => {
           href={"/"}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[13px] tablet:w-[30px] laptop:w-[47px] notebook:w-[63px] desktop:w-fit m-auto text-white hover:text-yellow-isaac"
+          className="m-auto text-white hover:text-yellow-isaac"
         >
-          <EmailButton />
+          <EmailButton className="tablet:w-8 laptop:w-12 notebook:w-14 desktop:w-16 " />
         </a>
       </div>
     </>

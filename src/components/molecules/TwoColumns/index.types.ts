@@ -1,11 +1,11 @@
 export default interface TwoColumnsProps {
   className?: string
   isTextLeft?: boolean
-  text?: string
   textKey?: string
+  text?: string
   buttonText?: string
   title: string
-  children: React.ReactNode
+  children?: React.ReactNode
   palette: string
   classNameBorder?: string
 }

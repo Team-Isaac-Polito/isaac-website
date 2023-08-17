@@ -12,10 +12,10 @@ const RotatedBorder: FC<RotatedBorderProps> = ({
   className,
 }) => {
   return (
-    <div className="relative z-10 m-auto w-fit">
+    <div className="relative m-auto w-fit">
       <div
         className={classNames(
-          "absolute w-full h-full border-4 border-solid rounded-2xl -z-10",
+          "absolute w-full h-full border-4 border-solid rounded-2xl",
           className
         )}
         style={{
@@ -24,6 +24,7 @@ const RotatedBorder: FC<RotatedBorderProps> = ({
           top: top,
           left: left,
           right: right,
+          zIndex: -1,
         }}
       />
       {children}

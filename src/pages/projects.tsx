@@ -1,5 +1,7 @@
-import Title from "@atoms/Title"
+import Typography from "@atoms/Typography"
 import Paragraph from "@molecules/Paragraph"
+import Slides from "@molecules/Slides"
+import Table from "@molecules/Table"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
 import reseq from "../assets/ReseQ1.mp4"
@@ -9,12 +11,14 @@ import RotatedBorder from "@atoms/RotatedBorder"
 import Gallery from "@molecules/Gallery"
 import { Trans } from "react-i18next"
 
+
 export default function Projects(): JSX.Element {
   return (
     <div>
       <div>
-        <Title className="text-center py-7 text-dark-blue">Rese.Q Mk1</Title>
-
+        <Typography className="text-center py-7 text-dark-blue" variant="h1">
+          Rese.Q Mk1
+        </Typography>
         <video width="1920" height="600" autoPlay muted loop>
           <source src={reseq} type="video/mp4" />
         </video>
@@ -60,7 +64,7 @@ export default function Projects(): JSX.Element {
             numSlides={3}
             palette="lightBluePalette"
             translationPath="projects.paragraph3.slides"
-          ></Slides>
+          />
         </Paragraph>
 
         <div className="py-32 h-fit">

@@ -24,28 +24,19 @@ export default function Gallery(): JSX.Element {
         className="w-full mb-7"
       >
         <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[290px] w-[490px] bg-gray-300 rounded-lg" />
+          <div className="h-[200px] w-[300px] bg-gray-300 rounded-lg" />
         </Carousel.Slide>
         <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[290px] w-[490px] bg-gray-300 rounded-lg" />
+          <div className="h-[200px] w-[300px] bg-gray-300 rounded-lg" />
         </Carousel.Slide>
         <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[290px] w-[490px] bg-gray-300 rounded-lg" />
+          <div className="h-[200px] w-[300px] bg-gray-300 rounded-lg" />
         </Carousel.Slide>
         <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[290px] w-[490px] bg-gray-300 rounded-lg" />
+          <div className="h-[200px] w-[300px] bg-gray-300 rounded-lg" />
         </Carousel.Slide>
         <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[290px] w-[490px] bg-gray-300 rounded-lg" />
-        </Carousel.Slide>
-        <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[290px] w-[490px] bg-gray-300 rounded-lg" />
-        </Carousel.Slide>
-        <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[290px] w-[490px] bg-gray-300 rounded-lg" />
-        </Carousel.Slide>
-        <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[290px] w-[490px] bg-gray-300 rounded-lg" />
+          <div className="h-[200px] w-[300px] bg-gray-300 rounded-lg" />
         </Carousel.Slide>
       </Carousel>
     </div>
