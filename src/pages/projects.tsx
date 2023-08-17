@@ -1,15 +1,15 @@
 import Typography from "@atoms/Typography"
 import Paragraph from "@molecules/Paragraph"
-import Slides from "@molecules/Slides"
-import Table from "@molecules/Table"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
-import { useTranslation } from "react-i18next"
-import reseq from "../assets/prova.mp4"
+import reseq from "../assets/ReseQ1.mp4"
+import Table from "@molecules/Table"
+import Slides from "@molecules/Slides"
+import RotatedBorder from "@atoms/RotatedBorder"
+import Gallery from "@molecules/Gallery"
+import { Trans } from "react-i18next"
 
 export default function Projects(): JSX.Element {
-  const { t } = useTranslation()
-
   return (
     <div>
       <div>
@@ -19,51 +19,65 @@ export default function Projects(): JSX.Element {
         <video width="1920" height="600" autoPlay muted loop>
           <source src={reseq} type="video/mp4" />
         </video>
-        <Paragraph palette="bluePalette" className="my-32">
+
+        <Paragraph palette="bluePalette">
           <TwoColumns
             isTextLeft
             palette="bluePalette"
             title="chi è rese.q mk1"
-            text={t("projects.paragraph1.text")}
-            buttonText="Learn more"
-            classNameBorder="bluePalette tablet:w-[400px] tablet:h-[500px] desktop:w-[619px] desktop:h-[729px]"
-            className="desktop:h-[1100px] tablet:h-[650px]"
+            textKey="projects.paragraph1.text"
+            buttonText=""
+            classNameBorder="bluePalette aspect-[4/5]
+             tablet:h-[310px] laptop:h-[450px] notebook:h-[500px] desktop:h-[736px]"
           >
-            <div className="rounded-md bg-gray-500 desktop:w-[547px] desktop:h-[666px] tablet:w-[340px] tablet:h-[460px]" />
+            <div
+              className="rounded-md bg-gray-500 aspect-[3/4] 
+              tablet:h-[280px] laptop:h-[400px] notebook:h-[450px] desktop:h-[666px]"
+            />
           </TwoColumns>
         </Paragraph>
-        <TwoColumns
-          palette="whitePalette"
-          classNameBorder="h-0 w-0"
-          title="caratteristiche"
-          textKey="projects.paragraph2.text"
-        >
-          <div className="w-fit">
-            <Table
-              translationPath="projects.paragraph2.datasheet"
-              palette="white"
-              rows={8}
-            />
-          </div>
-        </TwoColumns>
-        <Paragraph
-          invertSlope
-          palette="lightBluePalette"
-          className="py-[100px] mb-[50px]"
-        >
-          <div className="m-auto mx-[200px] text-center text-5xl">
-            <Typography className="mb-20 lightBluePalette" variant="h1">
-              obiettivi
-            </Typography>
-            Lo scopo di Rese.Q Mk1 è quello di fornire supporto ai soccorritori
-            in situazioni emergenziali. Le sue funzionalità attuali sono:
-          </div>
+
+        <div className="py-32  mx-48 tablet:mx-16 laptop:mx-28 notebook:mx-36 desktop:mx-48 h-fit">
+          <TwoColumns
+            palette="whitePalette"
+            classNameBorder="h-0 w-0"
+            title="caratteristiche"
+            textKey="projects.paragraph2.text"
+          >
+            <div className="">
+              <Table
+                translationPath="projects.paragraph2.datasheet"
+                palette="white"
+                rows={8}
+              />
+            </div>
+          </TwoColumns>
+        </div>
+
+        <Paragraph invertSlope palette="lightBluePalette">
+          <Typography className="mb-10 lightBluePalette" variant="h1">
+            obiettivi
+          </Typography>
+          <Trans i18nKey="projects.paragraph3.text"></Trans>
           <Slides
             numSlides={3}
             palette="lightBluePalette"
             translationPath="projects.paragraph3.slides"
           />
         </Paragraph>
+
+        <div className="py-32 h-fit">
+          <RotatedBorder
+            width="90%"
+            height="100%"
+            left="5%"
+            className="border-light-blue-isaac rotate-[3deg]"
+          >
+            <div className="w-screen">
+              <Gallery />
+            </div>
+          </RotatedBorder>
+        </div>
       </div>
     </div>
   )
