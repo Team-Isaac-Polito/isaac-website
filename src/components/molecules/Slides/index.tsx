@@ -1,5 +1,4 @@
 import { Carousel } from "@mantine/carousel"
-import { rem } from "@mantine/core"
 import TwoColumns from "@molecules/TwoColumns"
 import Autoplay from "embla-carousel-autoplay"
 import React, { useRef } from "react"
@@ -14,18 +13,18 @@ const Slides: FC<SlidesProps> = ({ translationPath, numSlides, palette }) => {
     slides.push(
       <Carousel.Slide>
         <TwoColumns
-          className="h-[500px]"
+          className="h-[190px] tablet:h-[200px] laptop:h-[250px] notebook:h-[350px] desktop:h-[450px]"
           isTextLeft
           palette={palette}
           title=""
           textKey={translationPath + "." + i}
           classNameBorder={
-            "desktop:w-[400px] notebook:w-[270px] laptop:w-[200px] aspect-[7/6] " +
+            "tablet:w-[130px] laptop:w-[200px] notebook:w-[270px] desktop:w-[400px] aspect-[7/6] " +
             " " +
             palette
           }
         >
-          <div className="bg-gray-300 desktop:w-[340px] notebook:w-[240px] laptop:w-[180px] aspect-[6/5]"></div>
+          <div className="bg-gray-300 tablet:w-[110px] laptop:w-[180px] notebook:w-[240px] desktop:w-[340px] aspect-[6/5]"></div>
         </TwoColumns>
       </Carousel.Slide>
     )
@@ -44,12 +43,12 @@ const Slides: FC<SlidesProps> = ({ translationPath, numSlides, palette }) => {
         withIndicators
         styles={{
           indicator: {
-            width: rem(20),
-            height: rem(20),
+            width: "20px",
+            height: "20px",
             border: "solid 10px white",
             transition: "width 200ms ease",
             "&[data-active]": {
-              width: rem(50),
+              width: "50px",
             },
           },
         }}
