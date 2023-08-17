@@ -8,7 +8,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <div
           className={classNames(
-            "font-poppins antialiased text-center font-extrabold text-4xl tablet:text-5xl laptop:text-6xl notebook:text-7xl desktop:text-8xl",
+            "antialiased text-center font-extrabold text-4xl tablet:text-5xl laptop:text-6xl notebook:text-7xl desktop:text-8xl",
             className ?? ""
           )}
         >
@@ -19,7 +19,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <div
           className={classNames(
-            "font-poppins uppercase antialiased font-extrabold text-3xl tablet:text-2xl laptop:text-4-5xl notebook:text-5-5xl desktop:text-7xl",
+            "uppercase antialiased font-extrabold text-3xl tablet:text-2xl laptop:text-4-5xl notebook:text-5-5xl desktop:text-7xl",
             className ?? ""
           )}
         >
@@ -30,7 +30,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <div
           className={classNames(
-            "font-poppins font-bold text-2xl laptop:text-3xl notebook:text-4xl desktop:text-5xl",
+            "font-bold text-2xl laptop:text-3xl notebook:text-4xl desktop:text-5xl",
             className ?? ""
           )}
         >
@@ -41,7 +41,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <div
           className={classNames(
-            "font-poppins antialiased text-xl tablet:text-base laptop:text-2xl notebook:text-3xl desktop:text-4-5xl desktop:leading-tight font-normal",
+            "antialiased text-xl tablet:text-base laptop:text-2xl notebook:text-3xl desktop:text-4-5xl desktop:leading-tight font-normal",
             className ?? ""
           )}
         >
@@ -52,7 +52,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <div
           className={classNames(
-            "font-poppins antialiased font-normal text-xs tablet:text-lg notebook:text-2xl desktop:text-4xl",
+            "antialiased font-normal text-xs tablet:text-lg notebook:text-2xl desktop:text-4xl",
             className ?? ""
           )}
         >
@@ -63,7 +63,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <div
           className={classNames(
-            "font-poppins font-normal text-[9px] tablet:text-[8px] laptop:text-[10px] notebook:text-sm desktop:text-xl",
+            "font-normal text-[9px] tablet:text-[8px] laptop:text-[10px] notebook:text-sm desktop:text-xl",
             className ?? ""
           )}
         >

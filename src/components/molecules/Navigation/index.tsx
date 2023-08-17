@@ -45,7 +45,7 @@ const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
                                 onClick={() => setToggleMenu(!toggleMenu)}
                               >
                                 <m.div
-                                  className="font-poppins antialiased flex items-center text-[30px] tracking-normal text-white hover:text-yellow-isaac transition duration-[250ms] w-full last:mb-[2vh]"
+                                  className="antialiased flex items-center text-[30px] tracking-normal text-white hover:text-yellow-isaac transition duration-[250ms] w-full last:mb-[2vh]"
                                   whileHover={{
                                     x: 40,
                                     transition: {
