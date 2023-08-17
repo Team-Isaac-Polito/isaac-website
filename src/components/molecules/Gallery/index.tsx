@@ -24,19 +24,16 @@ export default function Gallery(): JSX.Element {
         className="w-full mb-7"
       >
         <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[200px] w-[300px] bg-gray-300 rounded-lg" />
+          <div className="bg-gray-400 rounded-md h-52 w-96" />
         </Carousel.Slide>
         <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[200px] w-[300px] bg-gray-300 rounded-lg" />
+          <div className="bg-gray-400 rounded-md h-52 w-96" />
         </Carousel.Slide>
         <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[200px] w-[300px] bg-gray-300 rounded-lg" />
+          <div className="bg-gray-400 rounded-md h-52 w-96" />
         </Carousel.Slide>
         <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[200px] w-[300px] bg-gray-300 rounded-lg" />
-        </Carousel.Slide>
-        <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="h-[200px] w-[300px] bg-gray-300 rounded-lg" />
+          <div className="bg-gray-400 rounded-md h-52 w-96" />
         </Carousel.Slide>
       </Carousel>
     </div>
