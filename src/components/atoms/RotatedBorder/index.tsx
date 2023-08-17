@@ -12,7 +12,7 @@ const RotatedBorder: FC<RotatedBorderProps> = ({
   className,
 }) => {
   return (
-    <div className="relative m-auto w-fit">
+    <div className="relative m-auto">
       <div
         className={classNames(
           "absolute w-full h-full border-4 border-solid rounded-2xl",

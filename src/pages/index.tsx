@@ -51,12 +51,12 @@ export default function Home(): JSX.Element {
         Galleria
       </Typography>
       <RotatedBorder
-        width="90%"
+        width="70%"
         height="90%"
-        left="5%"
+        left="15%"
         className="border-light-blue-isaac rotate-[3deg]"
       >
-        <div className="w-screen">
+        <div className="relative w-full">
           <Gallery />
         </div>
       </RotatedBorder>
