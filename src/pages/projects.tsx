@@ -26,16 +26,17 @@ export default function Projects(): JSX.Element {
             title="chi è rese.q mk1"
             textKey="projects.paragraph1.text"
             buttonText=""
-            classNameBorder="bluePalette aspect-[4/5] tablet:h-[500px] desktop:h-[736px]"
+            classNameBorder="bluePalette aspect-[4/5]
+             tablet:h-[310px] laptop:h-[450px] notebook:h-[500px] desktop:h-[736px]"
           >
             <div
               className="rounded-md bg-gray-500 aspect-[3/4] 
-            desktop:h-[666px] tablet:h-[450px]"
+              tablet:h-[280px] laptop:h-[400px] notebook:h-[450px] desktop:h-[666px]"
             />
           </TwoColumns>
         </Paragraph>
 
-        <div className="py-32 mx-48 h-fit">
+        <div className="py-32  mx-48 tablet:mx-16 laptop:mx-28 notebook:mx-36 desktop:mx-48 h-fit">
           <TwoColumns
             palette="whitePalette"
             classNameBorder="h-0 w-0"
@@ -53,7 +54,7 @@ export default function Projects(): JSX.Element {
         </div>
 
         <Paragraph invertSlope palette="lightBluePalette">
-          <Title className="mb-20 lightBluePalette">obiettivi</Title>
+          <Title className="mb-10 lightBluePalette">obiettivi</Title>
           <Trans i18nKey="projects.paragraph3.text"></Trans>
           <Slides
             numSlides={3}
