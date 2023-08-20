@@ -38,7 +38,7 @@ const TwoColumns: FC<TwoColumnsProps> = ({
 
   return (
     <div className={className}>
-      <div className="grid grid-cols-2 h-full gap-20 tablet:gap-5 laptop:gap-10 notebook:gap-10 desktop:gap-20">
+      <div className="grid h-full grid-cols-2 gap-20 py-14 tablet:gap-5 laptop:gap-10 notebook:gap-10 desktop:gap-20">
         {isTextLeft
           ? [
               <div key="textLeftColumn" className="m-auto text-left">
