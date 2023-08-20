@@ -9,4 +9,5 @@ export interface MemberItem {
 export default interface AreaProps {
   desc: string
   members: MemberItem[]
+  init: number
 }
