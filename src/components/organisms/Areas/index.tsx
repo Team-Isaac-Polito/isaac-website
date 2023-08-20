@@ -1,9 +1,10 @@
 import SegmentedControl from "@atoms/SegmentedControl"
 import Area from "@molecules/Area"
 import React, { useRef, useState } from "react"
+import placeholder from "../../../assets/IconPlaceholder.png"
 
 export default function Areas(): JSX.Element {
-  const [area, setArea] = useState("it")
+  const [area, setArea] = useState("sf")
 
   return (
     <>
@@ -57,40 +58,30 @@ export default function Areas(): JSX.Element {
           members={[
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Marco Fincato",
               linkedinPath: "https://www.linkedin.com/",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Guglielmo Bergatto",
               linkedinPath: "",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
-              linkedinPath: "",
-            },
-            {
-              children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
-              ),
-              name: "Nome Cognome",
-              linkedinPath: "",
-            },
-            {
-              children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
-              ),
-              name: "Nome Cognome",
+              name: "Milena Yahya",
               linkedinPath: "",
             },
           ]}
+          init={1}
         />
       )}
       {area == "cn" && (
@@ -99,40 +90,30 @@ export default function Areas(): JSX.Element {
           members={[
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Marco Barbon",
               linkedinPath: "https://www.linkedin.com/",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Giuseppe Esposito",
               linkedinPath: "",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
-              linkedinPath: "",
-            },
-            {
-              children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
-              ),
-              name: "Nome Cognome",
-              linkedinPath: "",
-            },
-            {
-              children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
-              ),
-              name: "Nome Cognome",
+              name: "Edoardo Platania",
               linkedinPath: "",
             },
           ]}
+          init={1}
         />
       )}
       {area == "mc" && (
@@ -141,40 +122,54 @@ export default function Areas(): JSX.Element {
           members={[
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Sergio Gugliandolo",
               linkedinPath: "https://www.linkedin.com/",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Daniele Latella",
               linkedinPath: "",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Gianmarco Azzalin",
               linkedinPath: "",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Edoardo Pagliano",
               linkedinPath: "",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Federico Gariglio",
+              linkedinPath: "",
+            },
+            {
+              children: (
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+              ),
+              name: "Zaid Shaikh",
               linkedinPath: "",
             },
           ]}
+          init={2}
         />
       )}
       {area == "em" && (
@@ -183,40 +178,54 @@ export default function Areas(): JSX.Element {
           members={[
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Giorgia Tallino",
               linkedinPath: "https://www.linkedin.com/",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Apoorva Bhat",
               linkedinPath: "",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Alessandra Ricci",
               linkedinPath: "",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Pietro Chirio",
               linkedinPath: "",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Alice Allegretti",
+              linkedinPath: "",
+            },
+            {
+              children: (
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+              ),
+              name: "Simone Torino",
               linkedinPath: "",
             },
           ]}
+          init={2}
         />
       )}
       {area == "cm" && (
@@ -225,40 +234,30 @@ export default function Areas(): JSX.Element {
           members={[
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Cristina Genduso",
               linkedinPath: "https://www.linkedin.com/",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
+              name: "Marco Carli",
               linkedinPath: "",
             },
             {
               children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img src={placeholder} alt="placeholder" className="py-11" />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
-              name: "Nome Cognome",
-              linkedinPath: "",
-            },
-            {
-              children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
-              ),
-              name: "Nome Cognome",
-              linkedinPath: "",
-            },
-            {
-              children: (
-                <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
-              ),
-              name: "Nome Cognome",
+              name: "Ehsan Ali Shakeri Kondori",
               linkedinPath: "",
             },
           ]}
+          init={1}
         />
       )}
     </>
