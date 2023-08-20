@@ -1,13 +1,13 @@
+import RotatedBorder from "@atoms/RotatedBorder"
 import Typography from "@atoms/Typography"
+import Gallery from "@molecules/Gallery"
 import Paragraph from "@molecules/Paragraph"
+import Slides from "@molecules/Slides"
+import Table from "@molecules/Table"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
-import reseq from "../assets/ReseQ1.mp4"
-import Table from "@molecules/Table"
-import Slides from "@molecules/Slides"
-import RotatedBorder from "@atoms/RotatedBorder"
-import Gallery from "@molecules/Gallery"
 import { Trans } from "react-i18next"
+import reseq from "../assets/ReseQ1.mp4"
 
 export default function Projects(): JSX.Element {
   return (
@@ -37,7 +37,7 @@ export default function Projects(): JSX.Element {
           </TwoColumns>
         </Paragraph>
 
-        <div className="py-32  mx-48 tablet:mx-16 laptop:mx-28 notebook:mx-36 desktop:mx-48 h-fit">
+        <div className="py-32 mx-48 tablet:mx-16 laptop:mx-28 notebook:mx-36 desktop:mx-48 h-fit">
           <TwoColumns
             palette="whitePalette"
             classNameBorder="h-0 w-0"
@@ -74,7 +74,35 @@ export default function Projects(): JSX.Element {
             className="border-light-blue-isaac rotate-[3deg]"
           >
             <div className="w-screen">
-              <Gallery />
+              <Gallery
+                images={[
+                  {
+                    children: (
+                      <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+                    ),
+                  },
+                  {
+                    children: (
+                      <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+                    ),
+                  },
+                  {
+                    children: (
+                      <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+                    ),
+                  },
+                  {
+                    children: (
+                      <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+                    ),
+                  },
+                  {
+                    children: (
+                      <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+                    ),
+                  },
+                ]}
+              />
             </div>
           </RotatedBorder>
         </div>

@@ -51,13 +51,42 @@ export default function Home(): JSX.Element {
         Galleria
       </Typography>
       <RotatedBorder
-        width="70%"
-        height="90%"
-        left="15%"
+        width="80%"
+        height="80%"
+        top="10"
+        left="10%"
         className="border-light-blue-isaac rotate-[3deg]"
       >
         <div className="relative w-full">
-          <Gallery />
+          <Gallery
+            images={[
+              {
+                children: (
+                  <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+                ),
+              },
+              {
+                children: (
+                  <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+                ),
+              },
+              {
+                children: (
+                  <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+                ),
+              },
+              {
+                children: (
+                  <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+                ),
+              },
+              {
+                children: (
+                  <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+                ),
+              },
+            ]}
+          />
         </div>
       </RotatedBorder>
       <Form />
