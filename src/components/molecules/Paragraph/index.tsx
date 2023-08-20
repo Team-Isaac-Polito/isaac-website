@@ -19,7 +19,7 @@ const Paragraph: FC<ParagraphProps> = ({
       <Typography
         variant="p"
         className={classNames(
-          "py-24 text-4xl text-center -skew-y-3 notebook:py-32 mx-14 laptop:mx-32 notebook:mx-40 desktop:mx-48 desktop:py-40 h-fit",
+          "py-24 text-4xl text-center -skew-y-3 notebook:py-32 mx-14 laptop:mx-32 notebook:mx-40 desktop:mx-48 desktop:py-20 h-fit",
           slopeContent
         )}
       >

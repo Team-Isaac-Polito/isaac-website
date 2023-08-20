@@ -19,7 +19,7 @@ const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
               exit={{ x: "-100%" }}
               animate={{ x: toggleMenu ? 0 : "-100%" }}
               transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
-              className="fixed top-0 w-full h-full bg-black-background text-white z-[100]"
+              className="fixed top-0 w-full h-full text-white z-[100]"
             >
               <div className="flex flex-col h-full bg-black">
                 <div className="flex flex-row justify-between mt-3">
@@ -64,7 +64,7 @@ const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
                     </ul>
                   </nav>
                 </div>
-                <div className="flex pb-3 pl-10 mt-20 bg-black-background tablet:hidden">
+                <div className="flex pb-3 pl-10 mt-20 tablet:hidden">
                   <SocialNavigation />
                 </div>
               </div>
