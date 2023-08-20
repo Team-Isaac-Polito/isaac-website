@@ -1,8 +1,9 @@
 import { Carousel } from "@mantine/carousel"
 import Autoplay from "embla-carousel-autoplay"
-import React, { useRef } from "react"
+import React, { FC, useRef } from "react"
+import GalleryProps from "./index.types"
 
-export default function Gallery(): JSX.Element {
+const Gallery: FC<GalleryProps> = ({ images }) => {
   const autoplay = useRef(Autoplay({ delay: 3000 }))
   return (
     <div>
@@ -23,19 +24,16 @@ export default function Gallery(): JSX.Element {
         onMouseLeave={autoplay.current.reset}
         className="w-full mb-7"
       >
-        <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="bg-gray-400 rounded-md h-52 w-96" />
-        </Carousel.Slide>
-        <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="bg-gray-400 rounded-md h-52 w-96" />
-        </Carousel.Slide>
-        <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="bg-gray-400 rounded-md h-52 w-96" />
-        </Carousel.Slide>
-        <Carousel.Slide className="mx-4 my-auto laptop:mx-8">
-          <div className="bg-gray-400 rounded-md h-52 w-96" />
-        </Carousel.Slide>
+        {images.map((e, i) => {
+          return (
+            <Carousel.Slide className="mx-4 my-auto laptop:mx-8" key={i}>
+              {e.children}
+            </Carousel.Slide>
+          )
+        })}
       </Carousel>
     </div>
   )
 }
+
+export default Gallery
