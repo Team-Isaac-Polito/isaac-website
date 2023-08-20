@@ -1,11 +1,10 @@
-import RotatedBorder from "@atoms/RotatedBorder"
 import Typography from "@atoms/Typography"
 import { Carousel } from "@mantine/carousel"
 import React, { FC, useState } from "react"
 import { ReactComponent as LogoLK } from "../../../assets/svg/linkedinButton.svg"
 import AreaProps from "./index.types"
 
-const Area: FC<AreaProps> = ({ desc, members }) => {
+const Area: FC<AreaProps> = ({ desc, members, init }) => {
   const [showContacts, setShowContacts] = useState(false)
 
   return (
@@ -16,63 +15,55 @@ const Area: FC<AreaProps> = ({ desc, members }) => {
       >
         {desc}
       </Typography>
-      <RotatedBorder
-        width="90%"
-        height="40%"
-        left="5%"
-        top="30%"
-        className="border-white rotate-[-3deg]"
+
+      <Carousel
+        slideSize="20%"
+        breakpoints={[
+          { maxWidth: 1920, slideSize: "20%" },
+          { maxWidth: 1080, slideSize: "35%" },
+          { maxWidth: 696, slideSize: "60%" },
+        ]}
+        slideGap="xl"
+        withControls={false}
+        slidesToScroll={1}
+        align="center"
+        className="w-5/6 m-auto mb-7"
+        initialSlide={init}
       >
-        <Carousel
-          slideSize="20%"
-          breakpoints={[
-            { maxWidth: 1920, slideSize: "20%" },
-            { maxWidth: 1080, slideSize: "35%" },
-            { maxWidth: 696, slideSize: "60%" },
-          ]}
-          slideGap="xl"
-          loop
-          withControls={false}
-          slidesToScroll={1}
-          align="center"
-          className="w-5/6 m-auto mb-7"
-          initialSlide={2}
-        >
-          {members.map((e, i) => {
-            return (
-              <Carousel.Slide
-                className="p-0 my-auto mt-16 laptop:mt-24 notebook:mt-40"
-                key={i}
+        {members.map((e, i) => {
+          return (
+            <Carousel.Slide
+              className="p-0 my-auto mt-16 laptop:mt-24 notebook:mt-40"
+              key={i}
+            >
+              <div
+                onMouseEnter={() => setShowContacts(true)}
+                onMouseLeave={() => setShowContacts(false)}
+                className="m-auto w-fit"
               >
-                <div
-                  onMouseEnter={() => setShowContacts(true)}
-                  onMouseLeave={() => setShowContacts(false)}
-                  className="m-auto w-fit"
+                {showContacts && (
+                  <div className="absolute z-20 text-black right-3 top-3 hover:text-yellow-isaac">
+                    <a
+                      href={e.linkedinPath}
+                      rel="external noreferrer"
+                      target="_blank"
+                    >
+                      <LogoLK className="block mx-auto rounded-[10px] w-8" />
+                    </a>
+                  </div>
+                )}
+                {e.children}
+                <Typography
+                  variant="label"
+                  className="m-auto mt-10 font-semibold text-center w-36 text-yellow-isaac notebook:w-44"
                 >
-                  {showContacts && (
-                    <div className="absolute z-20 text-black right-3 top-3 hover:text-yellow-isaac">
-                      <a
-                        href={e.linkedinPath}
-                        rel="external noreferrer"
-                        target="_blank"
-                      >
-                        <LogoLK className="block mx-auto rounded-[10px] w-8" />
-                      </a>
-                    </div>
-                  )}
-                  {e.children}
-                  <Typography
-                    variant="label"
-                    className="m-auto mt-10 font-semibold text-center w-36 text-yellow-isaac notebook:w-44"
-                  >
-                    {e.name}
-                  </Typography>
-                </div>
-              </Carousel.Slide>
-            )
-          })}
-        </Carousel>
-      </RotatedBorder>
+                  {e.name}
+                </Typography>
+              </div>
+            </Carousel.Slide>
+          )
+        })}
+      </Carousel>
     </div>
   )
 }
