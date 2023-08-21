@@ -17,11 +17,7 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
   }
 
   return (
-    <div
-      className="!bg-transparent scroll-mt-20"
-      ref={controlRef}
-      id="services"
-    >
+    <div className="!bg-transparent" ref={controlRef} id="services">
       <Carousel
         slideSize="33%"
         slideGap="xl"
@@ -32,7 +28,7 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
         className="w-full mb-7"
       >
         {segments.map((item, i) => (
-          <Carousel.Slide className="mx-4 my-auto laptop:mx-8" key={i}>
+          <Carousel.Slide className="m-auto" key={i}>
             <div
               key={item.value}
               ref={item.ref}
@@ -42,7 +38,7 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
                   : "bg-transparent w-full h-12 tablet:w-[170px] tablet:h-10 laptop:w-[230px] laptop:h-12 notebook:w-[280px] desktop:w-[400px] notebook:h-14 desktop:h-fit m-auto"
               }`}
             >
-              <div className="relative flex items-center align-middle w-[274px] h-[43px] tablet:w-[165px] tablet:h-[35px] laptop:w-[224px] laptop:h-[43px] notebook:w-[274px] desktop:w-[395px] desktop:h-32 rounded-[10px] notebook:h-[48px] tablet:m-[2px] desktop:m-1">
+              <div className="relative flex items-center align-middle w-[274px] h-[43px] tablet:w-[230px] tablet:h-[35px] laptop:w-[330px] laptop:h-[65px] notebook:w-[430px] desktop:w-[550px] desktop:h-32 rounded-[10px] notebook:h-[48px] tablet:m-[2px] desktop:m-1 my-auto">
                 <input
                   type="radio"
                   className="absolute top-0 bottom-0 left-0 right-0 opacity-0 cursor-pointer"
@@ -56,7 +52,7 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
                   htmlFor={item.label}
                   className={`p-2 block m-auto duration-400 w-full ease-in-out cursor-pointer ${
                     i === activeIndex
-                      ? "text-yellow-isaac scale-100 font-extrabold text-3xl tablet:text-2xl laptop:text-4-5xl notebook:text-5xl desktop:text-6xl"
+                      ? "text-yellow-isaac scale-100 font-extrabold text-3xl tablet:text-2xl laptop:text-4xl notebook:text-5xl desktop:text-6xl"
                       : "text-dark-blue-isaac text-xl laptop:text-3xl notebook:text-4xl desktop:text-5xl font-bold scale-75"
                   }`}
                 >
