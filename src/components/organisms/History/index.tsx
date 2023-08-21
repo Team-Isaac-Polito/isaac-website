@@ -4,15 +4,15 @@ import Timeline from "@molecules/Timeline"
 import React, { FC, useRef, useState } from "react"
 import HistoryProps from "./index.types"
 
-const History: FC<HistoryProps> = () => {
+const History: FC<HistoryProps> = ({ title }) => {
   const [year, setYear] = useState("2002")
 
   return (
     <>
-      <Typography variant="h1" className="mb-20 text-yellow-isaac">
-        Storia
+      <Typography variant="h1" className="mb-10 laptop:mb-20 text-yellow-isaac">
+        {title}
       </Typography>
-      <div className="block relative top-9 h-[4px] bg-white w-11/12 mx-auto" />
+      <div className="block relative top-5 desktop:top-9 h-[4px] bg-white w-11/12 mx-auto" />
       <Timeline
         segments={[
           {
