@@ -12,14 +12,14 @@ const Paragraph: FC<ParagraphProps> = ({
 }) => {
   const slopeParagraph = invertSlope ? "skew-y-3" : "-skew-y-3"
   const slopeContent = invertSlope ? "-skew-y-3" : "skew-y-3"
-  const lineMargin = isLineTop ? " mb-7 " : " mt-7 "
+  const lineMargin = isLineTop ? " mb-5 desktop:mb-7 " : " mt-5 desktop:mt-7 "
 
   const slope = (
     <div className={palette}>
       <Typography
         variant="p"
         className={classNames(
-          "py-24 text-4xl text-center -skew-y-3 notebook:py-32 mx-14 laptop:mx-32 notebook:mx-40 desktop:mx-48 desktop:py-20 h-fit",
+          "py-16 laptop:py-24 text-4xl text-center -skew-y-3 notebook:py-32 mx-14 laptop:mx-32 notebook:mx-40 desktop:mx-48 desktop:py-20 h-fit",
           slopeContent
         )}
       >
