@@ -7,4 +7,5 @@ export interface HistoryItem {
 
 export default interface HistoryProps {
   years: HistoryItem[]
+  title: string
 }
