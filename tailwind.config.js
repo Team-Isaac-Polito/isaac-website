@@ -19,6 +19,10 @@ module.exports = {
       // => @media (min-width: 1920px) { ... }
     },
     extend: {
+      backgroundImage: {
+        hero: "url('/src/assets/Foto_gruppo.avif')",
+        project: "url('/src/assets/robot completo.avif')",
+      },
       colors: {
         "light-blue-isaac": "#549697",
         "dark-blue-isaac": "#1b1d44",
