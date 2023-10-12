@@ -5,8 +5,9 @@ import HeroProps from "./index.types"
 
 const Hero: FC<HeroProps> = (props) => {
   return (
-    <div className="py-24 bg-black laptop:py-32 h-fit desktop:py-52">
-      <div className="m-auto text-center text-white w-fit">
+    <div className="relative py-24 bg-center bg-no-repeat bg-cover bg-hero laptop:py-32 laptop:h-[500px] notebook:h-[550px] desktop:py-52">
+      <div className="bg-[#1e1e1e] w-full laptop:h-[500px] notebook:h-[550px] absolute top-0 opacity-30" />
+      <div className="relative z-10 m-auto text-center text-white w-fit">
         <Typography className="w-[370px] m-auto" variant="p">
           {props.subtitle}
         </Typography>
