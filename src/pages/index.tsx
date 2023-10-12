@@ -13,8 +13,8 @@ export default function Home(): JSX.Element {
   return (
     <div>
       <Hero
-        title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        subtitle="Lorem ipsum dolor sit amet."
+        title="Team ISAAC"
+        subtitle="Robotica di servizio mobile per operazioni SAR"
       />
       <Isaac />
       <Paragraph className="laptop:my-32" palette="bluePalette">
@@ -22,20 +22,20 @@ export default function Home(): JSX.Element {
           isTextLeft
           palette="bluePalette"
           title="progetti"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget laoreet arcu, et placerat erat. Proin semper tristique elit a dictum. Donec id erat sapien. Morbi non placerat lorem. Aenean feugiat est id nisi suscipit, sed iaculis dolor fermentum. Donec mauris elit, aliquam ac lacinia et, mollis in ante. Maecenas enim nibh, vehicula id volutpat eu."
+          text="Le operazioni di soccorso sono difficili e pericolose anche per gli stessi soccorritori. Robotica per RICERCA E SALVATAGGIO per aiutare o sostituire gli umani in questo tipo di missione."
           buttonText="Learn more"
           classNameBorder="tablet:w-[300px] tablet:h-[400px] desktop:w-[619px] desktop:h-[729px] bluePalette"
         >
-          <div className="rounded-md bg-gray-300 desktop:w-[547px] desktop:h-[666px] tablet:w-[240px] tablet:h-[360px]" />
+          <div className="rounded-md bg-project bg-cover desktop:w-[547px] desktop:h-[666px] tablet:w-[240px] tablet:h-[360px]" />
         </TwoColumns>
       </Paragraph>
       <Paragraph className="laptop:my-32" palette="whitePalette">
         <TwoColumns
           palette="whitePalette"
           title="eventi"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget laoreet arcu, et placerat erat. Proin semper tristique elit a dictum. Donec id erat sapien. Morbi non placerat lorem. Aenean feugiat est id nisi suscipit, sed iaculis dolor fermentum. Donec mauris elit, aliquam ac lacinia et, mollis in ante. Maecenas enim nibh, vehicula id volutpat eu."
+          text="Abbiamo partecipato alla Maker Faire Rome 2022 e parteciperemo anche a quella del 2023! Inoltre abbiamo partecipato ad altri eventi come A&T Turin 2023."
           buttonText="read more"
-          classNameBorder="tablet:w-[400px] tablet:h-[500px] desktop:w-[619px] desktop:h-[729px] border-light-blue-isaac"
+          classNameBorder="tablet:w-[300px] tablet:h-[400px] desktop:w-[619px] desktop:h-[729px] border-light-blue-isaac"
         >
           <div className="rounded-md bg-gray-300 desktop:w-[547px] desktop:h-[666px] tablet:w-[240px] tablet:h-[360px]" />
         </TwoColumns>
