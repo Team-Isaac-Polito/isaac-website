@@ -73,7 +73,7 @@ export default function Projects(): JSX.Element {
             left="5%"
             className="border-light-blue-isaac rotate-[3deg]"
           >
-            <div className="w-screen">
+            <div>
               <Gallery
                 images={[
                   {
