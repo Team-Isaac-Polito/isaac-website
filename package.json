@@ -46,7 +46,7 @@
 		"@babel/core": "^7.23.2",
 		"@types/node": "^20.8.6",
 		"@types/react": "^18.2.20",
-		"@types/webpack-env": "^1.18.1",
+		"@types/webpack-env": "^1.18.2",
 		"@typescript-eslint/eslint-plugin": "^6.7.5",
 		"@typescript-eslint/parser": "^6.7.5",
 		"@vitejs/plugin-react": "^4.0.4",
