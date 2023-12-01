@@ -22,7 +22,7 @@ const TwoColumns: FC<TwoColumnsProps> = ({
       <Typography className={palette} variant="h1">
         {title}
       </Typography>
-      <Typography variant="p" className="my-10">
+      <Typography variant="p" className="my-5 laptop:my-10">
         <Trans i18nKey={textKey} />
         {text}
       </Typography>
@@ -38,7 +38,7 @@ const TwoColumns: FC<TwoColumnsProps> = ({
 
   return (
     <div className={className}>
-      <div className="grid h-full grid-cols-2 gap-20 py-14 tablet:gap-5 laptop:gap-10 notebook:gap-10 desktop:gap-20">
+      <div className="grid h-full grid-cols-2 gap-20 desktop:py-14 tablet:gap-5 laptop:gap-10 notebook:gap-10 desktop:gap-20">
         {isTextLeft
           ? [
               <div key="textLeftColumn" className="m-auto text-left">

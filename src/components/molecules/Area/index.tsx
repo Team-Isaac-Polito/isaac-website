@@ -11,7 +11,7 @@ const Area: FC<AreaProps> = ({ desc, members, init }) => {
     <div>
       <Typography
         variant="p"
-        className="m-auto mx-20 text-center notebook:mt-10 laptop:mt-14 laptop:mx-28 w-fit"
+        className="m-auto text-center mx-14 notebook:mt-10 laptop:mt-14 laptop:mx-28 w-fit"
       >
         {desc}
       </Typography>
@@ -33,7 +33,7 @@ const Area: FC<AreaProps> = ({ desc, members, init }) => {
         {members.map((e, i) => {
           return (
             <Carousel.Slide
-              className="p-0 my-auto mt-16 laptop:mt-24 notebook:mt-40"
+              className="p-0 my-auto mt-10 notebook:mt-24 desktop:mt-40"
               key={i}
             >
               <div
@@ -55,7 +55,7 @@ const Area: FC<AreaProps> = ({ desc, members, init }) => {
                 {e.children}
                 <Typography
                   variant="label"
-                  className="m-auto mt-10 font-semibold text-center w-36 text-yellow-isaac notebook:w-44"
+                  className="m-auto mt-5 font-semibold text-center notebook:mt-10 w-36 text-yellow-isaac notebook:w-44"
                 >
                   {e.name}
                 </Typography>

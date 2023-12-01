@@ -28,17 +28,17 @@ const StaticEvent: FC<StaticEventProps> = ({
         images={[
           {
             children: (
-              <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
             ),
           },
           {
             children: (
-              <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
             ),
           },
           {
             children: (
-              <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
             ),
           },
         ]}
@@ -48,17 +48,17 @@ const StaticEvent: FC<StaticEventProps> = ({
         images={[
           {
             children: (
-              <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
             ),
           },
           {
             children: (
-              <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
             ),
           },
           {
             children: (
-              <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
+              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
             ),
           },
         ]}

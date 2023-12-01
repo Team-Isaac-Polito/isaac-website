@@ -10,7 +10,7 @@ export default function Areas(): JSX.Element {
     <>
       <div className="mx-10">
         <SegmentedControl
-          name="services"
+          name="areas"
           callback={(val) => setArea(val)}
           controlRef={useRef()}
           segments={[
@@ -58,7 +58,11 @@ export default function Areas(): JSX.Element {
           members={[
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
                 // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Marco Fincato",
@@ -66,16 +70,24 @@ export default function Areas(): JSX.Element {
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Guglielmo Bergatto",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Milena Yahya",
               linkedinPath: "",
@@ -90,24 +102,36 @@ export default function Areas(): JSX.Element {
           members={[
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Marco Barbon",
               linkedinPath: "https://www.linkedin.com/",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Giuseppe Esposito",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Edoardo Platania",
               linkedinPath: "",
@@ -122,48 +146,72 @@ export default function Areas(): JSX.Element {
           members={[
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Sergio Gugliandolo",
               linkedinPath: "https://www.linkedin.com/",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Daniele Latella",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Gianmarco Azzalin",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Edoardo Pagliano",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Federico Gariglio",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Zaid Shaikh",
               linkedinPath: "",
@@ -178,48 +226,72 @@ export default function Areas(): JSX.Element {
           members={[
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Giorgia Tallino",
               linkedinPath: "https://www.linkedin.com/",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Apoorva Bhat",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Alessandra Ricci",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Pietro Chirio",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Alice Allegretti",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Simone Torino",
               linkedinPath: "",
@@ -234,24 +306,36 @@ export default function Areas(): JSX.Element {
           members={[
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Cristina Genduso",
               linkedinPath: "https://www.linkedin.com/",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Marco Carli",
               linkedinPath: "",
             },
             {
               children: (
-                <img src={placeholder} alt="placeholder" className="py-11" />
-                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[150px] laptop:h-[220px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
+                <img
+                  src={placeholder}
+                  alt="placeholder"
+                  className="desktop:h-[370px] w-fit notebook:h-[280px] laptop:h-[200px] h-[150px] m-auto"
+                />
+                // <div className="desktop:w-[250px] desktop:h-[370px] notebook:w-[200px] notebook:h-[300px] laptop:w-[180px] laptop:h-[200px] w-[120px] h-[170px] bg-gray-400 m-auto rounded-xl" />
               ),
               name: "Ehsan Ali Shakeri Kondori",
               linkedinPath: "",
