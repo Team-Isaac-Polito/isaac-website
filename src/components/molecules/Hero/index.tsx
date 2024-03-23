@@ -8,19 +8,19 @@ const Hero: FC<HeroProps> = (props) => {
   const { t } = useTranslation()
 
   return (
-    <div className="relative py-24 bg-center bg-no-repeat bg-cover bg-hero laptop:py-32 laptop:h-[500px] notebook:h-[550px] desktop:py-52">
-      <div className="bg-[#1e1e1e] w-full laptop:h-[500px] notebook:h-[550px] absolute top-0 opacity-30" />
-      <div className="flex flex-col justify-center items-center h-full text-center text-white">
-        <Typography className="w-[370px] m-auto" variant="p">
+    <div
+      className="relative py-24 laptop:py-32 desktop:py-40 bg-center bg-no-repeat bg-cover bg-hero"
+      role="img"
+    >
+      <div className="absolute inset-0 bg-[#1A1A1A] opacity-50" />
+      <div className="relative z-10 m-auto text-center text-white w-fit">
+        <Typography className="max-w-[370px] mx-auto" variant="p">
           {props.subtitle}
         </Typography>
-        <Typography
-          className="w-[600px] laptop:w-[700px] notebook:w-[800px] desktop:w-[900px] pt-10"
-          variant="hero"
-        >
+        <Typography className="max-w-[600px] pt-4" variant="hero">
           {props.title}
         </Typography>
-        <div className="m-auto mt-16 w-fit">
+        <div className="mt-16">
           <Button isPrimary>{t("contact-us")}</Button>
         </div>
       </div>
