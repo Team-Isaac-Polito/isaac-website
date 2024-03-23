@@ -3,7 +3,7 @@ import React from "react"
 export interface MemberItem {
   name: string
   children: React.ReactNode
-  linkedinPath: string
+  linkedinPath?: string
 }
 
 export default interface AreaProps {

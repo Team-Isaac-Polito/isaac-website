@@ -5,6 +5,7 @@ export interface HistoryItem {
   children: React.ReactNode
 }
 
-export default interface HistoryProps {
-  years: HistoryItem[]
+export interface HistoryEvent {
+  year: string
+  description: string
 }

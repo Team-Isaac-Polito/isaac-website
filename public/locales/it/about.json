@@ -1,0 +1,59 @@
+{
+  "title": "Su di noi",
+  "description": "//TODO: Description of the team",
+  "history": {
+    "title": "Storia",
+    "events": [
+      {
+        "year": "2002",
+        "description": "Fondazione del team"
+      },
+      {
+        "year": "2008",
+        "description": "Testo 2005"
+      },
+      {
+        "year": "2010",
+        "description": "Testo 2010"
+      },
+      {
+        "year": "2024",
+        "description": "Testo 2024"
+      } 
+    ]
+  },
+  "areas": {
+    "title": "Aree del team",
+    "description": "//TODO: Description of the areas",
+    "items": [
+      {
+        "title": "SOFTWARE",
+        "value": "sf",
+        "description": "Descrizione dell'area software",
+        "members": [
+          {
+            "name": "Guglielmo Bergatto",
+            "role": "Responsabile area software",
+            "linkedin": "//TODO: linkedin link"
+          },
+          {
+            "name": "Luca De Paola"
+          }
+        ]
+      },
+      {
+        "title": "CONTROLLI",
+        "value": "cn",
+        "description": "Descrizione dell'area controlli",
+        "members": []
+      },
+      {
+        "title": "MECCANICA",
+        "value": "mc",
+        "description": "Descrizione dell'area meccanica",
+        "members": []
+      }
+    ]
+
+  }
+}

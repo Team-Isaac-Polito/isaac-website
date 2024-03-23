@@ -1,27 +1,44 @@
 import Hero from "@molecules/Hero"
 import GalleryEvent from "@organisms/GalleryEvent"
 import StaticEvent from "@organisms/StaticEvent"
+import { useTranslation } from "react-i18next"
 import React from "react"
 
+interface Event {
+  type: string
+  title: string
+  desc: string
+  palette: string
+}
+
 export default function Events(): JSX.Element {
+  const { t } = useTranslation("events")
+
   return (
     <>
-      <Hero title={"Eventi"} />
-      <StaticEvent
-        title={"MAKER FAIRE 2022"}
-        desc={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget laoreet arcu, et placerat erat. Proin semper tristique elit a dictum. Donec id erat sapien. Morbi non placerat lorem. Aenean feugiat est id nisi suscipit, sed iaculis dolor fermentum. Donec mauris elit, aliquam ac lacinia et, mollis in ante. Maecenas enim nibh, vehicula id volutpat eu."
+      <Hero title={t("title")} />
+      {(t("events", { returnObjects: true }) as Event[]).map((event, index) => {
+        if (event.type === "static") {
+          return (
+            <StaticEvent
+              key={index}
+              title={event.title}
+              desc={event.desc}
+              palette={event.palette}
+              button=" learn more"
+            />
+          )
+        } else if (event.type === "gallery") {
+          return (
+            <GalleryEvent
+              key={index}
+              title={event.title}
+              desc={event.desc}
+              palette={event.palette}
+            />
+          )
         }
-        button={"learn more"}
-        palette={"bluePalette"}
-      />
-      <GalleryEvent
-        title={"MAKER FAIRE 2022"}
-        desc={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget laoreet arcu, et placerat erat. Proin semper tristique elit a dictum. Donec id erat sapien. Morbi non placerat lorem. Aenean feugiat est id nisi suscipit, sed iaculis dolor fermentum. Donec mauris elit, aliquam ac lacinia et, mollis in ante. Maecenas enim nibh, vehicula id volutpat eu."
-        }
-        palette={"lightBluePalette"}
-      />
+      })}
     </>
   )
 }

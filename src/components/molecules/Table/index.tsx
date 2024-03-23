@@ -2,18 +2,18 @@ import React, { FC } from "react"
 import TableProps from "./index.types"
 import { useTranslation } from "react-i18next"
 
-const Table: FC<TableProps> = ({ translationPath, rows, palette }) => {
-  const { t } = useTranslation()
+const Table: FC<TableProps> = ({ context, translationPath, rows, palette }) => {
+  const { t } = useTranslation(context)
 
   const cells: Array<React.ReactNode> = []
 
   cells.push(
     <tr key={translationPath + "0"}>
       <td className="p-3  tablet:p-2 notebook:p-3 border-dark-blue-isaac border-[1px] rounded-tl-[12px]">
-        {t(translationPath + ".column1.1")}
+        {t(translationPath + ".property.1")}
       </td>
       <td className="p-3 tablet:p-2 notebook:p-3 border-dark-blue-isaac border-[1px] rounded-tr-[12px]">
-        {t(translationPath + ".column2.1")}
+        {t(translationPath + ".value.1")}
       </td>
     </tr>
   )
@@ -22,10 +22,10 @@ const Table: FC<TableProps> = ({ translationPath, rows, palette }) => {
     cells.push(
       <tr key={translationPath + rows + i}>
         <td className="p-3 tablet:p-2 notebook:p-3 border-dark-blue-isaac border-[1px]">
-          {t(translationPath + ".column1." + i)}
+          {t(translationPath + ".property." + i)}
         </td>
         <td className="p-3 tablet:p-2 notebook:p-3 border-dark-blue-isaac border-[1px]">
-          {t(translationPath + ".column2." + i)}
+          {t(translationPath + ".value." + i)}
         </td>
       </tr>
     )
@@ -34,10 +34,10 @@ const Table: FC<TableProps> = ({ translationPath, rows, palette }) => {
   cells.push(
     <tr key={translationPath + rows}>
       <td className="p-3 tablet:p-2 notebook:p-3 border-dark-blue-isaac border-[1px] rounded-bl-[12px]">
-        {t(translationPath + ".column1." + rows)}
+        {t(translationPath + ".property." + rows)}
       </td>
       <td className="p-3 tablet:p-2 notebook:p-3 border-dark-blue-isaac border-[1px] rounded-br-[12px]">
-        {t(translationPath + ".column2." + rows)}
+        {t(translationPath + ".value." + rows)}
       </td>
     </tr>
   )
