@@ -1,7 +1,6 @@
 import Button from "@atoms/Button"
 import RotatedBorderNew from "@atoms/RotatedBorderNew"
 import Typography from "@atoms/Typography"
-import classNames from "classnames"
 import React, { FC } from "react"
 import { Trans } from "react-i18next"
 import TwoColumnsProps from "./index.types"
@@ -26,38 +25,35 @@ const TwoColumns: FC<TwoColumnsProps> = ({
         <Trans i18nKey={textKey} />
         {text}
       </Typography>
-      {buttonText === undefined || buttonText === "" ? null : isTextLeft ? (
-        <Button className={palette}>{buttonText}</Button>
-      ) : (
-        <Button className={classNames("float-right", palette)}>
-          {buttonText}
-        </Button>
+      {buttonText === undefined || buttonText === "" ? null : (
+        <div className="text-center mt-4">
+          <Button className={palette}>{buttonText}</Button>
+        </div>
       )}
     </div>
   )
 
   return (
     <div className={className}>
-      <div className="grid h-full grid-cols-2 gap-20 py-14 tablet:gap-5 laptop:gap-10 notebook:gap-10 desktop:gap-20">
-        {isTextLeft
-          ? [
-              <div key="textLeftColumn" className="m-auto text-left">
-                {textColumn}
-              </div>,
-              <RotatedBorderNew key="content" className={classNameBorder}>
-                {children}
-              </RotatedBorderNew>,
-            ]
-          : [
-              <RotatedBorderNew key="content" className={classNameBorder}>
-                {children}
-              </RotatedBorderNew>,
-              <div key="textRightColumn" className="m-auto text-right">
-                {textColumn}
-              </div>,
-            ]}
+      <div className="grid gap-5 tablet:grid-cols-1 laptop:grid-cols-2">
+        {isTextLeft ? (
+          <>
+            <div className="text-center tablet:text-left">{textColumn}</div>
+            <RotatedBorderNew className={classNameBorder}>
+              {children}
+            </RotatedBorderNew>
+          </>
+        ) : (
+          <>
+            <RotatedBorderNew className={classNameBorder}>
+              {children}
+            </RotatedBorderNew>
+            <div className="text-center tablet:text-right">{textColumn}</div>
+          </>
+        )}
       </div>
     </div>
   )
 }
+
 export default TwoColumns
