@@ -8,7 +8,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 export default function About(): JSX.Element {
-  const {t} = useTranslation("about")
+  const { t } = useTranslation("about")
 
   return (
     <>
@@ -26,7 +26,7 @@ export default function About(): JSX.Element {
       </Paragraph>
       <Paragraph className="laptop:my-32" palette="bluePalette">
         <>
-          <History/>
+          <History />
         </>
       </Paragraph>
       <Paragraph className="laptop:my-32" palette="whitePalette">
@@ -34,9 +34,7 @@ export default function About(): JSX.Element {
           <Typography variant="h1" className="mb-20 text-light-blue-isaac">
             {t("areas.title")}
           </Typography>
-          <Typography variant="p">
-            {t("areas.description")}
-          </Typography>
+          <Typography variant="p">{t("areas.description")}</Typography>
         </>
       </Paragraph>
       <Paragraph palette={"lightBluePalette"} invertSlope>

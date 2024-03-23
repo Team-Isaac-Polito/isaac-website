@@ -11,14 +11,11 @@ import { useTranslation } from "react-i18next"
 import React from "react"
 
 export default function Home(): JSX.Element {
-  const { t } = useTranslation("homepage");
+  const { t } = useTranslation("homepage")
 
   return (
     <div>
-      <Hero
-        title="Team ISAAC"
-        subtitle={t("subtitle")}
-      />
+      <Hero title="Team ISAAC" subtitle={t("subtitle")} />
       <Isaac />
       <Paragraph className="laptop:my-32" palette="bluePalette">
         <TwoColumns

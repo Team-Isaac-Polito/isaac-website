@@ -9,7 +9,6 @@ interface Event {
   title: string
   desc: string
   palette: string
-
 }
 
 export default function Events(): JSX.Element {
@@ -18,8 +17,8 @@ export default function Events(): JSX.Element {
   return (
     <>
       <Hero title={t("title")} />
-      {(t('events', { returnObjects: true }) as Event[]).map((event, index) => {
-        if (event.type === 'static') {
+      {(t("events", { returnObjects: true }) as Event[]).map((event, index) => {
+        if (event.type === "static") {
           return (
             <StaticEvent
               key={index}
@@ -29,7 +28,7 @@ export default function Events(): JSX.Element {
               button=" learn more"
             />
           )
-        } else if (event.type === 'gallery') {
+        } else if (event.type === "gallery") {
           return (
             <GalleryEvent
               key={index}

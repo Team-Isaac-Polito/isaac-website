@@ -6,7 +6,12 @@ import { FC } from "react"
 import SlidesProps from "./index.types"
 import { useTranslation } from "react-i18next"
 
-const Slides: FC<SlidesProps> = ({ context, translationPath, numSlides, palette }) => {
+const Slides: FC<SlidesProps> = ({
+  context,
+  translationPath,
+  numSlides,
+  palette,
+}) => {
   const autoplay = useRef(Autoplay({ delay: 6000 }))
   const slides: Array<React.ReactNode> = []
   const { t } = useTranslation(context)

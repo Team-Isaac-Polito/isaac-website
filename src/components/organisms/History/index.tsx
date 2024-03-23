@@ -5,9 +5,6 @@ import React, { FC, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { HistoryEvent } from "./index.types"
 
-
-
-
 const History: FC = () => {
   const { t } = useTranslation("about")
 
@@ -28,21 +25,22 @@ const History: FC = () => {
             ref: React.createRef(),
             className: "m-auto", //TODO: Add dynamic spacing
           }
-        
         })}
         callback={(val) => setYear(val)}
         controlRef={useRef()}
       />
-      {(t("history.events", {returnObjects: true}) as HistoryEvent[]).map((item, idx) => {
-        if (item.year === year) {
-          return (
-            <HistoryItem key={idx} title={item.year}>
-              {item.description}
-            </HistoryItem>
-          );
+      {(t("history.events", { returnObjects: true }) as HistoryEvent[]).map(
+        (item, idx) => {
+          if (item.year === year) {
+            return (
+              <HistoryItem key={idx} title={item.year}>
+                {item.description}
+              </HistoryItem>
+            )
+          }
+          return null
         }
-        return null;
-      })}
+      )}
     </>
   )
 }
