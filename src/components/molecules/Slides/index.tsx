@@ -4,10 +4,12 @@ import Autoplay from "embla-carousel-autoplay"
 import React, { useRef } from "react"
 import { FC } from "react"
 import SlidesProps from "./index.types"
+import { useTranslation } from "react-i18next"
 
-const Slides: FC<SlidesProps> = ({ translationPath, numSlides, palette }) => {
+const Slides: FC<SlidesProps> = ({ context, translationPath, numSlides, palette }) => {
   const autoplay = useRef(Autoplay({ delay: 6000 }))
   const slides: Array<React.ReactNode> = []
+  const { t } = useTranslation(context)
 
   for (let i = 1; i <= numSlides; i++) {
     slides.push(
@@ -17,7 +19,7 @@ const Slides: FC<SlidesProps> = ({ translationPath, numSlides, palette }) => {
           isTextLeft
           palette={palette}
           title=""
-          textKey={translationPath + "." + i}
+          text={t(translationPath + "." + i)}
           classNameBorder={
             "tablet:w-[130px] laptop:w-[200px] notebook:w-[270px] desktop:w-[400px] aspect-[7/6] " +
             " " +

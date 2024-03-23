@@ -6,10 +6,12 @@ import Slides from "@molecules/Slides"
 import Table from "@molecules/Table"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
-import { Trans } from "react-i18next"
+import { useTranslation } from "react-i18next"
 import reseq from "../assets/ReseQ1.mp4"
 
 export default function Projects(): JSX.Element {
+  const { t } = useTranslation("projects")
+
   return (
     <div>
       <div>
@@ -24,8 +26,8 @@ export default function Projects(): JSX.Element {
           <TwoColumns
             isTextLeft
             palette="bluePalette"
-            title="chi è rese.q mk1"
-            textKey="projects.paragraph1.text"
+            title={t("reseq-mk1.title")}
+            textKey={t("reseq-mk1.description")}
             buttonText=""
             classNameBorder="bluePalette aspect-[4/5]
              tablet:h-[310px] laptop:h-[450px] notebook:h-[500px] desktop:h-[736px]"
@@ -41,12 +43,13 @@ export default function Projects(): JSX.Element {
           <TwoColumns
             palette="whitePalette"
             classNameBorder="h-0 w-0"
-            title="caratteristiche"
-            textKey="projects.paragraph2.text"
+            title={t("reseq-mk1.features.title")}
+            textKey="projects:reseq-mk1.features.description"
           >
             <div className="">
               <Table
-                translationPath="projects.paragraph2.datasheet"
+                context="projects"
+                translationPath="reseq-mk1.features.datasheet"
                 palette="white"
                 rows={8}
               />
@@ -56,13 +59,14 @@ export default function Projects(): JSX.Element {
 
         <Paragraph invertSlope palette="lightBluePalette">
           <Typography className="mb-10 lightBluePalette" variant="h1">
-            obiettivi
+            {t("reseq-mk1.objectives.title")}
           </Typography>
-          <Trans i18nKey="projects.paragraph3.text"></Trans>
+          {t("reseq-mk1.objectives.description")}
           <Slides
+            context="projects"
             numSlides={3}
             palette="lightBluePalette"
-            translationPath="projects.paragraph3.slides"
+            translationPath="reseq-mk1.objectives.slides"
           />
         </Paragraph>
 

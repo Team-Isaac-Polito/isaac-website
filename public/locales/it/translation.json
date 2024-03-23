@@ -12,56 +12,5 @@
     "years": "Anni di storia",
     "members": "Membri",
     "prototypes": "Prototipi"
-  },
-
-
-
-
-
-
-
-
-
-  "projects": {
-    "paragraph1": {
-      "title": "Chi è Rese.Q mk1",
-      "text": "È il primo prototipo del team per raggiungere l’obiettivo di creare un robot innovativo per le operazioni SAR.\n La nostra idea è quella di avere un robot modulare cingolato e con due possibili configurazioni: braccio robotico e robot strisciante. In modo che riesca a destreggiarsi facilmente in situazioni pericolose, per perlustrare l’ambiente senza rischiare le vite dei soccorritori."
-    },
-    "paragraph2": {
-      "title": "Caratteristiche",
-      "text": "<strong>Struttura modulare:</strong><br>Permette di adattare il robot a diverse scenari, con moduli specializzati<br><strong>Configurazione snake-like:</strong><br>Permette maggiore agilità nel movimento<br><strong>Configurazione braccio robotico:</strong><br>Per un sollevamento in verticale di parte del robot<br><strong>Controllo remoto:</strong><br>Tramite un telecomando e una telecamera sul robot, con possibilità future di guida autonoma e semi-autonoma.",
-      "datasheet": {
-        "title": "Scheda tecnica",
-        "column1": {
-          "1": "Dimensioni",
-          "2": "Peso",
-          "3": "Velocità lineare",
-          "4": "Angolo di imbardata",
-          "5": "Pendenza superabile",
-          "6": "Batteria",
-          "7": "Connettività",
-          "8": "Temperatura di lavoro"
-        },
-        "column2": {
-          "1": "L800*W150*H80 mm",
-          "2": "35kg max/modulo",
-          "3": "1m/s max",
-          "4": "35°",
-          "5": "45°, scale",
-          "6": "12V 1.8Ah",
-          "7": "WiFi, 4G",
-          "8": "-5°C min, 40°C max"
-        }
-      }
-    },
-    "paragraph3": {
-      "title": "Obiettivi",
-      "text": "Lo scopo di Rese.Q Mk1 è quello di fornire supporto ai soccorritori in situazioni emergenziali.\n Le sue funzionalità attuali sono:",
-      "slides": {
-        "1": "Esplorazione e mappatura di aree non in sicurezza",
-        "2": "Individuazione di persone in difficoltà",
-        "3": "Trasporto di viveri, medicine e altri beni di primo soccorso tramite un modulo aggiuntivo dedicato"
-      }
-    }
   }
 }
