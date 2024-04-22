@@ -10,7 +10,7 @@ const Social: FC<SocialProps> = ({ className }) => {
     <>
       <div
         className={classNames(
-          "text-white hover:text-yellow-isaac flex flex-row items-center gap-[6px] tablet:gap-3 laptop:gap-5 notebook:gap-6 desktop:gap-7",
+          "text-white hover:text-yellow-isaac grid grid-cols-3 mx-auto mt-0 gap-[6px] tablet:gap-3 laptop:gap-5 notebook:gap-6 desktop:gap-7",
           className ?? ""
         )}
       >
@@ -18,7 +18,7 @@ const Social: FC<SocialProps> = ({ className }) => {
           href={"https://www.instagram.com/"}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[13px] tablet:w-8 laptop:w-12 notebook:w-14 desktop:w-16 text-white hover:text-yellow-isaac"
+          className="w-[13px] tablet:w-8 laptop:w-10 notebook:w-14 desktop:w-16 text-white hover:text-yellow-isaac"
         >
           <InstagramButton />
         </a>
@@ -26,7 +26,7 @@ const Social: FC<SocialProps> = ({ className }) => {
           href={"https://www.linkedin.com/"}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[13px] tablet:w-8 laptop:w-12 notebook:w-14 desktop:w-16 text-white hover:text-yellow-isaac"
+          className="w-[13px] tablet:w-8 laptop:w-10 notebook:w-14 desktop:w-16 text-white hover:text-yellow-isaac"
         >
           <LinkedinButton />
         </a>
@@ -36,7 +36,7 @@ const Social: FC<SocialProps> = ({ className }) => {
           rel="noopener noreferrer"
           className="m-auto text-white hover:text-yellow-isaac"
         >
-          <EmailButton className="tablet:w-8 laptop:w-12 notebook:w-14 desktop:w-16 " />
+          <EmailButton className="tablet:w-8 laptop:w-10 notebook:w-14 desktop:w-16 " />
         </a>
       </div>
     </>

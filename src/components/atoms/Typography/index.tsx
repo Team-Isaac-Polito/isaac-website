@@ -63,7 +63,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <h3
           className={classNames(
-            "font-normal text-[9px] tablet:text-[8px] laptop:text-[10px] notebook:text-sm desktop:text-xl",
+            "font-normal text-xs laptop:text-sm notebook:text-base desktop:text-xl",
             className ?? ""
           )}
         >

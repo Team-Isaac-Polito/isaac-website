@@ -1,5 +1,5 @@
-import Footer from "@atoms/Footer"
 import NavBar from "@atoms/NavBar"
+import Footer from "@molecules/Footer"
 import Navigation from "@molecules/Navigation"
 import React, { useRef, useState } from "react"
 import { Outlet } from "react-router-dom"
