@@ -22,12 +22,12 @@ const Button: FC<ButtonProps> = ({
       {children}
     </a>
   ) : (
-    <div className="w-[220px] h-[45px] tablet:w-[170px] tablet:h-[35px] laptop:w-[220px] laptop:h-[55px] notebook:w-[285px] notebook:h-[55px] desktop:w-[370px] desktop:h-[72px]">
+    <div className="w-[220px] h-[40px] tablet:w-[170px] tablet:h-[55px] laptop:w-[220px] laptop:h-[55px] notebook:w-[285px] notebook:h-[55px] desktop:w-[370px] desktop:h-[72px]">
       <a
         href={href}
         onClick={onClick}
         className={classNames(
-          "cursor-pointer flex flex-col items-center justify-center text-base tablet:text-lg laptop:text-xl notebook:text-3xl desktop:text-4xl font-semibold w-fit h-fit laptop:py-4 py-2 px-4 laptop:px-10 desktop:px-16 rounded-3xl tablet:rounded-md laptop:rounded-xl desktop:rounded-2xl transition duration-500 ease-in-out uppercase hover:scale-105 hover:-translate-y-1 border-solid border-[5px]",
+          "cursor-pointer text-base m-auto tablet:text-lg laptop:text-xl notebook:text-3xl desktop:text-4xl font-semibold w-full h-full laptop:py-4 py-2 px-4 laptop:px-10 desktop:px-16 rounded-3xl tablet:rounded-xl desktop:rounded-2xl transition duration-500 ease-in-out uppercase hover:scale-105 hover:-translate-y-1 border-solid border-[5px]",
           className
         )}
       >

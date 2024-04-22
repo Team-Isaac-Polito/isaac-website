@@ -7,9 +7,7 @@ import { HistoryEvent } from "./index.types"
 
 const History: FC = () => {
   const { t } = useTranslation("about")
-
   const [year, setYear] = useState("2002")
-
   const events = t("history.events", { returnObjects: true }) as HistoryEvent[]
 
   return (
@@ -17,7 +15,7 @@ const History: FC = () => {
       <Typography variant="h1" className="mb-20 text-yellow-isaac">
         {t("history.title")}
       </Typography>
-      <div className="block relative top-9 h-[4px] bg-white w-11/12 mx-auto" />
+      <div className="block relative top-5 desktop:top-9 h-[4px] bg-white w-11/12 mx-auto" />
       <Timeline
         segments={events.map((event) => {
           return {

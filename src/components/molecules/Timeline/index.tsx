@@ -36,8 +36,8 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
                 htmlFor={item.value}
                 className={`p-2 block m-auto duration-400 ease-in-out cursor-pointer ${
                   i === activeIndex
-                    ? "w-12 h-12 rounded-full bg-white after:top-[15px]"
-                    : "w-12 h-12 rounded-full bg-dark-blue-isaac border-4 border-white after:top-[10px]"
+                    ? "w-8 h-8 desktop:w-12 desktop:h-12 rounded-full bg-white"
+                    : "w-8 h-8 desktop:w-12 desktop:h-12 rounded-full bg-dark-blue-isaac border-4 border-white"
                 }`}
               />
               <p className="block">{item.value}</p>

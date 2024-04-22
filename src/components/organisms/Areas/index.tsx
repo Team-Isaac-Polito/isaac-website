@@ -16,7 +16,7 @@ export default function Areas(): JSX.Element {
     <>
       <div className="mx-10">
         <SegmentedControl
-          name="services"
+          name="areas"
           callback={(val) => setArea(val)}
           controlRef={useRef()}
           segments={areas.map((areaItem) => ({

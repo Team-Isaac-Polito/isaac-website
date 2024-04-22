@@ -52,7 +52,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <p
           className={classNames(
-            "antialiased font-normal text-xs tablet:text-lg notebook:text-2xl desktop:text-4xl",
+            "antialiased font-normal text-xs tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl",
             className ?? ""
           )}
         >
