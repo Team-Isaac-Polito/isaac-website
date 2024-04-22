@@ -1,13 +1,13 @@
 import Typography from "@atoms/Typography"
-import { useTranslation } from "react-i18next"
 import React from "react"
+import { useTranslation } from "react-i18next"
 
 const Form = () => {
   const { t } = useTranslation()
 
   return (
     <div className="mt-40">
-      <Typography variant={"h1"} className="ml-96">
+      <Typography variant={"h1"} className="mx-auto mb-6 laptop:mb-10 w-fit">
         {t("contact-us")}
       </Typography>
       <iframe
