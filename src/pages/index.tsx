@@ -7,8 +7,9 @@ import Hero from "@molecules/Hero"
 import Numbers from "@molecules/Numbers"
 import Paragraph from "@molecules/Paragraph"
 import TwoColumns from "@molecules/TwoColumns"
-import { useTranslation } from "react-i18next"
 import React from "react"
+import { useTranslation } from "react-i18next"
+import img from "../assets/lightbulb.png"
 
 export default function Home(): JSX.Element {
   const { t } = useTranslation("homepage")
@@ -23,11 +24,10 @@ export default function Home(): JSX.Element {
           palette="bluePalette"
           title={t("projects.title")}
           text={t("projects.description")}
-          buttonText="Read more"
-          classNameBorder="tablet:w-[300px] tablet:h-[400px] desktop:w-[619px] desktop:h-[729px] bluePalette"
-        >
-          <div className="rounded-md bg-project bg-cover desktop:w-[547px] desktop:h-[666px] tablet:w-[240px] tablet:h-[360px]" />
-        </TwoColumns>
+          buttonText="Scopri di più"
+          src={img}
+          alt="immagine prova"
+        />
       </Paragraph>
       <Paragraph className="laptop:my-32" palette="whitePalette">
         <TwoColumns
@@ -35,10 +35,9 @@ export default function Home(): JSX.Element {
           title={t("events.title")}
           text={t("events.description")}
           buttonText="Read more"
-          classNameBorder="tablet:w-[300px] tablet:h-[400px] desktop:w-[619px] desktop:h-[729px] border-light-blue-isaac"
-        >
-          <div className="rounded-md bg-gray-300 desktop:w-[547px] desktop:h-[666px] tablet:w-[240px] tablet:h-[360px]" />
-        </TwoColumns>
+          src={img}
+          alt="immagine prova"
+        />
       </Paragraph>
       <Paragraph
         className="laptop:my-32"
