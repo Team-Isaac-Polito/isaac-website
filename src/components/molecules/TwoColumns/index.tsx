@@ -1,62 +1,94 @@
 import Button from "@atoms/Button"
-import RotatedBorderNew from "@atoms/RotatedBorderNew"
 import Typography from "@atoms/Typography"
-import classNames from "classnames"
 import React, { FC } from "react"
 import { Trans } from "react-i18next"
 import TwoColumnsProps from "./index.types"
 
 const TwoColumns: FC<TwoColumnsProps> = ({
-  className,
   isTextLeft,
   textKey,
   text,
   buttonText,
   title,
-  children,
   palette,
-  classNameBorder,
+  src,
+  alt,
 }) => {
-  const textColumn = (
-    <div className="align-middle">
-      <Typography className={palette} variant="h1">
-        {title}
-      </Typography>
-      <Typography variant="p" className="my-5 laptop:my-10">
-        <Trans i18nKey={textKey} />
-        {text}
-      </Typography>
-      {buttonText === undefined || buttonText === "" ? null : isTextLeft ? (
-        <Button className={palette}>{buttonText}</Button>
-      ) : (
-        <Button className={classNames("float-right", palette)}>
-          {buttonText}
-        </Button>
-      )}
-    </div>
-  )
-
   return (
-    <div className={className}>
-      <div className="grid h-full grid-cols-2 gap-20 desktop:py-14 tablet:gap-5 laptop:gap-10 notebook:gap-10 desktop:gap-20">
-        {isTextLeft
-          ? [
-              <div key="textLeftColumn" className="m-auto text-left">
-                {textColumn}
-              </div>,
-              <RotatedBorderNew key="content" className={classNameBorder}>
-                {children}
-              </RotatedBorderNew>,
-            ]
-          : [
-              <RotatedBorderNew key="content" className={classNameBorder}>
-                {children}
-              </RotatedBorderNew>,
-              <div key="textRightColumn" className="m-auto text-right">
-                {textColumn}
-              </div>,
-            ]}
-      </div>
+    <div className="grid h-full gap-20 tablet:grid-cols-2 desktop:py-20 tablet:gap-5 laptop:gap-10 notebook:gap-10 desktop:gap-20">
+      {isTextLeft ? (
+        <>
+          <div className="m-auto text-center tablet:text-left">
+            <Typography className={palette} variant="h1">
+              {title}
+            </Typography>
+            <Typography
+              variant="p"
+              className="my-5 text-justify laptop:my-10 tablet:text-left"
+            >
+              <Trans i18nKey={textKey} />
+              {text}
+            </Typography>
+            {buttonText === undefined || buttonText === "" ? null : (
+              <Button className="m-auto border-yellow-isaac tablet:ml-0">
+                {buttonText}
+              </Button>
+            )}
+          </div>
+          <img
+            src={src}
+            alt={alt}
+            className="w-56 m-auto laptop:w-72 notebook:w-80 desktop:w-96"
+            key="imgLeft"
+          />
+        </>
+      ) : (
+        <>
+          <div className="m-auto text-center tablet:text-right tablet:hidden">
+            <Typography className={palette} variant="h1">
+              {title}
+            </Typography>
+            <Typography
+              variant="p"
+              className="my-5 text-justify laptop:my-10 tablet:text-right"
+            >
+              <Trans i18nKey={textKey} />
+              {text}
+            </Typography>
+            {buttonText === undefined || buttonText === "" ? null : (
+              <Button className="m-auto tablet:float-right border-light-blue-isaac">
+                {buttonText}
+              </Button>
+            )}
+          </div>
+          <img
+            src={src}
+            alt={alt}
+            className="w-56 m-auto laptop:w-72 notebook:w-80 desktop:w-96 tablet:hidden"
+            key="imgLeft"
+          />
+          <img
+            src={src}
+            alt={alt}
+            className="hidden w-56 m-auto laptop:w-72 notebook:w-80 desktop:w-96 tablet:block"
+            key="imgLeft"
+          />
+          <div className="hidden m-auto text-right tablet:block">
+            <Typography className={palette} variant="h1">
+              {title}
+            </Typography>
+            <Typography variant="p" className="my-5 laptop:my-10">
+              <Trans i18nKey={textKey} />
+              {text}
+            </Typography>
+            {buttonText === undefined || buttonText === "" ? null : (
+              <Button className="float-right border-light-blue-isaac">
+                {buttonText}
+              </Button>
+            )}
+          </div>
+        </>
+      )}
     </div>
   )
 }
