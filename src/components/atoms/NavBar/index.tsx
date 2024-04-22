@@ -14,19 +14,22 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
   }
 
   const navLinkClass = ({ isActive }: { isActive: boolean }): string => {
-    return `hover:text-yellow-isaac mt-0 h-fit text-white text-xl tablet:text-base laptop:text-3xl notebook:text-4xl desktop:text-5xl ${
+    return `hover:text-yellow-isaac mt-0 text-white text-xl tablet:text-xl laptop:text-2xl notebook:text-3xl desktop:text-5xl ${
       isActive ? "text-yellow-isaac" : ""
     }`
   }
 
   return (
-    <header className="sticky top-0 z-20 grid w-full grid-cols-4 text-white h-14 tablet:h-16 laptop:h-24 font-Staatliches notebook:h-28 desktop:h-36 bg-dark-blue-isaac tablet:backdrop-blur-md">
-      <Logo className="hidden h-10 m-auto tablet:w-28 laptop:w-fit laptop:ml-14 notebook:ml-20 desktop:ml-28 laptop:h-14 notebook:h-16 desktop:h-24 tablet:flex" />
-      <nav className="items-center hidden col-span-2 m-auto text-5xl uppercase tablet:flex tablet:flex-row w-fit">
-        <ul className="m-auto h-fit">
+    <header className="sticky top-0 z-20 grid w-full grid-cols-4 text-white h-14 tablet:h-16 laptop:h-20 font-Staatliches notebook:h-24 desktop:h-28 bg-dark-blue-isaac tablet:backdrop-blur-md">
+      <Logo className="hidden h-10 m-auto tablet:w-28 laptop:w-fit laptop:ml-14 notebook:ml-20 desktop:ml-28 laptop:h-12 notebook:h-16 desktop:h-20 tablet:flex" />
+      <nav className="items-center hidden w-full col-span-2 text-5xl uppercase tablet:flex tablet:flex-row">
+        <ul className="grid w-full grid-cols-4">
           {navRoutes.map((route) => {
             return (
-              <li key={route.id} className="inline-block mx-5 cursor-pointer">
+              <li
+                key={route.id}
+                className="flex items-center mx-auto cursor-pointer"
+              >
                 <NavLink to={`${route.path}`} className={navLinkClass}>
                   {t(`routes.${route.title}`)}
                 </NavLink>
@@ -35,7 +38,7 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
           })}
         </ul>
       </nav>
-      <div className="hidden m-auto text-xl text-white tablet:flex tablet:flex-row justify-self-end tablet:text-base laptop:text-2xl notebook:text-3xl desktop:text-4xl w-fit laptop:mr-28">
+      <div className="hidden m-auto text-xl text-white tablet:flex tablet:flex-row justify-self-end tablet:text-lg laptop:text-2xl notebook:text-3xl desktop:text-4xl w-fit laptop:mr-28">
         <button
           onClick={() => changeLanguage("it")}
           className={
@@ -46,7 +49,7 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
         >
           ITA
         </button>
-        <div className="w-[2px] laptop:w-1 h-8 mx-3 bg-white laptop:h-10" />
+        <div className="w-[2px] laptop:w-1 h-7 mx-3 bg-white laptop:h-10" />
         <button
           onClick={() => changeLanguage("en")}
           className={
