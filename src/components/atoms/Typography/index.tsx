@@ -19,7 +19,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <h1
           className={classNames(
-            "uppercase antialiased font-extrabold text-3xl tablet:text-2xl laptop:text-4-5xl notebook:text-5-5xl desktop:text-7xl",
+            "uppercase font-extrabold text-3xl tablet:text-3xl laptop:text-4-5xl notebook:text-5-5xl desktop:text-7xl",
             className ?? ""
           )}
         >
@@ -41,7 +41,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <p
           className={classNames(
-            "antialiased text-xl tablet:text-base laptop:text-2xl notebook:text-3xl desktop:text-4-5xl desktop:leading-tight font-normal",
+            "text-base phone:text-lg tablet:text-lg notebook:text-2xl desktop:text-3xl desktop:leading-tight font-light",
             className ?? ""
           )}
         >
