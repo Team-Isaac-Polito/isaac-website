@@ -1,0 +1,24 @@
+{
+  "history": {
+    "events": []
+  },
+  "areas": {
+    "items": [
+      {
+        "title": "SOFTWARE",
+        "value": "sf",
+        "description": "Description of the software area",
+        "members": [
+          {
+            "name": "Guglielmo Bergatto",
+            "role": "Software area leader",
+            "linkedin": "//TODO: linkedin link"
+          },
+          {
+            "name": "Luca De Paola"
+          }
+        ]
+      }
+    ]
+  }
+}

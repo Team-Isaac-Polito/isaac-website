@@ -1,0 +1,17 @@
+{
+  "title": "Eventi",
+  "events": [
+    {
+      "type": "static",
+      "title": "Maker Faire 2022",
+      "desc": "//TODO: Testo italiano",
+      "palette": "bluePalette"
+    },
+    {
+      "type": "gallery",
+      "title": "MAKER FAIRE 2023",
+      "desc": "//TODO: Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "palette": "lightBluePalette"
+    }
+  ]
+}

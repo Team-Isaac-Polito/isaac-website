@@ -7,23 +7,23 @@ import Hero from "@molecules/Hero"
 import Numbers from "@molecules/Numbers"
 import Paragraph from "@molecules/Paragraph"
 import TwoColumns from "@molecules/TwoColumns"
+import { useTranslation } from "react-i18next"
 import React from "react"
 
 export default function Home(): JSX.Element {
+  const { t } = useTranslation("homepage")
+
   return (
     <div>
-      <Hero
-        title="Team ISAAC"
-        subtitle="Robotica di servizio mobile per operazioni SAR"
-      />
+      <Hero title="Team ISAAC" subtitle={t("subtitle")} />
       <Isaac />
       <Paragraph className="laptop:my-32" palette="bluePalette">
         <TwoColumns
           isTextLeft
           palette="bluePalette"
-          title="progetti"
-          text="Le operazioni di soccorso sono difficili e pericolose anche per gli stessi soccorritori. Robotica per RICERCA E SALVATAGGIO per aiutare o sostituire gli umani in questo tipo di missione."
-          buttonText="Learn more"
+          title={t("projects.title")}
+          text={t("projects.description")}
+          buttonText="Read more"
           classNameBorder="tablet:w-[300px] tablet:h-[400px] desktop:w-[619px] desktop:h-[729px] bluePalette"
         >
           <div className="rounded-md bg-project bg-cover desktop:w-[547px] desktop:h-[666px] tablet:w-[240px] tablet:h-[360px]" />
@@ -32,9 +32,9 @@ export default function Home(): JSX.Element {
       <Paragraph className="laptop:my-32" palette="whitePalette">
         <TwoColumns
           palette="whitePalette"
-          title="eventi"
-          text="Abbiamo partecipato alla Maker Faire Rome 2022 e parteciperemo anche a quella del 2023! Inoltre abbiamo partecipato ad altri eventi come A&T Turin 2023."
-          buttonText="read more"
+          title={t("events.title")}
+          text={t("events.description")}
+          buttonText="Read more"
           classNameBorder="tablet:w-[300px] tablet:h-[400px] desktop:w-[619px] desktop:h-[729px] border-light-blue-isaac"
         >
           <div className="rounded-md bg-gray-300 desktop:w-[547px] desktop:h-[666px] tablet:w-[240px] tablet:h-[360px]" />
@@ -48,7 +48,7 @@ export default function Home(): JSX.Element {
         <Numbers />
       </Paragraph>
       <Typography className="m-auto my-20 w-fit" variant="h1">
-        Galleria
+        {t("gallery")}
       </Typography>
       <RotatedBorder
         width="80%"
