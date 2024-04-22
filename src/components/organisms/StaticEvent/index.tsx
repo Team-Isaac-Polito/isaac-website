@@ -18,11 +18,10 @@ const StaticEvent: FC<StaticEventProps> = ({
           palette={palette}
           buttonText={button}
           text={desc}
-          classNameBorder="tablet:w-[300px] tablet:h-[400px] desktop:w-[619px] desktop:h-[729px] bluePalette"
           isTextLeft
-        >
-          <div className="rounded-md bg-gray-300 desktop:w-[547px] desktop:h-[666px] tablet:w-[240px] tablet:h-[360px]" />
-        </TwoColumns>
+          src={""}
+          alt={""}
+        />
       </Paragraph>
       <StaticGallery
         images={[

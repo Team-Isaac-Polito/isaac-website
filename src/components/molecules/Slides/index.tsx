@@ -1,10 +1,9 @@
 import { Carousel } from "@mantine/carousel"
 import TwoColumns from "@molecules/TwoColumns"
 import Autoplay from "embla-carousel-autoplay"
-import React, { useRef } from "react"
-import { FC } from "react"
-import SlidesProps from "./index.types"
+import React, { FC, useRef } from "react"
 import { useTranslation } from "react-i18next"
+import SlidesProps from "./index.types"
 
 const Slides: FC<SlidesProps> = ({
   context,
@@ -20,19 +19,13 @@ const Slides: FC<SlidesProps> = ({
     slides.push(
       <Carousel.Slide>
         <TwoColumns
-          className="h-[190px] tablet:h-[200px] laptop:h-[250px] notebook:h-[350px] desktop:h-[450px]"
           isTextLeft
           palette={palette}
           title=""
           text={t(translationPath + "." + i)}
-          classNameBorder={
-            "tablet:w-[130px] laptop:w-[200px] notebook:w-[270px] desktop:w-[400px] aspect-[7/6] " +
-            " " +
-            palette
-          }
-        >
-          <div className="bg-gray-300 tablet:w-[110px] laptop:w-[180px] notebook:w-[240px] desktop:w-[340px] aspect-[6/5]"></div>
-        </TwoColumns>
+          src={""}
+          alt={""}
+        />
       </Carousel.Slide>
     )
   }
