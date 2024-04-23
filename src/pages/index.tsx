@@ -23,7 +23,7 @@ export default function Home(): JSX.Element {
           palette="bluePalette"
           title={t("projects.title")}
           text={t("projects.description")}
-          buttonText="Scopri di più"
+          buttonText={t("scopri di più")}
           src={img}
           alt="immagine prova"
         />
@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
           palette="whitePalette"
           title={t("events.title")}
           text={t("events.description")}
-          buttonText="Read more"
+          buttonText={t("scopri di più")}
           src={img}
           alt="immagine prova"
         />
