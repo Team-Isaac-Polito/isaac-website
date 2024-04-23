@@ -33,7 +33,7 @@ export default function Projects(): JSX.Element {
         <TwoColumns
           palette="whitePalette"
           title={t("reseq-mk1.features.title")}
-          text="projects:reseq-mk1.features.description"
+          text={t("reseq-mk1.features.description")}
           src={img}
           alt={""}
         />
