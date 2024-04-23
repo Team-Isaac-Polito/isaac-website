@@ -13,8 +13,8 @@ i18n
       escapeValue: false,
       formatSeparator: ".",
     },
-    lng: "it",
-    fallbackLng: "en",
+    lng: localStorage.getItem("i18nextLng") || "it",
+    fallbackLng: localStorage.getItem("i18nextLng") || "en",
     detection: {
       order: ["path"],
       lookupFromPathIndex: 0,
