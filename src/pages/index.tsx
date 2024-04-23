@@ -1,6 +1,5 @@
 import Form from "@atoms/Form"
 import Isaac from "@atoms/Isaac"
-import RotatedBorder from "@atoms/RotatedBorder"
 import Typography from "@atoms/Typography"
 import Gallery from "@molecules/Gallery"
 import Hero from "@molecules/Hero"
@@ -46,48 +45,41 @@ export default function Home(): JSX.Element {
       >
         <Numbers />
       </Paragraph>
-      <Typography className="m-auto my-20 w-fit" variant="h1">
+      <Typography
+        className="m-auto mt-20 mb-10 notebook:mb-12 desktop:mb-20 w-fit"
+        variant="h1"
+      >
         {t("gallery")}
       </Typography>
-      <RotatedBorder
-        width="80%"
-        height="80%"
-        top="10"
-        left="10%"
-        className="border-light-blue-isaac rotate-[3deg]"
-      >
-        <div className="relative w-full">
-          <Gallery
-            images={[
-              {
-                children: (
-                  <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
-                ),
-              },
-              {
-                children: (
-                  <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
-                ),
-              },
-              {
-                children: (
-                  <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
-                ),
-              },
-              {
-                children: (
-                  <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
-                ),
-              },
-              {
-                children: (
-                  <div className="m-auto bg-gray-300 w-96 h-96 rounded-xl" />
-                ),
-              },
-            ]}
-          />
-        </div>
-      </RotatedBorder>
+      <Gallery
+        images={[
+          {
+            children: (
+              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+            ),
+          },
+          {
+            children: (
+              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+            ),
+          },
+          {
+            children: (
+              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+            ),
+          },
+          {
+            children: (
+              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+            ),
+          },
+          {
+            children: (
+              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+            ),
+          },
+        ]}
+      />
       <Form />
     </div>
   )
