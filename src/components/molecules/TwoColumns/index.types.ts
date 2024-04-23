@@ -3,7 +3,7 @@ export default interface TwoColumnsProps {
   textKey?: string
   text?: string
   buttonText?: string
-  title: string
+  title?: string
   palette: string
   src: string
   alt: string
