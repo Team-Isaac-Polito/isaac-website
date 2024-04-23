@@ -6,7 +6,7 @@ import FotoAssociazione from "../../../assets/FotoAssociazione.png"
 import HeroProps from "./index.types"
 
 const Hero: FC<HeroProps> = (props) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("homepage")
 
   return (
     <div className="relative">
