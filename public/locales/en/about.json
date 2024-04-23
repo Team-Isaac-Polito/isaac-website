@@ -1,8 +1,30 @@
 {
+  "title": "About Us",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
   "history": {
-    "events": []
+    "title": "history",
+    "events": [
+      {
+        "year": "2002",
+        "description": "Something explanatory of 2002"
+      },
+      {
+        "year": "2008",
+        "description": "Something explanatory of 2005"
+      },
+      {
+        "year": "2010",
+        "description": "Something explanatory of 2010"
+      },
+      {
+        "year": "2024",
+        "description": "Something explanatory of 2024"
+      }
+    ]
   },
   "areas": {
+    "title": "Our Areas",
+    "description": "//TODO: Description of the areas",
     "items": [
       {
         "title": "SOFTWARE",
