@@ -7,7 +7,7 @@ import { ReactComponent as People } from "../../../assets/svg/people.svg"
 import { ReactComponent as Robot } from "../../../assets/svg/robot.svg"
 
 const Numbers = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("homepage")
 
   return (
     <div className="m-auto laptop:my-8 notebook:my-16 w-fit desktop:my-32">
