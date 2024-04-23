@@ -10,7 +10,7 @@ const Numbers = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="m-auto laptop:mb-16 notebook:mb-20 w-fit desktop:mb-40">
+    <div className="m-auto laptop:my-8 notebook:my-16 w-fit desktop:my-32">
       <Typography
         className="m-auto mb-16 laptop:mb-32 desktop:mb-40 w-fit lightBluePalette"
         variant="h1"

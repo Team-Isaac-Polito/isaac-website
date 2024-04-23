@@ -13,7 +13,7 @@ const Number: FC<NumberProps> = ({ number, label }) => {
       </Typography>
       <Typography
         variant="label"
-        className="text-[28px] font-semibold uppercase !text-yellow-isaac w-fit m-auto text-center mt-7"
+        className="m-auto font-semibold text-center uppercase text-yellow-isaac w-fit desktop:mt-7"
       >
         {label}
       </Typography>
