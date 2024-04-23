@@ -3,7 +3,7 @@ import Autoplay from "embla-carousel-autoplay"
 import React, { FC, useRef } from "react"
 import GalleryProps from "./index.types"
 
-const Gallery: FC<GalleryProps> = ({ images }) => {
+const Gallery: FC<GalleryProps> = ({ images, className }) => {
   const autoplay = useRef(Autoplay({ delay: 3000 }))
   return (
     <Carousel
@@ -20,7 +20,10 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
     >
       {images.map((e, i) => {
         return (
-          <Carousel.Slide className="mx-4 my-auto laptop:mx-8" key={i}>
+          <Carousel.Slide
+            className={`mx-4 my-auto laptop:mx-8 ${className}`}
+            key={i}
+          >
             {e.children}
           </Carousel.Slide>
         )
