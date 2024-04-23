@@ -13,7 +13,7 @@ const Button: FC<ButtonProps> = ({
     <a
       href={href}
       onClick={onClick}
-      className="bg-light-blue-isaac cursor-pointer px-5 py-3 text-white text-base flex flex-col items-center justify-center font-extrabold w-[220px] h-[45px] tablet:text-xl tablet:w-[170px] tablet:h-[35px] laptop:text-2xl notebook:text-3xl desktop:text-4xl laptop:w-[220px] laptop:h-[55px] notebook:w-[270px] notebook:h-[55px] desktop:w-[320px] desktop:h-[72px] rounded-3xl tablet:rounded-md laptop:rounded-xl desktop:rounded-lg transition duration-500 ease-in-out uppercase m-auto hover:scale-105 hover:-translate-y-1"
+      className="flex items-center py-2 text-base font-semibold uppercase transition duration-500 ease-in-out cursor-pointer w-fit h-fit notebook:py-3 px-7 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:-translate-y-1 bg-light-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl"
     >
       {children}
     </a>
@@ -27,7 +27,7 @@ const Button: FC<ButtonProps> = ({
       <a
         href={href}
         onClick={onClick}
-        className="w-full h-full m-auto text-base font-semibold uppercase cursor-pointer tablet:text-base laptop:text-xl notebook:text-3xl desktop:text-4xl"
+        className="w-full h-full m-auto text-base font-semibold uppercase cursor-pointer tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl"
       >
         {children}
       </a>
