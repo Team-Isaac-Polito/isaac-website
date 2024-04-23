@@ -2,25 +2,30 @@ import Button from "@atoms/Button"
 import Typography from "@atoms/Typography"
 import React, { FC } from "react"
 import { useTranslation } from "react-i18next"
+import FotoAssociazione from "../../../assets/FotoAssociazione.png"
 import HeroProps from "./index.types"
 
 const Hero: FC<HeroProps> = (props) => {
   const { t } = useTranslation()
 
   return (
-    <div className="relative py-24 bg-center bg-no-repeat bg-cover bg-hero laptop:py-32 laptop:h-[500px] notebook:h-[550px] desktop:py-52">
-      <div className="bg-[#1e1e1e] w-full laptop:h-[500px] notebook:h-[550px] absolute top-0 opacity-30" />
-      <div className="relative z-10 m-auto text-center text-white w-fit">
-        <Typography className="w-[370px] m-auto" variant="p">
+    <div className="relative">
+      <img
+        alt="foto-associativa"
+        src={FotoAssociazione}
+        className="opacity-60 desktop:w-screen absolute object-cover w-[150%] h-full -z-20"
+      />
+      <div className="z-10 py-20 ml-6 text-white laptop:py-32 notebook:py-40 desktop:py-72 tablet:m-auto tablet:text-center w-fit">
+        <Typography
+          className="max-w-[180px] tablet:max-w-[280px] notebook:max-w-fit"
+          variant="p"
+        >
           {props.subtitle}
         </Typography>
-        <Typography
-          className="w-[600px] laptop:w-[700px] notebook:w-[800px] desktop:w-[900px] pt-10"
-          variant="hero"
-        >
+        <Typography className="pt-4 notebook:pt-10" variant="hero">
           {props.title}
         </Typography>
-        <div className="m-auto mt-16 w-fit">
+        <div className="mt-10 tablet:mx-auto notebook:mt-16 w-fit">
           <Button isPrimary>{t("contact-us")}</Button>
         </div>
       </div>
