@@ -1,0 +1,19 @@
+{
+  "reseq-mk1": {
+    "title": "What is RESE.Q MK1",
+    "description": "It is the team’s first prototype to achieve the goal of creating an innovative robot for SAR operations. Our idea is to have a modular crawler robot with two possible configurations: robotic arm and crawler robot. So that he can easily navigate dangerous situations, to explore the environment without risking the lives of rescuers.",
+    "features": {
+      "title": "features",
+      "description": "<strong>Modular structure:</strong><br>Allows you to adapt the robot to different scenarios, with specialized modules<br><strong>Configuration snake-like:</strong><br>Allows more agility in movement<br>strong>Robotic arm configuration:</strong><br>For vertical lifting of part of the robot<br><strong>Remote control:</strong><br>Via a remote control and a camera on the robot, with future possibilities of autonomous and semi-autonomous driving."
+    },
+    "objectives": {
+      "title": "Goals",
+      "description": "The purpose of Rese. Q Mk1 is to provide support to rescuers in emergency situations. Its current capabilities are:",
+      "slides": {
+        "1": "Exploration and mapping of unsafe areas",
+        "2": "Identifying people who need help",
+        "3": "Transport of food, medicine and other first aid items via a dedicated add-on module"
+      }
+    }
+  }
+}
