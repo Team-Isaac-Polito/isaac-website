@@ -1,4 +1,5 @@
 import StaticGallery from "@atoms/StaticGallery"
+import Gallery from "@molecules/Gallery"
 import Paragraph from "@molecules/Paragraph"
 import TwoColumns from "@molecules/TwoColumns"
 import React, { FC } from "react"
@@ -23,45 +24,72 @@ const StaticEvent: FC<StaticEventProps> = ({
           alt={""}
         />
       </Paragraph>
-      <StaticGallery
+      <Gallery
+        className="tablet:hidden"
         images={[
           {
             children: (
-              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
+              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
             ),
           },
           {
             children: (
-              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
+              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
             ),
           },
           {
             children: (
-              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
+              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+            ),
+          },
+          {
+            children: (
+              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
             ),
           },
         ]}
       />
-      <StaticGallery
-        className="mt-40"
-        images={[
-          {
-            children: (
-              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
-            ),
-          },
-          {
-            children: (
-              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
-            ),
-          },
-          {
-            children: (
-              <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
-            ),
-          },
-        ]}
-      />
+      <div className="hidden tablet:block">
+        <StaticGallery
+          images={[
+            {
+              children: (
+                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              ),
+            },
+            {
+              children: (
+                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              ),
+            },
+            {
+              children: (
+                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              ),
+            },
+          ]}
+        />
+        <StaticGallery
+          className="mt-32 desktop:mt-40"
+          images={[
+            {
+              children: (
+                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              ),
+            },
+            {
+              children: (
+                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              ),
+            },
+            {
+              children: (
+                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              ),
+            },
+          ]}
+        />
+      </div>
     </>
   )
 }
