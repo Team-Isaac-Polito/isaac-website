@@ -8,7 +8,7 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
       return (
         <h1
           className={classNames(
-            "antialiased text-center font-extrabold text-4xl tablet:text-5xl laptop:text-6xl notebook:text-7xl desktop:text-8xl",
+            "antialiased font-extrabold text-4xl tablet:text-5xl laptop:text-6xl notebook:text-7xl desktop:text-8xl",
             className ?? ""
           )}
         >
