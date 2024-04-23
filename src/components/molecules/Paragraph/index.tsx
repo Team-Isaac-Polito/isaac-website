@@ -17,7 +17,7 @@ const Paragraph: FC<ParagraphProps> = ({
     <div className={palette}>
       <div
         className={classNames(
-          "py-20 laptop:py-14 text-4xl text-center -skew-y-3 desktop:py-16 mx-6 tablet:mx-14 laptop:mx-32 notebook:mx-40 desktop:mx-48 h-fit",
+          "py-16 laptop:py-14 text-4xl text-center -skew-y-3 desktop:py-20 mx-6 tablet:mx-14 laptop:mx-32 notebook:mx-40 desktop:mx-48 h-fit",
           slopeContent
         )}
       >
