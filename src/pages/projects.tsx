@@ -24,7 +24,7 @@ export default function Projects(): JSX.Element {
           isTextLeft
           palette="bluePalette"
           title={t("reseq-mk1.title")}
-          textKey={t("reseq-mk1.description")}
+          text={t("reseq-mk1.description")}
           src={img}
           alt={""}
         />
@@ -33,7 +33,7 @@ export default function Projects(): JSX.Element {
         <TwoColumns
           palette="whitePalette"
           title={t("reseq-mk1.features.title")}
-          textKey="projects:reseq-mk1.features.description"
+          text="projects:reseq-mk1.features.description"
           src={img}
           alt={""}
         />

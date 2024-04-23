@@ -1,12 +1,24 @@
 {
   "subtitle": "Robotica di servizio mobile per operazioni SAR",
+  "contact-us": "Contattaci",
+  "about": {
+    "title": "About",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
   "projects": {
     "title": "progetti",
     "description": "I nostri progetti si basano sulla robotica di servizio. Attualmente stiamo lavorando su due prototipi per fini di ricerca e soccorso: Rese.Q Mk1 e la sua evoluzione, Rese.Q Mk2. Questi progetti sono la combinazione di competenze tecniche, pensare fuori dagli schemi e collaborazione tra i membri del team."
   },
+  "scopri di più": "Scopri di più",
   "events": {
     "title": "eventi",
     "description": "Per mostrare il nostro lavoro e condividere la nostra passione per la robotica, partecipiamo a vari eventi, come convention, fiere e giornate di orientamento. Queste sono anche ottime occasioni per lavorare in squadra e per costruire un legame più forte tra i membri del team."
   },
-  "gallery": "Galleria"
+  "numbers": {
+    "title": "numeri",
+    "years": "anni",
+    "members": "membri",
+    "prototypes": "prototipi"
+  },
+  "gallery": "galleria"
 }

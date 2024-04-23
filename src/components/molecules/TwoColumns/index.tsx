@@ -1,12 +1,10 @@
 import Button from "@atoms/Button"
 import Typography from "@atoms/Typography"
 import React, { FC } from "react"
-import { Trans } from "react-i18next"
 import TwoColumnsProps from "./index.types"
 
 const TwoColumns: FC<TwoColumnsProps> = ({
   isTextLeft,
-  textKey,
   text,
   buttonText,
   title,
@@ -26,7 +24,6 @@ const TwoColumns: FC<TwoColumnsProps> = ({
               variant="p"
               className="my-5 text-justify laptop:my-10 tablet:text-left"
             >
-              <Trans i18nKey={textKey} />
               {text}
             </Typography>
             {buttonText === undefined || buttonText === "" ? null : (
@@ -52,7 +49,6 @@ const TwoColumns: FC<TwoColumnsProps> = ({
               variant="p"
               className="my-5 text-justify laptop:my-10 tablet:text-right"
             >
-              <Trans i18nKey={textKey} />
               {text}
             </Typography>
             {buttonText === undefined || buttonText === "" ? null : (
@@ -78,7 +74,6 @@ const TwoColumns: FC<TwoColumnsProps> = ({
               {title}
             </Typography>
             <Typography variant="p" className="my-5 laptop:my-10">
-              <Trans i18nKey={textKey} />
               {text}
             </Typography>
             {buttonText === undefined || buttonText === "" ? null : (

@@ -1,0 +1,24 @@
+{
+  "subtitle": "Mobile service robotics for SAR operations",
+  "contact-us": "Contact us",
+  "about": {
+    "title": "About Us",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  "projects": {
+    "title": "projects",
+    "description": "Our projects are based on service robotics. We are currently working on two prototypes for search and rescue purposes: Rese. Q Mk1 and its evolution, Yields. Q Mk2. These projects are the combination of technical skills, thinking outside the box and collaboration between team members."
+  },
+  "scopri di più": "Discover more",
+  "events": {
+    "title": "events",
+    "description": "To show our work and share our passion for robotics, we participate in various events, such as conventions, fairs and orientation days. These are also great opportunities to work as a team and to build a stronger bond between team members."
+  },
+  "numbers": {
+    "title": "numbers",
+    "years": "years",
+    "members": "members",
+    "prototypes": "prototypes"
+  },
+  "gallery": "gallery"
+}

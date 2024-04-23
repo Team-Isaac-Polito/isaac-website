@@ -3,12 +3,12 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 function Isaac() {
-  const { t } = useTranslation()
+  const { t } = useTranslation("homepage")
 
   return (
     <div className="mx-6 mt-20 bg-white notebook:mt-32 laptop:mt-24 text-dark-blue-isaac h-fit tablet:mx-20 laptop:mx-28 desktop:mx-52">
       <Typography className="m-auto mb-10 tablet:text-center" variant="h1">
-        About
+        {t("about.title")}
       </Typography>
       <Typography variant="p" className="tablet:text-center">
         {t("about.description")}
