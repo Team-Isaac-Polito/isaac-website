@@ -9,7 +9,7 @@ export const SocialNavigation: FC<SocialProps> = ({ className }) => {
     <>
       <div
         className={classNames(
-          "text-white hover:text-yellow-isaac flex flex-row items-center gap-[6px] tablet:gap-3 laptop:gap-5 notebook:gap-6 desktop:gap-7",
+          "text-white hover:text-yellow-isaac grid grid-cols-2 items-center gap-[6px] w-fit",
           className ?? ""
         )}
       >
