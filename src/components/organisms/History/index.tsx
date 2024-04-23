@@ -12,16 +12,15 @@ const History: FC = () => {
 
   return (
     <>
-      <Typography variant="h1" className="mb-20 text-yellow-isaac">
+      <Typography variant="h1" className="mb-10 laptop:mb-20 text-yellow-isaac">
         {t("history.title")}
       </Typography>
-      <div className="block relative top-5 desktop:top-9 h-[4px] bg-white w-11/12 mx-auto" />
+      <div className="hidden tablet:block relative top-5 desktop:top-9 h-[4px] bg-white w-11/12 mx-auto" />
       <Timeline
         segments={events.map((event) => {
           return {
             value: event.year,
             ref: React.createRef(),
-            className: "m-auto", //TODO: Add dynamic spacing
           }
         })}
         callback={(val) => setYear(val)}
@@ -30,11 +29,7 @@ const History: FC = () => {
       {(t("history.events", { returnObjects: true }) as HistoryEvent[]).map(
         (item, idx) => {
           if (item.year === year) {
-            return (
-              <HistoryItem key={idx} title={item.year}>
-                {item.description}
-              </HistoryItem>
-            )
+            return <HistoryItem key={idx}>{item.description}</HistoryItem>
           }
           return null
         }
