@@ -1,3 +1,4 @@
+import Typography from "@atoms/Typography"
 import React, { FC, useState } from "react"
 import SegmentedControlProps from "./index.types"
 
@@ -16,12 +17,12 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
 
   return (
     <div ref={controlRef}>
-      <div className="relative z-0 grid grid-rows-3 gap-8 m-auto bg-transparent border-2 border-white tablet:border-none tablet:gap-4 notebook:gap-8 tablet:grid-cols-10 tablet:grid-rows-1 desktop:p-3">
+      <div className="relative z-0 grid grid-cols-2 grid-rows-2 gap-8 m-auto bg-transparent tablet:gap-4 notebook:gap-8 tablet:grid-cols-4 tablet:grid-rows-1 desktop:p-3">
         {segments?.map((item, i) => (
           <div
             key={item.value}
             ref={item.ref}
-            className={`z-20 text-center m-auto ${item.className}`}
+            className="z-20 m-auto text-center"
           >
             <div className="relative">
               <input
@@ -40,7 +41,7 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
                     : "w-8 h-8 desktop:w-12 desktop:h-12 rounded-full bg-dark-blue-isaac border-4 border-white"
                 }`}
               />
-              <p className="block">{item.value}</p>
+              <Typography variant="h2">{item.value}</Typography>
             </div>
           </div>
         ))}

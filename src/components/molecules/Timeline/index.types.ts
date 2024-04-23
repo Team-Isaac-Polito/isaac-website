@@ -3,7 +3,6 @@ import React from "react"
 export interface ButtonGroupItem {
   value: string
   ref
-  className: string
 }
 
 export default interface SegmentedControlProps {
