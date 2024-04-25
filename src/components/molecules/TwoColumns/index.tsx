@@ -12,6 +12,7 @@ const TwoColumns: FC<TwoColumnsProps> = ({
   palette,
   src,
   alt,
+  href,
 }) => {
   return (
     <div className="grid h-full gap-20 tablet:grid-cols-2 desktop:py-20 tablet:gap-5 laptop:gap-10 notebook:gap-10 desktop:gap-20">
@@ -28,7 +29,10 @@ const TwoColumns: FC<TwoColumnsProps> = ({
               <Trans>{text}</Trans>
             </Typography>
             {buttonText === undefined || buttonText === "" ? null : (
-              <Button className="m-auto border-yellow-isaac tablet:ml-0">
+              <Button
+                className="m-auto border-yellow-isaac hover:bg-yellow-isaac tablet:ml-0"
+                href={href}
+              >
                 {buttonText}
               </Button>
             )}
@@ -53,7 +57,10 @@ const TwoColumns: FC<TwoColumnsProps> = ({
               <Trans>{text}</Trans>
             </Typography>
             {buttonText === undefined || buttonText === "" ? null : (
-              <Button className="m-auto tablet:float-right border-light-blue-isaac">
+              <Button
+                className="m-auto tablet:float-right border-light-blue-isaac hover:bg-light-blue-isaac"
+                href={href}
+              >
                 {buttonText}
               </Button>
             )}
@@ -78,7 +85,10 @@ const TwoColumns: FC<TwoColumnsProps> = ({
               <Trans>{text}</Trans>
             </Typography>
             {buttonText === undefined || buttonText === "" ? null : (
-              <Button className="float-right border-light-blue-isaac">
+              <Button
+                className="float-right border-light-blue-isaac hover:bg-light-blue-isaac"
+                href={href}
+              >
                 {buttonText}
               </Button>
             )}
