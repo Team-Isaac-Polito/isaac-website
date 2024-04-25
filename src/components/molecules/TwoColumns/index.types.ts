@@ -7,4 +7,5 @@ export default interface TwoColumnsProps {
   palette: string
   src: string
   alt: string
+  href?: string
 }
