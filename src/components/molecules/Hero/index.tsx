@@ -26,7 +26,9 @@ const Hero: FC<HeroProps> = (props) => {
           {props.title}
         </Typography>
         <div className="mt-10 tablet:mx-auto notebook:mt-16 w-fit">
-          <Button isPrimary>{t("contact-us")}</Button>
+          <Button isPrimary href="/contact-us">
+            {t("contact-us")}
+          </Button>
         </div>
       </div>
     </div>
