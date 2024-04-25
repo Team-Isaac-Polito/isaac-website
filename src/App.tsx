@@ -4,6 +4,7 @@ import { Route, Routes, useLocation } from "react-router-dom"
 import Home from "./pages"
 import NotFound from "./pages/NotFound"
 import About from "./pages/about"
+import Contacts from "./pages/contact-us"
 import Events from "./pages/events"
 import Projects from "./pages/projects"
 
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="about" element={<About />} />
             <Route path="projects" element={<Projects />} />
             <Route path="events" element={<Events />} />
+            <Route path="contact-us" element={<Contacts />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
