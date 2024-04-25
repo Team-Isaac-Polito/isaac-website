@@ -1,4 +1,3 @@
-import Form from "@atoms/Form"
 import Isaac from "@atoms/Isaac"
 import Typography from "@atoms/Typography"
 import Gallery from "@molecules/Gallery"
@@ -24,6 +23,7 @@ export default function Home(): JSX.Element {
           title={t("projects.title")}
           text={t("projects.description")}
           buttonText={t("scopri di più")}
+          href="/projects"
           src={img}
           alt="immagine prova"
         />
@@ -34,6 +34,7 @@ export default function Home(): JSX.Element {
           title={t("events.title")}
           text={t("events.description")}
           buttonText={t("scopri di più")}
+          href="/events"
           src={img}
           alt="immagine prova"
         />
@@ -80,7 +81,6 @@ export default function Home(): JSX.Element {
           },
         ]}
       />
-      <Form />
     </div>
   )
 }
