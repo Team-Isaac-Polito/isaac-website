@@ -55,27 +55,27 @@ export default function Home(): JSX.Element {
         images={[
           {
             children: (
-              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              <div className="w-32 m-auto bg-gray-300 tablet:w-40 laptop:w-52 notebook:w-64 aspect-square desktop:w-96 rounded-xl" />
             ),
           },
           {
             children: (
-              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              <div className="w-32 m-auto bg-gray-300 tablet:w-40 laptop:w-52 notebook:w-64 aspect-square desktop:w-96 rounded-xl" />
             ),
           },
           {
             children: (
-              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              <div className="w-32 m-auto bg-gray-300 tablet:w-40 laptop:w-52 notebook:w-64 aspect-square desktop:w-96 rounded-xl" />
             ),
           },
           {
             children: (
-              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              <div className="w-32 m-auto bg-gray-300 tablet:w-40 laptop:w-52 notebook:w-64 aspect-square desktop:w-96 rounded-xl" />
             ),
           },
           {
             children: (
-              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
+              <div className="w-32 m-auto bg-gray-300 tablet:w-40 laptop:w-52 notebook:w-64 aspect-square desktop:w-96 rounded-xl" />
             ),
           },
         ]}
