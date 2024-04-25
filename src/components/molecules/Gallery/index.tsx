@@ -20,10 +20,7 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
     >
       {images.map((e, i) => {
         return (
-          <Carousel.Slide
-            className={`mx-4 my-auto laptop:mx-8 ${className}`}
-            key={i}
-          >
+          <Carousel.Slide className={`my-auto ${className}`} key={i}>
             {e.children}
           </Carousel.Slide>
         )
