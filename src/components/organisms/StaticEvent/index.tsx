@@ -5,19 +5,13 @@ import TwoColumns from "@molecules/TwoColumns"
 import React, { FC } from "react"
 import StaticEventProps from "./index.types"
 
-const StaticEvent: FC<StaticEventProps> = ({
-  title,
-  button,
-  desc,
-  palette,
-}) => {
+const StaticEvent: FC<StaticEventProps> = ({ title, desc, palette }) => {
   return (
     <>
       <Paragraph palette={palette} isLineTop className="my-40">
         <TwoColumns
           title={title}
           palette={palette}
-          buttonText={button}
           text={desc}
           isTextLeft
           src={""}
