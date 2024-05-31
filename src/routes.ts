@@ -23,4 +23,10 @@ export const navRoutes = [
     path: "events",
     en: true,
   },
+  {
+    id: 4,
+    title: "Contattaci",
+    path: "contact-us",
+    en: true,
+  },
 ]

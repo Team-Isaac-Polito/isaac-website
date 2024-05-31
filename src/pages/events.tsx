@@ -1,8 +1,8 @@
 import Hero from "@molecules/Hero"
 import GalleryEvent from "@organisms/GalleryEvent"
 import StaticEvent from "@organisms/StaticEvent"
-import { useTranslation } from "react-i18next"
 import React from "react"
+import { useTranslation } from "react-i18next"
 
 interface Event {
   type: string
@@ -25,7 +25,6 @@ export default function Events(): JSX.Element {
               title={event.title}
               desc={event.desc}
               palette={event.palette}
-              button=" learn more"
             />
           )
         } else if (event.type === "gallery") {

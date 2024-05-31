@@ -13,7 +13,7 @@ const Hero: FC<HeroProps> = (props) => {
       <img
         alt="foto-associativa"
         src={FotoAssociazione}
-        className="opacity-60 desktop:w-screen absolute object-cover w-[150%] h-full -z-20"
+        className="desktop:w-screen absolute object-cover w-[150%] h-full -z-20"
       />
       <div className="z-10 py-20 ml-6 text-white laptop:py-32 notebook:py-40 desktop:py-72 tablet:m-auto tablet:text-center w-fit">
         <Typography
@@ -26,7 +26,9 @@ const Hero: FC<HeroProps> = (props) => {
           {props.title}
         </Typography>
         <div className="mt-10 tablet:mx-auto notebook:mt-16 w-fit">
-          <Button isPrimary>{t("contact-us")}</Button>
+          <Button isPrimary href="/contact-us">
+            {t("contact-us")}
+          </Button>
         </div>
       </div>
     </div>

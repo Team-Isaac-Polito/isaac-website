@@ -24,14 +24,14 @@ export default function About(): JSX.Element {
           alt={"immagine di esempio"}
         />
       </Paragraph>
-      <Paragraph className="laptop:my-32" palette="bluePalette">
-        <History />
-      </Paragraph>
       <Paragraph className="notebook:my-32" palette="whitePalette">
         <Typography variant="h1" className="mb-20 text-light-blue-isaac">
           {t("areas.title")}
         </Typography>
         <Typography variant="p">{t("areas.description")}</Typography>
+      </Paragraph>
+      <Paragraph className="laptop:my-32" palette="bluePalette">
+        <History />
       </Paragraph>
       {/* <Paragraph palette={"lightBluePalette"} invertSlope>
         <Areas />
