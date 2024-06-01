@@ -17,7 +17,7 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
 
   return (
     <div ref={controlRef}>
-      <div className="relative z-0 grid grid-cols-2 grid-rows-2 gap-8 m-auto bg-transparent tablet:gap-4 notebook:gap-8 tablet:grid-cols-4 tablet:grid-rows-1 desktop:p-3">
+      <div className="relative z-0 grid grid-cols-2 grid-rows-2 gap-8 m-auto bg-transparent tablet:gap-4 notebook:gap-8 tablet:grid-cols-5 tablet:grid-rows-1 desktop:p-3">
         {segments?.map((item, i) => (
           <div
             key={item.value}
