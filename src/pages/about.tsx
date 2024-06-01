@@ -5,7 +5,7 @@ import TwoColumns from "@molecules/TwoColumns"
 // import Areas from "@organisms/Areas"
 import History from "@organisms/History"
 import React from "react"
-import { useTranslation } from "react-i18next"
+import { Trans, useTranslation } from "react-i18next"
 import img from "../assets/lightbulb.png"
 
 export default function About(): JSX.Element {
@@ -31,7 +31,9 @@ export default function About(): JSX.Element {
         <Typography variant="h1" className="mb-20 text-light-blue-isaac">
           {t("areas.title")}
         </Typography>
-        <Typography variant="p">{t("areas.description")}</Typography>
+        <Typography variant="p">
+          <Trans i18nKey={t("areas.description")} />
+        </Typography>
       </Paragraph>
       {/* <Paragraph palette={"lightBluePalette"} invertSlope>
         <Areas />
