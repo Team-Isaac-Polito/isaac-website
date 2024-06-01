@@ -1,35 +1,39 @@
 {
   "title": "Su di noi",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "description": "Siamo un team studentesco del Politecnico di Torino, formato da studenti con diversi percorsi e lauree.<br>Il team è seguito dal professore Giuseppe Quaglia e abbiamo tre obiettivi principali:<br> + insegnare a studenti, permettendogli di migliorare le loro competenze tecniche;<br> + costruire robot socialmente utili;<br> + partecipare in eventi promozionali e di divulgazione in ambito robotico.<br>Il principale obiettivo del team è quello di sviluppare robot innovativi per attività di ricerca e soccorso (robotica SAR) per contribuire all’avanzamento tecnologico nelle operazioni di salvataggio.",
   "history": {
     "title": "Storia",
     "events": [
       {
         "year": "2002",
-        "description": "Fondazione del team"
+        "description": "Nasce il Team ISAAC! “Isaac” è un robot umanoide sviluppato con l’obbiettivo di migliorare la comprensione dei bipedi."
       },
       {
-        "year": "2008",
-        "description": "Testo 2005"
+        "year": "2004",
+        "description": "La nostra seconda versione prototipo di un robot umanoide è stata presentata alla RoboCup 2004, a Osaka in Giappone. I test preliminari evidenziano una buona architettura sia dal punto di vista elettrico che meccanico."
       },
       {
-        "year": "2010",
-        "description": "Testo 2010"
+        "year": "2017",
+        "description": "Un nuovo inizio. Il Team ISAAC cambia gestione e obiettivo: si trasferisce nel dipartimento DIMEAS, sotto la supervisione del Prof. Giuseppe Quaglia, e inizia a dedicarsi alla robotica per le operazioni di ricerca e recupero. Le operazioni di soccorso sono difficili e pericolose anche per i soccorritori stessi. La robotica SAR serve ad aiutare o sostituire gli esseri umani in questo tipo di missioni."
+      },
+      {
+        "year": "2021",
+        "description": "Nasce RESE.Q MK1"
       },
       {
         "year": "2024",
-        "description": "Testo 2024"
+        "description": "Nasce RESE.Q MK2"
       }
     ]
   },
   "areas": {
     "title": "Aree del team",
-    "description": "//TODO: Description of the areas",
+    "description": "Siamo un team multidisciplinare in cui studenti da percorsi diversi collaborano per uno scopo comune, che in generale si tratta di costruire robot.<br>Nei progetti di cui ci occupiamo ci sono molti aspetti da tenere in considerazione, dalle parti fisiche fino al software e al controllo logico, senza dimenticarsi delle aree non tecniche come quella di comunicazione.<br>Scopri nel dettaglio le varie aree del team!",
     "items": [
       {
         "title": "SOFTWARE",
         "value": "sf",
-        "description": "Descrizione dell'area software",
+        "description": "Sviluppiamo codice Python per ROS per gestire il software di alto livello del robot. Lavoriamo su visione artificiale e funzionalità autonome. Ci occupiamo dello sviluppo del sito web del team utilizzando tecnologie come React, Tailwind CSS e Vite. Utilizziamo strumenti DevOps per facilitare lo sviluppo e il deployment del software, come Docker e GitHub Actions. Gestiamo il server del laboratorio e le piattaforme utilizzate dal team, come Proxmox, OPNsense e Wireguard.",
         "members": [
           {
             "name": "Guglielmo Bergatto",
@@ -50,7 +54,19 @@
       {
         "title": "MECCANICA",
         "value": "mc",
-        "description": "Descrizione dell'area meccanica",
+        "description": "Ci occupiamo di progettazione sia funzionale che esecutiva, utilizzando SolidWorks per la modellazione CAD. Scegliamo con cura i componenti e i materiali più adatti per i nostri progetti. Usiamo la stampa 3D per creare parti in polimeri e tecnopolimeri, e realizziamo lavorazioni CNC con fresatrice a 3 assi e tornio. Infine, ci dedichiamo alla produzione e all'assemblaggio completo della piattaforma robotica.",
+        "members": []
+      },
+      {
+        "title": "ELETTRONICA",
+        "value": "el",
+        "description": "Ci occupiamo della componente elettronica del robot, disegnando schemi elettrici e progettando circuiti stampati (PCB). Ci dedichiamo alla produzione fisica delle schede elettroniche e dei cablaggi.",
+        "members": []
+      },
+      {
+        "title": "COMUNICAZIONE",
+        "value": "cm",
+        "description": "Gestiamo i nostri social media, in particolare Instagram, e documentiamo le attività del team con foto e video. Ci occupiamo della gestione del sito web e curiamo l'immagine pubblica del team, realizzando abbigliamento personalizzato, poster, volantini e biglietti da visita.",
         "members": []
       }
     ]

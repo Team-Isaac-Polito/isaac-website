@@ -1,7 +1,7 @@
 import Button from "@atoms/Button"
 import Typography from "@atoms/Typography"
 import React from "react"
-import { useTranslation } from "react-i18next"
+import { Trans, useTranslation } from "react-i18next"
 
 function Isaac() {
   const { t } = useTranslation("homepage")
@@ -12,7 +12,7 @@ function Isaac() {
         {t("about.title")}
       </Typography>
       <Typography variant="p" className="tablet:text-center">
-        {t("about.description")}
+        <Trans i18nKey={t("about.description")} />
       </Typography>
       <div className="m-auto mt-16 w-fit">
         <Button
