@@ -1,3 +1,4 @@
+import img from "@assets/lightbulb.png"
 import Isaac from "@atoms/Isaac"
 import Typography from "@atoms/Typography"
 import Gallery from "@molecules/Gallery"
@@ -7,7 +8,6 @@ import Paragraph from "@molecules/Paragraph"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
 import { useTranslation } from "react-i18next"
-import img from "../assets/lightbulb.png"
 
 export default function Home(): JSX.Element {
   const { t } = useTranslation("homepage")

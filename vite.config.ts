@@ -13,6 +13,7 @@ export default defineConfig({
       "@atoms": `${path.resolve(__dirname, "./src/components/atoms")}`,
       "@molecules": `${path.resolve(__dirname, "./src/components/molecules")}`,
       "@organisms": `${path.resolve(__dirname, "./src/components/organisms")}`,
+      "@assets": path.resolve(__dirname, "./src/assets"),
     },
   },
   plugins: [react(), svgrPlugin(), eslint()],
