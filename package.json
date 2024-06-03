@@ -43,7 +43,7 @@
 		]
 	},
 	"devDependencies": {
-		"@babel/core": "^7.23.2",
+		"@babel/core": "^7.24.6",
 		"@types/node": "^20.8.6",
 		"@types/react": "^18.2.20",
 		"@types/webpack-env": "^1.18.4",
