@@ -32,7 +32,7 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
                 key={route.id}
                 className="flex items-center mx-auto cursor-pointer"
               >
-                <NavLink to={`${route.path}`} className={navLinkClass}>
+                <NavLink to={route.path} className={navLinkClass}>
                   {t(`routes.${route.title}`)}
                 </NavLink>
               </li>
