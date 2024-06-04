@@ -33,7 +33,7 @@
       {
         "title": "SOFTWARE",
         "value": "sf",
-        "description": "Description of the software area",
+        "description": "We develop Python code for ROS to manage the robot's high-level software. We are responsible for developing the team's website using technologies such as React, Tailwind CSS, and Vite. We use DevOps tools to facilitate software development and deployment, such as Docker and GitHub Actions. We manage the lab server and the platforms used by the team, such as Proxmox, OPNsense, and Wireguard.",
         "members": [
           {
             "name": "Guglielmo Bergatto",
@@ -44,6 +44,30 @@
             "name": "Luca De Paola"
           }
         ]
+      },
+      {
+        "title": "CONTROL",
+        "value": "cn",
+        "description": "We are responsible for developing control algorithms and simulations to calculate and predict the robot's behavior. In addition, we are integrating object detection and environment mapping algorithms.",
+        "members": []
+      },
+      {
+        "title": "MECHANICS",
+        "value": "mc",
+        "description": "We handle both functional and executive design, using SolidWorks for CAD modeling. We use CNC, milling machine, lathe and 3D printing to create parts in polymers and technopolymers. Also, we created and complete assembled by ourselves the robotic platform.",
+        "members": []
+      },
+      {
+        "title": "ELECTRONICS",
+        "value": "el",
+        "description": "We handle the electronic component of the robot, designing electrical schematics and printed circuit boards (PCBs). We also work on the physical production of electronic boards and wiring.",
+        "members": []
+      },
+      {
+        "title": "COMMUNICATION",
+        "value": "cm",
+        "description": "We manage our social media, particularly Instagram, and document the team's activities with photos and videos. We handle website management and curate the team's public image, creating custom apparel, posters, flyers, and business cards.",
+        "members": []
       }
     ]
   }
