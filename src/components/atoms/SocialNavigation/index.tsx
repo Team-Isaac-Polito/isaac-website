@@ -9,7 +9,7 @@ export const SocialNavigation: FC<SocialProps> = ({ className }) => {
     <>
       <div
         className={classNames(
-          "text-white hover:text-yellow-isaac grid grid-cols-2 items-center gap-[6px] w-fit",
+          "text-white grid grid-cols-2 items-center gap-[6px] w-fit",
           className ?? ""
         )}
       >
@@ -17,15 +17,15 @@ export const SocialNavigation: FC<SocialProps> = ({ className }) => {
           href={"https://www.instagram.com/team_isaac_polito/"}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[40px] text-white hover:text-yellow-isaac"
+          className="w-[40px] text-white"
         >
           <InstagramButton />
         </a>
         <a
-          href={"https://www.linkedin.com/"}
+          href={"https://www.linkedin.com/company/team-isaac-polito/"}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[40px] text-white hover:text-yellow-isaac"
+          className="w-[40px] text-white"
         >
           <LinkedinButton />
         </a>
