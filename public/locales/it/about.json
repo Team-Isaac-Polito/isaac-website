@@ -10,7 +10,7 @@
       },
       {
         "year": "2004",
-        "description": "La nostra seconda versione prototipo di un robot umanoide è stata presentata alla RoboCup 2004, a Osaka in Giappone. I test preliminari evidenziano una buona architettura sia dal punto di vista elettrico che meccanico."
+        "description": "Il secondo prototipo di robot umanoide è stato presentato alla RoboCup 2004, a Osaka in Giappone. I test preliminari evidenziano una buona architettura sia dal punto di vista elettronico che meccanico."
       },
       {
         "year": "2017",
@@ -48,7 +48,7 @@
       {
         "title": "CONTROLLI",
         "value": "cn",
-        "description": "Descrizione dell'area controlli",
+        "description": "Ci occupiamo di sviluppare gli algoritmi di controllo e le simulazioni per calcolare e predire il comportamento del robot. Inoltre, stiamo integrando algoritmi di rilevamento di oggetti e di mappatura dell'ambiente.",
         "members": []
       },
       {

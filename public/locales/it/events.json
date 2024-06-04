@@ -3,14 +3,14 @@
   "events": [
     {
       "type": "static",
-      "title": "Maker Faire 2022",
-      "desc": "//TODO: Testo italiano",
+      "title": "MAKER FAIRE 2023",
+      "desc": "Anche quest'anno il team torna negli spazi della fiera per mostrare al pubblico i nuovi aggiornamenti sul prototipo RESE.Q!",
       "palette": "bluePalette"
     },
     {
       "type": "gallery",
-      "title": "MAKER FAIRE 2023",
-      "desc": "//TODO: Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "title": "MAKER FAIRE 2022",
+      "desc": "Abbiamo presentato RESE.Q a un vasto pubblico che spazia dai più piccoli agli esperti nel campo della robotica, illustrando il suo funzionamento e il suo potenziale utilizzo nelle operazioni di ricerca.",
       "palette": "lightBluePalette"
     }
   ]
