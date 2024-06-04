@@ -10,7 +10,7 @@ import NavigationProps from "./index.types"
 const features = () => import("../../../features").then((res) => res.default)
 
 const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const onToggleLanguageClick = (lng: string) => {
     i18n.changeLanguage(lng)
     handleButtonClick()
@@ -77,7 +77,7 @@ const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
                                     isActive ? "underline" : ""
                                   }
                                 >
-                                  {route.title}
+                                  {t(`routes.${route.title}`)}
                                 </NavLink>
                               </m.div>
                             </button>
