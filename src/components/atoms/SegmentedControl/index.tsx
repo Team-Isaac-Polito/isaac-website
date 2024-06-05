@@ -1,4 +1,3 @@
-import { Carousel } from "@mantine/carousel"
 import React, { FC, useState } from "react"
 import SegmentedControlProps from "./index.types"
 
@@ -17,52 +16,40 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
   }
 
   return (
-    <div className="!bg-transparent" ref={controlRef} id="services">
-      <Carousel
-        slideSize="33%"
-        slideGap="xl"
-        loop
-        withControls={false}
-        slidesToScroll={1}
-        align="center"
-        className="w-full mb-7"
-      >
-        {segments.map((item, i) => (
-          <Carousel.Slide className="m-auto" key={i}>
-            <div
-              key={item.value}
-              ref={item.ref}
-              className={`flex items-center z-20 justify-center text-center rounded-xl m-auto ${
+    <div className="grid grid-rows-5 w-fit" ref={controlRef} id="services">
+      {segments.map((item, i) => (
+        <div
+          key={item.value}
+          ref={item.ref}
+          className={`z-20 ${
+            i === activeIndex
+              ? `${item.className}`
+              : "bg-transparent w-80 h-fit"
+          }`}
+        >
+          <div className="">
+            <input
+              type="radio"
+              className="appearance-none cursor-pointer"
+              value={item.value}
+              id={item.label}
+              name={name}
+              onChange={() => onInputChange(item.value, i)}
+              checked={i === activeIndex}
+            />
+            <label
+              htmlFor={item.label}
+              className={`p-2 block m-auto duration-400 w-full ease-in-out cursor-pointer text-xl laptop:text-3xl notebook:text-4-5xl text-left ${
                 i === activeIndex
-                  ? `${item.className}`
-                  : "bg-transparent w-full h-12 tablet:w-[170px] tablet:h-10 laptop:w-[230px] laptop:h-12 notebook:w-[280px] desktop:w-[400px] notebook:h-14 desktop:h-fit m-auto"
+                  ? "text-yellow-isaac font-extrabold"
+                  : "text-dark-blue-isaac font-normal"
               }`}
             >
-              <div className="relative flex items-center align-middle w-[274px] h-[43px] tablet:w-[230px] tablet:h-[35px] laptop:w-[330px] laptop:h-[65px] notebook:w-[430px] desktop:w-[550px] desktop:h-32 rounded-[10px] notebook:h-[48px] tablet:m-[2px] desktop:m-1 my-auto">
-                <input
-                  type="radio"
-                  className="absolute top-0 bottom-0 left-0 right-0 opacity-0 cursor-pointer"
-                  value={item.value}
-                  id={item.label}
-                  name={name}
-                  onChange={() => onInputChange(item.value, i)}
-                  checked={i === activeIndex}
-                />
-                <label
-                  htmlFor={item.label}
-                  className={`p-2 block m-auto duration-400 w-full ease-in-out cursor-pointer ${
-                    i === activeIndex
-                      ? "text-yellow-isaac scale-100 font-extrabold text-3xl tablet:text-2xl laptop:text-4xl notebook:text-5xl desktop:text-6xl"
-                      : "text-dark-blue-isaac text-xl laptop:text-3xl notebook:text-4xl desktop:text-5xl font-bold scale-75"
-                  }`}
-                >
-                  {item.label}
-                </label>
-              </div>
-            </div>
-          </Carousel.Slide>
-        ))}
-      </Carousel>
+              {item.label}
+            </label>
+          </div>
+        </div>
+      ))}
     </div>
   )
 }
