@@ -3,6 +3,7 @@ import Typography from "@atoms/Typography"
 import Hero from "@molecules/Hero"
 import Paragraph from "@molecules/Paragraph"
 import TwoColumns from "@molecules/TwoColumns"
+import Areas from "@organisms/Areas"
 import History from "@organisms/History"
 import React from "react"
 import { Trans, useTranslation } from "react-i18next"
@@ -33,6 +34,7 @@ export default function About(): JSX.Element {
         <Typography variant="p">
           <Trans i18nKey={t("areas.description")} />
         </Typography>
+        <Areas />
       </Paragraph>
     </>
   )
