@@ -1,3 +1,14 @@
+import TabImage from "@assets/projects/Tab.png"
+import first from "@assets/projects/carousel/IMG_2981.jpg"
+import second from "@assets/projects/carousel/IMG_3016.jpg"
+import third from "@assets/projects/carousel/IMG_3039.jpg"
+import fourth from "@assets/projects/carousel/IMG_5162.png"
+import fifth from "@assets/projects/carousel/IMG_5180.png"
+import AboutImage from "@assets/projects/projects1.jpg"
+import Slide1 from "@assets/projects/targets/targets_1.png"
+import Slide2 from "@assets/projects/targets/targets_2.png"
+import Slide3 from "@assets/projects/targets/targets_3.png"
+import Slide4 from "@assets/projects/targets/targets_4.png"
 import Typography from "@atoms/Typography"
 import Gallery from "@molecules/Gallery"
 import Paragraph from "@molecules/Paragraph"
@@ -6,7 +17,6 @@ import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
 import { useTranslation } from "react-i18next"
 import reseq from "../assets/ReseQ1.mp4"
-import img from "../assets/lightbulb.png"
 
 export default function Projects(): JSX.Element {
   const { t } = useTranslation("projects")
@@ -25,8 +35,8 @@ export default function Projects(): JSX.Element {
           palette="bluePalette"
           title={t("reseq-mk1.title")}
           text={t("reseq-mk1.description")}
-          src={img}
-          alt={""}
+          src={AboutImage}
+          alt={"Rese Q. Mk1 image"}
         />
       </Paragraph>
       <Paragraph palette="whitePalette" className="my-20">
@@ -34,8 +44,8 @@ export default function Projects(): JSX.Element {
           palette="whitePalette"
           title={t("reseq-mk1.features.title")}
           text={t("reseq-mk1.features.description")}
-          src={img}
-          alt={""}
+          src={TabImage}
+          alt={"Robot performance scheme"}
         />
       </Paragraph>
       <Paragraph invertSlope palette="lightBluePalette">
@@ -46,11 +56,28 @@ export default function Projects(): JSX.Element {
           {t("reseq-mk1.objectives.description")}
         </Typography>
         <Slides
-          context="projects"
-          numSlides={3}
-          translationPath="reseq-mk1.objectives.slides"
-          src={img}
-          alt="ciao"
+          slideEl={[
+            {
+              src: Slide1,
+              alt: "prova",
+              translationPath: "reseq-mk1.objectives.slides.1",
+            },
+            {
+              src: Slide2,
+              alt: "prova",
+              translationPath: "reseq-mk1.objectives.slides.2",
+            },
+            {
+              src: Slide3,
+              alt: "prova",
+              translationPath: "reseq-mk1.objectives.slides.3",
+            },
+            {
+              src: Slide4,
+              alt: "prova",
+              translationPath: "reseq-mk1.objectives.slides.4",
+            },
+          ]}
         />
       </Paragraph>
       <div className="py-32 h-fit">
@@ -58,27 +85,47 @@ export default function Projects(): JSX.Element {
           images={[
             {
               children: (
-                <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
+                <img
+                  src={first}
+                  alt="Rese Q. Mk1 image"
+                  className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl"
+                />
               ),
             },
             {
               children: (
-                <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
+                <img
+                  src={second}
+                  alt="Rese Q. Mk1 image"
+                  className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl"
+                />
               ),
             },
             {
               children: (
-                <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
+                <img
+                  src={third}
+                  alt="Rese Q. Mk1 image"
+                  className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl"
+                />
               ),
             },
             {
               children: (
-                <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
+                <img
+                  src={fourth}
+                  alt="Rese Q. Mk1 image"
+                  className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl"
+                />
               ),
             },
             {
               children: (
-                <div className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl" />
+                <img
+                  src={fifth}
+                  alt="Rese Q. Mk1 image"
+                  className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl"
+                />
               ),
             },
           ]}
