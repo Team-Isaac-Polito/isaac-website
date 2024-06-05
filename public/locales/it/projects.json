@@ -10,9 +10,10 @@
       "title": " Obiettivi",
       "description": "Lo scopo di Rese.Q Mk1 è quello di fornire supporto ai soccorritori in situazioni emergenziali. Le sue funzionalità attuali sono:",
       "slides": {
-        "1": "Esplorazione e mappatura di aree non in sicurezza",
-        "2": "Individuazione di persone in difficoltà",
-        "3": "Trasporto di viveri, medicine e altri beni di primo soccorso tramite un modulo aggiuntivo dedicato"
+        "1": "Individuazione di persone in difficoltà",
+        "2": "Esplorazione e mappatura di aree non in sicurezza",
+        "3": "Trasporto di viveri, medicine e altri beni di primo soccorso tramite un modulo aggiuntivo dedicato",
+        "4": "Messa in sicurezza di aree pericolose, con l’aiuto di un gripper sul modulo frontale per agire su eventuali fonti di rischio"
       }
     }
   }
