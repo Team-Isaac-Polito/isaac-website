@@ -84,49 +84,24 @@ export default function Projects(): JSX.Element {
         <Gallery
           images={[
             {
-              children: (
-                <img
-                  src={first}
-                  alt="Rese Q. Mk1 image"
-                  className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl"
-                />
-              ),
+              src: first,
+              alt: "Rese Q. Mk1 image",
             },
             {
-              children: (
-                <img
-                  src={second}
-                  alt="Rese Q. Mk1 image"
-                  className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl"
-                />
-              ),
+              src: fifth,
+              alt: "Rese Q. Mk1 image",
             },
             {
-              children: (
-                <img
-                  src={third}
-                  alt="Rese Q. Mk1 image"
-                  className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl"
-                />
-              ),
+              src: second,
+              alt: "Rese Q. Mk1 image",
             },
             {
-              children: (
-                <img
-                  src={fourth}
-                  alt="Rese Q. Mk1 image"
-                  className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl"
-                />
-              ),
+              src: fourth,
+              alt: "Rese Q. Mk1 image",
             },
             {
-              children: (
-                <img
-                  src={fifth}
-                  alt="Rese Q. Mk1 image"
-                  className="desktop:w-[370px] desktop:h-[370px] notebook:w-[300px] notebook:h-[300px] laptop:w-[220px] laptop:h-[220px] w-[170px] h-[170px] bg-gray-300 m-auto rounded-xl"
-                />
-              ),
+              src: third,
+              alt: "Rese Q. Mk1 image",
             },
           ]}
         />
