@@ -1,7 +1,6 @@
-import React from "react"
-
 export interface ImageItem {
-  children: React.ReactNode
+  src: string
+  alt: string
 }
 
 export default interface GalleryProps {
