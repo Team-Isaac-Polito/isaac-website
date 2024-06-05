@@ -5,7 +5,7 @@ export default interface TwoColumnsProps {
   buttonText?: string
   title?: string
   palette: string
-  src: string
-  alt: string
+  src?: string
+  alt?: string
   href?: string
 }
