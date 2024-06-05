@@ -25,7 +25,7 @@ const History: FC = () => {
         })}
         callback={(val) => setYear(val)}
         controlRef={useRef()}
-        defaultIndex={2}
+        defaultIndex={3}
       />
       {(t("history.events", { returnObjects: true }) as HistoryEvent[]).map(
         (item, idx) =>
