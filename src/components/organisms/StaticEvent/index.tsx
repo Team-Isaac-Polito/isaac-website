@@ -5,84 +5,20 @@ import TwoColumns from "@molecules/TwoColumns"
 import React, { FC } from "react"
 import StaticEventProps from "./index.types"
 
-const StaticEvent: FC<StaticEventProps> = ({ title, desc, palette }) => {
+const StaticEvent: FC<StaticEventProps> = ({
+  title,
+  desc,
+  palette,
+  images,
+}) => {
   return (
     <>
       <Paragraph palette={palette} isLineTop className="my-40">
-        <TwoColumns
-          title={title}
-          palette={palette}
-          text={desc}
-          isTextLeft
-          src={""}
-          alt={""}
-        />
+        <TwoColumns title={title} palette={palette} text={desc} isTextLeft />
       </Paragraph>
-      <Gallery
-        className="tablet:hidden"
-        images={[
-          {
-            children: (
-              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
-            ),
-          },
-          {
-            children: (
-              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
-            ),
-          },
-          {
-            children: (
-              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
-            ),
-          },
-          {
-            children: (
-              <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
-            ),
-          },
-        ]}
-      />
+      <Gallery className="tablet:hidden" images={images} />
       <div className="hidden tablet:block">
-        <StaticGallery
-          images={[
-            {
-              children: (
-                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
-              ),
-            },
-            {
-              children: (
-                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
-              ),
-            },
-            {
-              children: (
-                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
-              ),
-            },
-          ]}
-        />
-        <StaticGallery
-          className="mt-32 desktop:mt-40"
-          images={[
-            {
-              children: (
-                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
-              ),
-            },
-            {
-              children: (
-                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
-              ),
-            },
-            {
-              children: (
-                <div className="w-32 m-auto bg-gray-300 notebook:w-52 aspect-square desktop:w-96 rounded-xl" />
-              ),
-            },
-          ]}
-        />
+        <StaticGallery images={images} />
       </div>
     </>
   )
