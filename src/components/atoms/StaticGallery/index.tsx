@@ -11,7 +11,7 @@ const StaticGallery: FC<StaticGalleryProps> = ({ images, className }) => {
       )}
     >
       {images.map((e, i) => {
-        return <div key={i}>{e.children}</div>
+        return <img src={e.src} alt={e.alt} key={i} />
       })}
     </div>
   )
