@@ -6,7 +6,7 @@ import { AreaItem } from "./index.types"
 
 export default function Areas(): JSX.Element {
   const { t } = useTranslation("about")
-  const [area, setArea] = useState("sf")
+  const [area, setArea] = useState("mc")
 
   const areas = t("areas.items", { returnObjects: true }) as AreaItem[]
 
@@ -16,6 +16,7 @@ export default function Areas(): JSX.Element {
         name="areas"
         callback={(val) => setArea(val)}
         controlRef={useRef()}
+        defaultIndex={2}
         segments={areas.map((areaItem) => ({
           label: areaItem.title,
           value: areaItem.value,

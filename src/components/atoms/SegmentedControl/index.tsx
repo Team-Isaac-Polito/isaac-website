@@ -5,7 +5,7 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
   name,
   segments,
   callback,
-  defaultIndex = 0,
+  defaultIndex,
   controlRef,
 }) => {
   const [activeIndex, setActiveIndex] = useState(defaultIndex)
