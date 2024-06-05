@@ -1,8 +1,8 @@
 import EventsImage from "@assets/homepage/hp_Events_1.png"
 import ProjectsImage from "@assets/homepage/hp_Projects_1.png"
 import Isaac from "@atoms/Isaac"
-import Typography from "@atoms/Typography"
-import Gallery from "@molecules/Gallery"
+// import Typography from "@atoms/Typography"
+// import Gallery from "@molecules/Gallery"
 import Hero from "@molecules/Hero"
 import Numbers from "@molecules/Numbers"
 import Paragraph from "@molecules/Paragraph"
@@ -47,7 +47,7 @@ export default function Home(): JSX.Element {
       >
         <Numbers />
       </Paragraph>
-      <Typography
+      {/* <Typography
         className="m-auto mt-20 mb-10 notebook:mb-12 desktop:mb-20 w-fit"
         variant="h1"
       >
@@ -81,7 +81,7 @@ export default function Home(): JSX.Element {
             ),
           },
         ]}
-      />
+      /> */}
     </div>
   )
 }
