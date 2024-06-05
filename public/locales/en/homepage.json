@@ -16,9 +16,18 @@
   },
   "numbers": {
     "title": "numbers",
-    "years": "years",
-    "members": "members",
-    "prototypes": "prototypes"
+    "first": {
+      "title": "years",
+      "value": "22"
+    },
+    "second": {
+      "title": "members",
+      "value": "35+"
+    },
+    "third": {
+      "title": "prototypes",
+      "value": "2"
+    }
   },
   "gallery": "gallery"
 }

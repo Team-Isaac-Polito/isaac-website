@@ -14,7 +14,7 @@ function Isaac() {
       <Typography variant="p" className="tablet:text-center">
         <Trans i18nKey={t("about.description")} />
       </Typography>
-      <div className="m-auto mt-16 w-fit">
+      <div className="m-auto mt-10 mb-16 laptop:mb-0 laptop:mt-16 w-fit">
         <Button
           className="border-light-blue-isaac hover:bg-light-blue-isaac"
           href="/about"

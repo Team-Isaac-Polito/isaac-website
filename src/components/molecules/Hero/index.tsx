@@ -1,8 +1,8 @@
-import Button from "@atoms/Button"
+import HeroImage from "@assets/hero.png"
 import Typography from "@atoms/Typography"
 import React, { FC } from "react"
 import { useTranslation } from "react-i18next"
-import FotoAssociazione from "../../../assets/FotoAssociazione.png"
+import { NavLink } from "react-router-dom"
 import HeroProps from "./index.types"
 
 const Hero: FC<HeroProps> = (props) => {
@@ -12,7 +12,7 @@ const Hero: FC<HeroProps> = (props) => {
     <div className="relative">
       <img
         alt="foto-associativa"
-        src={FotoAssociazione}
+        src={HeroImage}
         className="desktop:w-screen absolute object-cover w-[150%] h-full -z-20"
       />
       <div className="z-10 py-20 ml-6 text-white laptop:py-32 notebook:py-40 desktop:py-72 tablet:m-auto tablet:text-center w-fit">
@@ -26,9 +26,12 @@ const Hero: FC<HeroProps> = (props) => {
           {props.title}
         </Typography>
         <div className="mt-10 tablet:mx-auto notebook:mt-16 w-fit">
-          <Button isPrimary href="/contact-us">
+          <NavLink
+            to="/contact-us"
+            className="flex items-center py-2 text-base font-semibold uppercase transition duration-500 ease-in-out cursor-pointer w-fit h-fit notebook:py-3 px-7 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:-translate-y-1 bg-light-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl"
+          >
             {t("contact-us")}
-          </Button>
+          </NavLink>
         </div>
       </div>
     </div>

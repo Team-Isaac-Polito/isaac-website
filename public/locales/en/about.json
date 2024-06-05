@@ -12,6 +12,7 @@
         "year": "2004",
         "description": "Our second prototype of a humanoid robot was presented at RoboCup 2004 in Osaka, Japan. Preliminary tests highlight a good architecture from both electrical and mechanical perspectives."
       },
+      { "year": "" },
       {
         "year": "2017",
         "description": "A new beginning. The ISAAC Team changes management and focus: it moves to the DIMEAS department under the supervision of Professor Giuseppe Quaglia and begins to focus on robotics for search and rescue operations. Rescue operations are difficult and dangerous, even for the rescuers themselves. SAR robotics aims to assist or replace humans in these types of missions."

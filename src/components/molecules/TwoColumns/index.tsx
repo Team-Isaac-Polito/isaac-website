@@ -77,7 +77,8 @@ const TwoColumns: FC<TwoColumnsProps> = ({
             className="hidden w-56 m-auto laptop:w-72 notebook:w-80 desktop:w-96 tablet:block"
             key="imgLeft"
           />
-          <div className="hidden m-auto text-right tablet:block">
+          <div className="hidden m-auto text-left tablet:block">
+            {/*textleft */}
             <Typography className={palette} variant="h1">
               {title}
             </Typography>
@@ -86,7 +87,7 @@ const TwoColumns: FC<TwoColumnsProps> = ({
             </Typography>
             {buttonText === undefined || buttonText === "" ? null : (
               <Button
-                className="float-right border-light-blue-isaac hover:bg-light-blue-isaac"
+                className="float-left border-light-blue-isaac hover:bg-light-blue-isaac"
                 href={href}
               >
                 {buttonText}

@@ -7,7 +7,7 @@ import { HistoryEvent } from "./index.types"
 
 const History: FC = () => {
   const { t } = useTranslation("about")
-  const [year, setYear] = useState("2002")
+  const [year, setYear] = useState("2017")
   const events = t("history.events", { returnObjects: true }) as HistoryEvent[]
 
   return (
@@ -25,14 +25,13 @@ const History: FC = () => {
         })}
         callback={(val) => setYear(val)}
         controlRef={useRef()}
+        defaultIndex={3}
       />
       {(t("history.events", { returnObjects: true }) as HistoryEvent[]).map(
-        (item, idx) => {
-          if (item.year === year) {
-            return <HistoryItem key={idx}>{item.description}</HistoryItem>
-          }
-          return null
-        }
+        (item, idx) =>
+          item.year === year ? (
+            <HistoryItem key={idx}>{item.description}</HistoryItem>
+          ) : null
       )}
     </>
   )

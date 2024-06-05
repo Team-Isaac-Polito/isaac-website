@@ -1,5 +1,4 @@
 import { SocialNavigation } from "@atoms/SocialNavigation"
-import Typography from "@atoms/Typography"
 import { AnimatePresence, LazyMotion, m } from "framer-motion"
 import React, { FC, useState } from "react"
 import { useTranslation } from "react-i18next"
@@ -11,7 +10,7 @@ import NavigationProps from "./index.types"
 const features = () => import("../../../features").then((res) => res.default)
 
 const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const onToggleLanguageClick = (lng: string) => {
     i18n.changeLanguage(lng)
     handleButtonClick()
@@ -78,7 +77,7 @@ const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
                                     isActive ? "underline" : ""
                                   }
                                 >
-                                  {route.title}
+                                  {t(`routes.${route.title}`)}
                                 </NavLink>
                               </m.div>
                             </button>
@@ -108,9 +107,9 @@ const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
                     </ul>
                   )}
                 </div>
-                <div className="grid grid-cols-2 mt-16">
+                <div className="mt-16">
                   <SocialNavigation />
-                  <div className="text-right">
+                  {/* <div className="text-right">
                     <Typography variant="h2" className="font-semibold">
                       Privacy
                     </Typography>
@@ -123,7 +122,7 @@ const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
                         Privacy
                       </a>
                     </NavLink>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </m.div>

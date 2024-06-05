@@ -16,9 +16,18 @@
   },
   "numbers": {
     "title": "numeri",
-    "years": "anni",
-    "members": "membri",
-    "prototypes": "prototipi"
+    "first": {
+      "title": "anni",
+      "value": "22"
+    },
+    "second": {
+      "title": "membri",
+      "value": "35+"
+    },
+    "third": {
+      "title": "prototipi",
+      "value": "2"
+    }
   },
   "gallery": "galleria"
 }

@@ -1,7 +1,8 @@
-import img from "@assets/lightbulb.png"
+import EventsImage from "@assets/homepage/hp_Events_1.png"
+import ProjectsImage from "@assets/homepage/hp_Projects_1.png"
 import Isaac from "@atoms/Isaac"
-import Typography from "@atoms/Typography"
-import Gallery from "@molecules/Gallery"
+// import Typography from "@atoms/Typography"
+// import Gallery from "@molecules/Gallery"
 import Hero from "@molecules/Hero"
 import Numbers from "@molecules/Numbers"
 import Paragraph from "@molecules/Paragraph"
@@ -24,8 +25,8 @@ export default function Home(): JSX.Element {
           text={t("projects.description")}
           buttonText={t("scopri di più")}
           href="/projects"
-          src={img}
-          alt="immagine prova"
+          src={ProjectsImage}
+          alt="Rese Q. Mk1"
         />
       </Paragraph>
       <Paragraph className="laptop:my-32" palette="whitePalette">
@@ -35,8 +36,8 @@ export default function Home(): JSX.Element {
           text={t("events.description")}
           buttonText={t("scopri di più")}
           href="/events"
-          src={img}
-          alt="immagine prova"
+          src={EventsImage}
+          alt="Event image"
         />
       </Paragraph>
       <Paragraph
@@ -46,7 +47,7 @@ export default function Home(): JSX.Element {
       >
         <Numbers />
       </Paragraph>
-      <Typography
+      {/* <Typography
         className="m-auto mt-20 mb-10 notebook:mb-12 desktop:mb-20 w-fit"
         variant="h1"
       >
@@ -80,7 +81,7 @@ export default function Home(): JSX.Element {
             ),
           },
         ]}
-      />
+      /> */}
     </div>
   )
 }

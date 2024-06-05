@@ -15,7 +15,7 @@ const Social: FC<SocialProps> = ({ className }) => {
         )}
       >
         <a
-          href={"https://www.instagram.com/"}
+          href={"https://www.instagram.com/team_isaac_polito/"}
           target="_blank"
           rel="noopener noreferrer"
           className="w-[13px] tablet:w-8 laptop:w-10 notebook:w-14 desktop:w-16 text-white hover:text-yellow-isaac"
@@ -23,7 +23,7 @@ const Social: FC<SocialProps> = ({ className }) => {
           <InstagramButton />
         </a>
         <a
-          href={"https://www.linkedin.com/"}
+          href={"https://www.linkedin.com/company/team-isaac-polito/"}
           target="_blank"
           rel="noopener noreferrer"
           className="w-[13px] tablet:w-8 laptop:w-10 notebook:w-14 desktop:w-16 text-white hover:text-yellow-isaac"
@@ -31,7 +31,7 @@ const Social: FC<SocialProps> = ({ className }) => {
           <LinkedinButton />
         </a>
         <a
-          href={"/"}
+          href="mailto:team.isaac.polito@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className="m-auto text-white hover:text-yellow-isaac"

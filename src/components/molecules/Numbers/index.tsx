@@ -10,7 +10,7 @@ const Numbers = () => {
   const { t } = useTranslation("homepage")
 
   return (
-    <div className="m-auto laptop:my-8 notebook:my-16 w-fit desktop:my-32">
+    <div className="w-3/4 m-auto laptop:my-8 notebook:my-16 desktop:my-32">
       <Typography
         className="m-auto mb-16 laptop:mb-32 desktop:mb-40 w-fit lightBluePalette"
         variant="h1"
@@ -20,15 +20,24 @@ const Numbers = () => {
       <div className="grid grid-rows-3 gap-10 h-fit tablet:grid-rows-1 tablet:grid-cols-3 tablet:gap-5 laptop:gap-0 laptop:gap-x-10 desktop:gap-x-24">
         <div>
           <Calendar className="m-auto mb-2 w-14 h-14 laptop:w-20 laptop:h-20 text-dark-blue-isaac" />
-          <Number number={13} label={t("numbers.years")} />
+          <Number
+            number={t("numbers.first.value")}
+            label={t("numbers.first.title")}
+          />
         </div>
         <div>
           <People className="m-auto mb-2 w-14 h-14 laptop:w-20 laptop:h-20 text-dark-blue-isaac" />
-          <Number number={"20+"} label={t("numbers.members")} />
+          <Number
+            number={t("numbers.second.value")}
+            label={t("numbers.second.title")}
+          />
         </div>
         <div>
           <Robot className="m-auto mb-2 w-14 h-14 laptop:w-20 laptop:h-20 text-dark-blue-isaac" />
-          <Number number={2} label={t("numbers.prototypes")} />
+          <Number
+            number={t("numbers.third.value")}
+            label={t("numbers.third.title")}
+          />
         </div>
       </div>
     </div>
