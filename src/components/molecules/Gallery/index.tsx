@@ -21,7 +21,11 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
       {images.map((e, i) => {
         return (
           <Carousel.Slide className={`my-auto ${className}`} key={i}>
-            <img src={e.src} alt={e.alt} />
+            <img
+              src={e.src}
+              alt={e.alt}
+              className="desktop:w-[370px] h-fit notebook:w-[300px] laptop:w-[220px] w-[170px] m-auto rounded-xl"
+            />
           </Carousel.Slide>
         )
       })}
