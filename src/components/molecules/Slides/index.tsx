@@ -4,30 +4,26 @@ import React, { FC } from "react"
 import { useTranslation } from "react-i18next"
 import SlidesProps from "./index.types"
 
-const Slides: FC<SlidesProps> = ({
-  context,
-  translationPath,
-  numSlides,
-  src,
-  alt,
-}) => {
+const Slides: FC<SlidesProps> = ({ slideEl }) => {
   const slides: Array<React.ReactNode> = []
-  const { t } = useTranslation(context)
+  const { t } = useTranslation("projects")
 
-  for (let i = 1; i <= numSlides; i++) {
-    slides.push(
-      <Carousel.Slide>
-        <div className="grid grid-cols-2 mt-8 h-80">
-          <Typography variant="p" className="my-auto text-left">
-            {t(translationPath + "." + i)}
-          </Typography>
-          <img
-            src={src}
-            alt={alt}
-            className="h-40 m-auto tablet:h-60 notebook:h-80"
-          />
-        </div>
-      </Carousel.Slide>
+  {
+    slideEl!.map((item, i) =>
+      slides.push(
+        <Carousel.Slide key={i}>
+          <div className="grid grid-cols-2 mt-8 h-80">
+            <Typography variant="p" className="my-auto text-left">
+              {t(item.translationPath)}
+            </Typography>
+            <img
+              src={item.src}
+              alt={item.alt}
+              className="h-40 m-auto tablet:h-60 notebook:h-80"
+            />
+          </div>
+        </Carousel.Slide>
+      )
     )
   }
 

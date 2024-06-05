@@ -1,7 +1,9 @@
-export default interface SlidesProps {
-  context: string
-  translationPath: string
-  numSlides: number
+interface SlideElement {
   src: string
   alt: string
+  translationPath: string
+}
+
+export default interface SlidesProps {
+  slideEl: SlideElement[]
 }
