@@ -26,75 +26,71 @@ export default function Events(): JSX.Element {
   return (
     <>
       <Hero title={t("title")} />
-      {(t("events", { returnObjects: true }) as Event[]).map((event, index) => {
-        if (event.type === "static") {
-          return (
-            <StaticEvent
-              key={index}
-              title={event.title}
-              desc={event.desc}
-              palette={event.palette}
-              images={[
-                {
-                  src: "",
-                  alt: "",
-                },
-                {
-                  src: mk23_1,
-                  alt: "",
-                },
-                {
-                  src: mk23_3,
-                  alt: "",
-                },
-                {
-                  src: mk23_4,
-                  alt: "",
-                },
-                {
-                  src: "",
-                  alt: "",
-                },
-                {
-                  src: mk23_5,
-                  alt: "",
-                },
-              ]}
-            />
-          )
-        } else if (event.type === "gallery") {
-          return (
-            <GalleryEvent
-              key={index}
-              title={event.title}
-              desc={event.desc}
-              palette={event.palette}
-              images={[
-                {
-                  src: mk22_1,
-                  alt: "",
-                },
-                {
-                  src: mk22_3,
-                  alt: "",
-                },
-                {
-                  src: mk22_4,
-                  alt: "",
-                },
-                {
-                  src: mk22_2,
-                  alt: "",
-                },
-                {
-                  src: mk22_5,
-                  alt: "",
-                },
-              ]}
-            />
-          )
-        }
-      })}
+      {(t("events", { returnObjects: true }) as Event[]).map((event, index) =>
+        event.type === "static" ? (
+          <StaticEvent
+            key={index}
+            title={event.title}
+            desc={event.desc}
+            palette={event.palette}
+            images={[
+              {
+                src: "",
+                alt: "",
+              },
+              {
+                src: mk23_1,
+                alt: "",
+              },
+              {
+                src: mk23_3,
+                alt: "",
+              },
+              {
+                src: mk23_4,
+                alt: "",
+              },
+              {
+                src: "",
+                alt: "",
+              },
+              {
+                src: mk23_5,
+                alt: "",
+              },
+            ]}
+          />
+        ) : event.type === "gallery" ? (
+          <GalleryEvent
+            key={index}
+            title={event.title}
+            desc={event.desc}
+            palette={event.palette}
+            images={[
+              {
+                src: mk22_1,
+                alt: "",
+              },
+              {
+                src: mk22_3,
+                alt: "",
+              },
+              {
+                src: mk22_4,
+                alt: "",
+              },
+              {
+                src: mk22_2,
+                alt: "",
+              },
+              {
+                src: mk22_5,
+                alt: "",
+              },
+            ]}
+          />
+        ) : null
+      )}
     </>
   )
 }
