@@ -10,9 +10,18 @@ const StaticGallery: FC<StaticGalleryProps> = ({ images, className }) => {
         className
       )}
     >
-      {images.map((e, i) => {
-        return <img src={e.src} alt={e.alt} key={i} />
-      })}
+      {images.map((e, i) =>
+        e.src === "" ? (
+          <div key={i} />
+        ) : (
+          <img
+            src={e.src}
+            alt={e.alt}
+            key={i}
+            className="desktop:w-[370px] h-fit notebook:w-[300px] laptop:w-[220px] w-[170px] m-auto rounded-xl"
+          />
+        )
+      )}
     </div>
   )
 }
