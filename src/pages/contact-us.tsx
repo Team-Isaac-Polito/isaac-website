@@ -15,8 +15,9 @@ export default function Contacts(): JSX.Element {
         variant="p"
         className="mx-6 text-center tablet:mx-20 laptop:mx-32 desktop:mx-52"
       >
-        Ci farebbe piacere sentirti. Compila il form sottostante e ti
-        risponderemo il prima possibile!
+        {t(
+          "Ci farebbe piacere sentirti. Compila il form sottostante e ti risponderemo il prima possibile!"
+        )}
       </Typography>
       <Form />
     </div>
