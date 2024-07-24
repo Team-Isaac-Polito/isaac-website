@@ -1,8 +1,6 @@
 import EventsImage from "@assets/homepage/hp_Events_1.png"
 import ProjectsImage from "@assets/homepage/hp_Projects_1.png"
 import Isaac from "@atoms/Isaac"
-// import Typography from "@atoms/Typography"
-// import Gallery from "@molecules/Gallery"
 import Hero from "@molecules/Hero"
 import Numbers from "@molecules/Numbers"
 import Paragraph from "@molecules/Paragraph"
@@ -47,41 +45,6 @@ export default function Home(): JSX.Element {
       >
         <Numbers />
       </Paragraph>
-      {/* <Typography
-        className="m-auto mt-20 mb-10 notebook:mb-12 desktop:mb-20 w-fit"
-        variant="h1"
-      >
-        {t("gallery")}
-      </Typography>
-      <Gallery
-        images={[
-          {
-            children: (
-              <div className="w-32 m-auto bg-gray-300 tablet:w-40 laptop:w-52 notebook:w-64 aspect-square desktop:w-96 rounded-xl" />
-            ),
-          },
-          {
-            children: (
-              <div className="w-32 m-auto bg-gray-300 tablet:w-40 laptop:w-52 notebook:w-64 aspect-square desktop:w-96 rounded-xl" />
-            ),
-          },
-          {
-            children: (
-              <div className="w-32 m-auto bg-gray-300 tablet:w-40 laptop:w-52 notebook:w-64 aspect-square desktop:w-96 rounded-xl" />
-            ),
-          },
-          {
-            children: (
-              <div className="w-32 m-auto bg-gray-300 tablet:w-40 laptop:w-52 notebook:w-64 aspect-square desktop:w-96 rounded-xl" />
-            ),
-          },
-          {
-            children: (
-              <div className="w-32 m-auto bg-gray-300 tablet:w-40 laptop:w-52 notebook:w-64 aspect-square desktop:w-96 rounded-xl" />
-            ),
-          },
-        ]}
-      /> */}
     </div>
   )
 }
