@@ -18,7 +18,7 @@ const Social: FC<SocialProps> = ({ className }) => {
           href={"https://www.instagram.com/team_isaac_polito/"}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[13px] tablet:w-8 laptop:w-10 notebook:w-14 desktop:w-16 text-white hover:text-yellow-isaac"
+          className="w-8 mx-auto text-white laptop:w-10 notebook:w-14 desktop:w-16 hover:text-yellow-isaac"
         >
           <InstagramButton />
         </a>
@@ -26,7 +26,7 @@ const Social: FC<SocialProps> = ({ className }) => {
           href={"https://www.linkedin.com/company/team-isaac-polito/"}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[13px] tablet:w-8 laptop:w-10 notebook:w-14 desktop:w-16 text-white hover:text-yellow-isaac"
+          className="w-8 mx-auto text-white laptop:w-10 notebook:w-14 desktop:w-16 hover:text-yellow-isaac"
         >
           <LinkedinButton />
         </a>
@@ -34,9 +34,9 @@ const Social: FC<SocialProps> = ({ className }) => {
           href="mailto:team.isaac.polito@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="m-auto text-white hover:text-yellow-isaac"
+          className="w-8 mx-auto text-white hover:text-yellow-isaac laptop:w-10 notebook:w-14 desktop:w-16"
         >
-          <EmailButton className="tablet:w-8 laptop:w-10 notebook:w-14 desktop:w-16 " />
+          <EmailButton />
         </a>
       </div>
     </>

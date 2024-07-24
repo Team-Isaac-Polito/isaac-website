@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound"
 import About from "./pages/about"
 import Contacts from "./pages/contact-us"
 import Events from "./pages/events"
+import Links from "./pages/links"
 import Projects from "./pages/projects"
 
 const Wrapper = ({ children }) => {
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="contact-us" element={<Contacts />} />
             <Route path="*" element={<NotFound />} />
           </Route>
+          <Route path="links" element={<Links />} />
         </Routes>
       </Wrapper>
     </Suspense>
