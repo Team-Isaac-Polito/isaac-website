@@ -12,8 +12,8 @@ const Slides: FC<SlidesProps> = ({ slideEl }) => {
     slideEl!.map((item, i) =>
       slides.push(
         <Carousel.Slide key={i}>
-          <div className="grid grid-cols-2 mt-8 h-80">
-            <Typography variant="p" className="my-auto text-left">
+          <div className="grid grid-cols-2 px-5 mt-8 h-80">
+            <Typography variant="p" className="pr-3 my-auto text-left">
               {t(item.translationPath)}
             </Typography>
             <img
