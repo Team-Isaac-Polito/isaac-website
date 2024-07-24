@@ -2,15 +2,15 @@
   "title": "Eventi",
   "events": [
     {
-      "type": "static",
-      "title": "MAKER FAIRE 2023",
-      "desc": "Anche quest'anno il team torna negli spazi della fiera per mostrare al pubblico i nuovi aggiornamenti sul prototipo RESE.Q!",
-      "palette": "bluePalette"
-    },
-    {
       "type": "gallery",
       "title": "A&T 2024",
       "palette": "lightBluePalette"
+    },
+    {
+      "type": "gallery",
+      "title": "MAKER FAIRE 2023",
+      "desc": "Anche quest'anno il team torna negli spazi della fiera per mostrare al pubblico i nuovi aggiornamenti sul prototipo RESE.Q!",
+      "palette": "bluePalette"
     },
     {
       "type": "gallery",
