@@ -22,7 +22,7 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
   return (
     <header className="sticky top-0 z-20 grid w-full grid-cols-5 text-white h-14 tablet:h-16 laptop:h-20 font-Staatliches notebook:h-24 desktop:h-28 bg-dark-blue-isaac tablet:backdrop-blur-md">
       <a href="/" className="m-auto">
-        <Logo className="hidden h-10 tablet:w-28 laptop:w-fit laptop:ml-14 notebook:ml-20 desktop:ml-28 laptop:h-12 notebook:h-16 desktop:h-20 tablet:flex" />
+        <Logo className="ml-4 h-10 w-28 laptop:w-fit laptop:ml-14 notebook:ml-20 desktop:ml-28 laptop:h-12 notebook:h-16 desktop:h-20 flex" />
       </a>
       <nav className="items-center hidden w-full col-span-3 m-auto text-5xl uppercase tablet:block">
         <ul className="grid w-full grid-cols-5">
