@@ -30,3 +30,6 @@ Your app is ready to be deployed!
 
 Serves the app built for production in a preview environment.
 Open [http://localhost:4173](http://localhost:4173) to view it in your browser.
+
+### Web Hosting
+Follow the important ⭐ on Outline (Website > Area Web)
