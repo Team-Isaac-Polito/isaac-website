@@ -2,16 +2,30 @@
   "title": "Events",
   "events": [
     {
-      "type": "static",
+      "type": "gallery",
+      "title": "A&T 2024",
+      "palette": "bluePalette",
+      "folder": "AT24"
+    },
+    {
+      "type": "gallery",
       "title": "MAKER FAIRE 2023",
       "desc": "Once again, the team returns to the exhibition spaces to show the public the latest updates on the RESE.Q prototype!",
-      "palette": "bluePalette"
+      "palette": "lightBluePalette",
+      "folder": "MK23"
+    },
+    {
+      "type": "gallery",
+      "title": "A&T 2023",
+      "palette": "bluePalette",
+      "folder": "AT23"
     },
     {
       "type": "gallery",
       "title": "MAKER FAIRE 2022",
       "desc": "We presented RESE.Q to a wide audience ranging from children to robotics experts, illustrating its operation and potential use in search operations.",
-      "palette": "lightBluePalette"
+      "palette": "lightBluePalette",
+      "folder": "MK22"
     }
   ]
 }
