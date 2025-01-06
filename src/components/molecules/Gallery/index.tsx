@@ -5,6 +5,10 @@ import GalleryProps from "./index.types"
 
 const Gallery: FC<GalleryProps> = ({ images, className }) => {
   const autoplay = useRef(Autoplay({ delay: 3000 }))
+
+  // Duplicate images when there are less than 4
+  const extendedImages = images.length < 4 ? [...images, ...images] : images
+
   return (
     <Carousel
       slideSize="33%"
@@ -18,7 +22,7 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
       onMouseLeave={autoplay.current.reset}
       className="w-full mb-7"
     >
-      {images.map((e, i) => {
+      {extendedImages.map((e, i) => {
         return (
           <Carousel.Slide className={`my-auto ${className}`} key={i}>
             <img
