@@ -2,7 +2,7 @@ import React, { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { NavLink } from "react-router-dom"
 import MenuIcon from "../../../assets/MenuIcon.png"
-import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
+import Logo from "../../../assets/svg/logo.svg?react"
 import { navRoutes } from "../../../routes"
 import NavBarProps from "./index.types"
 

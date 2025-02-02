@@ -3,7 +3,7 @@ import { AnimatePresence, LazyMotion, m } from "framer-motion"
 import React, { FC, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { NavLink } from "react-router-dom"
-import { ReactComponent as Logo } from "../../../assets/svg/logo.svg"
+import Logo from "../../../assets/svg/logo.svg?react"
 import { navRoutes } from "../../../routes"
 import NavigationProps from "./index.types"
 
