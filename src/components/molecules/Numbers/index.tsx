@@ -2,9 +2,9 @@ import Number from "@atoms/Number"
 import Typography from "@atoms/Typography"
 import React from "react"
 import { useTranslation } from "react-i18next"
-import { ReactComponent as Calendar } from "../../../assets/svg/calendar.svg"
-import { ReactComponent as People } from "../../../assets/svg/people.svg"
-import { ReactComponent as Robot } from "../../../assets/svg/robot.svg"
+import Calendar from "../../../assets/svg/calendar.svg?react"
+import People from "../../../assets/svg/people.svg?react"
+import Robot from "../../../assets/svg/robot.svg?react"
 
 const Numbers = () => {
   const { t } = useTranslation("homepage")
