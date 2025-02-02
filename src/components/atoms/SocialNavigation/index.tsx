@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import React, { FC } from "react"
-import { ReactComponent as InstagramButton } from "../../../assets/svg/instagramButton.svg"
-import { ReactComponent as LinkedinButton } from "../../../assets/svg/linkedinButton.svg"
+import InstagramButton from "../../../assets/svg/instagramButton.svg?react"
+import LinkedinButton from "../../../assets/svg/linkedinButton.svg?react"
 import SocialProps from "./index.types"
 
 export const SocialNavigation: FC<SocialProps> = ({ className }) => {

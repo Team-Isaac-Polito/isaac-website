@@ -1,7 +1,7 @@
 import Typography from "@atoms/Typography"
 import { Carousel } from "@mantine/carousel"
 import React, { FC, useState } from "react"
-import { ReactComponent as LogoLK } from "../../../assets/svg/linkedinButton.svg"
+import LogoLK from "../../../assets/svg/linkedinButton.svg?react"
 import AreaProps from "./index.types"
 
 const Area: FC<AreaProps> = ({ desc, members, init }) => {

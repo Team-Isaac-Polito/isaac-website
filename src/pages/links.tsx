@@ -1,7 +1,7 @@
 import Social from "@atoms/Social"
 import Typography from "@atoms/Typography"
 import React from "react"
-import { ReactComponent as Logo } from "../assets/svg/logo.svg"
+import Logo from "../assets/svg/logo.svg?react"
 
 export default function Links(): JSX.Element {
   return (
