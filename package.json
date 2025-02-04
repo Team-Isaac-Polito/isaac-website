@@ -35,7 +35,7 @@
 		"classnames": "^2.5.1",
 		"embla-carousel-autoplay": "^7.1.0",
 		"embla-carousel-react": "^7.1.0",
-		"framer-motion": "^11.3.12",
+		"framer-motion": "^12.0.11",
 		"i18next": "^23.16.2",
 		"i18next-http-backend": "^3.0.2",
 		"isaac-website": "file:",
