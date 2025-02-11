@@ -3,6 +3,7 @@ import ProjectsImage from "@assets/homepage/hp_Projects_1.png"
 import Isaac from "@atoms/Isaac"
 import Hero from "@molecules/Hero"
 import Numbers from "@molecules/Numbers"
+import Sponsors from "@molecules/Sponsors"
 import Paragraph from "@molecules/Paragraph"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
@@ -45,6 +46,7 @@ export default function Home(): JSX.Element {
       >
         <Numbers />
       </Paragraph>
+      <Sponsors />
     </div>
   )
 }
