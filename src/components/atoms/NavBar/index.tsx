@@ -6,7 +6,7 @@ import Logo from "../../../assets/svg/logo.svg?react"
 import { navRoutes } from "../../../routes"
 import NavBarProps from "./index.types"
 
-const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
+const NavBar: FC<NavBarProps> = ({ setToggleMenu }) => {
   const { t, i18n } = useTranslation()
 
   const changeLanguage = (lng: string) => {
@@ -65,7 +65,7 @@ const NavBar: FC<NavBarProps> = ({ setToggleMenu, toggleMenu }) => {
       </div>
       <div className="h-6 col-start-5 mt-4 mr-4 w-fit justify-self-end tablet:hidden">
         <button
-          onClick={() => setToggleMenu(!toggleMenu)}
+          onClick={() => setToggleMenu((toggleMenu) => !toggleMenu)}
           className="block w-6 h-6 cursor-pointer bg-none"
         >
           <img alt="Menu" src={MenuIcon} />
