@@ -69,13 +69,13 @@ const TwoColumns: FC<TwoColumnsProps> = ({
             src={src}
             alt={alt}
             className="w-56 m-auto laptop:w-72 notebook:w-80 desktop:w-96 tablet:hidden"
-            key="imgLeft"
+            key={title}
           />
           <img
             src={src}
             alt={alt}
             className="hidden w-56 m-auto laptop:w-72 notebook:w-80 desktop:w-96 tablet:block"
-            key="imgLeft"
+            key={title + " tablet"}
           />
           <div className="hidden m-auto text-left tablet:block">
             {/*textleft */}

@@ -101,7 +101,11 @@ export default function Events(): JSX.Element {
               ]}
             />
           ) : event.title === "A&T 2024" ? (
-            <Paragraph palette={event.palette} className="relative my-40">
+            <Paragraph
+              palette={event.palette}
+              key={`at24-${index}`}
+              className="relative my-40"
+            >
               <Typography
                 variant="h1"
                 className="mb-7 laptop:mb-10 desktop:mb-20 desktop:mt-10"

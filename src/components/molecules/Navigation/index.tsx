@@ -2,7 +2,7 @@ import { SocialNavigation } from "@atoms/SocialNavigation"
 import { AnimatePresence, LazyMotion, m } from "framer-motion"
 import React, { FC, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { NavLink } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import Logo from "../../../assets/svg/logo.svg?react"
 import { navRoutes } from "../../../routes"
 import NavigationProps from "./index.types"
@@ -17,6 +17,14 @@ const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
     setToggleMenu(!toggleMenu)
   }
   const changeTo = i18n.language === "it" ? "en" : "it"
+  const navigate = useNavigate()
+
+  const handleNavigation = (path: string) => {
+    setToggleMenu(false)
+    setTimeout(() => {
+      navigate(path)
+    }, 400)
+  }
 
   const [isVisible, setIsVisible] = useState(false)
   const [buttonStyle, setButtonStyle] = useState("")
@@ -57,33 +65,23 @@ const Navigation: FC<NavigationProps> = ({ toggleMenu, setToggleMenu }) => {
                 <div className="flex h-[200px] mt-28 flex-col tablet:flex-row">
                   <nav className="flex items-center h-full">
                     <ul>
-                      {navRoutes.map((route) => {
-                        return (
-                          <m.li key={route.id} className="list-none">
-                            <button onClick={() => setToggleMenu(!toggleMenu)}>
-                              <m.div
-                                className="antialiased flex items-center text-[30px] tracking-normal text-white hover:text-yellow-isaac transition duration-[250ms] w-full last:mb-[2vh]"
-                                whileHover={{
-                                  x: 40,
-                                  transition: {
-                                    duration: 0.25,
-                                    ease: [0.6, 0.05, -0.01, 0.9],
-                                  },
-                                }}
-                              >
-                                <NavLink
-                                  to={route.path}
-                                  className={({ isActive }) =>
-                                    isActive ? "underline" : ""
-                                  }
-                                >
-                                  {t(`routes.${route.title}`)}
-                                </NavLink>
-                              </m.div>
-                            </button>
-                          </m.li>
-                        )
-                      })}
+                      {navRoutes.map((route) => (
+                        <m.li key={route.id} className="list-none">
+                          <m.button
+                            onClick={() => handleNavigation(route.path)}
+                            className="antialiased flex items-center text-[30px] tracking-normal text-white hover:text-yellow-isaac transition duration-[250ms] w-full last:mb-[2vh] bg-transparent border-none outline-none"
+                            whileHover={{
+                              x: 40,
+                              transition: {
+                                duration: 0.25,
+                                ease: [0.6, 0.05, -0.01, 0.9],
+                              },
+                            }}
+                          >
+                            {t(`routes.${route.title}`)}
+                          </m.button>
+                        </m.li>
+                      ))}
                     </ul>
                   </nav>
                 </div>
