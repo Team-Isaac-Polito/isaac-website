@@ -8,7 +8,15 @@ import Contacts from "./pages/contact-us"
 import Events from "./pages/events"
 import Links from "./pages/links"
 import Projects from "./pages/projects"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 30,
+    },
+  },
+})
 const Wrapper = ({ children }) => {
   const location = useLocation()
   useLayoutEffect(() => {
@@ -21,17 +29,19 @@ const App = () => {
   return (
     <Suspense fallback="loading">
       <Wrapper>
-        <Routes>
-          <Route path={import.meta.env.BASE_URL} element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="projects" element={<Projects />} />
-            <Route path="events" element={<Events />} />
-            <Route path="contact-us" element={<Contacts />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-          <Route path="links" element={<Links />} />
-        </Routes>
+        <QueryClientProvider client={queryClient}>
+          <Routes>
+            <Route path={import.meta.env.BASE_URL} element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="events" element={<Events />} />
+              <Route path="contact-us" element={<Contacts />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+            <Route path="links" element={<Links />} />
+          </Routes>
+        </QueryClientProvider>
       </Wrapper>
     </Suspense>
   )
