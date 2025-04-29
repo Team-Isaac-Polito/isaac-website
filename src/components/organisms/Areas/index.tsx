@@ -19,37 +19,32 @@ export default function Areas(): JSX.Element {
   const areas = t("areas.items", { returnObjects: true }) as AreaItem[]
 
   return (
-    <div className="flex flex-col justify-center items-center ">
-      <div className="flex flex-row justify-center">
-        <SegmentedControl
-          name="areas"
-          callback={(val) => setArea(val)}
-          controlRef={useRef()}
-          defaultIndex={2}
-          segments={areas.map((areaItem) => ({
-            label: areaItem.title,
-            value: areaItem.value,
-            ref: React.createRef(),
-            className: "w-fit h-fit",
-          }))}
-        />
-      </div>
+    <div className="flex flex-col justify-center notebook:items-center ">
+      <SegmentedControl
+        name="areas"
+        callback={(val) => setArea(val)}
+        controlRef={useRef()}
+        defaultIndex={2}
+        segments={areas.map((areaItem) => ({
+          label: areaItem.title,
+          value: areaItem.value,
+          ref: React.createRef(),
+          className: "w-fit h-fit",
+        }))}
+      />
       <div>
-        <div className=" hidden tablet:block gap-5 overflow-auto bg-gradient-to-br from-blue-800/40 to-cyan-900/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl  w-[1680px] h-[470px] ">
+        <div className="gap-5 px-4 bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac backdrop-blur-md rounded-2xl shadow-2xl  notebook:w-[1680px] notebook:h-[470px] phone:w-[200px] phone:h-[120px] ">
           {isLoading && <p>Loading members...</p>}
 
-          <div className="flex flex-row gap-11 flex-wrap justify-around px-2 py-2">
-            {!isLoading && members?.length === 0 && (
-              <p>No members available for this area.</p>
-            )}
-            {!isLoading &&
+          <div className="flex flex-row gap-11 flex-wrap justify-around px-2 py-2 overflow-auto h-[270px] pr-2">
+            {/* {!isLoading &&
               members?.map((member) => (
                 <Card member={member} key={member.id} />
-              ))}
-            {/* {!isLoading &&
+              ))} */}
+            {!isLoading &&
               members
-                .filter((member) => member.area.includes(area))
-                .map((member) => <Card member={member} key={member.id} />)} */}
+                .filter((member) => member.field.includes(area))
+                .map((member) => <Card member={member} key={member.id} />)}
           </div>
           <div>
             {areas.map((areaItem, i) =>
@@ -57,7 +52,7 @@ export default function Areas(): JSX.Element {
                 <>
                   <Typography
                     key={i}
-                    variant="p"
+                    variant="card"
                     className="m-auto text-center w-fit"
                   >
                     {areaItem.description}
