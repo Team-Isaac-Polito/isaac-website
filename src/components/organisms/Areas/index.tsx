@@ -19,8 +19,8 @@ export default function Areas(): JSX.Element {
   const areas = t("areas.items", { returnObjects: true }) as AreaItem[]
 
   return (
-    <div className="grid grid-cols-2 mx-10 mt-16">
-      <div className="row-start-1 row-end-2 col-span-1 ">
+    <div className="flex flex-col justify-center items-center ">
+      <div className="flex flex-row justify-center">
         <SegmentedControl
           name="areas"
           callback={(val) => setArea(val)}
@@ -35,7 +35,7 @@ export default function Areas(): JSX.Element {
         />
       </div>
       <div>
-        <div className=" hidden tablet:block gap-5 overflow-auto row-start-1 col-start-2 bg-gradient-to-br from-blue-800/40 to-cyan-900/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl  w-fit h-[330px] ">
+        <div className=" hidden tablet:block gap-5 overflow-auto bg-gradient-to-br from-blue-800/40 to-cyan-900/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl  w-[1680px] h-[470px] ">
           {isLoading && <p>Loading members...</p>}
 
           <div className="flex flex-row gap-11 flex-wrap justify-around px-2 py-2">
@@ -51,21 +51,21 @@ export default function Areas(): JSX.Element {
                 .filter((member) => member.area.includes(area))
                 .map((member) => <Card member={member} key={member.id} />)} */}
           </div>
-        </div>
-        <div>
-          {areas.map((areaItem, i) =>
-            areaItem.value === area ? (
-              <>
-                <Typography
-                  key={i}
-                  variant="p"
-                  className="m-auto text-center w-fit"
-                >
-                  {areaItem.description}
-                </Typography>
-              </>
-            ) : null
-          )}
+          <div>
+            {areas.map((areaItem, i) =>
+              areaItem.value === area ? (
+                <>
+                  <Typography
+                    key={i}
+                    variant="p"
+                    className="m-auto text-center w-fit"
+                  >
+                    {areaItem.description}
+                  </Typography>
+                </>
+              ) : null
+            )}
+          </div>
         </div>
       </div>
     </div>

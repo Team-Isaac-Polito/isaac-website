@@ -16,17 +16,13 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
   }
 
   return (
-    <div className="grid grid-rows-5 w-fit" ref={controlRef} id="services">
+    <div
+      className="flex justify-between gap-24 "
+      ref={controlRef}
+      id="services"
+    >
       {segments.map((item, i) => (
-        <div
-          key={item.value}
-          ref={item.ref}
-          className={`z-20 ${
-            i === activeIndex
-              ? `${item.className}`
-              : "bg-transparent w-80 h-fit"
-          }`}
-        >
+        <div key={item.value} ref={item.ref}>
           <div className="">
             <input
               type="radio"
