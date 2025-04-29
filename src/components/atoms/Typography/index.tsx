@@ -48,6 +48,17 @@ const Typography: FC<TypographyProps> = ({ variant, className, children }) => {
           {children}
         </p>
       )
+    case "card":
+      return (
+        <p
+          className={classNames(
+            "text-base phone:text-lg tablet:text-lg notebook:text-2xl desktop:text-3xl desktop:leading-tight font-light text-lime-50",
+            className ?? ""
+          )}
+        >
+          {children}
+        </p>
+      )
     case "label":
       return (
         <p

@@ -12,6 +12,7 @@ export interface Member {
   linkedin: string | null
   email: string
   picture: string | null
+  field: string | null
 }
 
 export default interface CardProps {
