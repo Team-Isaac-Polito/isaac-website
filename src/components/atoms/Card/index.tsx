@@ -3,6 +3,7 @@ import CardProps from "./index.types"
 
 const Card: React.FC<CardProps> = ({ member }) => {
   const { name, surname, role, linkedin, picture } = member
+  const isLarge = surname.length > 10
 
   return (
     <div className="w-[340px] h-[230px] p-5 bg-gradient-to-br from-dark-blue-isaac via-light-blue-isaac to-black text-yellow-isaac rounded-2xl shadow-xl flex items-center ">
@@ -16,8 +17,15 @@ const Card: React.FC<CardProps> = ({ member }) => {
         className="w-44 h-52 rounded-sm border-2 border-white/30 shadow-sm object-cover"
       />
       <div className="flex flex-col justify-center ml-2">
-        <h3 className="text-lg font-semibold tracking-wide">
-          {name} {surname}
+        <h3 className="text-lg font-semibold tracking-wide">{name}</h3>
+        <h3
+          className={
+            isLarge
+              ? "text-sm font-semibold tracking-wide"
+              : "text-lg font-semibold tracking-wide"
+          }
+        >
+          {surname}
         </h3>
         <p className="text-sm text-white/80">{role || "No role listed"}</p>
         {linkedin && (
