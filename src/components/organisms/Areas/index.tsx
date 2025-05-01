@@ -1,5 +1,6 @@
 import SegmentedControl from "@atoms/SegmentedControl"
 import { useMembers } from "@molecules/Area/useMembers"
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
 
 import Typography from "@atoms/Typography"
 import React, { useRef, useState } from "react"
@@ -11,6 +12,13 @@ export default function Areas(): JSX.Element {
   const { members, isLoading, error } = useMembers()
   const { t } = useTranslation("about")
   const [area, setArea] = useState("mc")
+  const lenMembers = members?.length
+  const [cardPage, setCardPage] = useState(0)
+  function handleCardPage(toPage) {
+    if (toPage < lenMembers / 4 && toPage >= 0) {
+      setCardPage(toPage)
+    } else return
+  }
 
   area
   isLoading
@@ -35,7 +43,17 @@ export default function Areas(): JSX.Element {
       <div>
         <div className="gap-5 px-4 bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac backdrop-blur-md rounded-2xl shadow-2xl  notebook:w-[1680px] notebook:h-[470px] phone:w-[200px] phone:h-[120px] ">
           {isLoading && <p>Loading members...</p>}
+          <div className="justify-between flex py-2">
+            <FaArrowLeft
+              className=" text-yellow-isaac"
+              onClick={() => handleCardPage(cardPage - 4)}
+            />
 
+            <FaArrowRight
+              className=" text-yellow-isaac"
+              onClick={() => handleCardPage(cardPage + 4)}
+            />
+          </div>
           <div className="flex flex-row gap-11 flex-wrap justify-around px-2 py-2 overflow-auto h-[270px] pr-2">
             {/* {!isLoading &&
               members?.map((member) => (
@@ -44,6 +62,7 @@ export default function Areas(): JSX.Element {
             {!isLoading &&
               members
                 .filter((member) => member.field.includes(area))
+                .slice(cardPage, cardPage + 4)
                 .map((member) => <Card member={member} key={member.id} />)}
           </div>
           <div>
