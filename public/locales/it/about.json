@@ -47,9 +47,9 @@
         ]
       },
       {
-        "title": "CONTROLLI",
-        "value": "cn",
-        "description": "Ci occupiamo di sviluppare gli algoritmi di controllo e le simulazioni per calcolare e predire il comportamento del robot. Inoltre, stiamo integrando algoritmi di rilevamento di oggetti e di mappatura dell'ambiente.",
+        "title": "MANAGEMENT",
+        "value": "mg",
+        "description": "L’area Management è il cuore organizzativo del team ISAAC. Coordina tutte le attività trasversali necessarie al corretto funzionamento del progetto: gestione degli acquisti, relazioni con sponsor e partner, stesura di richieste di finanziamento, recruitment dei nuovi membri e pianificazione strategica delle attività. È composta dal team leader e dai capi area, che collaborano strettamente per garantire efficienza, coesione e crescita del team.",
         "members": []
       },
       {
