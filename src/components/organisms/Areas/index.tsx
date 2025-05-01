@@ -19,17 +19,13 @@ export default function Areas(): JSX.Element {
   function handleCardPage(toPage: number) {
     if (toPage < maxPage && toPage >= 0) {
       setCardPage(toPage)
-      console.log(toPage)
     } else return
   }
   useEffect(() => {
     setCardPage(0)
   }, [area])
-
-  console.log(error)
-
+  error ? console.log(error) : ""
   const areas = t("areas.items", { returnObjects: true }) as AreaItem[]
-
   return (
     <div className="flex flex-row notebook:flex-col justify-center items-center notebook:items-center ">
       <SegmentedControl
