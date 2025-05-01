@@ -45,7 +45,7 @@ export default function Areas(): JSX.Element {
         }))}
       />
       <div>
-        <div className="gap-5 px-4 bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac backdrop-blur-md rounded-2xl shadow-2xl  notebook:w-[1680px] notebook:h-[470px] phone:w-[200px] phone:h-[120px] ">
+        <div className="hidden notebook:block gap-5 px-4 bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac backdrop-blur-md rounded-2xl shadow-2xl  notebook:w-[1680px] notebook:h-[470px] phone:w-[200px] phone:h-[120px] ">
           {isLoading && <p>Loading members...</p>}
           <div className="justify-between flex py-2">
             <FaArrowLeft
