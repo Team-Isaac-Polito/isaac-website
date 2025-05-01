@@ -3,26 +3,30 @@ import { useMembers } from "@molecules/Area/useMembers"
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
 
 import Typography from "@atoms/Typography"
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { AreaItem } from "./index.types"
 import Card from "@atoms/Card"
 
 export default function Areas(): JSX.Element {
   const { members, isLoading, error } = useMembers()
-  const { t } = useTranslation("about")
   const [area, setArea] = useState("mc")
-  const lenMembers = members?.length
+  const filteredMembers =
+    members?.filter((member) => member.field.includes(area)) || []
+  const maxPage = Math.ceil(filteredMembers.length / 4)
+  const { t } = useTranslation("about")
   const [cardPage, setCardPage] = useState(0)
-  function handleCardPage(toPage) {
-    if (toPage < lenMembers / 4 && toPage >= 0) {
+  function handleCardPage(toPage: number) {
+    if (toPage < maxPage && toPage >= 0) {
       setCardPage(toPage)
+      console.log(toPage)
     } else return
   }
+  useEffect(() => {
+    setCardPage(0)
+  }, [area])
 
-  area
-  isLoading
-  error
+  console.log(error)
 
   const areas = t("areas.items", { returnObjects: true }) as AreaItem[]
 
@@ -46,12 +50,12 @@ export default function Areas(): JSX.Element {
           <div className="justify-between flex py-2">
             <FaArrowLeft
               className=" text-yellow-isaac"
-              onClick={() => handleCardPage(cardPage - 4)}
+              onClick={() => handleCardPage(cardPage - 1)}
             />
 
             <FaArrowRight
               className=" text-yellow-isaac"
-              onClick={() => handleCardPage(cardPage + 4)}
+              onClick={() => handleCardPage(cardPage + 1)}
             />
           </div>
           <div className="flex flex-row gap-11 flex-wrap justify-around px-2 py-2 overflow-auto h-[270px] pr-2">
@@ -60,9 +64,8 @@ export default function Areas(): JSX.Element {
                 <Card member={member} key={member.id} />
               ))} */}
             {!isLoading &&
-              members
-                .filter((member) => member.field.includes(area))
-                .slice(cardPage, cardPage + 4)
+              filteredMembers
+                ?.slice(cardPage * 4, cardPage * 4 + 4)
                 .map((member) => <Card member={member} key={member.id} />)}
           </div>
           <div>
