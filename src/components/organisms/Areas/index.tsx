@@ -48,15 +48,12 @@ export default function Areas(): JSX.Element {
         <div className="gap-5 px-4 bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac backdrop-blur-md rounded-2xl shadow-2xl  notebook:w-[1680px] notebook:h-[470px] ">
           {isLoading && <p>Loading members...</p>}
           <div className="notebook:flex justify-between hidden py-2">
-            <FaArrowLeft
-              className=" text-yellow-isaac"
-              onClick={() => handleCardPage(cardPage - 1)}
-            />
-
-            <FaArrowRight
-              className=" text-yellow-isaac"
-              onClick={() => handleCardPage(cardPage + 1)}
-            />
+            <button onClick={() => handleCardPage(cardPage - 1)}>
+              <FaArrowLeft className=" text-yellow-isaac " />
+            </button>
+            <button onClick={() => handleCardPage(cardPage + 1)}>
+              <FaArrowRight className=" text-yellow-isaac" />
+            </button>
           </div>
           <div className=" notebook:flex hidden flex-row gap-11 flex-wrap justify-around px-2 py-2 overflow-auto h-[270px] pr-2">
             {/* {!isLoading &&
