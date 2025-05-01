@@ -31,7 +31,7 @@ export default function Areas(): JSX.Element {
   const areas = t("areas.items", { returnObjects: true }) as AreaItem[]
 
   return (
-    <div className="flex flex-col justify-center notebook:items-center ">
+    <div className="flex flex-row notebook:flex-col justify-center items-center notebook:items-center ">
       <SegmentedControl
         name="areas"
         callback={(val) => setArea(val)}
@@ -45,9 +45,9 @@ export default function Areas(): JSX.Element {
         }))}
       />
       <div>
-        <div className="hidden notebook:block gap-5 px-4 bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac backdrop-blur-md rounded-2xl shadow-2xl  notebook:w-[1680px] notebook:h-[470px] phone:w-[200px] phone:h-[120px] ">
+        <div className="gap-5 px-4 bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac backdrop-blur-md rounded-2xl shadow-2xl  notebook:w-[1680px] notebook:h-[470px] ">
           {isLoading && <p>Loading members...</p>}
-          <div className="justify-between flex py-2">
+          <div className="notebook:flex justify-between hidden py-2">
             <FaArrowLeft
               className=" text-yellow-isaac"
               onClick={() => handleCardPage(cardPage - 1)}
@@ -58,7 +58,7 @@ export default function Areas(): JSX.Element {
               onClick={() => handleCardPage(cardPage + 1)}
             />
           </div>
-          <div className="flex flex-row gap-11 flex-wrap justify-around px-2 py-2 overflow-auto h-[270px] pr-2">
+          <div className=" notebook:flex hidden flex-row gap-11 flex-wrap justify-around px-2 py-2 overflow-auto h-[270px] pr-2">
             {/* {!isLoading &&
               members?.map((member) => (
                 <Card member={member} key={member.id} />
