@@ -32,7 +32,7 @@
 		"@tanstack/react-query": "^5.74.4",
 		"@types/jest": "^29.5.12",
 		"@types/react": "^18.2.20",
-		"@types/react-dom": "^18.2.7",
+		"@types/react-dom": "^19.0.3",
 		"classnames": "^2.5.1",
 		"embla-carousel-autoplay": "^7.1.0",
 		"embla-carousel-react": "^7.1.0",
@@ -41,7 +41,7 @@
 		"i18next-http-backend": "^3.0.2",
 		"isaac-website": "file:",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
+		"react-dom": "^19.0.0",
 		"react-i18next": "^15.4.0",
 		"react-icons": "^5.5.0",
 		"react-router-dom": "^6.15.0"
