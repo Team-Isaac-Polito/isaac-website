@@ -1,13 +1,3 @@
-export interface AreaItem {
-  title: string
-  value: string
-  description: string
-  members: Member[]
-}
-export type AreasProps = {
-  isLoading: boolean
-  members: Member[]
-}
 export interface Member {
   id: number
   user_updated: string
@@ -23,4 +13,8 @@ export interface Member {
   email: string
   picture: string | null
   field: string | null
+}
+
+export default interface CardProps {
+  member: Member
 }

@@ -47,9 +47,9 @@
         ]
       },
       {
-        "title": "CONTROL",
-        "value": "cn",
-        "description": "We are responsible for developing control algorithms and simulations to calculate and predict the robot's behavior. In addition, we are integrating object detection and environment mapping algorithms.",
+        "title": "MANAGEMENT",
+        "value": "mg",
+        "description": "The Management Area is the organizational core of Team ISAAC. It oversees all cross-functional activities essential to the project’s success: managing purchases, building relationships with sponsors and partners, preparing funding proposals, recruiting new members, and planning strategic activities. It is composed of the team leader and the area leaders, who work closely to ensure the team’s efficiency, cohesion, and growth.",
         "members": []
       },
       {
