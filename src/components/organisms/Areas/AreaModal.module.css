@@ -1,0 +1,25 @@
+.modalContent {
+  padding: 1.5rem; /* space all around, so scroll never hugs the close ‘X’ */
+  max-height: 80vh; /* keep modal from growing past viewport */
+  overflow: auto; /* enable scrolling when content overflows */
+}
+
+/* WebKit browsers */
+.modalContent::-webkit-scrollbar {
+  width: 8px;
+}
+.modalContent::-webkit-scrollbar-track {
+  background: #1e293b; /* dark-blue-isaac (Tailwind slate-800) */
+  border-radius: 9999px;
+}
+.modalContent::-webkit-scrollbar-thumb {
+  background-color: #facc15; /* yellow-isaac (Tailwind yellow-300) */
+  border-radius: 9999px;
+  border: 2px solid #1e293b; /* gives it a “rail” effect */
+}
+
+/* Firefox */
+.modalContent {
+  scrollbar-width: thin;
+  scrollbar-color: #facc15 #1e293b;
+}

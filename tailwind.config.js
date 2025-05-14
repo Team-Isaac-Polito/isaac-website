@@ -5,15 +5,19 @@ module.exports = {
     screens: {
       phone: "320px",
       // => @media (min-width: 320px) { ... }
-
+      phoneL: "420px",
+      // => @media (min-width: 420px) { ... }
       tablet: "696px",
       // => @media (min-width: 696px) { ... }
+
+      midtablap: "886px",
+      // => @media (min-width: 886px) { ... }
 
       laptop: "1080px",
       // => @media (min-width: 1080px) { ... }
 
-      notebook: "1366px",
-      // => @media (min-width: 1366px) { ... }
+      notebook: "1843px",
+      // => @media (min-width: 1843px) { ... }
 
       desktop: "1920px",
       // => @media (min-width: 1920px) { ... }

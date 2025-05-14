@@ -6,9 +6,8 @@ import { MdOutlineMailOutline } from "react-icons/md"
 const Card: React.FC<CardProps> = ({ member }) => {
   const { name, surname, role, linkedin, picture, email } = member
   const isLarge = surname.length > 10
-  // const avatar ="https://icons.veryicon.com/png/o/miscellaneous/standard/avatar-15.png"
   return (
-    <div className="w-[340px] h-[230px] p-5  text-yellow-isaac rounded-2xl shadow-2xl flex items-center backdrop-blur-3xl border border-slate-900 ">
+    <div className="phoneL:w-[340px] phoneL:h-[230px] p-5 w-[310px] h-[210px] text-yellow-isaac rounded-2xl shadow-2xl flex items-center backdrop-blur-3xl border border-slate-900 flex-shrink-0">
       <img
         src={
           picture != null
@@ -16,21 +15,23 @@ const Card: React.FC<CardProps> = ({ member }) => {
             : "favicon.svg"
         }
         alt={`${name} ${surname}`}
-        className="w-44 h-52 rounded-sm border-2 border-white/30 shadow-sm object-cover"
+        className="w-36 h-52 rounded-sm border-2 border-white/30 shadow-sm object-cover"
       />
-      <div className="flex flex-col justify-center ml-2 items-center">
+      <div className="flex flex-col ml-2 ">
         <h3 className="text-lg font-semibold tracking-wide">{name}</h3>
         <h3
           className={
             isLarge
-              ? "text-sm font-semibold tracking-wide"
-              : "text-lg font-semibold tracking-wide"
+              ? "phoneL:text-sm text-xs font-semibold tracking-wide "
+              : "phoneL:text-lg  font-semibold tracking-wide"
           }
         >
           {surname}
         </h3>
 
-        <p className="text-sm text-white/80">{role || "No role listed"}</p>
+        <p className="phoneL:text-lg text-xs font-semibold tracking-wide text-white/80">
+          {role || "No role listed"}
+        </p>
         <div className="flex">
           {linkedin && (
             <a
@@ -39,21 +40,17 @@ const Card: React.FC<CardProps> = ({ member }) => {
                   ? `${linkedin}`
                   : `https://${linkedin}`
               }
-              target="_blank"
-              rel="noopener noreferrer"
               className="mt-1 hover:text-white transition-colors"
             >
-              <RiLinkedinBoxLine />
+              <RiLinkedinBoxLine className="text-2xl" />
             </a>
           )}
           {email && (
             <a
               href={`mailto:${email}`}
-              target="_blank"
-              rel="noopener noreferrer"
               className="mt-1 hover:text-white transition-colors"
             >
-              <MdOutlineMailOutline />
+              <MdOutlineMailOutline className="text-2xl" />
             </a>
           )}
         </div>
