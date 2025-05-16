@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"
 import Typography from "@atoms/Typography"
 import polito from "@assets/sponsors/PoliTo.png"
 import preRi from "@assets/sponsors/preziosiRicami.png"
+import stm from "@assets/sponsors/STM.png"
 
 const sponsors = [
   { name: "Politecnico di Torino", logo: polito, url: "https://www.polito.it" },
@@ -10,6 +11,11 @@ const sponsors = [
     name: "Preziosi Ricami",
     logo: preRi,
     url: "http://www.preziosiricami.it/",
+  },
+  {
+    name: "STMicroelectronics",
+    logo: stm,
+    url: "https://www.st.com",
   },
 ]
 
