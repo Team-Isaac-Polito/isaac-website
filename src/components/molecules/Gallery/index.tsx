@@ -4,18 +4,39 @@ import React, { FC, useRef } from "react"
 import GalleryProps from "./index.types"
 
 const Gallery: FC<GalleryProps> = ({ images, className }) => {
-  const autoplay = useRef(Autoplay({ delay: 3000 }))
+  const autoplay = useRef(Autoplay({ delay: 2500 }))
   return (
     <Carousel
       slideSize="33%"
+      breakpoints={[
+        { maxWidth: 1024, slideSize: "50%" },
+        { maxWidth: 640, slideSize: "100%" },
+      ]}
       slideGap="xl"
       loop
-      withControls={false}
+      styles={{
+        control: {
+          background: "#ffffff0",
+          color: "#fff",
+          boxShadow: "0 2px 8px rgb(255, 255, 255)",
+          border: "none",
+          borderRadius: "50%",
+          "&:hover": {
+            background: "#2196f3",
+          },
+        },
+        indicator: {
+          background: "#ffffff",
+          border: "2px solid #ffffff",
+        },
+      }}
+      withControls
+      withIndicators
       slidesToScroll={1}
       align="center"
       plugins={[autoplay.current]}
-      onMouseEnter={autoplay.current.stop}
-      onMouseLeave={autoplay.current.reset}
+      // onMouseEnter={autoplay.current.stop}
+      // onMouseLeave={autoplay.current.reset}
       className="w-full mb-7"
     >
       {images.map((e, i) => {
