@@ -17,95 +17,105 @@ import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
 import { useTranslation } from "react-i18next"
 import reseq from "../assets/ReseQ1.mp4"
+import { Helmet } from "react-helmet-async"
 
 export default function Projects(): JSX.Element {
   const { t } = useTranslation("projects")
 
   return (
-    <div>
-      <Typography className="text-center py-7 text-dark-blue" variant="h1">
-        Rese.Q Mk1
-      </Typography>
-      <video width="1920" height="600" autoPlay muted loop>
-        <source src={reseq} type="video/mp4" />
-      </video>
-      <Paragraph palette="bluePalette" className="my-20">
-        <TwoColumns
-          isTextLeft
-          palette="bluePalette"
-          title={t("reseq-mk1.title")}
-          text={t("reseq-mk1.description")}
-          src={AboutImage}
-          alt={"Rese Q. Mk1 image"}
+    <>
+      <Helmet>
+        <title>Team Isaac /Projects</title>
+        <meta
+          name="description"
+          content="Projects that reflect the inspiration and aspirations of Team Isaac."
         />
-      </Paragraph>
-      <Paragraph palette="whitePalette" className="my-20">
-        <TwoColumns
-          palette="whitePalette"
-          title={t("reseq-mk1.features.title")}
-          text={t("reseq-mk1.features.description")}
-          src={TabImage}
-          alt={"Robot performance scheme"}
-        />
-      </Paragraph>
-      <Paragraph invertSlope palette="lightBluePalette">
-        <Typography className="mb-10 lightBluePalette" variant="h1">
-          {t("reseq-mk1.objectives.title")}
+      </Helmet>
+      <div>
+        <Typography className="text-center py-7 text-dark-blue" variant="h1">
+          Rese.Q Mk1
         </Typography>
-        <Typography variant="p" className="tablet:max-w-[80%] m-auto">
-          {t("reseq-mk1.objectives.description")}
-        </Typography>
-        <Slides
-          slideEl={[
-            {
-              src: Slide1,
-              alt: "prova",
-              translationPath: "reseq-mk1.objectives.slides.1",
-            },
-            {
-              src: Slide2,
-              alt: "prova",
-              translationPath: "reseq-mk1.objectives.slides.2",
-            },
-            {
-              src: Slide3,
-              alt: "prova",
-              translationPath: "reseq-mk1.objectives.slides.3",
-            },
-            {
-              src: Slide4,
-              alt: "prova",
-              translationPath: "reseq-mk1.objectives.slides.4",
-            },
-          ]}
-        />
-      </Paragraph>
-      <div className="py-32 h-fit">
-        <Gallery
-          images={[
-            {
-              src: first,
-              alt: "Rese Q. Mk1 image",
-            },
-            {
-              src: fifth,
-              alt: "Rese Q. Mk1 image",
-            },
-            {
-              src: second,
-              alt: "Rese Q. Mk1 image",
-            },
-            {
-              src: fourth,
-              alt: "Rese Q. Mk1 image",
-            },
-            {
-              src: third,
-              alt: "Rese Q. Mk1 image",
-            },
-          ]}
-        />
+        <video width="1920" height="600" autoPlay muted loop>
+          <source src={reseq} type="video/mp4" />
+        </video>
+        <Paragraph palette="bluePalette" className="my-20">
+          <TwoColumns
+            isTextLeft
+            palette="bluePalette"
+            title={t("reseq-mk1.title")}
+            text={t("reseq-mk1.description")}
+            src={AboutImage}
+            alt={"Rese Q. Mk1 image"}
+          />
+        </Paragraph>
+        <Paragraph palette="whitePalette" className="my-20">
+          <TwoColumns
+            palette="whitePalette"
+            title={t("reseq-mk1.features.title")}
+            text={t("reseq-mk1.features.description")}
+            src={TabImage}
+            alt={"Robot performance scheme"}
+          />
+        </Paragraph>
+        <Paragraph invertSlope palette="lightBluePalette">
+          <Typography className="mb-10 lightBluePalette" variant="h1">
+            {t("reseq-mk1.objectives.title")}
+          </Typography>
+          <Typography variant="p" className="tablet:max-w-[80%] m-auto">
+            {t("reseq-mk1.objectives.description")}
+          </Typography>
+          <Slides
+            slideEl={[
+              {
+                src: Slide1,
+                alt: "prova",
+                translationPath: "reseq-mk1.objectives.slides.1",
+              },
+              {
+                src: Slide2,
+                alt: "prova",
+                translationPath: "reseq-mk1.objectives.slides.2",
+              },
+              {
+                src: Slide3,
+                alt: "prova",
+                translationPath: "reseq-mk1.objectives.slides.3",
+              },
+              {
+                src: Slide4,
+                alt: "prova",
+                translationPath: "reseq-mk1.objectives.slides.4",
+              },
+            ]}
+          />
+        </Paragraph>
+        <div className="py-32 h-fit">
+          <Gallery
+            images={[
+              {
+                src: first,
+                alt: "Rese Q. Mk1 image",
+              },
+              {
+                src: fifth,
+                alt: "Rese Q. Mk1 image",
+              },
+              {
+                src: second,
+                alt: "Rese Q. Mk1 image",
+              },
+              {
+                src: fourth,
+                alt: "Rese Q. Mk1 image",
+              },
+              {
+                src: third,
+                alt: "Rese Q. Mk1 image",
+              },
+            ]}
+          />
+        </div>
       </div>
-    </div>
+    </>
   )
 }

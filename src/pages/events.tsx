@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import { useEvents } from "@organisms/GalleryEvent/useEvents"
 import { FaSpinner } from "react-icons/fa"
 import { GalleryImage, EventType } from "@organisms/GalleryEvent/events.types"
+import { Helmet } from "react-helmet-async"
 const palette = ["bluePalette", "lightBluePalette"]
 
 export default function Events(): JSX.Element {
@@ -18,6 +19,13 @@ export default function Events(): JSX.Element {
 
   return (
     <>
+      <Helmet>
+        <title>Team Isaac /Events</title>
+        <meta
+          name="description"
+          content="Events attended by Team Isaac SAR robotics services"
+        />
+      </Helmet>
       <Hero title={isEn() ? "Events" : "Eventi"} />
       {events.map((event: EventType, index: number) => (
         <GalleryEvent

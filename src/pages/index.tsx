@@ -8,45 +8,55 @@ import Paragraph from "@molecules/Paragraph"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
 import { useTranslation } from "react-i18next"
+import { Helmet } from "react-helmet-async"
 
 export default function Home(): JSX.Element {
   const { t } = useTranslation("homepage")
 
   return (
-    <div>
-      <Hero title="Team ISAAC" subtitle={t("subtitle")} />
-      <Isaac />
-      <Paragraph className="laptop:my-32" palette="bluePalette">
-        <TwoColumns
-          isTextLeft
-          palette="bluePalette"
-          title={t("projects.title")}
-          text={t("projects.description")}
-          buttonText={t("scopri di più")}
-          href="/projects"
-          src={ProjectsImage}
-          alt="Rese Q. Mk1"
+    <>
+      <Helmet>
+        <title>Team Isaac - Polito</title>
+        <meta
+          name="description"
+          content="Mobile service robotics for SAR operations"
         />
-      </Paragraph>
-      <Paragraph className="laptop:my-32" palette="whitePalette">
-        <TwoColumns
-          palette="whitePalette"
-          title={t("events.title")}
-          text={t("events.description")}
-          buttonText={t("scopri di più")}
-          href="/events"
-          src={EventsImage}
-          alt="Event image"
-        />
-      </Paragraph>
-      <Paragraph
-        className="laptop:my-32"
-        palette="lightBluePalette"
-        invertSlope
-      >
-        <Numbers />
-      </Paragraph>
-      <Sponsors />
-    </div>
+      </Helmet>
+      <div>
+        <Hero title="Team ISAAC" subtitle={t("subtitle")} />
+        <Isaac />
+        <Paragraph className="laptop:my-32" palette="bluePalette">
+          <TwoColumns
+            isTextLeft
+            palette="bluePalette"
+            title={t("projects.title")}
+            text={t("projects.description")}
+            buttonText={t("scopri di più")}
+            href="/projects"
+            src={ProjectsImage}
+            alt="Rese Q. Mk1"
+          />
+        </Paragraph>
+        <Paragraph className="laptop:my-32" palette="whitePalette">
+          <TwoColumns
+            palette="whitePalette"
+            title={t("events.title")}
+            text={t("events.description")}
+            buttonText={t("scopri di più")}
+            href="/events"
+            src={EventsImage}
+            alt="Event image"
+          />
+        </Paragraph>
+        <Paragraph
+          className="laptop:my-32"
+          palette="lightBluePalette"
+          invertSlope
+        >
+          <Numbers />
+        </Paragraph>
+        <Sponsors />
+      </div>
+    </>
   )
 }
