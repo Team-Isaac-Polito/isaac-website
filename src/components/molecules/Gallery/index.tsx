@@ -4,7 +4,22 @@ import React, { FC, useRef } from "react"
 import GalleryProps from "./index.types"
 
 const Gallery: FC<GalleryProps> = ({ images, className }) => {
+  const enableCarouselFeatures = images.length > 3
   const autoplay = useRef(Autoplay({ delay: 2500 }))
+  if (!enableCarouselFeatures) {
+    return (
+      <div className="flex gap-xl w-full mb-7 justify-center">
+        {images.map((e, i) => (
+          <img
+            key={i}
+            src={e.src}
+            alt={e.alt}
+            className={`desktop:w-[370px] h-fit notebook:w-[300px] laptop:w-[220px] w-[170px] m-auto rounded-xl ${className}`}
+          />
+        ))}
+      </div>
+    )
+  }
   return (
     <Carousel
       slideSize="33%"
