@@ -2,6 +2,7 @@ import Social from "@atoms/Social"
 import Typography from "@atoms/Typography"
 import React from "react"
 import Logo from "../assets/svg/logo.svg?react"
+import { Link } from "react-router-dom"
 
 export default function Links(): JSX.Element {
   return (
@@ -11,9 +12,9 @@ export default function Links(): JSX.Element {
         @TeamIsaac
       </Typography>
       <div className="grid grid-rows-3 mx-7 tablet:mx-auto tablet:w-2/6 mb-7 gap-y-5">
-        <a
+        <Link
           className="py-1 text-center bg-white px-7 rounded-2xl group hover:scale-105"
-          href="/"
+          to="/"
         >
           <Typography
             variant="p"
@@ -21,10 +22,10 @@ export default function Links(): JSX.Element {
           >
             Website
           </Typography>
-        </a>
-        <a
+        </Link>
+        <Link
           className="py-1 text-center bg-white px-7 rounded-2xl group hover:scale-105"
-          href="/contact-us"
+          to="/contact-us"
         >
           <Typography
             variant="p"
@@ -32,15 +33,18 @@ export default function Links(): JSX.Element {
           >
             Contacts
           </Typography>
-        </a>
-        <a className="py-1 text-center bg-white px-7 rounded-2xl group hover:scale-105">
+        </Link>
+        <Link
+          className="py-1 text-center bg-white px-7 rounded-2xl group hover:scale-105"
+          to="not-found"
+        >
           <Typography
             variant="p"
             className="font-semibold text-light-blue-isaac group-hover:font-bold group-hover:text-yellow-isaac"
           >
             Join Us
           </Typography>
-        </a>
+        </Link>
       </div>
       <div className="mx-auto tablet:w-1/2">
         <Social />
