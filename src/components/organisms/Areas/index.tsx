@@ -33,6 +33,7 @@ export default function Areas() {
         onChange={(val) => {
           setArea(val)
           setShowModal(false)
+          goTo(0)
         }}
       />
 
