@@ -6,13 +6,17 @@ import TwoColumns from "@molecules/TwoColumns"
 import Areas from "@organisms/Areas"
 import History from "@organisms/History"
 import React from "react"
+import { Helmet } from "react-helmet-async"
 import { Trans, useTranslation } from "react-i18next"
-
 export default function About(): JSX.Element {
   const { t } = useTranslation("about")
 
   return (
     <>
+      <Helmet>
+        <title>Team Isaac /About</title>
+        <meta name="description" content="Learn more about Team-Isaac" />
+      </Helmet>
       <Hero title={"About"} />
       <Paragraph className="notebook:my-32" palette="whitePalette">
         <TwoColumns
