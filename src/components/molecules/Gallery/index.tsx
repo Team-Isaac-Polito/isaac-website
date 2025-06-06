@@ -11,13 +11,13 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
 
   if (carouselLength === 1) {
     return (
-      <div className="flex gap-xl w-full mb-7 justify-center">
+      <div className="flex gap-xl mb-7  justify-center">
         {images.map((e, i) => (
           <img
             key={i}
             src={e.src}
             alt={e.alt}
-            className={`w-[70%] m-auto pt-0 mt-0 rounded-xl ${className}`}
+            className={`desktop:w-[870px] notebook:w-[600px] laptop:w-[420px] w-[270px] m-auto rounded-xl ${className}`}
           />
         ))}
       </div>
