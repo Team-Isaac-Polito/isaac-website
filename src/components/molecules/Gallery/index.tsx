@@ -1,12 +1,33 @@
 import { Carousel } from "@mantine/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import React, { FC, useRef } from "react"
+import { useMediaQuery } from "@mantine/hooks"
 import GalleryProps from "./index.types"
 
 const Gallery: FC<GalleryProps> = ({ images, className }) => {
-  const enableCarouselFeatures = images.length > 3
+  const isMobile = useMediaQuery("(max-width: 640px)")
   const autoplay = useRef(Autoplay({ delay: 2500 }))
-  if (!enableCarouselFeatures) {
+  const carouselLength = images.length
+
+  if (carouselLength === 1) {
+    return (
+      <div className="flex gap-xl w-full mb-7 justify-center">
+        {images.map((e, i) => (
+          <img
+            key={i}
+            src={e.src}
+            alt={e.alt}
+            className={`w-[70%] m-auto pt-0 mt-0 rounded-xl ${className}`}
+          />
+        ))}
+      </div>
+    )
+  }
+
+  const shouldUseCarousel =
+    carouselLength > 3 || (carouselLength > 1 && carouselLength < 4 && isMobile)
+
+  if (!shouldUseCarousel) {
     return (
       <div className="flex gap-xl w-full mb-7 justify-center">
         {images.map((e, i) => (
@@ -20,6 +41,7 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
       </div>
     )
   }
+
   return (
     <Carousel
       slideSize="33%"
@@ -50,21 +72,17 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
       slidesToScroll={1}
       align="center"
       plugins={[autoplay.current]}
-      // onMouseEnter={autoplay.current.stop}
-      // onMouseLeave={autoplay.current.reset}
       className="w-full mb-7"
     >
-      {images.map((e, i) => {
-        return (
-          <Carousel.Slide className={`my-auto ${className}`} key={i}>
-            <img
-              src={e.src}
-              alt={e.alt}
-              className="desktop:w-[370px] h-fit notebook:w-[300px] laptop:w-[220px] w-[170px] m-auto rounded-xl"
-            />
-          </Carousel.Slide>
-        )
-      })}
+      {images.map((e, i) => (
+        <Carousel.Slide className={`my-auto ${className}`} key={i}>
+          <img
+            src={e.src}
+            alt={e.alt}
+            className="desktop:w-[370px] h-full notebook:w-[300px] laptop:w-[220px] w-[170px] m-auto rounded-xl"
+          />
+        </Carousel.Slide>
+      ))}
     </Carousel>
   )
 }
