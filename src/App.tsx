@@ -10,6 +10,7 @@ import Links from "./pages/links"
 import Projects from "./pages/projects"
 import { HelmetProvider } from "react-helmet-async"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import { MantineProvider } from "@mantine/core"
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -32,17 +33,19 @@ const App = () => {
       <Wrapper>
         <QueryClientProvider client={queryClient}>
           <HelmetProvider>
-            <Routes>
-              <Route path={import.meta.env.BASE_URL} element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="projects" element={<Projects />} />
-                <Route path="events" element={<Events />} />
-                <Route path="contact-us" element={<Contacts />} />
-                <Route path="*" element={<NotFound />} />
-              </Route>
-              <Route path="links" element={<Links />} />
-            </Routes>
+            <MantineProvider>
+              <Routes>
+                <Route path={import.meta.env.BASE_URL} element={<Layout />}>
+                  <Route index element={<Home />} />
+                  <Route path="about" element={<About />} />
+                  <Route path="projects" element={<Projects />} />
+                  <Route path="events" element={<Events />} />
+                  <Route path="contact-us" element={<Contacts />} />
+                  <Route path="*" element={<NotFound />} />
+                </Route>
+                <Route path="links" element={<Links />} />
+              </Routes>
+            </MantineProvider>
           </HelmetProvider>
         </QueryClientProvider>
       </Wrapper>

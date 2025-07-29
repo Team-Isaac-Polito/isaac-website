@@ -1,4 +1,5 @@
 import { Carousel } from "@mantine/carousel"
+import '@mantine/carousel/styles.css'
 import Autoplay from "embla-carousel-autoplay"
 import React, { FC, useRef } from "react"
 import GalleryProps from "./index.types"
@@ -22,13 +23,21 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
   }
   return (
     <Carousel
-      slideSize="33%"
-      breakpoints={[
-        { maxWidth: 1024, slideSize: "50%" },
-        { maxWidth: 640, slideSize: "100%" },
-      ]}
-      slideGap="xl"
-      loop
+      orientation="horizontal"
+      emblaOptions={{ loop: true, align: "center", slidesToScroll: 1, axis: "x" }}
+      slideSize={{
+      base: "100%",   // mobile
+      sm: "100%",     // tablet (Mantine sm ≈ 640px)
+      md: "50%",      // Mantine md ≈ 768px
+      lg: "33.333%",  // Mantine lg ≈ 1024px
+      xl: "33.333%",  // Mantine xl ≈ 1280px+
+    }}
+      slideGap={{
+        base: "xs",
+        sm: "xs",
+        md: "lg",
+        lg: "xl",
+        xl: "xl",}}
       styles={{
         control: {
           background: "#ffffff0",
@@ -47,8 +56,6 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
       }}
       withControls
       withIndicators
-      slidesToScroll={1}
-      align="center"
       plugins={[autoplay.current]}
       // onMouseEnter={autoplay.current.stop}
       // onMouseLeave={autoplay.current.reset}
