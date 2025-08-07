@@ -22,10 +22,10 @@ export default function Projects({
 }: ProjectsProps): JSX.Element | null {
   const { i18n } = useTranslation("events")
   const activeStyle =
-    " mt-3 p-3 text-base font-bold w-full border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer h-fit notebook:py-3  laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl  bg-yellow-isaac text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl hover:outline-none "
+    " mt-3 p-3 text-base underline font-bold w-full border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer h-fit notebook:py-3  laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl  text-yellow-isaac bg-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl hover:outline-none "
 
   const style =
-    " outline-none bg-dark-blue-isaac w-full text-yellow-isaac  mt-3 p-3 text-base font-bold  border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer  h-fit notebook:py-3 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:translate-y-[1px]   text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl  "
+    " outline-none bg-yellow-isaac w-full text-dark-blue-isaac  mt-3 p-3 text-base font-bold  border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer  h-fit notebook:py-3 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:translate-y-[1px]   text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl  "
 
   const isEn = (): boolean => {
     return i18n.language === "en"
@@ -60,9 +60,9 @@ export default function Projects({
   }
 
   return (
-    <div>
+    <div className="flex flex-col">
       <Paragraph noSlope palette="lightBluePalette ">
-        <Typography className="mb-10 text-dark-blue-isaac" variant="h1">
+        <Typography className="mb-10 mt-10 text-dark-blue-isaac" variant="h1">
           What is RESE.Q?
         </Typography>
         <Typography variant="p" className="tablet:max-w-[80%] m-auto">
@@ -86,7 +86,7 @@ export default function Projects({
         />
       </Paragraph>
       {projects && projects.length > 0 && (
-        <div className=" fixed mx-auto  notebook:top-[6.5rem] w-full phone:top-12 tablet:top-14 notebook:top-20 z-10 ">
+        <div className=" fixed mx-auto  notebook:top-[6.5rem] w-full phone:top-12 tablet:top-14 laptop:top-20 z-10 ">
           <div className="flex justify-center items-center ">
             {projects.map((project: ProjectType, index: number) => (
               <button
@@ -117,13 +117,13 @@ export default function Projects({
         Your browser does not support the video tag.
       </video>
 
-      <Paragraph palette="whitePalette" className="my-20 z-10">
+      <Paragraph palette="whitePalette" className="my-20 ">
         <Features mk={isActive.split(" ")[1].toUpperCase()} />
       </Paragraph>
 
       <Objectives />
 
-      <div className="py-32 h-fit">
+      <div className="mt-24 tablet:mb-24 mb-0">
         <Gallery
           images={projectToDisplay.gallery.map((image: GalleryImage) => ({
             src: `https://cms.teamisaac.it/assets/${image.directus_files_id}?width=1900&height=2800&quality=80`,

@@ -17,7 +17,7 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
             key={i}
             src={e.src}
             alt={e.alt}
-            className={`desktop:w-[870px] notebook:w-[600px] laptop:w-[420px] w-[270px] m-auto rounded-xl ${className}`}
+            className={`desktop:w-[870px] notebook:w-[600px] laptop:w-[420px] w-[320px] m-auto rounded-xl ${className}`}
           />
         ))}
       </div>
@@ -35,7 +35,7 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
             key={i}
             src={e.src}
             alt={e.alt}
-            className={`desktop:w-[370px] h-fit notebook:w-[300px] laptop:w-[220px] w-[170px] m-auto rounded-xl ${className}`}
+            className={`desktop:w-[370px] h-fit notebook:w-[300px] laptop:w-[220px] w-[250px] m-auto rounded-xl ${className}`}
           />
         ))}
       </div>
@@ -72,14 +72,14 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
       slidesToScroll={1}
       align="center"
       plugins={[autoplay.current]}
-      className="w-full mb-7"
+      className="w-full mb-7 ml-1 tablet:ml-0"
     >
       {images.map((e, i) => (
-        <Carousel.Slide className={`my-auto ${className}`} key={i}>
+        <Carousel.Slide className={`flex justify-center ${className}`} key={i}>
           <img
             src={e.src}
             alt={e.alt}
-            className="desktop:w-[370px] h-full notebook:w-[300px] laptop:w-[220px] w-[170px] m-auto rounded-xl"
+            className="desktop:w-[370px] h-full notebook:w-[300px] laptop:w-[220px] w-[300px] mx-auto "
           />
         </Carousel.Slide>
       ))}
