@@ -25,7 +25,7 @@ export default function Projects(): JSX.Element {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="mt-7 flex gap-7">
+      <div className="mt-7 flex gap-4 ">
         {projects.map((project: ProjectType, index: number) => (
           <button
             key={project.id || index}
