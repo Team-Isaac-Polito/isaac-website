@@ -1,3 +1,4 @@
+import BackToTopButton from "@atoms/BackToTopButton"
 import NavBar from "@atoms/NavBar"
 import Footer from "@molecules/Footer"
 import Navigation from "@molecules/Navigation"
@@ -21,6 +22,7 @@ const Layout = () => {
       <NavBar toggleMenu={toggleMenu} setToggleMenu={disableScrollMobile} />
       <Navigation toggleMenu={toggleMenu} setToggleMenu={disableScrollMobile} />
       <Outlet />
+      <BackToTopButton />
       <Footer />
     </>
   )
