@@ -1,20 +1,18 @@
-import TabImage from "@assets/projects/Tab.png"
-// import AboutImage from "@assets/projects/projects1.jpg"
+// import TabImage from "@assets/projects/Tab.png"
+import AboutImage from "@assets/projects/projects1.jpg"
 import Objectives from "@atoms/Objectives/index"
 import Typography from "@atoms/Typography"
 import Gallery from "@molecules/Gallery"
 import Paragraph from "@molecules/Paragraph"
-import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
 import { useTranslation } from "react-i18next"
 import { ProjectType } from "@molecules/Projects/index.types"
 
-// import reseq1 from "../../../assets/ReseQ1.mp4"
-// import reseq2 from "../../../assets/ReseQ2.mp4"
-
 import { GalleryImage, ProjectsProps } from "./index.types"
 import { useProjects } from "./useProjects"
 import { FaSpinner } from "react-icons/fa"
+import Features from "@atoms/Features"
+import TwoColumns from "@molecules/TwoColumns"
 
 export default function Projects({
   activeProject,
@@ -24,10 +22,10 @@ export default function Projects({
 }: ProjectsProps): JSX.Element | null {
   const { i18n } = useTranslation("events")
   const activeStyle =
-    " mt-3 p-3 text-base font-bold border-x-dark-blue-isaac border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer w-fit h-fit notebook:py-3 px-7 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:-translate-y-1 bg-yellow-isaac text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl hover:outline-none hover:bg-dark-blue-isaac hover:ring hover:ring-offset-light-blue-isaac  hover:text-yellow-isaac focus:ring-offset-8 "
+    " mt-3 p-3 text-base font-bold w-full border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer h-fit notebook:py-3  laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl  bg-yellow-isaac text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl hover:outline-none "
 
   const style =
-    " outline-none bg-dark-blue-isaac  text-yellow-isaac  mt-3 p-3 text-base font-bold border-x-yellow-isaac border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer w-fit h-fit notebook:py-3 px-7 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:-translate-y-1  text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl hover:outline-none hover:bg-dark-blue-isaac hover:ring hover:ring-offset-light-blue-isaac  hover:text-yellow-isaac focus:ring-offset-8"
+    " outline-none bg-dark-blue-isaac w-full text-yellow-isaac  mt-3 p-3 text-base font-bold  border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer  h-fit notebook:py-3 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:translate-y-[1px]   text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl  "
 
   const isEn = (): boolean => {
     return i18n.language === "en"
@@ -60,48 +58,43 @@ export default function Projects({
       </div>
     )
   }
-  // const videoToDisplay =
-  //   projectToDisplay.title === "Rese.Q Mk1" ? reseq1 : reseq2
-  console.log(projectToDisplay)
 
   return (
     <div>
-      {/* <Typography className="text-center py-7 text-dark-blue" variant="h1">
-            {projectToDisplay.title}
-          </Typography> */}
-
       <Paragraph noSlope palette="lightBluePalette ">
         <Typography className="mb-10 text-dark-blue-isaac" variant="h1">
           What is RESE.Q?
         </Typography>
         <Typography variant="p" className="tablet:max-w-[80%] m-auto">
           {isEn()
-            ? `RESE.Q is a cutting-edge rescue robot developed to support first responders in the most dangerous and challenging environments, such as partially collapsed buildings after disasters. Its innovative design allows it to enter unstable areas before human rescuers, navigating complex rubble and tight spaces thanks to its modular, snake-like movement system.
-
-Equipped with advanced mapping and imaging capabilities, RESE.Q can generate 2D and 3D visualizations of its surroundings, providing rescuers with critical real-time data. The robot’s sensor suite enables it to detect, locate, and identify victims and hazards, including pipes, gas cylinders, and warning signs, minimizing the risk to human life.
-
-With its articulated arm, RESE.Q can visually inspect hard-to-reach locations and remotely operate on the environment—such as closing valves or opening doors—when immediate action is needed. Additionally, a dedicated module allows it to deliver essential supplies, like first aid kits, directly to those in need within hazardous zones.
-
-By combining agility, versatility, and intelligence, RESE.Q is a powerful tool for modern search-and-rescue operations, extending the reach of emergency teams and saving lives when every second counts.`
-            : `RESE.Q è un robot da soccorso all’avanguardia, sviluppato per supportare i primi soccorritori negli ambienti più pericolosi e complessi, come gli edifici parzialmente crollati dopo una calamità. Grazie al suo design innovativo, RESE.Q può entrare in aree instabili prima dei soccorritori umani, muovendosi tra le macerie e passando attraverso spazi ristretti grazie al suo sistema modulare e ai movimenti simili a quelli di un serpente.
-
-Dotato di avanzate capacità di mappatura e imaging, RESE.Q è in grado di generare visualizzazioni 2D e 3D dell’ambiente circostante, fornendo ai soccorritori dati critici in tempo reale. L’insieme dei suoi sensori permette di rilevare, localizzare e identificare vittime e pericoli, come tubature, bombole di gas e segnali di allerta, riducendo al minimo i rischi per le vite umane.
-
-Grazie al suo braccio articolato, RESE.Q può ispezionare visivamente zone di difficile accesso e operare a distanza sull’ambiente, ad esempio chiudendo valvole o aprendo porte quando è necessario intervenire subito. Inoltre, tramite un modulo dedicato, è in grado di trasportare forniture essenziali, come kit di primo soccorso, direttamente alle persone in pericolo all’interno di zone rischiose.
-
-Unendo agilità, versatilità e intelligenza, RESE.Q rappresenta uno strumento fondamentale per le moderne operazioni di ricerca e soccorso, estendendo le capacità dei team di emergenza e contribuendo a salvare vite quando ogni secondo è prezioso.`}
+            ? `RESE.Q Mk2 is a major upgrade over the first prototype, featuring a more advanced 6-DOF arm, improved mobility with new active joints, and a more compact, maneuverable design. The electronics have been completely redesigned for reliability, with a custom PCB and many new sensors, including thermal camera and LIDAR. These improvements make MK2 more capable in challenging environments, better supporting search and rescue operations.`
+            : `RESE.Q Mk2 è un’evoluzione del primo prototipo: ha un braccio a 6 gradi di libertà più avanzato, una mobilità migliorata grazie ai nuovi giunti attivi e un design più compatto e manovrabile. L’elettronica è stata riprogettata con un PCB custom e molti nuovi sensori, tra cui termocamera e LIDAR. Questi miglioramenti rendono MK2 ancora più efficace nelle operazioni di ricerca e soccorso.`}
         </Typography>
       </Paragraph>
+      <Paragraph palette="bluePalette" className="my-20">
+        <TwoColumns
+          isTextLeft
+          palette="bluePalette"
+          title={projectToDisplay.title}
+          text={
+            isEn()
+              ? projectToDisplay.description_eng
+              : projectToDisplay.description_ita
+          }
+          src={AboutImage}
+          alt={`${projectToDisplay.title} image`}
+        />
+      </Paragraph>
       {projects && projects.length > 0 && (
-        <div className="mt-7 fixed mx-auto top-80 z-10 ">
-          <div className="flex flex-col gap-4">
+        <div className=" fixed mx-auto  notebook:top-[6.5rem] w-full phone:top-12 tablet:top-14 notebook:top-20 z-10 ">
+          <div className="flex justify-center items-center ">
             {projects.map((project: ProjectType, index: number) => (
               <button
                 key={project.id || index}
                 className={isActive === project.title ? activeStyle : style}
                 onClick={() => handleActive(project.title)}
               >
-                {project.title.split(" ")[1]}
+                {project.title}
               </button>
             ))}
           </div>
@@ -125,20 +118,7 @@ Unendo agilità, versatilità e intelligenza, RESE.Q rappresenta uno strumento f
       </video>
 
       <Paragraph palette="whitePalette" className="my-20 z-10">
-        <TwoColumns
-          palette="whitePalette"
-          title={isEn() ? "Features" : "Caratteristiche"}
-          text={
-            isEn()
-              ? projectToDisplay.features_eng
-              : projectToDisplay.features_ita
-          }
-          src={TabImage}
-          alt={"Robot performance scheme"}
-        />
-        <button className="mt-6 p-3 text-base font-bold border-x-dark-blue-isaac border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer w-fit h-fit notebook:py-3 px-7 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:-translate-y-1 bg-yellow-isaac text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl hover:outline-none hover:bg-dark-blue-isaac hover:ring hover:ring-offset-light-blue-isaac  hover:text-yellow-isaac focus:ring-offset-8">
-          Compare
-        </button>
+        <Features mk={isActive.split(" ")[1].toUpperCase()} />
       </Paragraph>
 
       <Objectives />

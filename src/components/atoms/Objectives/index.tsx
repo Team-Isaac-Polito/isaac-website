@@ -23,7 +23,8 @@ export default function Projects(): JSX.Element {
         {t("reseq-mk1.objectives.title")}
       </Typography>
       <Typography variant="p" className="tablet:max-w-[80%] m-auto">
-        {t("reseq-mk1.objectives.description")}
+        The purpose of Rese.Q is to provide support to rescuers in emergency
+        situations. Its current capabilities are:
       </Typography>
       <Slides
         slideEl={[
