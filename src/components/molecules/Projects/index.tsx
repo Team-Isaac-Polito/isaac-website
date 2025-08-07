@@ -22,10 +22,10 @@ export default function Projects({
 }: ProjectsProps): JSX.Element | null {
   const { i18n } = useTranslation("events")
   const activeStyle =
-    " mt-3 p-3 text-base underline font-bold w-full border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer h-fit notebook:py-3  laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl  text-yellow-isaac bg-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl hover:outline-none "
+    " mt-3 mx-2 py-3  text-base underline font-bold w-full  uppercase transition duration-500 ease-in-out cursor-pointer  tablet:mx-4 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl  text-yellow-isaac bg-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl  "
 
   const style =
-    " outline-none bg-yellow-isaac w-full text-dark-blue-isaac  mt-3 p-3 text-base font-bold  border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer  h-fit notebook:py-3 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:translate-y-[1px]   text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl  "
+    " outline-none mx-2  bg-yellow-isaac w-full text-dark-blue-isaac tablet-mx-4  mt-3 py-3 text-base font-bold   uppercase transition duration-500 ease-in-out cursor-pointer  tablet:mx-4 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl  tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl"
 
   const isEn = (): boolean => {
     return i18n.language === "en"
