@@ -7,6 +7,8 @@ import Paragraph from "@molecules/Paragraph"
 import TwoColumns from "@molecules/TwoColumns"
 import React from "react"
 import { useTranslation } from "react-i18next"
+import { ProjectType } from "@molecules/Projects/index.types"
+
 // import reseq1 from "../../../assets/ReseQ1.mp4"
 // import reseq2 from "../../../assets/ReseQ2.mp4"
 
@@ -16,14 +18,22 @@ import { FaSpinner } from "react-icons/fa"
 
 export default function Projects({
   activeProject,
+  projects,
+  isActive,
+  handleActive,
 }: ProjectsProps): JSX.Element | null {
   const { i18n } = useTranslation("events")
+  const activeStyle =
+    " mt-3 p-3 text-base font-bold border-x-dark-blue-isaac border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer w-fit h-fit notebook:py-3 px-7 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:-translate-y-1 bg-yellow-isaac text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl hover:outline-none hover:bg-dark-blue-isaac hover:ring hover:ring-offset-light-blue-isaac  hover:text-yellow-isaac focus:ring-offset-8 "
+
+  const style =
+    " outline-none bg-dark-blue-isaac  text-yellow-isaac  mt-3 p-3 text-base font-bold border-x-yellow-isaac border-solid border-4 uppercase transition duration-500 ease-in-out cursor-pointer w-fit h-fit notebook:py-3 px-7 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl hover:scale-105 hover:-translate-y-1  text-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl hover:outline-none hover:bg-dark-blue-isaac hover:ring hover:ring-offset-light-blue-isaac  hover:text-yellow-isaac focus:ring-offset-8"
 
   const isEn = (): boolean => {
     return i18n.language === "en"
   }
 
-  const { projects, isLoading } = useProjects()
+  const { isLoading } = useProjects()
 
   if (isLoading) {
     return (
@@ -60,7 +70,7 @@ export default function Projects({
             {projectToDisplay.title}
           </Typography> */}
 
-      <Paragraph palette="" className="my-20">
+      <Paragraph noSlope palette="lightBluePalette ">
         <Typography className="mb-10 text-dark-blue-isaac" variant="h1">
           What is RESE.Q?
         </Typography>
@@ -82,6 +92,21 @@ Grazie al suo braccio articolato, RESE.Q può ispezionare visivamente zone di di
 Unendo agilità, versatilità e intelligenza, RESE.Q rappresenta uno strumento fondamentale per le moderne operazioni di ricerca e soccorso, estendendo le capacità dei team di emergenza e contribuendo a salvare vite quando ogni secondo è prezioso.`}
         </Typography>
       </Paragraph>
+      {projects && projects.length > 0 && (
+        <div className="mt-7 fixed mx-auto top-80 z-10 ">
+          <div className="flex flex-col gap-4">
+            {projects.map((project: ProjectType, index: number) => (
+              <button
+                key={project.id || index}
+                className={isActive === project.title ? activeStyle : style}
+                onClick={() => handleActive(project.title)}
+              >
+                {project.title.split(" ")[1]}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       <video
         className="mt-6"
@@ -99,7 +124,7 @@ Unendo agilità, versatilità e intelligenza, RESE.Q rappresenta uno strumento f
         Your browser does not support the video tag.
       </video>
 
-      <Paragraph palette="whitePalette" className="my-20">
+      <Paragraph palette="whitePalette" className="my-20 z-10">
         <TwoColumns
           palette="whitePalette"
           title={isEn() ? "Features" : "Caratteristiche"}

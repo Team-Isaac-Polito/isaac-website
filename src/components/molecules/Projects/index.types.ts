@@ -12,7 +12,11 @@ export interface ProjectType {
   features_eng: string | null
   features_ita: string | null
   gallery: GalleryImage[]
+  video?: string
 }
 export interface ProjectsProps {
-  activeProject: string // Prop to specify which project to display
+  activeProject: string
+  projects: ProjectType[]
+  isActive: string
+  handleActive: (title: string) => void
 }

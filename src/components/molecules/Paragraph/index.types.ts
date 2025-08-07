@@ -4,4 +4,5 @@ export default interface ParagraphProps {
   children: React.ReactNode
   className?: string
   palette: string
+  noSlope?: boolean
 }

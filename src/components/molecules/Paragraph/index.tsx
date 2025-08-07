@@ -5,6 +5,7 @@ import ParagraphProps from "./index.types"
 const Paragraph: FC<ParagraphProps> = ({
   invertSlope,
   isLineTop,
+  noSlope,
   children,
   className,
   palette,
@@ -17,8 +18,8 @@ const Paragraph: FC<ParagraphProps> = ({
     <div className={palette}>
       <div
         className={classNames(
-          "py-16 laptop:py-14 text-4xl text-center -skew-y-3 desktop:py-20 mx-6 tablet:mx-14 laptop:mx-32 notebook:mx-40 desktop:mx-48 h-fit",
-          slopeContent
+          "py-16 laptop:py-14 text-4xl text-center  desktop:py-20 mx-6 tablet:mx-14 laptop:mx-32 notebook:mx-40 desktop:mx-48 h-fit",
+          noSlope ? "" : slopeContent
         )}
       >
         {children}
@@ -29,12 +30,12 @@ const Paragraph: FC<ParagraphProps> = ({
   const line = <div className={"h-3 " + palette + lineMargin} />
 
   return isLineTop ? (
-    <div className={classNames(slopeParagraph, className)}>
+    <div className={classNames(noSlope ? "" : slopeParagraph, className)}>
       {line}
       {slope}
     </div>
   ) : (
-    <div className={classNames(slopeParagraph, className)}>
+    <div className={classNames(noSlope ? "" : slopeParagraph, className)}>
       {slope}
       {line}
     </div>
