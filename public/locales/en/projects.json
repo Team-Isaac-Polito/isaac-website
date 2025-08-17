@@ -1,4 +1,5 @@
 {
+  "intro": "RESE.Q is an advanced rescue robot designed to assist first responders in collapsed or hazardous environments. Its modular, snake-like design lets it navigate rubble, tight passages, and unstable areas before human rescuers. With mapping and imaging tools, it generates 2D and 3D visualizations to guide operations in real time. Sensors detect and identify victims, obstacles, and hazards such as pipes, cylinders, or warning signs. An articulated arm enables inspection and remote actions like closing valves or opening doors. A dedicated module allows it to deliver supplies, such as first aid kits, to people in need. By uniting agility, versatility, and intelligence, RESE.Q enhances rescue missions and helps save lives.",
   "reseq-mk1": {
     "title": "What is RESE.Q MK1",
     "description": "It is the team’s first prototype to achieve the goal of creating an innovative robot for SAR operations. Our idea is to have a modular crawler robot with two possible configurations: robotic arm and crawler robot. So that he can easily navigate dangerous situations, to explore the environment without risking the lives of rescuers.",
