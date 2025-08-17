@@ -3,14 +3,24 @@ export interface GalleryImage {
   Projects_id: number
   directus_files_id: string
 }
+type SpecItem = {
+  label: string
+  value: string
+  upgrade?: boolean
+}
 
+export type SpecSection = {
+  title?: string
+  category: string
+  items: SpecItem[]
+}
 export interface ProjectType {
   id: number
   title: string
   description_eng: string | null
   description_ita: string | null
-  features_eng: string | null
-  features_ita: string | null
+  specs_ita: SpecSection[] | null
+  specs_eng: SpecSection[] | null
   gallery: GalleryImage[]
   video?: string
 }

@@ -20,16 +20,34 @@ export default function Projects({
   isActive,
   handleActive,
 }: ProjectsProps): JSX.Element | null {
-  const { i18n } = useTranslation("events")
-  const activeStyle =
-    " mt-3 mx-2 py-3  text-base underline font-bold w-full  uppercase transition duration-500 ease-in-out cursor-pointer  tablet:mx-4 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl  text-yellow-isaac bg-dark-blue-isaac tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl  "
+  const { t, i18n } = useTranslation("projects")
+  const basePadding = "py-3 mx-2 mt-3 w-full"
+  const responsivePadding =
+    "tablet:mx-4 laptop:px-8 notebook:px-10 desktop:px-12"
+  const rounded = "rounded-3xl tablet:rounded-xl desktop:rounded-2xl"
+  const textSizes =
+    "text-base tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl"
+  const transition = "transition duration-500 ease-in-out cursor-pointer"
 
-  const style =
-    " outline-none mx-2  bg-yellow-isaac w-full text-dark-blue-isaac tablet-mx-4  mt-3 py-3 text-base font-bold   uppercase transition duration-500 ease-in-out cursor-pointer  tablet:mx-4 laptop:px-8 notebook:px-10 desktop:px-12 rounded-3xl tablet:rounded-xl desktop:rounded-2xl  tablet:text-base laptop:text-xl notebook:text-2xl desktop:text-4xl"
+  const activeStyle = [
+    basePadding,
+    responsivePadding,
+    rounded,
+    textSizes,
+    transition,
+    "underline font-bold uppercase text-yellow-isaac bg-dark-blue-isaac",
+  ].join(" ")
 
-  const isEn = (): boolean => {
-    return i18n.language === "en"
-  }
+  const style = [
+    basePadding,
+    responsivePadding,
+    rounded,
+    textSizes,
+    transition,
+    "outline-none font-bold uppercase bg-dark-blue-isaac text-white",
+  ].join(" ")
+
+  const isEn = (): boolean => i18n.language === "en"
 
   const { isLoading } = useProjects()
 
@@ -66,9 +84,7 @@ export default function Projects({
           What is RESE.Q?
         </Typography>
         <Typography variant="p" className="tablet:max-w-[80%] m-auto">
-          {isEn()
-            ? `RESE.Q Mk2 is a major upgrade over the first prototype, featuring a more advanced 6-DOF arm, improved mobility with new active joints, and a more compact, maneuverable design. The electronics have been completely redesigned for reliability, with a custom PCB and many new sensors, including thermal camera and LIDAR. These improvements make MK2 more capable in challenging environments, better supporting search and rescue operations.`
-            : `RESE.Q Mk2 è un’evoluzione del primo prototipo: ha un braccio a 6 gradi di libertà più avanzato, una mobilità migliorata grazie ai nuovi giunti attivi e un design più compatto e manovrabile. L’elettronica è stata riprogettata con un PCB custom e molti nuovi sensori, tra cui termocamera e LIDAR. Questi miglioramenti rendono MK2 ancora più efficace nelle operazioni di ricerca e soccorso.`}
+          {t("intro")}
         </Typography>
       </Paragraph>
       <Paragraph palette="bluePalette" className="my-20">
@@ -118,7 +134,11 @@ export default function Projects({
       </video>
 
       <Paragraph palette="whitePalette" className="my-20 ">
-        <Features mk={isActive.split(" ")[1].toUpperCase()} />
+        <Features
+          specs={
+            isEn() ? projectToDisplay.specs_eng : projectToDisplay.specs_ita
+          }
+        />
       </Paragraph>
 
       <Objectives />
