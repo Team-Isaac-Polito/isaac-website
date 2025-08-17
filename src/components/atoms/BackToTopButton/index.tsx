@@ -21,7 +21,7 @@ const BackToTopButton: React.FC = () => {
     <button
       onClick={scrollToTop}
       className={`
-        fixed bottom-8 right-8 z-50 p-3 rounded-full shadow-lg
+        fixed bottom-4 right-4 z-50 p-2 rounded-full shadow-lg
         bg-yellow-isaac text-dark-blue-isaac hover:bg-dark-blue-isaac
         hover:text-yellow-isaac transition-all duration-300
         ${visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
@@ -29,7 +29,7 @@ const BackToTopButton: React.FC = () => {
       aria-label="Back to top"
       title="Back to top"
     >
-      <FaArrowUp size={20} />
+      <FaArrowUp size={16} />
     </button>
   )
 }
