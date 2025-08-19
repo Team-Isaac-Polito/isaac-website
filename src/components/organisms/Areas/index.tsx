@@ -27,25 +27,27 @@ export default function Areas() {
 
   return (
     <div className="flex flex-col items-center">
-      <AreaSelector
-        areas={areas}
-        selected={area}
-        onChange={(val) => {
-          setArea(val)
-          setShowModal(false)
-          goTo(0)
-        }}
-      />
+      <div className="bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac rounded-2xl shadow-2xl w-full">
+        <AreaSelector
+          areas={areas}
+          selected={area}
+          onChange={(val) => {
+            setArea(val)
+            setShowModal(false)
+            goTo(0)
+          }}
+        />
+        <div className="h-[2px] w-full bg-gradient-to-r from-yellow-isaac via-white to-yellow-isaac my-3 hidden midtablap:block"></div>
 
-      <MembersGrid
-        members={filtered}
-        isLoading={isLoading}
-        page={page}
-        maxPage={maxPage}
-        itemsPerPage={itemsPerPage}
-        onPageChange={goTo}
-      />
-
+        <MembersGrid
+          members={filtered}
+          isLoading={isLoading}
+          page={page}
+          maxPage={maxPage}
+          itemsPerPage={itemsPerPage}
+          onPageChange={goTo}
+        />
+      </div>
       <AreaDescription
         description={currentArea.description}
         isCondensed={itemsPerPage > 1}

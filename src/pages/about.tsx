@@ -38,7 +38,9 @@ export default function About(): JSX.Element {
         <Typography variant="p">
           <Trans i18nKey={t("areas.description")} />
         </Typography>
-        <Areas />
+        <div className="mt-4">
+          <Areas />
+        </div>
       </Paragraph>
     </>
   )
