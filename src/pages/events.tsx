@@ -34,7 +34,7 @@ export default function Events(): JSX.Element {
           desc={isEn() ? event.description_eng : event.description_ita}
           palette={index % 2 ? palette[0] : palette[1]}
           images={event.gallery.map((image: GalleryImage) => ({
-            src: `https://cms.teamisaac.it/assets/${image.directus_files_id}?width=1900&height=2800&quality=80`,
+            src: `https://cms.teamisaac.it/assets/${image.directus_files_id}?width=1600&height=1900&quality=80`,
             alt: `${event.title}`,
           }))}
         />
