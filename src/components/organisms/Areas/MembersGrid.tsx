@@ -14,20 +14,26 @@ export const MembersGrid: FC<MembersGridProps> = ({
   if (error) console.error(error)
 
   return (
-    <div className="bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac rounded-2xl shadow-2xl w-full">
+    <div>
       {isLoading ? (
         <p>Loading members…</p>
       ) : (
         <>
           <div className="midtablap:flex justify-between hidden p-2">
-            <button onClick={() => onPageChange(page - 1)} disabled={page <= 0}>
-              <FaArrowLeft className="text-yellow-isaac" />
+            <button
+              onClick={() => onPageChange(page - 1)}
+              disabled={page <= 0}
+              className="text-yellow-isaac disabled:text-gray-400 disabled:cursor-not-allowed"
+            >
+              <FaArrowLeft />
             </button>
+
             <button
               onClick={() => onPageChange(page + 1)}
               disabled={page >= maxPage}
+              className="text-yellow-isaac disabled:text-gray-400 disabled:cursor-not-allowed"
             >
-              <FaArrowRight className="text-yellow-isaac" />
+              <FaArrowRight />
             </button>
           </div>
 
@@ -37,6 +43,11 @@ export const MembersGrid: FC<MembersGridProps> = ({
               .map((m) => (
                 <Card key={m.id} member={m} />
               ))}
+          </div>
+          <div className="text-right mr-2 mb-2 hidden midtablap:block">
+            <p className="text-white text-sm ">
+              {page + 1}/{maxPage + 1}
+            </p>
           </div>
         </>
       )}

@@ -14,6 +14,12 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
     setActiveIndex(index)
     callback(value, index)
   }
+  const styles = `py-1.5 px-4 block duration-400 ease-in-out cursor-pointer text-xl laptop:text-3xl notebook:text-4-5xl text-left  ${
+    1 === activeIndex
+      ? "text-yellow-isaac font-extrabold bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac border-y-dark-blue-isaac rounded-full shadow-dark-blue-isaac w-fit"
+      : "text-dark-blue-isaac font-normal"
+  }`
+  console.log(styles)
 
   return (
     <div
@@ -38,11 +44,7 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
           />
           <label
             htmlFor={item.label}
-            className={` py-1.5 px-4 block duration-400 ease-in-out cursor-pointer text-xl laptop:text-3xl notebook:text-4-5xl text-left  ${
-              i === activeIndex
-                ? "text-yellow-isaac font-extrabold bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac border-y-dark-blue-isaac rounded-full shadow-dark-blue-isaac w-fit"
-                : "text-dark-blue-isaac font-normal"
-            }`}
+            className={` py-1.5 px-4 block duration-400 ease-in-out cursor-pointer text-xl laptop:text-3xl notebook:text-4-5xl text-left ${activeIndex === i ? "text-yellow-isaac" : " text-white"}   `}
           >
             {item.label}
           </label>
