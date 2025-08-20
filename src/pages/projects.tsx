@@ -21,20 +21,20 @@ export default function Projects(): JSX.Element {
   }
 
   return (
-  <>
-    <Helmet>
-      <title>Team Isaac /Projects</title>
-      <meta
-        name="description"
-        content="Projects that reflect the inspiration and aspirations of Team Isaac."
+    <>
+      <Helmet>
+        <title>Team Isaac /Projects</title>
+        <meta
+          name="description"
+          content="Projects that reflect the inspiration and aspirations of Team Isaac."
+        />
+      </Helmet>
+      <Project
+        activeProject={isActive}
+        projects={projects}
+        isActive={isActive}
+        handleActive={handleActive}
       />
-    </Helmet>
-    <Project
-      activeProject={isActive}
-      projects={projects}
-      isActive={isActive}
-      handleActive={handleActive}
-    />
-  </>
+    </>
   )
 }
