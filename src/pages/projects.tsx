@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Project from "@molecules/Projects/index"
 import { useProjects } from "@molecules/Projects/useProjects"
 import { FaSpinner } from "react-icons/fa"
+import { Helmet } from "react-helmet-async"
 
 export default function Projects(): JSX.Element {
   const { projects, isLoading } = useProjects()
@@ -20,11 +21,20 @@ export default function Projects(): JSX.Element {
   }
 
   return (
+        <>
+       <Helmet>
+        <title>Team Isaac /Projects</title>
+        <meta
+          name="description"
+          content="Projects that reflect the inspiration and aspirations of Team Isaac."
+        />
+      </Helmet>
     <Project
       activeProject={isActive}
       projects={projects}
       isActive={isActive}
       handleActive={handleActive}
     />
+      </>
   )
 }
