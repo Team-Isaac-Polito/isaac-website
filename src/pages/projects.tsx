@@ -21,7 +21,7 @@ export default function Projects(): JSX.Element {
   }
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Helmet>
         <title>Team Isaac /Projects</title>
         <meta
@@ -35,6 +35,6 @@ export default function Projects(): JSX.Element {
         isActive={isActive}
         handleActive={handleActive}
       />
-    </>
+    </div>
   )
 }
