@@ -1,5 +1,5 @@
 export interface HistoryEvent {
-  year: number
+  year: string
   desc_eng: string
   desc_ita: string
 }
