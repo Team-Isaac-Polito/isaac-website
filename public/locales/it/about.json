@@ -1,32 +1,7 @@
 {
   "title": "Su di noi",
   "description": "Siamo un team studentesco del Politecnico di Torino, formato da studenti con diversi percorsi e lauree.<br>Il team è seguito dal professore Giuseppe Quaglia e abbiamo tre obiettivi principali:<br> + insegnare a studenti, permettendogli di migliorare le loro competenze tecniche;<br> + costruire robot socialmente utili;<br> + partecipare in eventi promozionali e di divulgazione in ambito robotico.<br>Il principale obiettivo del team è quello di sviluppare robot innovativi per attività di ricerca e soccorso (robotica SAR) per contribuire all’avanzamento tecnologico nelle operazioni di salvataggio.",
-  "history": {
-    "title": "Storia",
-    "events": [
-      {
-        "year": "2002",
-        "description": "Nasce il Team ISAAC! “Isaac” è un robot umanoide sviluppato con l’obbiettivo di migliorare la comprensione dei bipedi."
-      },
-      {
-        "year": "2004",
-        "description": "Il secondo prototipo di robot umanoide è stato presentato alla RoboCup 2004, a Osaka in Giappone. I test preliminari evidenziano una buona architettura sia dal punto di vista elettronico che meccanico."
-      },
-      { "year": "" },
-      {
-        "year": "2017",
-        "description": "Un nuovo inizio. Il Team ISAAC cambia gestione e obiettivo: si trasferisce nel dipartimento DIMEAS, sotto la supervisione del Prof. Giuseppe Quaglia, e inizia a dedicarsi alla robotica per le operazioni di ricerca e recupero. Le operazioni di soccorso sono difficili e pericolose anche per i soccorritori stessi. La robotica SAR serve ad aiutare o sostituire gli esseri umani in questo tipo di missioni."
-      },
-      {
-        "year": "2021",
-        "description": "Nasce RESE.Q MK1"
-      },
-      {
-        "year": "2024",
-        "description": "Nasce RESE.Q MK2"
-      }
-    ]
-  },
+ 
   "areas": {
     "title": "Aree del team",
     "description": "Siamo un team multidisciplinare in cui studenti da percorsi diversi collaborano per uno scopo comune, che in generale si tratta di costruire robot.<br>Nei progetti di cui ci occupiamo ci sono molti aspetti da tenere in considerazione, dalle parti fisiche fino al software e al controllo logico, senza dimenticarsi delle aree non tecniche come quella di comunicazione.<br>Scopri nel dettaglio le varie aree del team!",
