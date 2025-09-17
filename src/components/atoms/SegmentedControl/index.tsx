@@ -19,7 +19,6 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
       ? "text-yellow-isaac font-extrabold bg-gradient-to-br from-dark-blue-isaac via-dark-blue-isaac to-dark-blue-isaac border-y-dark-blue-isaac rounded-full shadow-dark-blue-isaac w-fit"
       : "text-dark-blue-isaac font-normal"
   }`
-  console.log(styles)
 
   return (
     <div
