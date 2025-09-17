@@ -1,19 +1,19 @@
 import HistoryItem from "@atoms/HistoryItem"
+
 import Typography from "@atoms/Typography"
 import Timeline from "@molecules/Timeline"
+import { isEn } from "@utils/utilities"
 import React, { FC, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { HistoryEvent } from "./index.types"
-import { useHistory } from "./useHistory"
+interface indexProps {
+  events: HistoryEvent[]
+}
 
-const History: FC = () => {
-  const { isLoading, history, error } = useHistory()
-  console.log(history)
+const History: FC<indexProps> = ({ events }: { events: HistoryEvent[] }) => {
   const { t } = useTranslation("about")
-  const [year, setYear] = useState("2017")
-  const events = t("history.events", { returnObjects: true }) as HistoryEvent[]
-  if (isLoading) <div>Loading...</div>
-  if (error) console.log(error)
+  const [year, setYear] = useState(history[0].year)
+  console.log(history)
   return (
     <>
       <Typography variant="h1" className="mb-10 laptop:mb-20 text-yellow-isaac">
@@ -23,7 +23,7 @@ const History: FC = () => {
       <Timeline
         segments={events.map((event) => {
           return {
-            value: event.year,
+            value: event.year.toString(),
             ref: React.createRef(),
           }
         })}
@@ -31,11 +31,10 @@ const History: FC = () => {
         controlRef={useRef()}
         defaultIndex={3}
       />
-      {(t("history.events", { returnObjects: true }) as HistoryEvent[]).map(
-        (item, idx) =>
-          item.year === year ? (
-            <HistoryItem key={idx}>{item.description}</HistoryItem>
-          ) : null
+      {events.map((item, idx) =>
+        item.year === year ? (
+          <HistoryItem key={idx}>{isEn() ? "kir" : item.desc_ita}</HistoryItem>
+        ) : null
       )}
     </>
   )
