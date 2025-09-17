@@ -1,20 +1,17 @@
 import Hero from "@molecules/Hero"
 import GalleryEvent from "@organisms/GalleryEvent"
 import React from "react"
-import { useTranslation } from "react-i18next"
 
 import { useEvents } from "@organisms/GalleryEvent/useEvents"
 import { FaSpinner } from "react-icons/fa"
 import { GalleryImage, EventType } from "@organisms/GalleryEvent/events.types"
 import { Helmet } from "react-helmet-async"
+import { isEn } from "@utils/utilities"
 const palette = ["bluePalette", "lightBluePalette"]
 
 export default function Events(): JSX.Element {
-  const { i18n } = useTranslation("events")
   const { events, isLoading } = useEvents()
-  function isEn(): boolean {
-    return i18n.language === "en"
-  }
+  
   if (isLoading) return <FaSpinner />
 
   return (
