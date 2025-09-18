@@ -11,10 +11,11 @@
       "title": "Goals",
       "description": "The purpose of Rese. Q Mk1 is to provide support to rescuers in emergency situations. Its current capabilities are:",
       "slides": {
-        "1": "Identifying people who need help.",
-        "2": "Exploration and mapping of unsafe areas.",
-        "3": "Transport of food, medicine and other first aid items via a dedicated add-on module.",
-        "4": "Securing dangerous areas, with the help of a gripper on the front module to act on any sources of risk."
+        "1": "Enter partially collapsed buildings before human rescuers, and navigate complex and partially collapsed environments",
+        "2": "Map the surrounding environment by generating a 2D map useful for rescuers, images and 3D visualizations of the environment",
+        "3": "Detect, locate, and recognize victims, hazards (pipes, gas cylinders, etc.), and signs inside the collapsed building (e.g., Hazmat warnings)",
+        "4": "Transport of food, medicine and other first aid items via a dedicated add-on module",
+        "5": "Securing dangerous areas, with the help of a gripper on the front module to act on any sources of risk"
       }
     }
   }
