@@ -5,6 +5,7 @@ import Slide2 from "@assets/projects/targets/targets_2.png"
 import Slide3 from "@assets/projects/targets/targets_3.png"
 
 import Slide4 from "@assets/projects/targets/targets_4.png"
+import Slide5 from "@assets/projects/targets/targets_5.png"
 
 import Typography from "@atoms/Typography"
 
@@ -48,6 +49,11 @@ export default function Projects(): JSX.Element {
             alt: "prova",
             translationPath: "reseq-mk1.objectives.slides.4",
           },
+          {
+           src: Slide5,
+           alt: "prova",
+           translationPath: "reseq-mk1.objectives.slides.6",
+         },
         ]}
       />
     </Paragraph>
