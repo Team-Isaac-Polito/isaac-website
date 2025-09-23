@@ -1,32 +1,7 @@
 {
   "title": "About Us",
   "description": "We are a student team from the Polytechnic University of Turin, formed by students with diverse backgrounds and degrees. Led by Professor Giuseppe Quaglia, the team has three main goals:<br> + to train students, enabling them to enhance their practical technical skills;<br> + to develop socially impactful robots; <br> + to participate in promotional and disclosure events within the robotics field.<br>The team's primary focus lies in the development of innovative and efficient robots for Search and Rescue (SAR) activities to contribute to the advancement of technology in life-saving operations.",
-  "history": {
-    "title": "history",
-    "events": [
-      {
-        "year": "2002",
-        "description": "The ISAAC Team is born! “Isaac” is a humanoid robot developed with the goal of improving the understanding of bipeds."
-      },
-      {
-        "year": "2004",
-        "description": "Our second prototype of a humanoid robot was presented at RoboCup 2004 in Osaka, Japan. Preliminary tests highlight a good architecture from both electrical and mechanical perspectives."
-      },
-      { "year": "" },
-      {
-        "year": "2017",
-        "description": "A new beginning. The ISAAC Team changes management and focus: it moves to the DIMEAS department under the supervision of Professor Giuseppe Quaglia and begins to focus on robotics for search and rescue operations. Rescue operations are difficult and dangerous, even for the rescuers themselves. SAR robotics aims to assist or replace humans in these types of missions."
-      },
-      {
-        "year": "2021",
-        "description": "RESE.Q MK1 is born!"
-      },
-      {
-        "year": "2024",
-        "description": "RESE.Q MK2 is born!"
-      }
-    ]
-  },
+ 
   "areas": {
     "title": "Our Areas",
     "description": "We are a multidisciplinary team where stusdents from different backgrounds collaborate for a common purpose, which generally involves building robots. <br>In the projects we handle, there are many aspects to consider, from physical parts to software and logical control, not to mention non-technical areas like communication.<br>Discover in detail the various areas of the team!",

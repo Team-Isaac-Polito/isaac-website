@@ -1,10 +1,10 @@
 // import TabImage from "@assets/projects/Tab.png"
+import React from "react"
 import AboutImage from "@assets/projects/projects1.jpg"
 import Objectives from "@atoms/Objectives/index"
 import Typography from "@atoms/Typography"
 import Gallery from "@molecules/Gallery"
 import Paragraph from "@molecules/Paragraph"
-import React from "react"
 import { useTranslation } from "react-i18next"
 import { ProjectType } from "@molecules/Projects/index.types"
 
@@ -13,6 +13,7 @@ import { useProjects } from "./useProjects"
 import { FaSpinner } from "react-icons/fa"
 import Features from "@atoms/Features"
 import TwoColumns from "@molecules/TwoColumns"
+import { isEn } from "@utils/utilities"
 
 export default function Projects({
   activeProject,
@@ -20,7 +21,7 @@ export default function Projects({
   isActive,
   handleActive,
 }: ProjectsProps): JSX.Element | null {
-  const { t, i18n } = useTranslation("projects")
+  const { t } = useTranslation("projects")
   const basePadding = "py-3 mx-2 mt-3 w-full"
   const responsivePadding =
     "tablet:mx-4 laptop:px-8 notebook:px-10 desktop:px-12"
@@ -46,8 +47,6 @@ export default function Projects({
     transition,
     "outline-none font-bold uppercase bg-dark-blue-isaac text-white",
   ].join(" ")
-
-  const isEn = (): boolean => i18n.language === "en"
 
   const { isLoading } = useProjects()
 

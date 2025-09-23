@@ -8,9 +8,8 @@ interface FeaturesProps {
 
 const Features: React.FC<FeaturesProps> = ({ specs }) => {
   if (!specs) {
-    return <div className="text-red-600">No specks found for this model.</div>
+    return <div className="text-red-600">No specs found for this model.</div>
   }
-  console.log(specs)
 
   return (
     <div>

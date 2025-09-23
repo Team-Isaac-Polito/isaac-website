@@ -1,16 +1,20 @@
 import img from "@assets/about/AboutUS_1.png"
+import React from "react"
 import Typography from "@atoms/Typography"
 import Hero from "@molecules/Hero"
 import Paragraph from "@molecules/Paragraph"
 import TwoColumns from "@molecules/TwoColumns"
 import Areas from "@organisms/Areas"
 import History from "@organisms/History"
-import React from "react"
+import { useHistory } from "@organisms/History/useHistory"
 import { Helmet } from "react-helmet-async"
 import { Trans, useTranslation } from "react-i18next"
+import { FaSpinner } from "react-icons/fa"
 export default function About(): JSX.Element {
   const { t } = useTranslation("about")
-
+  const { isLoading, history } = useHistory()
+  if (isLoading) return <FaSpinner></FaSpinner>
+  
   return (
     <>
       <Helmet>
@@ -29,7 +33,7 @@ export default function About(): JSX.Element {
         />
       </Paragraph>
       <Paragraph className="laptop:my-32" palette="bluePalette">
-        <History />
+        <History events={history.data}/>
       </Paragraph>
       <Paragraph className="notebook:my-32" palette="whitePalette">
         <Typography variant="h1" className="mb-20 text-light-blue-isaac">
