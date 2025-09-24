@@ -1,9 +1,6 @@
 import Slide1 from "@assets/projects/targets/targets_1.png"
-
 import Slide2 from "@assets/projects/targets/targets_2.png"
-
 import Slide3 from "@assets/projects/targets/targets_3.png"
-
 import Slide4 from "@assets/projects/targets/targets_4.png"
 import Slide5 from "@assets/projects/targets/targets_5.png"
 
@@ -52,7 +49,7 @@ export default function Projects(): JSX.Element {
           {
            src: Slide5,
            alt: "prova",
-           translationPath: "reseq-mk1.objectives.slides.6",
+           translationPath: "reseq-mk1.objectives.slides.5",
          },
         ]}
       />
