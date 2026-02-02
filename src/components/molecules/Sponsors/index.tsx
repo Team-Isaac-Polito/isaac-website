@@ -4,6 +4,7 @@ import Typography from "@atoms/Typography"
 import polito from "@assets/sponsors/PoliTo.png"
 import preRi from "@assets/sponsors/preziosiRicami.png"
 import stm from "@assets/sponsors/STM.png"
+import npcb from "@assets/sponsors/NextPCB.png"
 
 const sponsors = [
   { name: "Politecnico di Torino", logo: polito, url: "https://www.polito.it" },
@@ -16,6 +17,11 @@ const sponsors = [
     name: "STMicroelectronics",
     logo: stm,
     url: "https://www.st.com",
+  },
+  {
+    name: "NextPCB",
+    logo: npcb,
+    url: "https://www.nextpcb.com/",
   },
 ]
 
