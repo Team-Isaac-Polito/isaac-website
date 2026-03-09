@@ -21,7 +21,7 @@ const Sponsors = () => {
     }
     getSponsors()
   }, [sponsors])
-  console.log(sponsors)
+
   return (
     <div className="mx-6 mt-20 bg-white notebook:mt-32 laptop:mt-24 text-dark-blue-isaac h-fit tablet:mx-20 laptop:mx-28 desktop:mx-52">
       <Typography className="m-auto mb-10 text-center" variant="h1">
