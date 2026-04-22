@@ -38,7 +38,7 @@
 		"embla-carousel-react": "^7.1.0",
 		"framer-motion": "^12.0.11",
 		"i18next": "^23.16.2",
-		"i18next-http-backend": "^3.0.2",
+		"i18next-http-backend": "^3.0.5",
 		"isaac-website": "file:",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
