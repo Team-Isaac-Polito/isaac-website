@@ -31,7 +31,7 @@ const Slides: FC<SlidesProps> = ({ slideEl }) => {
     <Carousel
       className="tablet:w-[65%]"
       mx="auto"
-      loop
+      emblaOptions={{ loop: true }}
       height={400}
       withControls={false}
       initialSlide={1}
@@ -42,9 +42,6 @@ const Slides: FC<SlidesProps> = ({ slideEl }) => {
           height: "20px",
           backgroundColor: "white !important",
           transition: "width 200ms ease",
-          "&[data-active]": {
-            width: "50px",
-          },
         },
       }}
     >

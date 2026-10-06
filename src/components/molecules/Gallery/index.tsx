@@ -1,12 +1,13 @@
 import { Carousel } from "@mantine/carousel"
 import Autoplay from "embla-carousel-autoplay"
-import React, { FC, useRef } from "react"
+import React, { FC, useMemo } from "react"
 import { useMediaQuery } from "@mantine/hooks"
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 import GalleryProps from "./index.types"
 
 const Gallery: FC<GalleryProps> = ({ images, className }) => {
   const isMobile = useMediaQuery("(max-width: 640px)")
-  const autoplay = useRef(Autoplay({ delay: 2500 }))
+  const autoplay = useMemo(() => Autoplay({ delay: 2500 }), [])
   const carouselLength = images.length
 
   if (carouselLength === 1) {
@@ -44,34 +45,28 @@ const Gallery: FC<GalleryProps> = ({ images, className }) => {
 
   return (
     <Carousel
-      slideSize="33%"
-      breakpoints={[
-        { maxWidth: 1024, slideSize: "50%" },
-        { maxWidth: 640, slideSize: "100%" },
-      ]}
+      slideSize={{ base: "100%", sm: "50%", md: "33%" }}
       slideGap="xl"
-      loop
+      emblaOptions={{ loop: true, slidesToScroll: 1, align: "center" }}
+      controlSize={32}
+      previousControlIcon={<FaChevronLeft size={16} />}
+      nextControlIcon={<FaChevronRight size={16} />}
       styles={{
         control: {
-          background: "#ffffff0",
-          color: "#fff",
-          boxShadow: "0 2px 8px rgb(255, 255, 255)",
+          backgroundColor: "#ffffff",
+          color: "#1b1d44",
+          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.2)",
           border: "none",
           borderRadius: "50%",
-          "&:hover": {
-            background: "#2196f3",
-          },
         },
         indicator: {
-          background: "#ffffff",
+          backgroundColor: "#ffffff",
           border: "2px solid #ffffff",
         },
       }}
       withControls
       withIndicators
-      slidesToScroll={1}
-      align="center"
-      plugins={[autoplay.current]}
+      plugins={[autoplay]}
       className="w-full mb-7 ml-1 tablet:ml-0"
     >
       {images.map((e, i) => (

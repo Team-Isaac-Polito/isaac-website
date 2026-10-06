@@ -18,7 +18,7 @@ export default function AreaSelector({
       }))}
       defaultIndex={areas.findIndex((a) => a.value === selected)}
       callback={onChange}
-      controlRef={useRef()}
+      controlRef={useRef(null)}
     />
   )
 }

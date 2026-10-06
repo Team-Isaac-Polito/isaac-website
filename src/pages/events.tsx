@@ -11,7 +11,7 @@ const palette = ["bluePalette", "lightBluePalette"]
 
 export default function Events(): JSX.Element {
   const { events, isLoading } = useEvents()
-  
+
   if (isLoading) return <FaSpinner />
 
   return (

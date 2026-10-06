@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react"
+import { useState, useMemo } from "react"
 
 export function useCardPagination(totalItems: number, itemsPerPage: number) {
   const maxPage = useMemo(
@@ -7,13 +7,10 @@ export function useCardPagination(totalItems: number, itemsPerPage: number) {
   )
   const [page, setPage] = useState(0)
 
-  // clamp page if totalItems or itemsPerPage changes
-  useEffect(() => {
-    setPage((p) => (p > maxPage ? maxPage : p))
-  }, [maxPage])
+  const clampedPage = page > maxPage ? maxPage : page
 
   const goTo = (newPage: number) =>
     setPage((p) => (newPage >= 0 && newPage <= maxPage ? newPage : p))
 
-  return { page, maxPage, goTo }
+  return { page: clampedPage, maxPage, goTo }
 }
