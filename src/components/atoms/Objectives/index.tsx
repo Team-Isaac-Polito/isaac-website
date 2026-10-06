@@ -47,10 +47,10 @@ export default function Projects(): JSX.Element {
             translationPath: "reseq-mk1.objectives.slides.4",
           },
           {
-           src: Slide5,
-           alt: "prova",
-           translationPath: "reseq-mk1.objectives.slides.5",
-         },
+            src: Slide5,
+            alt: "prova",
+            translationPath: "reseq-mk1.objectives.slides.5",
+          },
         ]}
       />
     </Paragraph>

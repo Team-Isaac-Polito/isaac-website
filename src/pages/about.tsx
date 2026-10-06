@@ -14,7 +14,7 @@ export default function About(): JSX.Element {
   const { t } = useTranslation("about")
   const { isLoading, history } = useHistory()
   if (isLoading) return <FaSpinner></FaSpinner>
-  
+
   return (
     <>
       <Helmet>
@@ -33,7 +33,7 @@ export default function About(): JSX.Element {
         />
       </Paragraph>
       <Paragraph className="laptop:my-32" palette="bluePalette">
-        <History events={history.data}/>
+        <History events={history.data} />
       </Paragraph>
       <Paragraph className="notebook:my-32" palette="whitePalette">
         <Typography variant="h1" className="mb-20 text-light-blue-isaac">

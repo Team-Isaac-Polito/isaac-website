@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import Project from "@molecules/Projects/index"
 import { useProjects } from "@molecules/Projects/useProjects"
 import { FaSpinner } from "react-icons/fa"
@@ -6,19 +6,21 @@ import { Helmet } from "react-helmet-async"
 
 export default function Projects(): JSX.Element {
   const { projects, isLoading } = useProjects()
-  const [isActive, setActive] = useState("")
+  const [selectedTitle, setSelectedTitle] = useState("")
   const handleActive = (activeProjectTitle: string) => {
-    setActive(activeProjectTitle)
+    setSelectedTitle(activeProjectTitle)
   }
 
-  useEffect(() => {
-    if (!isLoading && projects && projects?.length > 0 && isActive === "") {
-      setActive(projects[0].title)
-    }
-  }, [isLoading, projects, isActive])
   if (isLoading) {
     return <FaSpinner />
   }
+
+  const activeProject =
+    selectedTitle !== ""
+      ? selectedTitle
+      : projects && projects.length > 0
+        ? projects[0].title
+        : ""
 
   return (
     <div className="overflow-x-hidden">
@@ -30,9 +32,9 @@ export default function Projects(): JSX.Element {
         />
       </Helmet>
       <Project
-        activeProject={isActive}
+        activeProject={activeProject}
         projects={projects}
-        isActive={isActive}
+        isActive={activeProject}
         handleActive={handleActive}
       />
     </div>

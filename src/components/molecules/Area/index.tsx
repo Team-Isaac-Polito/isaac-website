@@ -17,16 +17,10 @@ const Area: FC<AreaProps> = ({ desc, members, init }) => {
       </Typography>
 
       <Carousel
-        slideSize="20%"
-        breakpoints={[
-          { maxWidth: 1920, slideSize: "20%" },
-          { maxWidth: 1080, slideSize: "35%" },
-          { maxWidth: 696, slideSize: "60%" },
-        ]}
+        slideSize={{ base: "60%", sm: "35%", md: "20%" }}
         slideGap="xl"
         withControls={false}
-        slidesToScroll={1}
-        align="center"
+        emblaOptions={{ slidesToScroll: 1, align: "center" }}
         className="w-5/6 m-auto mb-7"
         initialSlide={init}
       >

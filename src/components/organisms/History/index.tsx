@@ -25,7 +25,7 @@ const History: FC<indexProps> = ({ events }: { events: HistoryEvent[] }) => {
           }
         })}
         callback={(val) => setYear(val)}
-        controlRef={useRef()}
+        controlRef={useRef(null)}
         defaultIndex={3}
       />
       {events.map((item, idx) =>

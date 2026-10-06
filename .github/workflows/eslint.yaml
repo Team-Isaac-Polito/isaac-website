@@ -18,17 +18,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
-      - name: Install ESLint
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v5
+        with:
+          node-version: latest
+          cache: "npm"
+
+      - name: Install dependencies
         run: |
-          npm install eslint@8.42.0
+          npm ci
           npm install @microsoft/eslint-formatter-sarif@3.0.0
 
       - name: Run ESLint
-        run: npx eslint .
-          --config .eslintrc.js
-          --ext .js,.jsx,.ts,.tsx
-          --format @microsoft/eslint-formatter-sarif
-          --output-file eslint-results.sarif
+        run: npm run lint -- --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
         continue-on-error: true
 
       - name: Upload analysis results to GitHub
