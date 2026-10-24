@@ -1,7 +1,9 @@
-import { MyNavbar } from "./components/navbar/navbar";
+import {HubJumbo} from "./components";
 
 export default function Home() {
   return (
-    <MyNavbar />
+    <>
+      <HubJumbo />
+    </>
   );
 }
