@@ -1,0 +1,35 @@
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); }
+}
+
+.sponsor-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-slider::before,
+.sponsor-slider::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+    top: 0;
+    pointer-events: none;
+}
+
+.sponsor-slider::before {
+    left: 0;
+}
+
+.sponsor-slider::after {
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.sponsor-slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}

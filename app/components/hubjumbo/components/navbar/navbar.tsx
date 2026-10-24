@@ -20,7 +20,7 @@ export function MyNavbar() {
           About
         </NavbarLink>
         <NavbarLink href="#" className="!border-0 !text-white hover:!bg-white/10 md:hover:!bg-transparent">Progetti</NavbarLink>
-        <NavbarLink href="#" className="!border-0 !text-white hover:!bg-white/10 md:hover:!bg-transparent">Eventi</NavbarLink>
+        <NavbarLink href="#eventi" className="!border-0 !text-white hover:!bg-white/10 md:hover:!bg-transparent">Eventi</NavbarLink>
         <NavbarLink href="#" className="!border-0 !text-white hover:!bg-white/10 md:hover:!bg-transparent">Contattaci</NavbarLink>
       </NavbarCollapse>
     </Navbar>
