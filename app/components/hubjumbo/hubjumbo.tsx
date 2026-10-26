@@ -4,12 +4,12 @@ import { MyNavbar } from "./components/navbar/navbar";
 
 export function HubJumbo() {
   return (
-    <section className="relative isolate flex min-h-svh w-full items-center justify-center overflow-hidden">
+    <section className="relative isolate flex  w-full items-center justify-center overflow-hidden">
       <div className="absolute top-0 left-0 right-0 z-30">
         <MyNavbar />
       </div>
 
-      <article className="relative z-20 flex min-h-svh w-full flex-col items-center justify-center px-4 pb-8 pt-24 text-center text-white sm:px-6 sm:pt-28">
+      <article className="relative z-20 flex w-full flex-col items-center justify-center px-4 pb-8 pt-24 text-center text-white sm:px-6 sm:pt-28">
         <h1 className="text-3xl font-extrabold tracking-tight drop-shadow-md sm:text-6xl">
           Team Isaac
         </h1>
