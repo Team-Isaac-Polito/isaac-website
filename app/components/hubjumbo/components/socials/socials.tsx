@@ -9,9 +9,9 @@ interface SocialProps {
 
 export function Socials() {
   const socialLinks: SocialProps[] = [
-    { name: "LinkedIn", href: "https://linkedin.com", icon: <FaLinkedin /> },
-    { name: "GitHub", href: "https://github.com", icon: <FaGithub /> },
-    { name: "Instagram", href: "https://instagram.com", icon: <FaInstagram /> },
+    { name: "LinkedIn", href: "https://it.linkedin.com/company/team-isaac-polito", icon: <FaLinkedin /> },
+    { name: "GitHub", href: "https://github.com/Team-Isaac-Polito", icon: <FaGithub /> },
+    { name: "Instagram", href: "https://www.instagram.com/team_isaac_polito/", icon: <FaInstagram /> },
   ];
 
   return (
