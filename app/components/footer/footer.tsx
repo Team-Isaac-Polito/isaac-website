@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Socials } from "../hubjumbo/components"
 
 export function Footer() {
+    
     return (
         <footer className="bg-neutral-primary-soft">
             <div className="mx-auto w-full max-w-7xl p-4 py-6 lg:py-8">
@@ -13,7 +14,7 @@ export function Footer() {
                 </div>
                 <hr className="my-6 border-default sm:mx-auto lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm text-body sm:text-center">© {new Date().getFullYear()} <a href="https://flowbite.com/" className="hover:underline">Team Isaac</a>. All Rights Reserved.
+                    <span className="text-sm text-body sm:text-center">© 2027 <a href="https://flowbite.com/" className="hover:underline">Team Isaac</a>. All Rights Reserved.
                     </span>
                     <div className="flex mt-4 sm:justify-center sm:mt-0">
                         <a href="#" className="text-body hover:text-heading ms-5">

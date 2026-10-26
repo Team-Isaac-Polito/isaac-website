@@ -1,11 +1,13 @@
+import Image from "next/image";
+
 export function EventsSection() {
   const eventImages = [
-    "Immagine evento 1",
-    "Immagine evento 2",
-    "Immagine evento 3",
-    "Immagine evento 4",
-    "Immagine evento 5",
-    "Immagine evento 6",
+    "maker_faire_2022.jpeg",
+    "robocup_brazil.jpg",
+    "notte_dei_ricercatori_1.jpeg",
+    "notte_dei_ricercatori.jpeg",
+    "robot_somewhere.jpg",
+    "vittorio_doing_something.jpeg",
   ];
 
   return (
@@ -22,25 +24,14 @@ export function EventsSection() {
         {eventImages.map((image, index) => (
           <div
             key={image}
-            role="img"
-            aria-label={`Segnaposto per ${image.toLowerCase()}`}
-            className={`flex h-[62%] flex-none items-center justify-center rounded-2xl border-4 border-white text-center text-xs font-medium text-gray-600 shadow-lg sm:h-[76%] sm:rounded-3xl sm:text-sm ${
-              [
-                "bg-[#d9e8e6]",
-                "bg-[#e5e9ed]",
-                "bg-[#e6e2d8]",
-                "bg-[#e6e4ec]",
-                "bg-[#e9e2dc]",
-                "bg-[#dfe7e2]",
-              ][index]
-            } w-[46%] md:w-[35%] lg:w-[24%] ${
+            className={`relative flex h-[62%] flex-none overflow-hidden rounded-2xl shadow-lg sm:h-[76%] sm:rounded-3xl w-[46%] md:w-[35%] lg:w-[24%] ${
               [
                 "-rotate-[7deg]",
                 "rotate-[4deg]",
                 "-rotate-[5deg]",
                 "rotate-[5deg]",
-                "-rotate-[4deg]",
-                "rotate-[6deg]",
+                "-rotate-[5deg]",
+                "rotate-[5deg]",
               ][index]
             } ${index > 0 ? "-ml-[16%] md:-ml-[12%] lg:-ml-[8%]" : ""} ${
               [
@@ -48,14 +39,20 @@ export function EventsSection() {
                 "-translate-y-3 sm:-translate-y-6",
                 "translate-y-3 sm:translate-y-5",
                 "-translate-y-2 sm:-translate-y-4",
-                "translate-y-2 sm:translate-y-6",
-                "-translate-y-3 sm:-translate-y-2",
+                 "translate-y-3 sm:translate-y-5",
+                "-translate-y-2 sm:-translate-y-4",
               ][index]
             } ${index === 3 ? "hidden md:flex" : ""} ${
               index >= 4 ? "hidden lg:flex" : ""
             }`}
           >
-            {image}
+            <Image
+              src={`/${image}`}
+              alt={image}
+              fill
+              sizes="(min-width: 1024px) 24vw, (min-width: 768px) 35vw, 46vw"
+              className="object-cover"
+            />
           </div>
         ))}
       </div>
