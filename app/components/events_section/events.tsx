@@ -1,20 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function EventsSection() {
   const eventImages = [
-    "maker_faire_2022.jpeg",
-    "robocup_brazil.jpg",
-    "notte_dei_ricercatori_1.jpeg",
-    "notte_dei_ricercatori.jpeg",
-    "robot_somewhere.jpg",
-    "vittorio_doing_something.jpeg",
+    "/maker_faire/2022/maker_faire_2022.jpeg",
+    "/robocup/2025/robocup_brazil.jpg",
+    "/notte_dei_ricercatori/2026/notte_dei_ricercatori_1.jpeg",
+    "/notte_dei_ricercatori/2026/notte_dei_ricercatori.jpeg",
+    "/robocup/2025/robot_somewhere.jpg",
+    "/maker_faire/2022/vittorio_doing_something.jpeg",
   ];
 
   return (
     <section
       id="eventi"
       aria-labelledby="events-title"
-      className="relative isolate flex min-h-[38rem] scroll-mt-8 items-center justify-center overflow-hidden bg-white px-4 py-16 text-gray-900 sm:min-h-[44rem] sm:px-6 sm:py-24"
+      className="isaac-pattern relative isolate flex min-h-[38rem] scroll-mt-8 items-center justify-center overflow-hidden bg-white px-4 py-16 text-gray-900 sm:min-h-[44rem] sm:px-6 sm:py-24"
     >
       <div
         id="eventi-galleria"
@@ -47,7 +48,7 @@ export function EventsSection() {
             }`}
           >
             <Image
-              src={`/${image}`}
+              src={image}
               alt={image}
               fill
               sizes="(min-width: 1024px) 24vw, (min-width: 768px) 35vw, 46vw"
@@ -68,8 +69,8 @@ export function EventsSection() {
           Organizziamo fiere, dimostrazioni e incontri per condividere i nostri
           progetti di robotica e incontrare chi, come noi, ama l’innovazione.
         </p>
-        <a
-          href="#eventi-galleria"
+        <Link
+          href="/events"
           className="mt-7 inline-flex min-h-12 items-center justify-center gap-3 rounded-2xl bg-[#549697] px-6 py-3 text-lg font-semibold text-white transition-colors hover:bg-[#397778] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#397778] sm:mt-10 sm:px-8 sm:text-xl"
         >
           Scopri gli eventi
@@ -87,7 +88,7 @@ export function EventsSection() {
               strokeWidth="2"
             />
           </svg>
-        </a>
+        </Link>
       </div>
     </section>
   );

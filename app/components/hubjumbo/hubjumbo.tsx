@@ -21,6 +21,10 @@ export function HubJumbo() {
       </article>
 
       <div className="pointer-events-none absolute inset-0 z-10 bg-black/60" />
+      <div
+        aria-hidden="true"
+        className="isaac-pattern isaac-pattern-dark pointer-events-none absolute inset-0 z-[15] opacity-30"
+      />
 
       <video
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"

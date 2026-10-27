@@ -4,11 +4,11 @@ import './sponsor_list.css'
 export function SponsorList() {
     // Array delle immagini per pulizia del codice
     const sponsors = [
-        "/PoliTO.png", "/altium.png", "/Igus_logo.svg.png", "/pinto.png", "/preziosiRicami.png", "/solidworks.png", "/STM.png", "/NextPCB.png",
+        "/sponsor/PoliTo.png", "/sponsor/altium.png", "/sponsor/Igus_logo.svg.png", "/sponsor/pinto.png", "/sponsor/preziosiRicami.png", "/sponsor/solidworks.png", "/sponsor/STM.png", "/sponsor/NextPCB.png",
     ];
 
    return (
-        <section className="py-12 bg-gray-50">
+        <section className="isaac-pattern py-12 bg-gray-50">
             <div className="max-w-6xl mx-auto px-4">
                 <h3 className="text-center text-lg font-semibold text-gray-600 mb-6 tracking-wider">
                     Credono in noi

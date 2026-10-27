@@ -4,11 +4,11 @@ import { Socials } from "../hubjumbo/components"
 export function Footer() {
     
     return (
-        <footer className="bg-neutral-primary-soft">
+        <footer className="isaac-pattern bg-neutral-primary-soft">
             <div className="mx-auto w-full max-w-7xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="flex mb-6 md:mb-0">
-                        <Image width={30} height={10} src="favicon.svg" className="h-24 me-3" alt="Team Isaac Logo" />
+                        <Image width={30} height={10} src="/favicon.svg" className="h-24 me-3" alt="Team Isaac Logo" />
                         <span className="text-heading self-center text-2xl font-semibold whitespace-nowrap">Team Isaac</span>
                     </div>
                 </div>
