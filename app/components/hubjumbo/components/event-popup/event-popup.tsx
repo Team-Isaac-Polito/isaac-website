@@ -15,6 +15,9 @@ export function EventPopup() {
     return () => dialog?.close();
   }, []);
 
+  function closeDialog() {
+     dialogRef.current?.close();
+  }
   function goToEvents() {
     dialogRef.current?.close();
     document.getElementById("eventi")?.scrollIntoView({ behavior: "smooth" });
@@ -28,7 +31,7 @@ export function EventPopup() {
     >
       <button
         type="button"
-        onClick={goToEvents}
+        onClick={closeDialog}
         aria-label="Chiudi e vai agli eventi"
         className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full text-2xl text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#549697]"
       >

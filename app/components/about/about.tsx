@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { MyNavbar } from "../hubjumbo/components/navbar/navbar";
+import { ScrollReveal } from "../shared/ScrollReveal/scroll_reveal";
 import { teamEvents } from "../../events/team-events";
 
 const milestones = [
@@ -62,7 +63,10 @@ export function AboutPage() {
           <MyNavbar />
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl">
+        <ScrollReveal
+          direction="left"
+          className="relative z-10 mx-auto w-full max-w-7xl"
+        >
           <p className="mb-5 text-sm font-semibold uppercase tracking-[0.28em] text-[#73b9b4] sm:text-base">
             Politecnico di Torino · dal 2002
           </p>
@@ -81,7 +85,7 @@ export function AboutPage() {
           >
             Scopri chi siamo
           </a>
-        </div>
+        </ScrollReveal>
       </section>
 
       <section
@@ -278,40 +282,46 @@ export function AboutPage() {
           className="flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#478d8d] sm:gap-7 sm:px-10 lg:px-[max(4rem,calc((100vw-80rem)/2))]"
         >
           {teamEvents.map((event, index) => (
-            <Link
+            <ScrollReveal
               key={event.slug}
-              href={`/events/${event.slug}`}
-              aria-label={`Scopri ${event.title}: descrizione e foto delle edizioni`}
-              className="group relative aspect-[4/5] w-[78vw] max-w-[24rem] flex-none snap-start overflow-hidden rounded-2xl bg-[#1b1b3a] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#478d8d] sm:w-[42vw] lg:w-[27vw]"
+              direction={index % 2 === 0 ? "left" : "right"}
+              delayMs={(index % 3) * 90}
+              className="w-[78vw] max-w-[24rem] flex-none snap-start sm:w-[42vw] lg:w-[27vw]"
             >
-              <Image
-                src={event.heroImage}
-                alt=""
-                fill
-                sizes="(min-width: 1024px) 27vw, (min-width: 640px) 42vw, 78vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#12132d]/95 via-[#12132d]/10 to-transparent transition-colors duration-300 group-hover:from-[#12132d] group-hover:via-[#12132d]/35" />
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5 text-white sm:p-7">
-                <span>
-                  <span className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-[#73b9b4]">
-                    {event.category}
+              <Link
+                href={`/events/${event.slug}`}
+                aria-label={`Scopri ${event.title}: descrizione e foto delle edizioni`}
+                className="group relative block aspect-[4/5] w-full snap-start overflow-hidden rounded-2xl bg-[#1b1b3a] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#478d8d]"
+              >
+                <Image
+                  src={event.heroImage}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 27vw, (min-width: 640px) 42vw, 78vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#12132d]/95 via-[#12132d]/10 to-transparent transition-colors duration-300 group-hover:from-[#12132d] group-hover:via-[#12132d]/35" />
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5 text-white sm:p-7">
+                  <span>
+                    <span className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-[#73b9b4]">
+                      {event.category}
+                    </span>
+                    <span className="block text-xl font-semibold sm:text-2xl">
+                      {event.title}
+                    </span>
+                    <span className="mt-2 block max-h-0 overflow-hidden text-sm leading-relaxed text-white/75 opacity-0 transition-all duration-300 group-hover:max-h-20 group-hover:opacity-100">
+                      Scopri le edizioni e le foto
+                    </span>
                   </span>
-                  <span className="block text-xl font-semibold sm:text-2xl">
-                    {event.title}
+                  <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full border border-white/40 text-lg transition-all duration-300 group-hover:border-[#f5c64b] group-hover:bg-[#f5c64b] group-hover:text-[#1b1b3a]">
+                    <span aria-hidden="true">↗</span>
                   </span>
-                  <span className="mt-2 block max-h-0 overflow-hidden text-sm leading-relaxed text-white/75 opacity-0 transition-all duration-300 group-hover:max-h-20 group-hover:opacity-100">
-                    Scopri le edizioni e le foto
+                  <span className="sr-only">
+                    0{index + 1}
                   </span>
-                </span>
-                <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full border border-white/40 text-lg transition-all duration-300 group-hover:border-[#f5c64b] group-hover:bg-[#f5c64b] group-hover:text-[#1b1b3a]">
-                  <span aria-hidden="true">↗</span>
-                </span>
-                <span className="sr-only">
-                  0{index + 1}
-                </span>
-              </div>
-            </Link>
+                </div>
+              </Link>
+            </ScrollReveal>
           ))}
         </div>
       </section>
