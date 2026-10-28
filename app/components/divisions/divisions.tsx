@@ -77,10 +77,8 @@ export function Divisions() {
                   type="button"
                   aria-pressed={isActive}
                   onClick={() => setActiveDivisionIndex(index)}
-                  className={`rounded-xl border px-5 py-4 text-left transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#397778] ${
-                    isActive
-                      ? "translate-x-1 border-[#397778]/30 bg-white shadow-sm"
-                      : "border-transparent bg-transparent hover:border-slate-200 hover:bg-white/70"
+                  className={`division-choice ${
+                    isActive ? "division-choice-active" : ""
                   }`}
                 >
                   <span className="flex items-center gap-3 text-lg font-semibold sm:text-xl">

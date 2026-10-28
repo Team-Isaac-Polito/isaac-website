@@ -203,7 +203,7 @@ export function TeamAreas() {
                     )
                     ?.focus();
                 }}
-                className={`team-area-tab shrink-0 ${
+                className={`team-area-tab ${
                   isActive ? "team-area-tab-active" : ""
                 }`}
               >
