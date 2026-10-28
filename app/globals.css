@@ -91,11 +91,11 @@ body, html {
 }
 
 .scroll-reveal-pending[data-reveal-direction="left"] {
-  transform: translate3d(-3rem, 1rem, 0) rotate(-1.5deg) scale(0.985);
+  transform: translate3d(-0.5rem, 0.5rem, 0) scale(0.985);
 }
 
 .scroll-reveal-pending[data-reveal-direction="right"] {
-  transform: translate3d(3rem, 1rem, 0) rotate(1.5deg) scale(0.985);
+  transform: translate3d(0.5rem, 0.5rem, 0) scale(0.985);
 }
 
 .scroll-reveal-pending[data-reveal-direction="zoom"] {

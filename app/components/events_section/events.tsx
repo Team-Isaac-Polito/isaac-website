@@ -26,15 +26,8 @@ export function EventsSection() {
           <div
             key={image}
             className={`relative flex h-[62%] flex-none overflow-hidden rounded-2xl shadow-lg sm:h-[76%] sm:rounded-3xl w-[46%] md:w-[35%] lg:w-[24%] ${
-              [
-                "-rotate-[7deg]",
-                "rotate-[4deg]",
-                "-rotate-[5deg]",
-                "rotate-[5deg]",
-                "-rotate-[5deg]",
-                "rotate-[5deg]",
-              ][index]
-            } ${index > 0 ? "-ml-[16%] md:-ml-[12%] lg:-ml-[8%]" : ""} ${
+              index > 0 ? "-ml-[16%] md:-ml-[12%] lg:-ml-[8%]" : ""
+            } ${
               [
                 "translate-y-2 sm:translate-y-4",
                 "-translate-y-3 sm:-translate-y-6",

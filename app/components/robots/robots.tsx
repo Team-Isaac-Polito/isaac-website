@@ -5,12 +5,12 @@ const robots = [
   {
     name: "Rese.q MK1",
     image: "/robot/reseq-mk1.png",
-    href: "https://teamisaac.polito.it",
+    href: "/projects",
   },
   {
     name: "Rese.q MK2",
     image: "/robot/reseq-mk2.jpg",
-    href: "https://framer.com",
+    href: "/projects",
   },
 ];
 
