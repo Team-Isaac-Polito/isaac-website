@@ -71,6 +71,79 @@ body, html {
   animation: event-enter 500ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.project-reel-video {
+  animation: project-reel-drift 24s ease-in-out infinite alternate;
+}
+
+.project-hero-copy > * {
+  animation: project-hero-arrive 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.project-hero-copy > :nth-child(1) {
+  animation-delay: 150ms;
+}
+
+.project-hero-copy > :nth-child(2) {
+  animation-delay: 300ms;
+}
+
+.project-hero-copy > :nth-child(3) {
+  animation-delay: 450ms;
+}
+
+.project-hero-copy > :nth-child(4) {
+  animation-delay: 600ms;
+}
+
+.project-hero-link span {
+  transition: transform 250ms ease;
+}
+
+.project-hero-link:hover span {
+  transform: translateY(3px);
+}
+
+.projects-page .scroll-reveal-pending {
+  filter: none;
+  transform: translate3d(0, 2rem, 0);
+  transition:
+    opacity 650ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay),
+    transform 800ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay);
+}
+
+.projects-page .scroll-reveal-pending .project-photo {
+  clip-path: inset(0 0 100%);
+  transition: clip-path 900ms cubic-bezier(0.76, 0, 0.24, 1) 150ms;
+}
+
+.projects-page .scroll-reveal-pending.scroll-reveal-visible .project-photo {
+  clip-path: inset(0);
+}
+
+@keyframes project-reel-drift {
+  from {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: scale(1.11) translate3d(-1%, -0.5%, 0);
+  }
+}
+
+@keyframes project-hero-arrive {
+  from {
+    clip-path: inset(0 0 100%);
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  to {
+    clip-path: inset(0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .scroll-reveal {
   --reveal-delay: 0ms;
 }
@@ -112,11 +185,17 @@ body, html {
   .event-enter,
   .division-panel-enter,
   .scroll-reveal-pending,
-  .scroll-reveal-visible {
+  .scroll-reveal-visible,
+  .project-reel-video,
+  .project-hero-copy > * {
     animation: none;
     filter: none;
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .projects-page .scroll-reveal-pending .project-photo {
+    clip-path: none;
   }
 }

@@ -5,6 +5,8 @@ import { MyNavbar } from "../components/hubjumbo/components/navbar/navbar";
 import { Socials } from "../components/hubjumbo/components/socials/socials";
 import { ScrollReveal } from "../components/shared/ScrollReveal/scroll_reveal";
 import { ProjectReel } from "./project-reel";
+import { IsaacButton } from "../components/shared/IsaacButton/isaac_button";
+import { FaGithub } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Progetti | Team Isaac",
@@ -51,48 +53,56 @@ const systems = [
 export default function ProjectsPage() {
   return (
     <>
-      <main className="overflow-hidden bg-[#f6f5f0] text-[#1b1b3a]">
+      <main className="projects-page overflow-hidden bg-[#f6f5f0] text-[#1b1b3a]">
         <section
           id="robot"
-          className="relative isolate flex min-h-176 flex-col justify-between overflow-hidden bg-[#1b1b3a] px-5 pb-12 pt-28 text-white sm:px-8 lg:min-h-216 lg:px-16 lg:pb-16"
+          className="project-hero relative isolate flex min-h-[min(48rem,100svh)] flex-col items-center justify-between overflow-hidden bg-[#1b1b3a] px-5 pb-7 pt-24 text-white sm:px-8 sm:pb-9 lg:px-16"
         >
           <ProjectReel />
-          <div className="absolute inset-0 -z-10 bg-[#1b1b3a]/55" />
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-[#10102a]/55 via-[#1b1b3a]/50 to-[#10102a]/80" />
+          <div
+            aria-hidden="true"
+            className="isaac-pattern isaac-pattern-dark pointer-events-none absolute inset-0 -z-10 opacity-25"
+          />
           <div className="absolute inset-x-0 top-0 z-30">
             <MyNavbar />
           </div>
 
-          <div className="relative z-10 mx-auto mt-auto w-full max-w-7xl">
-            <div className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-white/85 sm:text-sm">
-              <span className="h-px w-8 bg-[#478d8d]" />
+          <div className="project-hero-copy relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center pb-12 pt-16 text-center">
+            <p className="project-hero-kicker flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-white/85 sm:text-sm">
+              <span aria-hidden="true" className="h-px w-8 bg-[#478d8d]" />
               Robotica per il soccorso
-            </div>
-            <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.95] sm:text-8xl lg:text-9xl">
-              RESE<span className="text-[#478d8d]">.Q</span>
+              <span aria-hidden="true" className="h-px w-8 bg-[#478d8d]" />
+            </p>
+            <h1 className="project-hero-title mt-6 text-[clamp(4.5rem,15vw,12rem)] font-extrabold leading-[0.82] tracking-[-0.08em]">
+              RESE<span className="text-[#70b3b0]">.Q</span>
             </h1>
-            <div className="mt-8 grid gap-8 border-t border-white/35 pt-6 sm:grid-cols-[1fr_auto] sm:items-end lg:mt-10">
-              <p className="max-w-2xl text-xl leading-snug text-white/90 sm:text-2xl">
-                Prima entra il robot. Poi, con una mappa più chiara, entrano i
-                soccorritori.
+            <div className="my-7 max-w-2xl">
+              <p className="text-lg leading-relaxed text-white/90 sm:text-xl">
+                Un robot modulare per esplorare ambienti pericolosi e aiutare i
+                soccorritori a capire cosa li aspetta.
               </p>
-              <a
-                href="#architettura"
-                className="inline-flex min-h-12 w-fit items-center gap-3 border-b border-[#478d8d] pb-2 text-sm font-bold uppercase tracking-[0.12em] text-white transition-colors hover:text-[#b7d5d5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#478d8d]"
-              >
-                Entra nel progetto <span aria-hidden="true">↓</span>
-              </a>
             </div>
+            <IsaacButton text=" Scopri il progetto" />
           </div>
-          <p className="relative z-10 mx-auto mt-10 w-full max-w-7xl text-xs font-medium uppercase tracking-[0.16em] text-white/70">
-            RESE.Q MK2 · prove sul campo
-          </p>
+          <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between gap-4 border-t border-white/35 pt-4 text-[0.65rem] font-medium uppercase tracking-[0.16em] text-white/70 sm:text-xs">
+            <p>RESE.Q MK2</p>
+            <p className="hidden sm:block">Progettato e costruito dal Team Isaac</p>
+            <a
+              href="#architettura"
+              aria-label="Scorri per scoprire il progetto"
+              className="transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#70b3b0]"
+            >
+              Scroll ↓
+            </a>
+          </div>
         </section>
 
         <section
           id="architettura"
-          className="px-5 py-20 sm:px-8 sm:py-28 lg:px-16 lg:py-36"
+          className="isaac-pattern scroll-mt-8 bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28"
         >
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
+          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <ScrollReveal direction="left">
               <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-[#478d8d]">
                 Un sistema, non un singolo pezzo
@@ -120,7 +130,7 @@ export default function ProjectsPage() {
             </ScrollReveal>
           </div>
         </section>
-        <section className="px-5 py-20 sm:px-8 sm:py-28 lg:px-16 lg:py-36">
+        <section className="px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28">
           <div className="mx-auto max-w-7xl">
             <ScrollReveal>
               <div className="mb-12 max-w-3xl sm:mb-16">
@@ -138,7 +148,7 @@ export default function ProjectsPage() {
               </div>
             </ScrollReveal>
 
-              <div className="border-t-2 border-[#1b1b3a]">
+            <div className="border-t-2 border-[#1b1b3a]">
               {systems.map((system) => (
                 <ScrollReveal key={system.number} direction="up">
                   <section className="grid gap-6 border-b border-[#1b1b3a]/20 py-8 md:grid-cols-[0.8fr_1.2fr] md:gap-12 md:py-10">
@@ -171,7 +181,7 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        <section className="bg-white px-5 py-20 sm:px-8 sm:py-28 lg:px-16 lg:py-36">
+        <section className="bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28">
           <div className="mx-auto max-w-7xl">
             <ScrollReveal>
               <div className="mb-12 flex flex-col gap-5 sm:mb-16 sm:flex-row sm:items-end sm:justify-between">
@@ -192,14 +202,14 @@ export default function ProjectsPage() {
 
             <div className="grid gap-10 md:grid-cols-2 md:gap-6">
               <ScrollReveal direction="left">
-                <article>
-                  <div className="relative aspect-4/3 overflow-hidden bg-[#f6f5f0]">
+                <article className="group">
+                  <div className="project-photo relative aspect-4/3 overflow-hidden bg-[#f6f5f0]">
                     <Image
                       src="/robot/reseq-mk1.png"
                       alt="Il team assembla la base cingolata del prototipo RESE.Q MK1"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
-                      className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                     />
                     <span className="absolute left-4 top-4 bg-[#f6f5f0] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em]">
                       Primo prototipo
@@ -218,17 +228,17 @@ export default function ProjectsPage() {
               </ScrollReveal>
 
               <ScrollReveal direction="right" delayMs={120}>
-                <article>
-                  <div className="relative aspect-4/3 overflow-hidden bg-[#f6f5f0]">
+                <article className="group md:mt-16">
+                  <div className="project-photo relative aspect-4/3 overflow-hidden bg-[#f6f5f0]">
                     <Image
                       src="/robot/reseq-mk2.jpg"
                       alt="RESE.Q MK2 durante una prova su un terreno irregolare"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
-                      className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                     />
                     <span className="absolute left-4 top-4 bg-[#478d8d] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white">
-                      Prove sul campo
+                      Secondo prototipo
                     </span>
                   </div>
                   <div className="mt-5 flex items-baseline justify-between gap-4 border-b border-[#1b1b3a]/25 pb-4">
@@ -247,7 +257,7 @@ export default function ProjectsPage() {
         </section>
 
         <section className="bg-[#1b1b3a] px-5 py-16 text-center text-white sm:px-8 sm:py-20">
-          <ScrollReveal>
+          <ScrollReveal className="flex flex-col justify-center items-center">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/85">
               Dal laboratorio, senza filtri
             </p>
@@ -264,9 +274,10 @@ export default function ProjectsPage() {
               href="https://github.com/Team-Isaac-Polito"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-11 items-center gap-2 border-b border-[#478d8d] px-1 text-sm font-bold text-white transition-colors hover:text-[#b7d5d5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#478d8d]"
+              className="w-96 rounded-md text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 bg-white focus:outline-none flex justify-center items-center gap-4 text-black"
             >
-              Esplora il lavoro su GitHub <span aria-hidden="true">↗</span>
+              <FaGithub size={24} />
+              Esplora il lavoro su GitHub
             </a>
           </ScrollReveal>
         </section>

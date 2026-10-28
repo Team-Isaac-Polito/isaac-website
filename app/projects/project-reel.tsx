@@ -35,14 +35,13 @@ export function ProjectReel() {
     <video
       ref={videoRef}
       aria-label="RESE.Q MK2 durante una dimostrazione alla Maker Faire"
-      className="absolute inset-0 -z-20 h-full w-full object-cover"
+      className="project-reel-video absolute inset-0 -z-20 h-full w-full object-cover"
       src="/video/reseq_mk2_makerfaire.mp4"
       poster="/robot/reseq-mk2.jpg"
       autoPlay
       muted
       loop
       playsInline
-      controls
       preload="metadata"
     />
   );
