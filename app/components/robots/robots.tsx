@@ -62,7 +62,7 @@ export function Robots() {
                   aria-hidden="true"
                   className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent"
                 />
-                <span className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#569698] text-white shadow-md transition-colors group-hover:bg-[#397778] sm:h-[54px] sm:w-[54px]">
+                <span className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center bg-[#569698] text-white shadow-md transition-colors group-hover:bg-[#397778] sm:h-[54px] sm:w-[54px]" style={{clipPath: "polygon(0 0, 100% 0, 100% 72%, 56% 100%, 0 100%)"}}>
                   <svg
                     aria-hidden="true"
                     viewBox="0 0 24 24"
