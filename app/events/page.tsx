@@ -46,14 +46,14 @@ export default function EventsPage() {
   return (
     <section id="eventi">
       <main className="overflow-hidden bg-[#f6f5f0] text-[#1b1b3a]">
-        <section className="relative isolate flex items-center justify-center overflow-hidden bg-white px-5 pb-14 pt-24 text-[#121212] sm:pb-18 sm:pt-28 lg:min-h-[58rem] lg:px-16 lg:pb-12 lg:pt-28">
+        <section className="relative isolate flex min-h-[38rem] items-center justify-center overflow-hidden bg-white px-5 pb-14 pt-24 text-[#121212] sm:min-h-[48rem] sm:pb-18 sm:pt-28 lg:min-h-[58rem] lg:px-16 lg:pb-12 lg:pt-28">
           <div className="absolute inset-x-0 top-0 z-30">
             <MyNavbar darkText />
           </div>
 
           <EventOrbit items={heroCollage} />
 
-          <div className="relative z-10 mx-auto flex w-full max-w-[36rem] flex-col items-center justify-center rounded-full bg-white px-3 py-10 text-center sm:py-12 lg:py-14">
+          <div className="relative z-10 mx-auto flex w-full max-w-[36rem] flex-col items-center justify-center rounded-full bg-white/80 px-3 py-10 text-center backdrop-blur-[2px] sm:py-12 md:bg-white lg:py-14">
             <div className="event-enter px-2">
               <h1 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
                 COMPETIZIONI &amp; EVENTI
@@ -65,26 +65,6 @@ export default function EventsPage() {
               </p>
             </div>
 
-            <div
-              aria-label="Momenti dagli eventi del Team Isaac"
-              className="mt-8 grid w-full max-w-xl grid-cols-3 gap-3 sm:mt-10 sm:gap-4 lg:hidden"
-            >
-              {heroCollage.slice(0, 3).map((item) => (
-                <div
-                  key={item.image}
-                  className="event-enter relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-100"
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    priority
-                    sizes="(min-width: 640px) 160px, 30vw"
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
