@@ -8,16 +8,16 @@ export function EventPopup() {
 
   useEffect(() => {
     const dialog = dialogRef.current;
-
-    if (dialog && !dialog.open) {
+    const hasUserCloseDialog = localStorage.getItem("hasUserCloseDialog") ?? false
+    if (dialog && !dialog.open && hasUserCloseDialog == false) {
       dialog.showModal();
     }
-
     return () => dialog?.close();
   }, []);
 
   function closeDialog() {
      dialogRef.current?.close();
+     localStorage.setItem("hasUserCloseDialog", "true") // localStorage supporta solo le stringhe non i booleani diretti :(
   }
 
   return (

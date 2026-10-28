@@ -6,13 +6,6 @@
       "description": "Sviluppiamo codice Python per ROS per gestire il software di alto livello del robot. Lavoriamo su visione artificiale e funzionalità autonome. Ci occupiamo dello sviluppo del sito web del team utilizzando tecnologie come React, Tailwind CSS e Vite. Utilizziamo strumenti DevOps per facilitare lo sviluppo e il deployment del software, come Docker e GitHub Actions. Gestiamo il server del laboratorio e le piattaforme utilizzate dal team, come Proxmox, OPNsense e Wireguard.",
       "members": [
         {
-          "name": "Luca De Paola",
-          "role": "Team Leader",
-          "photo": "https://cms.teamisaac.it/assets/5b13cc3e-4e1e-4838-aa3a-afd2d2b9dea1?width=900&height=900&quality=50",
-          "email": "luca.depaola@studenti.polito.it",
-          "linkedin": "https://www.linkedin.com/in/de-paola-luca/"
-        },
-        {
           "name": "Yunus Selim Aytekin",
           "role": "Head of Software",
           "photo": "https://cms.teamisaac.it/assets/07638476-b35d-4f66-a9a1-e58bb1e8db55?width=900&height=900&quality=50",
@@ -27,21 +20,10 @@
           "linkedin": "https://www.linkedin.com/in/koksal-berkay-denktas-547725290/"
         },
         {
-          "name": "Tobia Giorgi",
-          "role": "Software Engineer",
-          "photo": "https://cms.teamisaac.it/assets/59a7346e-919c-4b59-b099-d9037798e362?width=900&height=900&quality=50",
-          "email": "tobia.giorgi@studenti.polito.it"
-        },
-        {
           "name": "Xiaoxue Chen",
           "role": "Software Engineer",
           "email": "xiaoxue.chen@studenti.polito.it",
           "linkedin": "https://www.linkedin.com/in/xiaoxue-chen-805335387/"
-        },
-        {
-          "name": "Cansu Doğan",
-          "role": "Software Engineer",
-          "email": "cansu.dogan@studenti.polito.it"
         },
         {
           "name": "Salvatore Caló",

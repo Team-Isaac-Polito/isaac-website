@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@tanstack/react-form": "^1.33.5",
+    "@tanstack/react-form-nextjs": "^1.33.5",
     "flowbite": "^4.0.2",
     "flowbite-react": "^0.12.17",
     "next": "16.4.3",

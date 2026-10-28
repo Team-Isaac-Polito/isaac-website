@@ -23,7 +23,7 @@ export function MyNavbar({ darkText = false }: { darkText?: boolean }) {
         </NavbarLink>
         <NavbarLink href="/projects" className={`!border-0 ${textColor} ${darkText ? "hover:!bg-black/5" : "hover:!bg-white/10"} md:hover:!bg-transparent`}>Progetti</NavbarLink>
         <NavbarLink href="/events" className={`!border-0 ${textColor} ${darkText ? "hover:!bg-black/5" : "hover:!bg-white/10"} md:hover:!bg-transparent`}>Eventi</NavbarLink>
-        <NavbarLink href="#" className={`!border-0 ${textColor} ${darkText ? "hover:!bg-black/5" : "hover:!bg-white/10"} md:hover:!bg-transparent`}>Contattaci</NavbarLink>
+        <NavbarLink href="/contact-us" className={`!border-0 ${textColor} ${darkText ? "hover:!bg-black/5" : "hover:!bg-white/10"} md:hover:!bg-transparent`}>Contattaci</NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );

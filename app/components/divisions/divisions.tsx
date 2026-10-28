@@ -8,35 +8,30 @@ const divisions = [
     number: "01",
     description:
       "Diamo intelligenza ai robot: sviluppiamo il software che collega sensori, algoritmi e attuatori, trasformando i dati in decisioni e movimenti.",
-    focus: ["Software embedded", "Navigazione", "Interfacce digitali"],
   },
   {
     name: "Management",
     number: "02",
     description:
       "Coordiniamo le attività e aiutiamo le idee a diventare progetti concreti. Organizziamo il lavoro, seguiamo le collaborazioni e teniamo unito il team.",
-    focus: ["Pianificazione", "Collaborazioni", "Organizzazione"],
   },
   {
     name: "Meccanica",
     number: "03",
     description:
       "Progettiamo e realizziamo la struttura dei robot. Dalla modellazione CAD alla prototipazione, scegliamo soluzioni e materiali adatti alle missioni.",
-    focus: ["Progettazione CAD", "Prototipazione", "Strutture robotiche"],
   },
   {
     name: "Elettronica",
     number: "04",
     description:
       "Progettiamo i circuiti e integriamo l’hardware del robot. Sensori, attuatori e sistemi di alimentazione lavorano insieme in modo affidabile.",
-    focus: ["Circuiti", "Sensori e attuatori", "Integrazione hardware"],
   },
   {
     name: "Comunicazione",
     number: "05",
     description:
       "Raccontiamo il team e i suoi progetti, curando la presenza online e gli incontri con il pubblico durante fiere, eventi e dimostrazioni.",
-    focus: ["Divulgazione", "Eventi", "Contenuti digitali"],
   },
 ];
 
@@ -122,14 +117,6 @@ export function Divisions() {
               aria-label={`Competenze dell'area ${activeDivision.name}`}
               className="relative mt-8 flex flex-wrap gap-2"
             >
-              {activeDivision.focus.map((skill) => (
-                <li
-                  key={skill}
-                  className="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white/90"
-                >
-                  {skill}
-                </li>
-              ))}
             </ul>
           </div>
         </div>
