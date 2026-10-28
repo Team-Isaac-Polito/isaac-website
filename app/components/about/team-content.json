@@ -1,0 +1,293 @@
+{
+  "areas": [
+    {
+      "id": "software",
+      "name": "Software",
+      "description": "Sviluppiamo codice Python per ROS per gestire il software di alto livello del robot. Lavoriamo su visione artificiale e funzionalità autonome. Ci occupiamo dello sviluppo del sito web del team utilizzando tecnologie come React, Tailwind CSS e Vite. Utilizziamo strumenti DevOps per facilitare lo sviluppo e il deployment del software, come Docker e GitHub Actions. Gestiamo il server del laboratorio e le piattaforme utilizzate dal team, come Proxmox, OPNsense e Wireguard.",
+      "members": [
+        {
+          "name": "Luca De Paola",
+          "role": "Team Leader",
+          "photo": "https://cms.teamisaac.it/assets/5b13cc3e-4e1e-4838-aa3a-afd2d2b9dea1?width=900&height=900&quality=50",
+          "email": "luca.depaola@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/de-paola-luca/"
+        },
+        {
+          "name": "Yunus Selim Aytekin",
+          "role": "Head of Software",
+          "photo": "https://cms.teamisaac.it/assets/07638476-b35d-4f66-a9a1-e58bb1e8db55?width=900&height=900&quality=50",
+          "email": "yunusselim.aytekin@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/yunus-selim-aytekin-0200a4330"
+        },
+        {
+          "name": "Koksal Berkay Denktas",
+          "role": "Software Engineer",
+          "photo": "https://cms.teamisaac.it/assets/2ad2ae25-9674-4e42-880b-59daff700e43?width=900&height=900&quality=50",
+          "email": "koksalberkay.denktas@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/koksal-berkay-denktas-547725290/"
+        },
+        {
+          "name": "Tobia Giorgi",
+          "role": "Software Engineer",
+          "photo": "https://cms.teamisaac.it/assets/59a7346e-919c-4b59-b099-d9037798e362?width=900&height=900&quality=50",
+          "email": "tobia.giorgi@studenti.polito.it"
+        },
+        {
+          "name": "Xiaoxue Chen",
+          "role": "Software Engineer",
+          "email": "xiaoxue.chen@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/xiaoxue-chen-805335387/"
+        },
+        {
+          "name": "Cansu Doğan",
+          "role": "Software Engineer",
+          "email": "cansu.dogan@studenti.polito.it"
+        },
+        {
+          "name": "Salvatore Caló",
+          "role": "Software Engineer",
+          "photo": "https://cms.teamisaac.it/assets/3bd611e7-178f-4764-9a93-4f9c307d14f8?width=900&height=900&quality=50",
+          "email": "salvatore.calo@studenti.polito.it"
+        },
+        {
+          "name": "Luca Genca",
+          "role": "Software Engineer",
+          "email": "luca.genca@studenti.polito.it"
+        },
+        {
+          "name": "Aum Raju Oza",
+          "role": "Software Engineer",
+          "photo": "https://cms.teamisaac.it/assets/c323011f-ba22-45f1-a083-0258c33e8647?width=900&height=900&quality=50",
+          "email": "s350567@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/aum-oza-14a30a1b2"
+        }
+      ]
+    },
+    {
+      "id": "management",
+      "name": "Management",
+      "description": "L’area Management è il cuore organizzativo del team ISAAC. Coordina tutte le attività trasversali necessarie al corretto funzionamento del progetto: gestione degli acquisti, relazioni con sponsor e partner, stesura di richieste di finanziamento, recruitment dei nuovi membri e pianificazione strategica delle attività. È composta dal team leader e dai capi area, che collaborano strettamente per garantire efficienza, coesione e crescita del team.",
+      "members": [
+        {
+          "name": "Luca De Paola",
+          "role": "Team Leader",
+          "photo": "https://cms.teamisaac.it/assets/5b13cc3e-4e1e-4838-aa3a-afd2d2b9dea1?width=900&height=900&quality=50",
+          "email": "luca.depaola@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/de-paola-luca/"
+        },
+        {
+          "name": "Vittorio Giulimondi",
+          "role": "Head of Mechanics, Sustainability Manager",
+          "photo": "https://cms.teamisaac.it/assets/6bbe4d91-ffcc-49bc-97c9-5c5fa7138791?width=900&height=900&quality=50",
+          "email": "vittorio.giulimondi@studenti.polito.it"
+        },
+        {
+          "name": "Yunus Selim Aytekin",
+          "role": "Head of Software",
+          "photo": "https://cms.teamisaac.it/assets/07638476-b35d-4f66-a9a1-e58bb1e8db55?width=900&height=900&quality=50",
+          "email": "yunusselim.aytekin@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/yunus-selim-aytekin-0200a4330"
+        },
+        {
+          "name": "Yusuf Serdar Aytekin",
+          "role": "Head of Embedded Systems",
+          "photo": "https://cms.teamisaac.it/assets/2875b397-8165-4f04-bc5c-2f9c764c6fc7?width=900&height=900&quality=50",
+          "email": "yusufserdar.aytekin@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/yusuf-serdar-aytekin-7a686232b"
+        },
+        {
+          "name": "Sergio Gugliandolo",
+          "role": "Team Advisor",
+          "photo": "https://cms.teamisaac.it/assets/0ac1e445-183b-4d7a-8567-d6656687f8ee?width=900&height=900&quality=50",
+          "email": "sergio.gugliandolo@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/sergio-gugliandolo/"
+        },
+        {
+          "name": "Amartya Singh",
+          "role": "Management",
+          "photo": "https://cms.teamisaac.it/assets/ade751ba-bacd-4bcf-90ff-02ae91b04f9a?width=900&height=900&quality=50",
+          "email": "amartya.singh@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/amartya-singh-980059382/"
+        },
+        {
+          "name": "Ahmet Tolga Birand",
+          "role": "Management",
+          "photo": "https://cms.teamisaac.it/assets/b89b89d6-8b39-4062-90b0-53093bcd2fa6?width=900&height=900&quality=50",
+          "email": "ahmettolga.birand@studenti.polito.it"
+        },
+        {
+          "name": "Marco Cutarelli",
+          "role": "Management",
+          "photo": "https://cms.teamisaac.it/assets/a04b4683-46a6-4654-b40f-c5708680162f?width=900&height=900&quality=50",
+          "email": "marco.cutarelli@studenti.polito.it"
+        }
+      ]
+    },
+    {
+      "id": "meccanica",
+      "name": "Meccanica",
+      "description": "Ci occupiamo di progettazione sia funzionale che esecutiva, utilizzando SolidWorks per la modellazione CAD. Scegliamo con cura i componenti e i materiali più adatti per i nostri progetti. Usiamo la stampa 3D per creare parti in polimeri e tecnopolimeri, e realizziamo lavorazioni CNC con fresatrice a 3 assi e tornio. Infine, ci dedichiamo alla produzione e all'assemblaggio completo della piattaforma robotica.",
+      "members": [
+        {
+          "name": "Vittorio Giulimondi",
+          "role": "Head of Mechanics, Sustainability Manager",
+          "photo": "https://cms.teamisaac.it/assets/6bbe4d91-ffcc-49bc-97c9-5c5fa7138791?width=900&height=900&quality=50",
+          "email": "vittorio.giulimondi@studenti.polito.it"
+        },
+        {
+          "name": "Giulio Biasiotto",
+          "role": "Mechanical Engineer",
+          "email": "giulio.biasiotto@studenti.polito.it"
+        },
+        {
+          "name": "Leonardo Viglialoro",
+          "role": "Mechanical Engineer",
+          "photo": "https://cms.teamisaac.it/assets/fcc92091-dfec-4418-ba91-5a97906cbb30?width=900&height=900&quality=50",
+          "email": "leonardo.viglialoro@studenti.polito.it"
+        },
+        {
+          "name": "Barbara Rondinella",
+          "role": "Mechanical Engineer",
+          "photo": "https://cms.teamisaac.it/assets/3fe337bb-7f0d-4e20-a634-92ac6eabacfe?width=900&height=900&quality=50"
+        },
+        {
+          "name": "Daniele Latella",
+          "role": "Mechanical Advisor",
+          "photo": "https://cms.teamisaac.it/assets/495105d4-2280-42c1-b934-e197580efdbb?width=900&height=900&quality=50",
+          "email": "daniele.latella@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/daniele-latella/"
+        },
+        {
+          "name": "Sergio Gugliandolo",
+          "role": "Team Advisor",
+          "photo": "https://cms.teamisaac.it/assets/0ac1e445-183b-4d7a-8567-d6656687f8ee?width=900&height=900&quality=50",
+          "email": "sergio.gugliandolo@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/sergio-gugliandolo/"
+        },
+        {
+          "name": "Noor Khalid Suliman Mahgoub",
+          "role": "Mechanical Engineer",
+          "photo": "https://cms.teamisaac.it/assets/fdec990a-d509-4ca8-b671-6925822dc879?width=900&height=900&quality=50",
+          "email": "noor.khalidsulimanmahgoub@studenti.polito.it"
+        },
+        {
+          "name": "Mattia Tirrito",
+          "role": "Mechanical Engineer",
+          "photo": "https://cms.teamisaac.it/assets/956739f2-717b-45bb-933d-db86154e70f0?width=900&height=900&quality=50",
+          "email": "s335965@studenti.polito.it"
+        },
+        {
+          "name": "Francesca Rotondo",
+          "role": "Mechanical Engineer",
+          "email": "s340280@studenti.polito.it"
+        },
+        {
+          "name": "Edoardo Bonaventura",
+          "role": "Mechanical Engineer",
+          "photo": "https://cms.teamisaac.it/assets/fcf70705-65eb-4366-858f-1d1f88b53968?width=900&height=900&quality=50",
+          "email": "s352348@studenti.polito.it"
+        },
+        {
+          "name": "Anton Dimchev Neshev",
+          "role": "Mechanical Engineer",
+          "photo": "https://cms.teamisaac.it/assets/2c5d2b9d-889b-43b1-977e-0e2b72d7035a?width=900&height=900&quality=50",
+          "email": "antondimchev.neshev@studenti.polito.it"
+        },
+        {
+          "name": "Alessandro Cereda",
+          "role": "Mechanical Engineer",
+          "photo": "https://cms.teamisaac.it/assets/fe640b0a-6448-4ffa-90e1-94879e96a11e?width=900&height=900&quality=50",
+          "email": "alessandro.cereda@studenti.polito.it"
+        },
+        {
+          "name": "Alper Karakuş",
+          "role": "Mechanical Engineer",
+          "email": "alper.karakus@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/alper-karakus"
+        },
+        {
+          "name": "Onni Olavi Liski",
+          "role": "Mechanical Engineer",
+          "email": "s350414@studenti.polito.it"
+        }
+      ]
+    },
+    {
+      "id": "elettronica",
+      "name": "Elettronica",
+      "description": "Ci occupiamo della componente elettronica del robot, disegnando schemi elettrici e progettando circuiti stampati (PCB). Ci dedichiamo alla produzione fisica delle schede elettroniche e dei cablaggi.",
+      "members": [
+        {
+          "name": "Yusuf Serdar Aytekin",
+          "role": "Head of Embedded Systems",
+          "photo": "https://cms.teamisaac.it/assets/2875b397-8165-4f04-bc5c-2f9c764c6fc7?width=900&height=900&quality=50",
+          "email": "yusufserdar.aytekin@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/yusuf-serdar-aytekin-7a686232b"
+        },
+        {
+          "name": "Mariagiusy Baldassarra",
+          "role": "Embedded Engineer",
+          "email": "mariagiusy.baldassarra@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/mariagiusy-baldassarra-39959228a"
+        },
+        {
+          "name": "Francesco Volpe",
+          "role": "Embedded Engineer",
+          "photo": "https://cms.teamisaac.it/assets/bd4795d7-735b-420f-b732-00dc9049d1ec?width=900&height=900&quality=50",
+          "email": "fra.volpe@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/volpe-francesco"
+        },
+        {
+          "name": "Francesco Partipilo",
+          "role": "Embedded Engineer",
+          "email": "francesco.partipilo@studenti.polito.it"
+        },
+        {
+          "name": "Davide Covolo",
+          "role": "Embedded Engineer",
+          "photo": "https://cms.teamisaac.it/assets/bea34f79-38d1-4245-826b-45f530db26da?width=900&height=900&quality=50",
+          "email": "davide.covolo@studenti.polito.it"
+        },
+        {
+          "name": "Luca Papaleo",
+          "role": "Embedded Engineer",
+          "photo": "https://cms.teamisaac.it/assets/ec1bc180-53ed-4936-8185-6f9e9360b7b3?width=900&height=900&quality=50",
+          "email": "s354227@studenti.polito.it"
+        },
+        {
+          "name": "Nicolas Tosco",
+          "role": "Embedded Engineer",
+          "photo": "https://cms.teamisaac.it/assets/346cbd61-f242-4282-854e-643301b24bcd?width=900&height=900&quality=50",
+          "email": "nicolas.tosco@studenti.polito.it"
+        },
+        {
+          "name": "Aminadab Zerai Ghebrehiwet",
+          "role": "Embedded Engineer",
+          "photo": "https://cms.teamisaac.it/assets/65b131c8-2673-420b-86f1-39e42a98bbdc?width=900&height=900&quality=50",
+          "email": "aminadabzerai.ghebrehiwet@studenti.polito.it"
+        }
+      ]
+    },
+    {
+      "id": "comunicazione",
+      "name": "Comunicazione",
+      "description": "Gestiamo i nostri social media, in particolare Instagram, e documentiamo le attività del team con foto e video. Ci occupiamo della gestione del sito web e curiamo l'immagine pubblica del team, realizzando abbigliamento personalizzato, poster, volantini e biglietti da visita.",
+      "members": [
+        {
+          "name": "Luca De Paola",
+          "role": "Team Leader",
+          "photo": "https://cms.teamisaac.it/assets/5b13cc3e-4e1e-4838-aa3a-afd2d2b9dea1?width=900&height=900&quality=50",
+          "email": "luca.depaola@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/de-paola-luca/"
+        },
+        {
+          "name": "Elisa De Farfalla",
+          "role": "Head of Communication",
+          "photo": "https://cms.teamisaac.it/assets/e4c18f44-6335-405b-823f-c73a24eaaef7?width=900&height=900&quality=50",
+          "email": "elisa.defarfalla@studenti.polito.it",
+          "linkedin": "https://www.linkedin.com/in/elisa-de-farfalla-a75aa7318"
+        }
+      ]
+    }
+  ]
+}

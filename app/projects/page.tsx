@@ -6,7 +6,7 @@ import { Socials } from "../components/hubjumbo/components/socials/socials";
 import { ScrollReveal } from "../components/shared/ScrollReveal/scroll_reveal";
 import { ProjectReel } from "./project-reel";
 import { IsaacButton } from "../components/shared/IsaacButton/isaac_button";
-import { FaGithub } from "react-icons/fa";
+import { FaArrowDown, FaGithub } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Progetti | Team Isaac",
@@ -62,7 +62,7 @@ export default function ProjectsPage() {
           <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-[#10102a]/55 via-[#1b1b3a]/50 to-[#10102a]/80" />
           <div
             aria-hidden="true"
-            className="isaac-pattern isaac-pattern-dark pointer-events-none absolute inset-0 -z-10 opacity-25"
+            className="project-grid-overlay pointer-events-none absolute inset-0 -z-10"
           />
           <div className="absolute inset-x-0 top-0 z-30">
             <MyNavbar />
@@ -83,24 +83,18 @@ export default function ProjectsPage() {
                 soccorritori a capire cosa li aspetta.
               </p>
             </div>
-            <IsaacButton text=" Scopri il progetto" />
-          </div>
-          <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between gap-4 border-t border-white/35 pt-4 text-[0.65rem] font-medium uppercase tracking-[0.16em] text-white/70 sm:text-xs">
-            <p>RESE.Q MK2</p>
-            <p className="hidden sm:block">Progettato e costruito dal Team Isaac</p>
-            <a
+            <IsaacButton
+              text="Scopri il progetto"
               href="#architettura"
-              aria-label="Scorri per scoprire il progetto"
-              className="transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#70b3b0]"
-            >
-              Scroll ↓
-            </a>
+              icon={<FaArrowDown />}
+              className="isaac-cta--projects"
+            />
           </div>
         </section>
 
         <section
           id="architettura"
-          className="isaac-pattern scroll-mt-8 bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28"
+          className="project-grid-pattern scroll-mt-8 bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28"
         >
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <ScrollReveal direction="left">
@@ -130,7 +124,7 @@ export default function ProjectsPage() {
             </ScrollReveal>
           </div>
         </section>
-        <section className="px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28">
+        <section className="project-grid-pattern px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28">
           <div className="mx-auto max-w-7xl">
             <ScrollReveal>
               <div className="mb-12 max-w-3xl sm:mb-16">
@@ -181,7 +175,7 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        <section className="bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28">
+        <section className="project-grid-pattern bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28">
           <div className="mx-auto max-w-7xl">
             <ScrollReveal>
               <div className="mb-12 flex flex-col gap-5 sm:mb-16 sm:flex-row sm:items-end sm:justify-between">
@@ -256,7 +250,7 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        <section className="bg-[#1b1b3a] px-5 py-16 text-center text-white sm:px-8 sm:py-20">
+        <section className="project-grid-pattern project-grid-pattern--dark bg-[#1b1b3a] px-5 py-16 text-center text-white sm:px-8 sm:py-20">
           <ScrollReveal className="flex flex-col justify-center items-center">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/85">
               Dal laboratorio, senza filtri
@@ -270,15 +264,14 @@ export default function ProjectsPage() {
             <div className="mt-5">
               <Socials />
             </div>
-            <a
+            <IsaacButton
+              text="Esplora il lavoro su GitHub"
               href="https://github.com/Team-Isaac-Polito"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-96 rounded-md text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 bg-white focus:outline-none flex justify-center items-center gap-4 text-black"
-            >
-              <FaGithub size={24} />
-              Esplora il lavoro su GitHub
-            </a>
+              icon={<FaGithub size={20} />}
+              className="isaac-cta--light"
+            />
           </ScrollReveal>
         </section>
       </main>

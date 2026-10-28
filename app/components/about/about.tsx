@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { MyNavbar } from "../hubjumbo/components/navbar/navbar";
 import { ScrollReveal } from "../shared/ScrollReveal/scroll_reveal";
-import { teamEvents } from "../../events/team-events";
+import { IsaacButton } from "../shared/IsaacButton/isaac_button";
+import { FaArrowDown } from "react-icons/fa";
+import { TeamAreas } from "./team-areas";
 
 const milestones = [
   {
@@ -35,17 +36,6 @@ const milestones = [
 
 export function AboutPage() {
   const [activeMilestone, setActiveMilestone] = useState(0);
-  const galleryRef = useRef<HTMLDivElement>(null);
-
-  function scrollGallery(direction: -1 | 1) {
-    const gallery = galleryRef.current;
-    if (!gallery) return;
-
-    gallery.scrollBy({
-      left: direction * gallery.clientWidth * 0.8,
-      behavior: "smooth",
-    });
-  }
 
   return (
     <main className="bg-[#f6f5f0] text-[#1b1b3a]">
@@ -75,16 +65,16 @@ export function AboutPage() {
             <br />
             idee, robot.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-2xl">
+          <p className="my-7 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-2xl">
             Siamo un team di studenti appassionati di robotica, uniti dalla
             voglia di progettare tecnologie che possano fare la differenza.
           </p>
-          <a
-            href="/about"
-            className="mt-9 inline-flex min-h-12 items-center rounded-full bg-[#f5c64b] px-7 py-3 font-semibold text-[#1b1b3a] transition-colors hover:bg-[#ffda72] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-          >
-            Scopri chi siamo
-          </a>
+          <IsaacButton
+            text="Scopri il progetto"
+            href="#divisioni"
+            icon={<FaArrowDown />}
+            className="isaac-cta--projects"
+          />
         </ScrollReveal>
       </section>
 
@@ -200,16 +190,14 @@ export function AboutPage() {
                 >
                   <span
                     aria-hidden="true"
-                    className={`h-3 w-3 rounded-full border-2 transition-colors sm:h-4 sm:w-4 ${
-                      isActive
+                    className={`h-3 w-3 rounded-full border-2 transition-colors sm:h-4 sm:w-4 ${isActive
                         ? "border-[#f5c64b] bg-[#f5c64b]"
                         : "border-white/60 bg-[#1b1b3a]"
-                    }`}
+                      }`}
                   />
                   <span
-                    className={`text-sm font-bold transition-colors sm:text-xl ${
-                      isActive ? "text-[#f5c64b]" : "text-white/65"
-                    }`}
+                    className={`text-sm font-bold transition-colors sm:text-xl ${isActive ? "text-[#f5c64b]" : "text-white/65"
+                      }`}
                   >
                     {milestone.year}
                   </span>
@@ -231,6 +219,7 @@ export function AboutPage() {
           </div>
         </div>
       </section>
+      <TeamAreas />
     </main>
   );
 }

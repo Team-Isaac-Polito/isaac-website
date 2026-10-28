@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { IsaacButton } from "../shared/IsaacButton/isaac_button";
 
 export function EventsSection() {
   const eventImages = [
@@ -58,30 +59,11 @@ export function EventsSection() {
         >
           Eventi
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-gray-700 sm:text-xl">
+        <p className="mx-auto my-4 max-w-xl text-base leading-relaxed text-gray-700 sm:text-xl">
           Organizziamo fiere, dimostrazioni e incontri per condividere i nostri
           progetti di robotica e incontrare chi, come noi, ama l’innovazione.
         </p>
-        <Link
-          href="/events"
-          className="mt-7 inline-flex min-h-12 items-center justify-center gap-3 rounded-2xl bg-[#549697] px-6 py-3 text-lg font-semibold text-white transition-colors hover:bg-[#397778] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#397778] sm:mt-10 sm:px-8 sm:text-xl"
-        >
-          Scopri gli eventi
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="h-6 w-6"
-          >
-            <path
-              d="M5 12h14m-6-6 6 6-6 6"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-            />
-          </svg>
-        </Link>
+        <IsaacButton text="Scopri gli eventi" href="/events" />
       </div>
     </section>
   );

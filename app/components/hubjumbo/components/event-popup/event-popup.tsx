@@ -1,5 +1,6 @@
 "use client";
 
+import { IsaacButton } from "@/app/components/shared/IsaacButton/isaac_button";
 import { useEffect, useRef } from "react";
 
 export function EventPopup() {
@@ -17,10 +18,6 @@ export function EventPopup() {
 
   function closeDialog() {
      dialogRef.current?.close();
-  }
-  function goToEvents() {
-    dialogRef.current?.close();
-    document.getElementById("eventi")?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
@@ -48,17 +45,11 @@ export function EventPopup() {
         >
           Scopri i nostri eventi
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-gray-600">
+        <p className="my-4 text-base leading-relaxed text-gray-600">
           Fiere, dimostrazioni e incontri: vieni a conoscere il Team Isaac e i
           nostri progetti di robotica per la ricerca e il soccorso.
         </p>
-        <button
-          type="button"
-          onClick={goToEvents}
-          className="mt-6 inline-flex min-h-11 items-center justify-center rounded-lg bg-[#549697] px-6 py-3 font-semibold text-white transition hover:bg-[#397778] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#397778]"
-        >
-          Vai agli eventi
-        </button>
+        <IsaacButton text="Scopri gli eventi" href="#eventi" />
       </div>
     </dialog>
   );

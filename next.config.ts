@@ -5,6 +5,15 @@ const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cms.teamisaac.it",
+        pathname: "/assets/**",
+      },
+    ],
+  },
   turbopack: {
     rules: {
       "*.css": {
