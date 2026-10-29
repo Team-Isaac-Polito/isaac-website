@@ -8,7 +8,7 @@ export function MyNavbar({ darkText = false }: { darkText?: boolean }) {
   const textColor = darkText ? "!text-[#1b1b3a]" : "!text-white";
 
   return (
-    <Navbar fluid className="!bg-transparent !px-3 sm:!px-6">
+    <Navbar fluid className="!bg-white !px-3 sm:!px-6">
       <NavbarBrand as={Link} href="/">
         <Image src="/favicon.svg" className="mr-3 h-12 w-8 sm:h-9 sm:w-9" alt="Team Isaac" width={36} height={36} priority />
         <span className={`self-center whitespace-nowrap text-lg font-semibold ${textColor} sm:text-xl`}>Team Isaac</span>

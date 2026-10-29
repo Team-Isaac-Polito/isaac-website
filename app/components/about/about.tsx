@@ -50,7 +50,7 @@ export function AboutPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#12132d]/95 via-[#12132d]/55 to-[#12132d]/10" />
         <div className="absolute inset-x-0 top-0 z-20">
-          <MyNavbar />
+          <MyNavbar darkText={true} />
         </div>
 
         <ScrollReveal

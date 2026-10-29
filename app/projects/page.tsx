@@ -65,7 +65,7 @@ export default function ProjectsPage() {
             className="project-grid-overlay pointer-events-none absolute inset-0 -z-10"
           />
           <div className="absolute inset-x-0 top-0 z-30">
-            <MyNavbar />
+            <MyNavbar darkText={true} />
           </div>
 
           <div className="project-hero-copy relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center pb-12 pt-16 text-center">

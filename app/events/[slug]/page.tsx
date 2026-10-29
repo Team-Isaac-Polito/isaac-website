@@ -61,7 +61,7 @@ export default async function EventPage({
             className="isaac-pattern isaac-pattern-dark pointer-events-none absolute inset-0 opacity-25"
           />
           <div className="absolute inset-x-0 top-0 z-20">
-            <MyNavbar />
+            <MyNavbar darkText={true} />
           </div>
 
           <div className="relative z-10 mx-auto w-full max-w-7xl">

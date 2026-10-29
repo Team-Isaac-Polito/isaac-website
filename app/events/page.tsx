@@ -48,7 +48,7 @@ export default function EventsPage() {
       <main className="overflow-hidden bg-[#f6f5f0] text-[#1b1b3a]">
         <section className="relative isolate flex min-h-[38rem] items-center justify-center overflow-hidden bg-white px-5 pb-14 pt-24 text-[#121212] sm:min-h-[48rem] sm:pb-18 sm:pt-28 lg:min-h-[58rem] lg:px-16 lg:pb-12 lg:pt-28">
           <div className="absolute inset-x-0 top-0 z-30">
-            <MyNavbar darkText />
+            <MyNavbar darkText={true} />
           </div>
 
           <EventOrbit items={heroCollage} />
