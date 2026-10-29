@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { IsaacButton } from "../shared/IsaacButton/isaac_button";
+import { IsaacButton } from "../shared";
 
 export function EventsSection() {
   const eventImages = [

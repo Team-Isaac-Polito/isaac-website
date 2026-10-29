@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
+import type { RefObject } from "react";
 
-export function ProjectReel() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
+export function useProjectReelPlayback(
+  videoRef: RefObject<HTMLVideoElement | null>,
+) {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -29,20 +30,5 @@ export function ProjectReel() {
     motionPreference.addEventListener("change", handleMotionPreferenceChange);
     return () =>
       motionPreference.removeEventListener("change", handleMotionPreferenceChange);
-  }, []);
-
-  return (
-    <video
-      ref={videoRef}
-      aria-label="RESE.Q MK2 durante una dimostrazione alla Maker Faire"
-      className="project-reel-video absolute inset-0 -z-20 h-full w-full object-cover"
-      src="/video/reseq_mk2_makerfaire.mp4"
-      poster="/robot/reseq-mk2.jpg"
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="metadata"
-    />
-  );
+  }, [videoRef]);
 }

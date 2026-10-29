@@ -1,2 +1,7 @@
-// this is just a barrel file (a file just to have one single import when you import multiple components)
-export { HubJumbo } from "./hubjumbo/hubjumbo"
+export * from "./divisions";
+export * from "./events_section";
+export * from "./hubjumbo";
+export * from "./hubjumbo/components";
+export * from "./robots";
+export * from "./shared";
+export * from "./sponsor_list";

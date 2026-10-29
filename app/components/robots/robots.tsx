@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ScrollReveal } from "../shared/ScrollReveal/scroll_reveal";
+import { ScrollReveal } from "../shared";
 
 const robots = [
   {

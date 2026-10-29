@@ -20,6 +20,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Code organization
+
+- `app/page.tsx` and each page's `page.tsx` define routes and compose their page components.
+- `app/components/` contains the home page components. Reusable components live in `app/components/shared/`.
+- Page-specific components and content live next to their route, for example in `app/about/`, `app/events/`, and `app/projects/`.
+- Put subcomponents and hooks close to the component or feature that uses them. Move a component to `shared/` only when multiple pages or features use it.
+- Use a component's `hooks/` folder for its interactive logic, keeping the component focused on rendering and connecting its child components.
+- Each source folder exposes its public modules through `index.ts`; import from that folder instead of reaching into individual implementation files.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

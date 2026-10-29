@@ -1,6 +1,5 @@
-import { IsaacButton } from "../shared/IsaacButton/isaac_button";
-import { Socials } from "./components";
-import { MyNavbar } from "./components/navbar/navbar";
+import { IsaacButton } from "../shared";
+import { MyNavbar, Socials } from "./components";
 
 export function HubJumbo() {
   return (

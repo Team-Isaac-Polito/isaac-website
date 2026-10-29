@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Footer } from "../components/footer/footer";
-import { AboutPage } from "../components/about/about";
+import { AboutPage } from ".";
+import { Footer } from "../components/shared";
 
 export const metadata: Metadata = {
   title: "About | Team Isaac",
