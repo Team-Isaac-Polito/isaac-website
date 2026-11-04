@@ -38,7 +38,7 @@ export function EventGallery({ event }: { event: TeamEvent }) {
             Vuoi scoprire altri momenti del Team Isaac?
           </p>
           <Link
-            href="/about#members-title"
+            href="/events"
             className="mt-4 inline-flex items-center gap-2 font-bold text-[#397778] transition-colors hover:text-[#1b1b3a] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#478d8d]"
           >
             Torna a tutte le storie <span aria-hidden="true">→</span>
